@@ -1,0 +1,26 @@
+/*===========================================================*/
+/* Fonts ======================================================*/
+
+@font-face {
+  font-family: "Sora";
+  src: url("../fonts/sora/Sora-VariableFont_wght.woff2") format("woff2-variations");
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../fonts/plus-jakarta-sans/PlusJakartaSans-VariableFont_wght.woff2") format("woff2-variations");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../fonts/plus-jakarta-sans/PlusJakartaSans-Italic-VariableFont_wght.woff2") format("woff2-variations");
+  font-weight: 200 800;
+  font-style: italic;
+  font-display: swap;
+}
