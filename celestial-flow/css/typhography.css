@@ -1,0 +1,214 @@
+/*============================================================*/
+/*Typography ==================================================*/
+
+/*title, subtitle, text --------------------------------------*/
+.title-hero {
+  font: var(--font-title-hero);
+  letter-spacing: var(--letter-spacing-title-hero);
+  color: var(--color-title);
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+.title {
+  font: var(--font-title);
+  letter-spacing: var(--letter-spacing-title);
+  color: var(--color-title);
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.subtitle {
+  font: var(--font-subtitle);
+  letter-spacing: var(--letter-spacing-subtitle);
+  color: var(--color-subtitle);
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.text-lg {
+  font: var(--font-text-lg);
+  color: var(--color-text);
+}
+
+.text {
+  font: var(--font-text);
+  color: var(--color-text);
+}
+
+.text-sm {
+  font: var(--font-text-sm);
+  color: var(--color-text);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-on-accent {
+  color: var(--color-on-accent);
+}
+
+/*text-overline --------------------------------------------------*/
+.text-overline {
+  font: var(--font-text-sm);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+/*text-underline -------------------------------------------------*/
+.text-underline {
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+/*weight -------------------------------------------------------*/
+.text-light { font-weight: 300; }
+.text-normal { font-weight: 400; }
+.text-medium { font-weight: 500; }
+.text-semibold { font-weight: 600; }
+.text-bold { font-weight: 700; }
+.text-extrabold { font-weight: 800; }
+
+/*letter-spacing -------------------------------------------------*/
+.text-spacing-none { letter-spacing: 0; }
+.text-spacing-sm { letter-spacing: -0.02em; }
+.text-spacing { letter-spacing: 0.05em; }
+.text-spacing-md { letter-spacing: 0.1em; }
+.text-spacing-lg { letter-spacing: 0.15em; }
+
+/*decorative text --------------------------------------------*/
+.text-decorative {
+  position: relative;
+  isolation: isolate;
+}
+
+.text-decorative::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  font: 800 clamp(3rem, 8vw, 6rem) "Sora", -apple-system, "Segoe UI", sans-serif;
+  line-height: 1;
+  color: var(--color-border);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/*bracket ------------------------------------------------------*/
+.text-bracket::before { content: "["; margin-right: .3em; }
+.text-bracket::after { content: "]"; margin-left: .3em; }
+
+/*text-stat ----------------------------------------------------*/
+.text-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.text-stat__number {
+  font: 800 clamp(2.5rem, 5vw, 4rem) "Sora", -apple-system, "Segoe UI", sans-serif;
+  line-height: 1;
+  color: var(--color-title);
+}
+
+.text-stat__label {
+  font: var(--font-text-sm);
+  color: var(--color-text);
+}
+
+/*alignment ------------------------------------------------------*/
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/*color ----------------------------------------------------------*/
+.text-red { color: #c62852; }
+.text-salmon { color: #d85f63; }
+.text-orange { color: #c97a24; }
+.text-yellow { color: #c9a321; }
+.text-lime { color: #90a92e; }
+.text-green { color: #3b9659; }
+.text-teal { color: #2d8b7f; }
+.text-cyan { color: #2d90b0; }
+.text-blue { color: #3f73cf; }
+.text-indigo { color: #5e63cf; }
+.text-purple { color: #8758c6; }
+.text-pink { color: #c53f74; }
+.text-brown { color: #9b6848; }
+.text-gray { color: #66707d; }
+.text-black { color: #222831; }
+.text-white { color: #ffffff; }
+
+.text-gold {
+  color: #c99b3a;
+  background: linear-gradient(135deg, #8f6520 0%, #c99b3a 30%, #f2d16b 50%, #c99b3a 70%, #8f6520 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-silver {
+  color: #b5bec7;
+  background: linear-gradient(135deg, #6d7680 0%, #b5bec7 30%, #eef2f5 50%, #b5bec7 70%, #6d7680 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-bronze {
+  color: #996339;
+  background: linear-gradient(135deg, #5f3c22 0%, #996339 30%, #cb9157 50%, #996339 70%, #5f3c22 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/*size scale -----------------------------------------------------*/
+.text-size-xs {
+  font-size: clamp(0.7rem, 0.68rem + 0.1vw, 0.75rem);
+}
+
+.text-size-sm {
+  font-size: clamp(0.8rem, 0.78rem + 0.1vw, 0.875rem);
+}
+
+.text-size-md {
+  font-size: clamp(0.925rem, 0.9rem + 0.15vw, 1rem);
+}
+
+.text-size-lg {
+  font-size: clamp(1.1rem, 1.05rem + 0.25vw, 1.25rem);
+}
+
+.text-size-xl {
+  font-size: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+}
+
+.text-size-2xl {
+  font-size: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+}
+
+.text-size-3xl {
+  font-size: clamp(1.875rem, 1.5rem + 1.875vw, 3rem);
+}
+
+.text-size-4xl {
+  font-size: clamp(2.25rem, 1.6rem + 3.25vw, 4rem);
+}
+
+.text-size-5xl {
+  font-size: clamp(2.5rem, 1.5rem + 5vw, 5rem);
+}
+
+.text-size-6xl {
+  font-size: clamp(3rem, 1.5rem + 7vw, 6.5rem);
+}
