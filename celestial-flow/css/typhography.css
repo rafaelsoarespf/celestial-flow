@@ -93,7 +93,8 @@
   top: 0;
   right: 0;
   z-index: -1;
-  font: 800 clamp(3rem, 8vw, 6rem) "Sora", -apple-system, "Segoe UI", sans-serif;
+  font: var(--font-title-hero);
+  font-size: clamp(3rem, 8vw, 6rem);
   line-height: 1;
   color: var(--color-border);
   pointer-events: none;
@@ -112,7 +113,8 @@
 }
 
 .text-stat__number {
-  font: 800 clamp(2.5rem, 5vw, 4rem) "Sora", -apple-system, "Segoe UI", sans-serif;
+  font: var(--font-title-hero);
+  font-size: clamp(2.5rem, 5vw, 4rem);
   line-height: 1;
   color: var(--color-title);
 }
