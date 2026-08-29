@@ -2,9 +2,9 @@
 html,body {
   min-height: 100dvh;
   line-height: 1.6;
-  letter-spacing: 0.02em;
   background: var(--color-background);
   font: var(--font-text);
+  letter-spacing: var(--letter-spacing-text);
   color: var(--color-text);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -29,31 +29,37 @@ h1,h2,h3,h4,h5,h6 {
 h1 {
   font: var(--font-title);
   color: var(--color-title);
+  letter-spacing: var(--letter-spacing-title);
 }
 
 h2 {
   font: var(--font-subtitle);
   color: var(--color-subtitle);
+  letter-spacing: var(--letter-spacing-subtitle);
 }
 
 h3 {
   font: var(--font-heading-3);
-  color: var(--color-subtitle);
+  color: var(--color-heading);
+  letter-spacing: var(--letter-spacing-heading);
 }
 
 h4 {
   font: var(--font-heading-4);
-  color: var(--color-subtitle);
+  color: var(--color-heading);
+  letter-spacing: var(--letter-spacing-heading);
 }
 
 h5 {
   font: var(--font-heading-5);
-  color: var(--color-subtitle);
+  color: var(--color-heading);
+  letter-spacing: var(--letter-spacing-heading);
 }
 
 h6 {
   font: var(--font-heading-6);
-  color: var(--color-subtitle);
+  color: var(--color-heading);
+  letter-spacing: var(--letter-spacing-heading);
 }
 
 main :is(h1, h2, h3, h4, h5, h6, p):not(.mb, .mb-none, .mb-sm, .mb-md, .mb-lg,
@@ -83,7 +89,7 @@ mark {
   background-color: color-mix(in srgb, var(--color-accent) 40%, rgba(255, 255, 255, 0) 60%);
   color: var(--color-on-accent);
   padding: 0.1em 0.25em;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
 }
 
 /*a ---------------------------------------------------------*/
@@ -109,7 +115,7 @@ button {
   color: var(--color-on-accent);
   background: var(--color-accent);
   padding: 0.5rem 0.8rem;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   border: 1px solid var(--color-accent);
   box-shadow: var(--shadow-md);
   cursor: pointer;
@@ -143,7 +149,7 @@ code {
   background: color-mix(in srgb, var(--color-accent) 20%, rgba(255, 255, 255, 0.06));
   color: var(--color-accent);
   padding: 0.2em 0.45em;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   font-size: 0.95em;
   font-family: monospace;
 }
@@ -154,7 +160,7 @@ pre {
   backdrop-filter: var(--blur);
   color: color-mix(in srgb, var(--color-on-accent) 80%, rgba(248, 248, 248, 0.5));
   padding: 1.25rem;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   overflow-x: auto;
   line-height: 1.7;
   border: 1px solid color-mix(in srgb, var(--color-accent) 40%, transparent);
@@ -194,7 +200,7 @@ blockquote {
   padding: 1rem 1.2rem;
   background: var(--color-surface-1);
   border-left: 6px solid var(--color-accent);
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   font-style: italic;
   box-shadow: var(--shadow-md);
 }
@@ -224,7 +230,7 @@ input,textarea,select {
   backdrop-filter: var(--blur);
   color: var(--color-text);
   border: 1px solid var(--color-border);
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: .75rem .9rem;
   box-sizing: border-box;
   transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
@@ -458,7 +464,7 @@ input[type="file"] {
   width: 100%;
   padding: .35rem;
   border: 1px solid var(--color-border);
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   background: color-mix(in srgb, var(--color-surface-2) 10%, transparent);
   backdrop-filter: var(--blur);
   color: var(--color-text);
@@ -480,7 +486,7 @@ input[type="file"]::file-selector-button {
   margin-right: .75rem;
   padding: .55rem .9rem;
   border: none;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   background: var(--color-accent);
   color: var(--color-on-accent);
   font: inherit;
@@ -513,7 +519,7 @@ input[type="color"] {
   height: 3rem;
   padding: .2rem;
   border: 1px solid var(--color-border);
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   background: color-mix(in srgb, var(--color-surface-2) 10%, transparent);
   backdrop-filter: var(--blur);
   cursor: pointer;
@@ -536,13 +542,13 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 
 input[type="color"]::-webkit-color-swatch {
   border: none;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
 }
 
 /*Firefox*/
 input[type="color"]::-moz-color-swatch {
   border: none;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
 }
 
 input[type="color"]:disabled{
@@ -558,7 +564,7 @@ table {
   overflow: hidden;
   background: var(--color-surface-1);
   border: 1px solid var(--color-border);
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
 }
 
@@ -655,7 +661,7 @@ html {
 ::-webkit-scrollbar-thumb {
   background-color: var(--color-surface-2);
   border: solid 1px var(--color-border);
-  border-radius: 5px;
+  border-radius: var(--radius-sm);
 }
 
 /* accessibility -------------------------------------------*/
