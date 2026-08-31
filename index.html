@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--About Project-->
+  <title>Celestial Flow</title>
+  <meta name="description" content="Modern CSS framework focused on elegance, responsiveness and clean design" />
+  <meta name="author" content="Rafael" />
+  <meta name="keywords" content="css, framework, responsive, modern ui, frontend, aurora css" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Aurora CSS" />
+  <meta property="og:description" content="Modern CSS framework focused on elegance and responsive design." />
+  <meta property="og:type" content="website" />
+
+  <!--Theme-->
+  <meta name="theme-color" content="#121212" />
+
+  <!--Content Security Policy (CSP)-->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self';script-src 'self';style-src 'self' 'unsafe-inline';img-src 'self' data: blob:;font-src 'self' data:;connect-src 'self' https: ws: wss:;object-src 'none';base-uri 'self';form-action 'self';frame-ancestors 'none';upgrade-insecure-requests;" />
+  <!--Referrer Policy-->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <!-- Permissions Policy-->
+  <meta http-equiv="Permissions-Policy"
+    content="camera=(),microphone=(),geolocation=(),payment=(),usb=(),accelerometer=(),gyroscope=(),magnetometer=()" />
+  <!-- HSTS (somente se usar HTTPS, configurar no servidor) -->
+  <!-- <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains"> -->
+  <!--Favicon-->
+  <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" />
+  <!--Celestial Flow-->
+  <link rel="stylesheet" href="./celestial-flow/css/fonts.css">
+  <link rel="stylesheet" href="./celestial-flow/css/reset.css">
+  <link rel="stylesheet" href="./celestial-flow/css/themes.css">
+  <link rel="stylesheet" href="./celestial-flow/css/globals.css">
+  <link rel="stylesheet" href="./celestial-flow/css/layout.css">
+  <link rel="stylesheet" href="./celestial-flow/css/spacing.css">
+  <link rel="stylesheet" href="./celestial-flow/css/typography.css">
+  <link rel="stylesheet" href="./celestial-flow/css/components.css">
+  <link rel="stylesheet" href="./celestial-flow/css/forms.css">
+  <link rel="stylesheet" href="./celestial-flow/css/overlays.css">
+  <link rel="stylesheet" href="./celestial-flow/css/structure.css">
+  <link rel="stylesheet" href="./celestial-flow/css/decorative.css">
+  <link rel="stylesheet" href="./celestial-flow/css/appearance.css">
+  <link rel="stylesheet" href="./celestial-flow/css/animations.css">
+  <!--Celestial Flow JS-->
+  <script src="./celestial-flow/celestial-flow/js/celestial-flow.js" defer></script>
+  <!--CSS-->
+  <link rel="stylesheet" href="./docs/styles/index.css" />
+  <!--Scripts-->
+  <script type="module" src="./docs/dist/main.js"></script>
+</head>
+
+<html>
+<!-- Navbar -------------------------------------------------------->
+<header class="navbar">
+  <div class="navbar__content">
+    <a href="./index.html" class="navbar__logo">Celestial Flow</a>
+
+    <ul class="navbar__menu" id="navbar-menu">
+      <li><a href="./docs/pages/docs/index.html">Docs</a></li>
+      <li><a href="">GitHub</a></li>
+    </ul>
+
+    <div class="select theme-selector">
+      <button class="select__btn" type="button">Light</button>
+      <div class="select__menu">
+        <button class="select__item" type="button" data-value="light"><span class="theme-preview"
+            data-theme="light"></span>Light</button>
+        <button class="select__item" type="button" data-value="dark"><span class="theme-preview"
+            data-theme="dark"></span>Dark</button>
+        <button class="select__item" type="button" data-value="ink"><span class="theme-preview"
+            data-theme="ink"></span>Ink</button>
+        <!-- demais temas -->
+      </div>
+    </div>
+
+    <button class="navbar__toggle" type="button" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<!--main------------------------------------------------------------>
+<main data-theme="light">
+  <!-- Hero -------------------------------------------------------->
+  <section class="section-lg fx-glow-lg">
+    <div class="container center">
+      <span class="text-overline">Theme-First CSS Framework</span>
+      <h1 class="title-hero width-650">Build elegant interfaces with reusable primitives</h1>
+      <p class="width-500 mb-lg">Celestial Flow ships with a complete theming layer, a concise class syntax, and a
+        polished look by default.</p>
+      <div class="row">
+        <a href="./docs/pages/docs/index.html" class="btn">Documentation</a>
+        <a href="" class="btn-outline">View GitHub</a>
+      </div>
+      <p class="text-size-sm mt">Open Source · Zero dependencies</p>
+    </div>
+  </section>
+
+  <!-- Theme System -------------------------------------------------->
+  <section class="section fx-dots">
+    <div class="container center">
+      <span class="text-overline">Theme System</span>
+      <h2 class="title text-spacing-sm width-600 mt-sm mb">Built theme-first, not styled last.</h2>
+      <p class="mb-lg">Celestial Flow ships with a complete theming layer from day one — switch identity instantly,
+        without touching a single component.</p>
+
+      <!--theme-selector-->
+      <div class="select theme-selector mb-lg">
+        <button class="select__btn" type="button">Light</button>
+        <div class="select__menu">
+          <button class="select__item" type="button" data-value="light"><span class="theme-preview"
+              data-theme="light"></span>Light</button>
+          <button class="select__item" type="button" data-value="dark"><span class="theme-preview"
+              data-theme="dark"></span>Dark</button>
+          <button class="select__item" type="button" data-value="ink"><span class="theme-preview"
+              data-theme="ink"></span>Ink</button>
+          <!-- ... demais temas ... -->
+        </div>
+      </div>
+
+      <div class="theme-demo float border-pulse">
+        <div class="theme-demo__navbar">
+          <div class="theme-demo__logo"></div>
+          <div class="theme-demo__menu"></div>
+        </div>
+
+        <div class="theme-demo__content">
+          <div class="theme-demo__card card text-left">
+            <div class="theme-demo__accent corner-dot"></div>
+            <h4>Dashboard</h4>
+            <p>Colors, surfaces and components update automatically.</p>
+            <div class="mt row">
+              <button>Button</button>
+              <button class="btn-outline">Button Ghost</button>
+            </div>
+          </div>
+
+          <div class="theme-demo__stats">
+            <div class="theme-demo__stat card text-left">
+              <h5>Multiple themes</h5>
+              <p class="text-size-sm">Switch identity instantly.</p>
+            </div>
+            <div class="theme-demo__stat card text-left">
+              <h5>Composable utilities</h5>
+              <p class="text-size-sm">Mix and match freely.</p>
+            </div>
+            <div class="theme-demo__stat card text-left">
+              <h5>Fully responsive</h5>
+              <p class="text-size-sm">Looks great everywhere.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Concise Syntax -------------------------------------------------->
+  <section class="section fx-glow">
+    <div class="container">
+      <div class="grid">
+        <div class="col-5">
+          <span class="text-overline">Concise by Design</span>
+          <h2 class="title text-spacing-sm mt-sm mb">Less markup. The same polish.</h2>
+          <p class="mb">Celestial Flow favors short, composable class names over long utility chains — so your markup
+            stays <span class="text-underline">readable</span>, even as your interface grows.</p>
+
+          <p class="text-size-lg mb-sm mt-lg">✓ Reusable utilities</p>
+          <div class="divider-line"></div>
+          <p class="text-size-lg mb-sm mt">✓ Minimal abstraction</p>
+          <div class="divider-line"></div>
+          <p class="text-size-lg mb-sm mt">✓ Responsive by default</p>
+          <div class="divider-line"></div>
+          <p class="text-size-lg mt">✓ Theme-ready variables</p>
+        </div>
+
+        <div class="col-7">
+          <pre class="card-code"><code>&lt;div class="card fx-glow"&gt;
+  &lt;span class="text-overline"&gt;Featured&lt;/span&gt;
+  &lt;h3&gt;Celestial Flow&lt;/h3&gt;
+  &lt;p&gt;Built for clarity.&lt;/p&gt;
+  &lt;button&gt;Explore&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="divider">✦</div>
+  </div>
+
+  <!-- Type Scale --------------------------------------------------->
+  <section class="section">
+    <div class="container">
+      <div class="grid">
+        <div class="col-4">
+          <span class="text-overline text-bracket">Type Scale</span>
+          <span class="tag mt-sm">9 sizes</span>
+          <h2 class="title text-spacing-sm mt-sm mb">A scale that holds its weight from caption to headline.</h2>
+          <p>Nine sizes, fluid by default — from the smallest label to a title built for impact.</p>
+        </div>
+        <div class="col-8">
+          <div class="type-scale">
+            <div class="type-scale__row"><span class="text-size-xs">Aa</span><code
+                class="text-size-xs">.text-size-xs</code></div>
+            <div class="type-scale__row"><span class="text-size-sm">Aa</span><code
+                class="text-size-xs">.text-size-sm</code></div>
+            <div class="type-scale__row"><span class="text-size-md">Aa</span><code
+                class="text-size-xs">.text-size-md</code></div>
+            <div class="type-scale__row"><span class="text-size-lg">Aa</span><code
+                class="text-size-xs">.text-size-lg</code></div>
+            <div class="type-scale__row"><span class="text-size-xl">Aa</span><code
+                class="text-size-xs">.text-size-xl</code></div>
+            <div class="type-scale__row"><span class="text-size-2xl">Aa</span><code
+                class="text-size-xs">.text-size-2xl</code></div>
+            <div class="type-scale__row"><span class="text-size-3xl">Aa</span><code
+                class="text-size-xs">.text-size-3xl</code></div>
+            <div class="type-scale__row"><span class="text-size-4xl">Aa</span><code
+                class="text-size-xs">.text-size-4xl</code></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="divider-fade"></div>
+  </div>
+
+  <!-- Effects -------------------------------------------------------->
+  <section class="section-sm">
+    <div class="container">
+      <div class="grid">
+        <div class="col-4">
+          <span class="text-overline text-bracket">Depth &amp; Texture</span>
+          <span class="tag mt-sm">4 effects</span>
+          <h2 class="title text-spacing-sm mt-sm">Layer effects without leaving CSS.</h2>
+        </div>
+        <div class="col-8 row gap-md">
+          <div class="fx-swatch fx-glow"><span class="text-size-xs text-overline">Glow</span></div>
+          <div class="fx-swatch fx-grid"><span class="text-size-xs text-overline">Grid</span></div>
+          <div class="fx-swatch fx-dots"><span class="text-size-xs text-overline">Dots</span></div>
+          <div class="fx-swatch fx-gradient"><span class="text-size-xs text-overline">Gradient</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cta -------------------------------------------------------->
+  <section class="card accent center text-center p-lg container">
+    <span class="text-overline">Get Started</span>
+    <h2 class="title text-spacing-sm width-600 mt-sm mb">Start building with Celestial Flow today</h2>
+    <p class="width-500 mb-lg">A modern CSS system designed to scale real interfaces, not just pages.</p>
+    <div class="row">
+      <button class="surface-2 text-accent">Get Started</button>
+      <div class="divider-vertical"></div>
+      <a class="btn-outline" href="./docs/pages/docs/index.html">Explore Docs</a>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -------------------------------------------------------->
+<footer class="footer">
+  <p>Celestial Flow — Modern UI framework for clean interfaces.</p>
+  <div>
+    <a href="./docs/pages/docs/index.html">Docs</a>
+    <a href="">GitHub</a>
+  </div>
+</footer>
+
+
+</html>
