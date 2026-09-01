@@ -47,14 +47,14 @@
   <link rel="stylesheet" href="./celestial-flow/css/appearance.css">
   <link rel="stylesheet" href="./celestial-flow/css/animations.css">
   <!--Celestial Flow JS-->
-  <script src="./celestial-flow/celestial-flow/js/celestial-flow.js" defer></script>
+  <script src="./celestial-flow/js/celestial-flow.js" defer></script>
   <!--CSS-->
   <link rel="stylesheet" href="./docs/styles/index.css" />
   <!--Scripts-->
   <script type="module" src="./docs/dist/main.js"></script>
 </head>
 
-<html>
+<html data-theme="light">
 <!-- Navbar -------------------------------------------------------->
 <header class="navbar">
   <div class="navbar__content">
@@ -65,6 +65,7 @@
       <li><a href="">GitHub</a></li>
     </ul>
 
+    <!--theme-selector-->
     <div class="select theme-selector">
       <button class="select__btn" type="button">Light</button>
       <div class="select__menu">
@@ -72,9 +73,38 @@
             data-theme="light"></span>Light</button>
         <button class="select__item" type="button" data-value="dark"><span class="theme-preview"
             data-theme="dark"></span>Dark</button>
+        <button class="select__item" type="button" data-value="light-teal"><span class="theme-preview"
+            data-theme="light-teal"></span>Light Teal</button>
+        <button class="select__item" type="button" data-value="dark-teal"><span class="theme-preview"
+            data-theme="dark-teal"></span>Dark Teal</button>
+        <button class="select__item" type="button" data-value="nebula-light"><span class="theme-preview"
+            data-theme="nebula-light"></span>Nebula Light</button>
+        <button class="select__item" type="button" data-value="nebula-dark"><span class="theme-preview"
+            data-theme="nebula-dark"></span>Nebula Dark</button>
+        <button class="select__item" type="button" data-value="coffee"><span class="theme-preview"
+            data-theme="coffee"></span>Coffee</button>
+        <button class="select__item" type="button" data-value="paper"><span class="theme-preview"
+            data-theme="paper"></span>Paper</button>
+        <button class="select__item" type="button" data-value="neumorphism"><span class="theme-preview"
+            data-theme="neumorphism"></span>Neumorphism</button>
+        <button class="select__item" type="button" data-value="glass"><span class="theme-preview"
+            data-theme="glass"></span>Glass</button>
+        <button class="select__item" type="button" data-value="forest"><span class="theme-preview"
+            data-theme="forest"></span>Forest</button>
+        <button class="select__item" type="button" data-value="nord"><span class="theme-preview"
+            data-theme="nord"></span>Nord</button>
+        <button class="select__item" type="button" data-value="sakura"><span class="theme-preview"
+            data-theme="sakura"></span>Sakura</button>
+        <button class="select__item" type="button" data-value="gold"><span class="theme-preview"
+            data-theme="gold"></span>Gold</button>
+        <button class="select__item" type="button" data-value="light-slate-mist"><span class="theme-preview"
+            data-theme="light-slate-mist"></span>Light Slate Mist</button>
+        <button class="select__item" type="button" data-value="dark-slate-mist"><span class="theme-preview"
+            data-theme="dark-slate-mist"></span>Dark Slate Mist</button>
+        <button class="select__item" type="button" data-value="blacksteel"><span class="theme-preview"
+            data-theme="blacksteel"></span>Blacksteel</button>
         <button class="select__item" type="button" data-value="ink"><span class="theme-preview"
             data-theme="ink"></span>Ink</button>
-        <!-- demais temas -->
       </div>
     </div>
 
@@ -83,7 +113,7 @@
 </header>
 
 <!--main------------------------------------------------------------>
-<main data-theme="light">
+<main>
   <!-- Hero -------------------------------------------------------->
   <section class="section-lg fx-glow-lg">
     <div class="container center">
@@ -108,16 +138,45 @@
         without touching a single component.</p>
 
       <!--theme-selector-->
-      <div class="select theme-selector mb-lg">
+      <div class="select theme-selector mb-md">
         <button class="select__btn" type="button">Light</button>
         <div class="select__menu">
           <button class="select__item" type="button" data-value="light"><span class="theme-preview"
               data-theme="light"></span>Light</button>
           <button class="select__item" type="button" data-value="dark"><span class="theme-preview"
               data-theme="dark"></span>Dark</button>
+          <button class="select__item" type="button" data-value="light-teal"><span class="theme-preview"
+              data-theme="light-teal"></span>Light Teal</button>
+          <button class="select__item" type="button" data-value="dark-teal"><span class="theme-preview"
+              data-theme="dark-teal"></span>Dark Teal</button>
+          <button class="select__item" type="button" data-value="nebula-light"><span class="theme-preview"
+              data-theme="nebula-light"></span>Nebula Light</button>
+          <button class="select__item" type="button" data-value="nebula-dark"><span class="theme-preview"
+              data-theme="nebula-dark"></span>Nebula Dark</button>
+          <button class="select__item" type="button" data-value="coffee"><span class="theme-preview"
+              data-theme="coffee"></span>Coffee</button>
+          <button class="select__item" type="button" data-value="paper"><span class="theme-preview"
+              data-theme="paper"></span>Paper</button>
+          <button class="select__item" type="button" data-value="neumorphism"><span class="theme-preview"
+              data-theme="neumorphism"></span>Neumorphism</button>
+          <button class="select__item" type="button" data-value="glass"><span class="theme-preview"
+              data-theme="glass"></span>Glass</button>
+          <button class="select__item" type="button" data-value="forest"><span class="theme-preview"
+              data-theme="forest"></span>Forest</button>
+          <button class="select__item" type="button" data-value="nord"><span class="theme-preview"
+              data-theme="nord"></span>Nord</button>
+          <button class="select__item" type="button" data-value="sakura"><span class="theme-preview"
+              data-theme="sakura"></span>Sakura</button>
+          <button class="select__item" type="button" data-value="gold"><span class="theme-preview"
+              data-theme="gold"></span>Gold</button>
+          <button class="select__item" type="button" data-value="light-slate-mist"><span class="theme-preview"
+              data-theme="light-slate-mist"></span>Light Slate Mist</button>
+          <button class="select__item" type="button" data-value="dark-slate-mist"><span class="theme-preview"
+              data-theme="dark-slate-mist"></span>Dark Slate Mist</button>
+          <button class="select__item" type="button" data-value="blacksteel"><span class="theme-preview"
+              data-theme="blacksteel"></span>Blacksteel</button>
           <button class="select__item" type="button" data-value="ink"><span class="theme-preview"
               data-theme="ink"></span>Ink</button>
-          <!-- ... demais temas ... -->
         </div>
       </div>
 
