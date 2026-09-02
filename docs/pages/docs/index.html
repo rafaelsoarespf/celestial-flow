@@ -47,170 +47,17 @@
   <link rel="stylesheet" href="../../../celestial-flow/css/appearance.css">
   <link rel="stylesheet" href="../../../celestial-flow/css/animations.css">
   <!--Celestial Flow JS-->
-  <script src="./celestial-flow/js/celestial-flow.js" defer></script>
+  <script src="../../../celestial-flow/js/celestial-flow.js" defer></script>
   <!--CSS-->
   <link rel="stylesheet" href="./docs/styles/index.css" />
   <!--Scripts-->
-  <script type="module" src="./docs/dist/main.js"></script>
+  <script type="module" src="../../dist/main.js"></script>
 </head>
 
 <html data-theme="light">
 <div class="sidebar-layout">
   <!-- Sidebar -------------------------------------------------------->
-  <aside class="sidebar">
-    <div class="sidebar__header">
-      <a href="./index.html" class="navbar__logo">Celestial Flow</a>
-    </div>
-
-    <nav class="sidebar__menu">
-      <a href="./installation.html">Installation</a>
-      <a href="./themes.html">Themes</a>
-
-      <details class="tree">
-        <summary>Layout</summary>
-        <a href="./layout.html#container">Container</a>
-        <a href="./layout.html#section">Section</a>
-        <a href="./layout.html#grid">Grid</a>
-        <a href="./layout.html#row-column">Row &amp; Column</a>
-        <a href="./layout.html#alignment">Alignment</a>
-        <a href="./layout.html#position">Position</a>
-      </details>
-
-      <details class="tree">
-        <summary>Spacing</summary>
-        <a href="./spacing.html#margin">Margin</a>
-        <a href="./spacing.html#padding">Padding</a>
-        <a href="./spacing.html#gap">Gap</a>
-        <a href="./spacing.html#width">Width</a>
-        <a href="./spacing.html#height">Height</a>
-      </details>
-
-      <details class="tree">
-        <summary>Typography</summary>
-        <a href="./typography.html#title-text">Title, Subtitle &amp; Text</a>
-        <a href="./typography.html#overline">Overline</a>
-        <a href="./typography.html#underline">Underline</a>
-        <a href="./typography.html#weight">Weight</a>
-        <a href="./typography.html#letter-spacing">Letter Spacing</a>
-        <a href="./typography.html#decorative-text">Decorative Text</a>
-        <a href="./typography.html#bracket">Bracket</a>
-        <a href="./typography.html#text-stat">Text Stat</a>
-        <a href="./typography.html#alignment">Alignment</a>
-        <a href="./typography.html#color">Color</a>
-        <a href="./typography.html#size-scale">Size Scale</a>
-      </details>
-
-      <details class="tree">
-        <summary>Appearance</summary>
-        <a href="./appearance.html#surfaces">Surfaces</a>
-        <a href="./appearance.html#background">Background</a>
-        <a href="./appearance.html#border">Border</a>
-        <a href="./appearance.html#effects">Effects</a>
-      </details>
-
-      <details class="tree">
-        <summary>Decorative</summary>
-        <a href="./decorative.html#divider">Divider</a>
-        <a href="./decorative.html#frame-corners">Frame Corners</a>
-        <a href="./decorative.html#accent-stroke">Accent Stroke</a>
-        <a href="./decorative.html#ring">Ring</a>
-        <a href="./decorative.html#corner-dot">Corner Dot</a>
-      </details>
-
-      <details class="tree">
-        <summary>Animations</summary>
-        <a href="./animations.html#motion">Motion</a>
-        <a href="./animations.html#overlay-effects">Overlay Effects</a>
-        <a href="./animations.html#animated-border">Animated Border</a>
-        <a href="./animations.html#hover">Hover</a>
-        <a href="./animations.html#entrance">Entrance</a>
-        <a href="./animations.html#loading">Loading</a>
-        <a href="./animations.html#text">Text</a>
-      </details>
-
-      <details class="tree">
-        <summary>Components</summary>
-        <a href="./components.html#button">Button</a>
-        <a href="./components.html#card">Card</a>
-        <a href="./components.html#card-img">Card Image</a>
-        <a href="./components.html#card-code">Card Code</a>
-        <a href="./components.html#alert">Alert</a>
-        <a href="./components.html#toast">Toast</a>
-        <a href="./components.html#badge">Badge</a>
-        <a href="./components.html#tag">Tag</a>
-      </details>
-
-      <details class="tree">
-        <summary>Forms</summary>
-        <a href="./forms.html#field">Field</a>
-        <a href="./forms.html#switch">Switch</a>
-        <a href="./forms.html#input-group">Input Group</a>
-        <a href="./forms.html#select">Select</a>
-      </details>
-
-      <details class="tree">
-        <summary>Overlays &amp; Disclosure</summary>
-        <a href="./overlays.html#modal">Modal</a>
-        <a href="./overlays.html#toast">Toast</a>
-        <a href="./overlays.html#accordion">Accordion</a>
-        <a href="./overlays.html#tree">Tree</a>
-        <a href="./overlays.html#tabs">Tabs</a>
-        <a href="./overlays.html#tooltip">Tooltip</a>
-      </details>
-
-      <details class="tree">
-        <summary>Structure</summary>
-        <a href="./structure.html#navbar">Navbar</a>
-        <a href="./structure.html#sidebar">Sidebar</a>
-        <a href="./structure.html#footer">Footer</a>
-        <a href="./structure.html#panel">Panel</a>
-      </details>
-      </nav>
-
-      <div class="sidebar__footer">
-        <div class="select theme-selector">
-          <button class="select__btn" type="button">Light</button>
-          <div class="select__menu">
-            <button class="select__item" type="button" data-value="light"><span class="theme-preview"
-                data-theme="light"></span>Light</button>
-            <button class="select__item" type="button" data-value="dark"><span class="theme-preview"
-                data-theme="dark"></span>Dark</button>
-            <button class="select__item" type="button" data-value="light-teal"><span class="theme-preview"
-                data-theme="light-teal"></span>Light Teal</button>
-            <button class="select__item" type="button" data-value="dark-teal"><span class="theme-preview"
-                data-theme="dark-teal"></span>Dark Teal</button>
-            <button class="select__item" type="button" data-value="nebula-light"><span class="theme-preview"
-                data-theme="nebula-light"></span>Nebula Light</button>
-            <button class="select__item" type="button" data-value="nebula-dark"><span class="theme-preview"
-                data-theme="nebula-dark"></span>Nebula Dark</button>
-            <button class="select__item" type="button" data-value="coffee"><span class="theme-preview"
-                data-theme="coffee"></span>Coffee</button>
-            <button class="select__item" type="button" data-value="paper"><span class="theme-preview"
-                data-theme="paper"></span>Paper</button>
-            <button class="select__item" type="button" data-value="neumorphism"><span class="theme-preview"
-                data-theme="neumorphism"></span>Neumorphism</button>
-            <button class="select__item" type="button" data-value="glass"><span class="theme-preview"
-                data-theme="glass"></span>Glass</button>
-            <button class="select__item" type="button" data-value="forest"><span class="theme-preview"
-                data-theme="forest"></span>Forest</button>
-            <button class="select__item" type="button" data-value="nord"><span class="theme-preview"
-                data-theme="nord"></span>Nord</button>
-            <button class="select__item" type="button" data-value="sakura"><span class="theme-preview"
-                data-theme="sakura"></span>Sakura</button>
-            <button class="select__item" type="button" data-value="gold"><span class="theme-preview"
-                data-theme="gold"></span>Gold</button>
-            <button class="select__item" type="button" data-value="light-slate-mist"><span class="theme-preview"
-                data-theme="light-slate-mist"></span>Light Slate Mist</button>
-            <button class="select__item" type="button" data-value="dark-slate-mist"><span class="theme-preview"
-                data-theme="dark-slate-mist"></span>Dark Slate Mist</button>
-            <button class="select__item" type="button" data-value="blacksteel"><span class="theme-preview"
-                data-theme="blacksteel"></span>Blacksteel</button>
-            <button class="select__item" type="button" data-value="ink"><span class="theme-preview"
-                data-theme="ink"></span>Ink</button>
-          </div>
-        </div>
-      </div>
-  </aside>
+  <aside class="sidebar doc-sidebar"></aside>
 
 
   <!--main------------------------------------------------------------>
