@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--About Project-->
+  <title>Celestial Flow</title>
+  <meta name="description" content="Modern CSS framework focused on elegance, responsiveness and clean design" />
+  <meta name="author" content="Rafael" />
+  <meta name="keywords" content="css, framework, responsive, modern ui, frontend, celestial-flow" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Celestial Flow" />
+  <meta property="og:description" content="Modern CSS framework focused on elegance and responsive design." />
+  <meta property="og:type" content="website" />
+
+  <!--Theme-->
+  <meta name="theme-color" content="#121212" />
+
+  <!--Content Security Policy (CSP)-->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self';script-src 'self';style-src 'self' 'unsafe-inline';img-src 'self' data: blob:;font-src 'self' data:;connect-src 'self' https: ws: wss:;object-src 'none';base-uri 'self';form-action 'self';frame-ancestors 'none';upgrade-insecure-requests;" />
+  <!--Referrer Policy-->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <!-- Permissions Policy-->
+  <meta http-equiv="Permissions-Policy"
+    content="camera=(),microphone=(),geolocation=(),payment=(),usb=(),accelerometer=(),gyroscope=(),magnetometer=()" />
+  <!-- HSTS (somente se usar HTTPS, configurar no servidor) -->
+  <!-- <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains"> -->
+  <!--Favicon-->
+  <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" />
+  <!--Celestial Flow-->
+  <link rel="stylesheet" href="../../../celestial-flow/css/fonts.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/reset.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/themes.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/globals.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/layout.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/spacing.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/typography.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/components.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/forms.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/overlays.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/structure.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/decorative.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/appearance.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/animations.css">
+  <!--Celestial Flow JS-->
+  <script src="../../../celestial-flow/js/celestial-flow.js" defer></script>
+  <!--CSS-->
+  <link rel="stylesheet" href="./docs/styles/index.css" />
+  <!--Scripts-->
+  <script type="module" src="../../dist/main.js"></script>
+</head>
+
+<div class="sidebar-layout">
+  <aside class="sidebar doc-sidebar"></aside>
+  <main class="content">
+    <button class="sidebar__toggle" type="button" aria-label="Toggle sidebar">☰</button>
+
+    <!--hero ---------------------------------------------------------->
+    <section class="section-sm fx-glow center container">
+      <span class="text-overline">Documentation</span>
+      <h1 class="text-size-4xl text-spacing-sm mt-sm mb">Spacing</h1>
+      <p class="width-600 center-self">
+        Margin, padding, gap, and fixed width/height scales for consistent spacing across your project.
+      </p>
+    </section>
+
+    <!--margin---------------------------------------------------->
+    <section class="section-sm">
+      <div class="container">
+        <span class="text-overline" id="margin">Margin</span>
+        <h2 class="text-spacing-sm mt-sm mb">Margin</h2>
+        <p class="mb">Directional margin utilities, each with five sizes. The unsuffixed class
+          (<code>.mt</code>, <code>.mb</code>...) is the base size, 1rem.</p>
+        <pre class="card-code"><code>&lt;div class="mt mb-lg"&gt;
+  ...
+&lt;/div&gt;</code></pre>
+
+        <table class="mt">
+          <thead>
+            <tr>
+              <th>Direction</th>
+              <th><code>-none</code></th>
+              <th><code>-sm</code></th>
+              <th>base</th>
+              <th><code>-md</code></th>
+              <th><code>-lg</code></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Top</td>
+              <td><code>.mt-none</code></td>
+              <td><code>.mt-sm</code></td>
+              <td><code>.mt</code></td>
+              <td><code>.mt-md</code></td>
+              <td><code>.mt-lg</code></td>
+            </tr>
+            <tr>
+              <td>Bottom</td>
+              <td><code>.mb-none</code></td>
+              <td><code>.mb-sm</code></td>
+              <td><code>.mb</code></td>
+              <td><code>.mb-md</code></td>
+              <td><code>.mb-lg</code></td>
+            </tr>
+            <tr>
+              <td>Left</td>
+              <td><code>.ml-none</code></td>
+              <td><code>.ml-sm</code></td>
+              <td><code>.ml</code></td>
+              <td><code>.ml-md</code></td>
+              <td><code>.ml-lg</code></td>
+            </tr>
+            <tr>
+              <td>Right</td>
+              <td><code>.mr-none</code></td>
+              <td><code>.mr-sm</code></td>
+              <td><code>.mr</code></td>
+              <td><code>.mr-md</code></td>
+              <td><code>.mr-lg</code></td>
+            </tr>
+            <tr>
+              <td>All sides</td>
+              <td><code>.m-none</code></td>
+              <td><code>.m-sm</code></td>
+              <td><code>.m</code></td>
+              <td><code>.m-md</code></td>
+              <td><code>.m-lg</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!--padding---------------------------------------------------->
+    <section class="section-sm fx-dots">
+      <div class="container">
+        <span class="text-overline" id="padding">Padding</span>
+        <h2 class="text-spacing-sm mt-sm mb">Padding</h2>
+        <p class="mb">Same pattern as margin, applied to padding instead. The unsuffixed class is the base
+          size, 1rem.</p>
+        <pre class="card-code"><code>&lt;div class="pt pb-lg"&gt;
+  ...
+&lt;/div&gt;</code></pre>
+
+        <table class="mt">
+          <thead>
+            <tr>
+              <th>Direction</th>
+              <th><code>-none</code></th>
+              <th><code>-sm</code></th>
+              <th>base</th>
+              <th><code>-md</code></th>
+              <th><code>-lg</code></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Top</td>
+              <td><code>.pt-none</code></td>
+              <td><code>.pt-sm</code></td>
+              <td><code>.pt</code></td>
+              <td><code>.pt-md</code></td>
+              <td><code>.pt-lg</code></td>
+            </tr>
+            <tr>
+              <td>Bottom</td>
+              <td><code>.pb-none</code></td>
+              <td><code>.pb-sm</code></td>
+              <td><code>.pb</code></td>
+              <td><code>.pb-md</code></td>
+              <td><code>.pb-lg</code></td>
+            </tr>
+            <tr>
+              <td>Left</td>
+              <td><code>.pl-none</code></td>
+              <td><code>.pl-sm</code></td>
+              <td><code>.pl</code></td>
+              <td><code>.pl-md</code></td>
+              <td><code>.pl-lg</code></td>
+            </tr>
+            <tr>
+              <td>Right</td>
+              <td><code>.pr-none</code></td>
+              <td><code>.pr-sm</code></td>
+              <td><code>.pr</code></td>
+              <td><code>.pr-md</code></td>
+              <td><code>.pr-lg</code></td>
+            </tr>
+            <tr>
+              <td>All sides</td>
+              <td><code>.p-none</code></td>
+              <td><code>.p-sm</code></td>
+              <td><code>.p</code></td>
+              <td><code>.p-md</code></td>
+              <td><code>.p-lg</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!--gap---------------------------------------------------->
+    <section class="section-sm">
+      <div class="container">
+        <span class="text-overline" id="gap">Gap</span>
+        <h2 class="text-spacing-sm mt-sm mb">Gap</h2>
+        <p class="mb">Spacing between flex or grid children — no direction, just a single scale.</p>
+        <pre class="card-code"><code>&lt;div class="gap-lg"&gt;
+  ...
+&lt;/div&gt;</code></pre>
+
+        <table class="mt">
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.gap-none</code></td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td><code>.gap-sm</code></td>
+              <td>.5rem</td>
+            </tr>
+            <tr>
+              <td><code>.gap</code></td>
+              <td>1rem</td>
+            </tr>
+            <tr>
+              <td><code>.gap-md</code></td>
+              <td>1.5rem</td>
+            </tr>
+            <tr>
+              <td><code>.gap-lg</code></td>
+              <td>3rem</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+<!--width---------------------------------------------------->
+<section class="section-sm fx-dots">
+  <div class="container">
+    <span class="text-overline" id="width">Width</span>
+    <h2 class="text-spacing-sm mt-sm mb">Width</h2>
+    <p class="mb">Fixed width classes, from 50px to 1200px.</p>
+
+    <div class="width-300 surface-2 p text-center mb">
+      <code>.width-300</code>
+    </div>
+    <pre class="card-code"><code>&lt;div class="width-300"&gt;
+  ...
+&lt;/div&gt;</code></pre>
+
+    <table class="mt">
+      <thead>
+        <tr><th>Class</th><th>Value</th><th>Class</th><th>Value</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>.width-50</code></td><td>50px</td><td><code>.width-650</code></td><td>650px</td></tr>
+        <tr><td><code>.width-100</code></td><td>100px</td><td><code>.width-700</code></td><td>700px</td></tr>
+        <tr><td><code>.width-150</code></td><td>150px</td><td><code>.width-750</code></td><td>750px</td></tr>
+        <tr><td><code>.width-200</code></td><td>200px</td><td><code>.width-800</code></td><td>800px</td></tr>
+        <tr><td><code>.width-250</code></td><td>250px</td><td><code>.width-850</code></td><td>850px</td></tr>
+        <tr><td><code>.width-300</code></td><td>300px</td><td><code>.width-900</code></td><td>900px</td></tr>
+        <tr><td><code>.width-350</code></td><td>350px</td><td><code>.width-950</code></td><td>950px</td></tr>
+        <tr><td><code>.width-400</code></td><td>400px</td><td><code>.width-1000</code></td><td>1000px</td></tr>
+        <tr><td><code>.width-450</code></td><td>450px</td><td><code>.width-1050</code></td><td>1050px</td></tr>
+        <tr><td><code>.width-500</code></td><td>500px</td><td><code>.width-1100</code></td><td>1100px</td></tr>
+        <tr><td><code>.width-550</code></td><td>550px</td><td><code>.width-1150</code></td><td>1150px</td></tr>
+        <tr><td><code>.width-600</code></td><td>600px</td><td><code>.width-1200</code></td><td>1200px</td></tr>
+        <tr><td><code>.width-full</code></td><td>100%, no cap</td><td></td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!--height---------------------------------------------------->
+<section class="section-sm">
+  <div class="container">
+    <span class="text-overline" id="height">Height</span>
+    <h2 class="text-spacing-sm mt-sm mb">Height</h2>
+    <p class="mb">Fixed height steps, plus viewport-relative options for full-page layouts.</p>
+
+    <div class="row gap mb">
+      <div class="height-100 surface-2 p text-center center-items width-150"><code>.height-100</code></div>
+      <div class="height-150 surface-2 p text-center center-items width-150"><code>.height-150</code></div>
+    </div>
+
+    <table class="mt">
+      <thead>
+        <tr><th>Class</th><th>Value</th><th>Class</th><th>Value</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>.height-50</code></td><td>50px</td><td><code>.height-450</code></td><td>450px</td></tr>
+        <tr><td><code>.height-100</code></td><td>100px</td><td><code>.height-500</code></td><td>500px</td></tr>
+        <tr><td><code>.height-150</code></td><td>150px</td><td><code>.height-550</code></td><td>550px</td></tr>
+        <tr><td><code>.height-200</code></td><td>200px</td><td><code>.height-600</code></td><td>600px</td></tr>
+        <tr><td><code>.height-250</code></td><td>250px</td><td><code>.height-full</code></td><td>100%</td></tr>
+        <tr><td><code>.height-300</code></td><td>300px</td><td><code>.height-100dvh</code></td><td>full viewport</td></tr>
+        <tr><td><code>.height-350</code></td><td>350px</td><td><code>.height-min-100dvh</code></td><td>min-height: 100dvh</td></tr>
+        <tr><td><code>.height-400</code></td><td>400px</td><td></td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+    <!--next steps---------------------------------------------------->
+    <section class="card accent center text-center p-lg container">
+      <span class="text-overline">Next</span>
+      <h2 class="text-spacing-sm width-600 mt-sm mb">Style your text</h2>
+      <p class="width-500 mb-lg">Type scale, weight, letter spacing, and native text elements.</p>
+      <a class="btn-outline" href="./typography.html">Typography →</a>
+    </section>
+  </main>
+</div>
+
+</html>
