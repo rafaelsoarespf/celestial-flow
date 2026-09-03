@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", init);
 function init() {
     initSidebar();
+    initThemeGallery();
 }
 export async function initSidebar() {
     const sidebar = document.querySelector(".doc-sidebar");
@@ -23,4 +24,16 @@ document.addEventListener("sidebar:loaded", () => {
     window.initSelect();
     window.initSidebar();
 });
+//theme.html
+//theme gallery ===================================
+function initThemeGallery() {
+    document.querySelectorAll(".theme-card[data-theme-set]").forEach((card) => {
+        card.addEventListener("click", () => {
+            const theme = card.dataset.themeSet;
+            if (!theme)
+                return;
+            document.body.setAttribute("data-theme", theme);
+        });
+    });
+}
 //# sourceMappingURL=main.js.map

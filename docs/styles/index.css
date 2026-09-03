@@ -83,3 +83,119 @@
   border: 1px solid var(--color-border);
   background: var(--color-surface-1);
 }
+
+
+
+/*themes.*/
+/*theme-gallery ------------------------------------------------*/
+.theme-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/*theme-card ------------------------------------------------*/
+.theme-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;        
+  justify-content: flex-start;
+  gap: .6rem;
+  width: 150px;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  min-width: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.theme-card:hover {
+  box-shadow: none;
+  transform: none;
+  opacity: 1;
+}
+
+.theme-card__preview {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--color-background);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  height: 95px;
+  flex-direction: column;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.theme-card:hover .theme-card__preview {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.theme-card__navbar {
+  height: 18px;
+  flex-shrink: 0;
+  background: var(--color-surface-2);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 8px;
+}
+
+.theme-card__logo {
+  width: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--color-accent);
+}
+
+.theme-card__navdot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-border);
+}
+
+.theme-card__navdot:first-of-type {
+  margin-left: auto;
+}
+
+.theme-card__body {
+  flex: 1;
+  justify-content: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.theme-card__title-line {
+  width: 70%;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--color-title);
+}
+
+.theme-card__text-line {
+  width: 45%;
+  height: 5px;
+  border-radius: 2px;
+  background: var(--color-text);
+}
+
+.theme-card__btn {
+  width: 34px;
+  height: 11px;
+  border-radius: 5px;
+  background: var(--color-accent);
+  margin-top: 4px;
+}
+
+.theme-card__name {
+  font: var(--font-text-sm);
+  color: var(--color-text);
+  padding-left: .1rem;
+}
