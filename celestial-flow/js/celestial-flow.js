@@ -82,6 +82,9 @@ function initSelect() {
   const selects = document.querySelectorAll(".select");
 
   selects.forEach((select) => {
+    if (select.dataset.initialized) return;
+    select.dataset.initialized = "true";
+
     const button = select.querySelector(".select__btn");
     const options = select.querySelectorAll(".select__item");
 

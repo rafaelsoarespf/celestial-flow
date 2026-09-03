@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--About Project-->
+  <title>Celestial Flow</title>
+  <meta name="description" content="Modern CSS framework focused on elegance, responsiveness and clean design" />
+  <meta name="author" content="Rafael" />
+  <meta name="keywords" content="css, framework, responsive, modern ui, frontend, celestial-flow" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Celestial Flow" />
+  <meta property="og:description" content="Modern CSS framework focused on elegance and responsive design." />
+  <meta property="og:type" content="website" />
+
+  <!--Theme-->
+  <meta name="theme-color" content="#121212" />
+
+  <!--Content Security Policy (CSP)-->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self';script-src 'self';style-src 'self' 'unsafe-inline';img-src 'self' data: blob:;font-src 'self' data:;connect-src 'self' https: ws: wss:;object-src 'none';base-uri 'self';form-action 'self';frame-ancestors 'none';upgrade-insecure-requests;" />
+  <!--Referrer Policy-->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <!-- Permissions Policy-->
+  <meta http-equiv="Permissions-Policy"
+    content="camera=(),microphone=(),geolocation=(),payment=(),usb=(),accelerometer=(),gyroscope=(),magnetometer=()" />
+  <!-- HSTS (somente se usar HTTPS, configurar no servidor) -->
+  <!-- <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains"> -->
+  <!--Favicon-->
+  <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" />
+  <!--Celestial Flow-->
+  <link rel="stylesheet" href="../../../celestial-flow/css/fonts.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/reset.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/themes.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/globals.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/layout.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/spacing.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/typography.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/components.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/forms.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/overlays.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/structure.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/decorative.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/appearance.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/animations.css">
+  <!--Celestial Flow JS-->
+  <script src="../../../celestial-flow/js/celestial-flow.js" defer></script>
+  <!--CSS-->
+  <link rel="stylesheet" href="./docs/styles/index.css" />
+  <!--Scripts-->
+  <script type="module" src="../../dist/main.js"></script>
+</head>
+
+<html data-theme="light">
+<div class="sidebar-layout">
+  <!-- sidebar ---------------------------------------------------------->
+  <aside class="sidebar doc-sidebar"></aside>
+  <!-- main ---------------------------------------------------------->
+  <main class="content">
+    <button class="sidebar__toggle" type="button" aria-label="Toggle sidebar">☰</button>
+
+    <!--hero ---------------------------------------------------------->
+    <section class="section-sm fx-glow center container">
+      <span class="text-overline">Documentation</span>
+      <h1 class="text-size-4xl text-spacing-sm mt-sm mb">Installation</h1>
+      <p class="width-600 center-self">
+        Celestial Flow has zero dependencies and no build step required.
+        Link the stylesheets, link the script, and you're ready to build.
+      </p>
+    </section>
+
+    <!--prerequisites---------------------------------------------------->
+    <section class="section-sm">
+      <div class="container">
+        <span class="text-overline" id="prerequisites">Prerequisites</span>
+        <h2 class="text-spacing-sm mt-sm mb">Before you start</h2>
+        <p class="mb">Celestial Flow is plain CSS and vanilla JavaScript — no Node, no package manager, no build
+          tools. You only need a code editor and a way to serve static files (a live-reload extension, or any
+          static host).</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="divider-fade"></div>
+    </div>
+
+    <!--add framework---------------------------------------------------->
+    <section class="section-sm">
+      <div class="container">
+        <span class="text-overline" id="add-framework">Step 1</span>
+        <h2 class="text-spacing-sm mt-sm mb">Add the framework to your project</h2>
+        <p class="mb">Place the <code>celestial-flow</code> folder — containing <code>css</code>,
+          <code>fonts</code>, and
+          <code>js</code> — inside your project. Your structure should look like this:
+        </p>
+        <pre class="card-code"><code>your-project/
+├── celestial-flow/
+│   ├── css/
+│   │   ├── reset.css
+│   │   ├── globals.css
+│   │   ├── themes.css
+│   │   ├── fonts.css
+│   │   ├── typography.css
+│   │   ├── layout.css
+│   │   ├── spacing.css
+│   │   ├── appearance.css
+│   │   ├── decorative.css
+│   │   ├── components.css
+│   │   ├── forms.css
+│   │   ├── overlays.css
+│   │   ├── structure.css
+│   │   └── animations.css
+│   ├── fonts/
+│   │   ├── sora/
+│   │   └── plus-jakarta-sans/
+│   └── js/
+│       └── celestial-flow.js
+└── index.html</code></pre>
+      </div>
+    </section>
+
+    <!--link framework---------------------------------------------------->
+    <section class="section-sm">
+      <div class="container">
+        <span class="text-overline" id="link-framework">Step 2</span>
+        <h2 class="text-spacing-sm mt-sm mb">Link the stylesheets and script</h2>
+        <p class="mb">Add everything to your <code>&lt;head&gt;</code>. Stylesheets must follow this order —
+          <code>reset.css</code> first, <code>animations.css</code> last, the rest following the cascade from base to
+          component-level styles. The script uses <code>defer</code> so it doesn't block page rendering; it powers the
+          theme selector, navbar, sidebar, panels, and the <code>select</code> component.
+        </p>
+        <pre class="card-code"><code>&lt;head&gt;
+  &lt;!-- reset --&gt;
+  &lt;link rel="stylesheet" href="celestial-flow/css/reset.css"&gt;
+
+  &lt;!-- base: tokens, themes, fonts --&gt;
+  &lt;link rel="stylesheet" href="celestial-flow/css/globals.css"&gt;
+  &lt;link rel="stylesheet" href="celestial-flow/css/themes.css"&gt;
+  &lt;link rel="stylesheet" href="celestial-flow/css/fonts.css"&gt;
+  &lt;link rel="stylesheet" href="celestial-flow/css/typography.css"&gt;
+
+  &lt;!-- utilities --&gt;
+  &lt;link rel="stylesheet" href="celestial-flow/css/layout.css"&gt;
+  &lt;link rel="stylesheet" href="celestial-flow/css/spacing.css"&gt;
+  &lt;link rel="stylesheet" href="celestial-flow/css/appearance.css"&gt;
+  &lt;link rel="stylesheet" href="celestial-flow/css/decorative.css"&gt;
+
+  &lt;!-- components --&gt;
+  &lt;link rel="stylesheet" href="celestial-flow/css/components.css"&gt;
+  &lt;link rel="stylesheet" href="celestial-flow/css/forms.css"&gt;
+  &lt;link rel="stylesheet" href="celestial-flow/css/overlays.css"&gt;
+  &lt;link rel="stylesheet" href="celestial-flow/css/structure.css"&gt;
+
+  &lt;!-- animations --&gt;
+  &lt;link rel="stylesheet" href="celestial-flow/css/animations.css"&gt;
+
+  &lt;!-- script --&gt;
+  &lt;script src="celestial-flow/js/celestial-flow.js" defer&gt;&lt;/script&gt;
+&lt;/head&gt;</code></pre>
+      </div>
+    </section>
+
+    <!--set a theme---------------------------------------------------->
+    <section class="section-sm">
+      <div class="container">
+        <span class="text-overline" id="set-a-theme">Step 3</span>
+        <h2 class="text-spacing-sm mt-sm mb">Set a theme</h2>
+        <p class="mb">Add a <code>data-theme</code> attribute to your <code>&lt;html&gt;</code> tag to set the
+          default theme. See the <a href="./themes.html" class="text-underline">Themes</a> page for the full
+          list.</p>
+        <pre class="card-code"><code>&lt;html data-theme="dark"&gt;</code></pre>
+      </div>
+    </section>
+
+    <!--next steps---------------------------------------------------->
+    <section class="card accent center text-center p-lg container">
+      <span class="text-overline">Next</span>
+      <h2 class="text-spacing-sm width-600 mt-sm mb">Explore the theme system</h2>
+      <p class="width-500 mb-lg">See every built-in theme and learn how to customize your own.</p>
+      <a class="btn-outline" href="./themes.html">Themes →</a>
+    </section>
+  </main>
+</div>
+</html>
