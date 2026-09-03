@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--About Project-->
+  <title>Celestial Flow</title>
+  <meta name="description" content="Modern CSS framework focused on elegance, responsiveness and clean design" />
+  <meta name="author" content="Rafael" />
+  <meta name="keywords" content="css, framework, responsive, modern ui, frontend, celestial-flow" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Celestial Flow" />
+  <meta property="og:description" content="Modern CSS framework focused on elegance and responsive design." />
+  <meta property="og:type" content="website" />
+
+  <!--Theme-->
+  <meta name="theme-color" content="#121212" />
+
+  <!--Content Security Policy (CSP)-->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self';script-src 'self';style-src 'self' 'unsafe-inline';img-src 'self' data: blob:;font-src 'self' data:;connect-src 'self' https: ws: wss:;object-src 'none';base-uri 'self';form-action 'self';frame-ancestors 'none';upgrade-insecure-requests;" />
+  <!--Referrer Policy-->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <!-- Permissions Policy-->
+  <meta http-equiv="Permissions-Policy"
+    content="camera=(),microphone=(),geolocation=(),payment=(),usb=(),accelerometer=(),gyroscope=(),magnetometer=()" />
+  <!-- HSTS (somente se usar HTTPS, configurar no servidor) -->
+  <!-- <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains"> -->
+  <!--Favicon-->
+  <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" />
+  <!--Celestial Flow-->
+  <link rel="stylesheet" href="../../../celestial-flow/css/fonts.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/reset.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/themes.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/globals.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/layout.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/spacing.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/typography.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/components.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/forms.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/overlays.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/structure.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/decorative.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/appearance.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/animations.css">
+  <!--Celestial Flow JS-->
+  <script src="../../../celestial-flow/js/celestial-flow.js" defer></script>
+  <!--CSS-->
+  <link rel="stylesheet" href="./docs/styles/index.css" />
+  <!--Scripts-->
+  <script type="module" src="../../dist/main.js"></script>
+</head>
+<html data-theme="light">
+<div class="sidebar-layout">
+  <!-- sidebar ---------------------------------------------------------->
+  <aside class="sidebar doc-sidebar"></aside>
+  <!-- main ---------------------------------------------------------->
+  <main class="content">
+    <button class="sidebar__toggle" type="button" aria-label="Toggle sidebar">☰</button>
+
+    <!--hero ---------------------------------------------------------->
+    <section class="section-sm fx-glow center container">
+      <span class="text-overline">Documentation</span>
+      <h1 class="text-size-4xl text-spacing-sm mt-sm mb">Layout</h1>
+      <p class="width-600 center-self">
+        Containers, sections, a percentage-based grid, and alignment utilities to structure any page.
+      </p>
+    </section>
+
+    <!--container---------------------------------------------------->
+    <section class="section-sm">
+      <div class="container">
+        <span class="text-overline" id="container">Container</span>
+        <h2 class="text-spacing-sm mt-sm mb">Container</h2>
+        <p class="mb">Caps content width at 1200px and centers it. Nearly every section in this framework wraps its
+          content in one.</p>
+        <div class="container card mt mb center-items">
+          <code>.container</code><span class="tag position-tr">1200px</span>
+        </div>
+        <pre class="card-code"><code>&lt;div class="container"&gt;
+  ...
+&lt;/div&gt;</code></pre>
+
+        <p class="mt-lg mb">Combine with a <a href="./spacing.html#width"
+            class="text-underline"><code>.width-N</code></a>
+          class to center a narrower box — <code>.container</code> supplies the centering, <code>.width-N</code> caps
+          the size below 1200px.</p>
+        <div class="container width-400 card mb center-items">
+          <span><code>.container.</code> + <code>.width-400</code></span> <span class="tag position-tr">400px</span>
+        </div>
+        <pre class="card-code"><code>&lt;div class="container width-400"&gt;
+  ...
+&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="divider-fade"></div>
+    </div>
+
+    <!--section---------------------------------------------------->
+    <section class="section-sm fx-dots">
+      <div class="container">
+        <span class="text-overline" id="section">Section</span>
+        <h2 class="text-spacing-sm mt-sm mb">Section</h2>
+        <p class="mb-lg">Vertical padding scale for page sections, from small dividers to full hero blocks. All
+          four are fluid — they scale with viewport width via <code>clamp()</code>.</p>
+
+        <div class="column gap-sm mb">
+          <div class="surface p text-center"><code>.section-sm</code></div>
+          <div class="surface p text-center"><code>.section</code></div>
+          <div class="surface p text-center"><code>.section-md</code></div>
+          <div class="surface p text-center"><code>.section-lg</code></div>
+        </div>
+
+        <pre class="card-code"><code>&lt;section class="section-sm"&gt;
+  ...
+&lt;/section&gt;</code></pre>
+      </div>
+    </section>
+
+    <!--grid---------------------------------------------------->
+    <section class="section-sm">
+      <div class="container">
+        <span class="text-overline" id="grid">Grid</span>
+        <h2 class="text-spacing-sm mt-sm mb">Grid</h2>
+        <p class="mb">A 12-column, percentage-based grid. Wrap columns in <code>.grid</code>, then size each
+          child
+          with <code>.col-1</code> through <code>.col-12</code>. Below 480px, every column stacks full-width
+          automatically.</p>
+        <div class="grid mb">
+          <div class="col-4 surface p text-center"><code>.col-4</code></div>
+          <div class="col-4 surface p text-center"><code>.col-4</code></div>
+          <div class="col-4 surface p text-center"><code>.col-4</code></div>
+        </div>
+        <pre class="card-code"><code>&lt;div class="grid"&gt;
+  &lt;div class="col-4"&gt;...&lt;/div&gt;
+  &lt;div class="col-4"&gt;...&lt;/div&gt;
+  &lt;div class="col-4"&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <p class="mb-sm mt-lg">Columns don't need to be equal:</p>
+        <div class="grid">
+          <div class="col-4 surface p text-center"><code>.col-4</code></div>
+          <div class="col-8 surface p text-center"><code>.col-8</code></div>
+        </div>
+
+        <p class="mb-sm mt-lg">Leave off <code>.col-N</code> and children split evenly on their own — useful when
+          you don't want to calculate a fraction for every item:</p>
+        <div class="grid">
+          <div class="surface p text-center">1</div>
+          <div class="surface p text-center">2</div>
+          <div class="surface p text-center">3</div>
+          <div class="surface p text-center">4</div>
+          <div class="surface p text-center">5</div>
+        </div>
+
+        <p class="mb-sm mt-lg">Mixing is fine too — items with <code>.col-N</code> take a fixed share, items
+          without it split whatever space remains:</p>
+        <div class="grid">
+          <div class="col-3 surface p text-center"><code>.col-3</code></div>
+          <div class="surface p text-center">no class — fills the rest</div>
+        </div>
+
+        <p class="mb-sm mt-lg">Full class reference:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Width</th>
+              <th>Class</th>
+              <th>Width</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.col-1</code></td>
+              <td>~8.3%</td>
+              <td><code>.col-7</code></td>
+              <td>~58.3%</td>
+            </tr>
+            <tr>
+              <td><code>.col-2</code></td>
+              <td>~16.6%</td>
+              <td><code>.col-8</code></td>
+              <td>~66.6%</td>
+            </tr>
+            <tr>
+              <td><code>.col-3</code></td>
+              <td>25%</td>
+              <td><code>.col-9</code></td>
+              <td>75%</td>
+            </tr>
+            <tr>
+              <td><code>.col-4</code></td>
+              <td>~33.3%</td>
+              <td><code>.col-10</code></td>
+              <td>~83.3%</td>
+            </tr>
+            <tr>
+              <td><code>.col-5</code></td>
+              <td>~41.6%</td>
+              <td><code>.col-11</code></td>
+              <td>~91.6%</td>
+            </tr>
+            <tr>
+              <td><code>.col-6</code></td>
+              <td>50%</td>
+              <td><code>.col-12</code></td>
+              <td>100%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="divider-fade"></div>
+
+
+    <!--row & column---------------------------------------------------->
+    <section class="section-sm fx-dots">
+      <div class="container">
+        <span class="text-overline" id="row-column">Row &amp; Column</span>
+        <h2 class="text-spacing-sm mt-sm mb">Row &amp; Column</h2>
+        <p class="mb">Simple flex wrappers when you don't need a 12-column grid — just items in a row or a
+          column, evenly gapped. Add <code>-reverse</code> to flip the order.</p>
+
+        <div class="grid mb">
+          <div class="col-6">
+            <p class="mb-sm"><code>.row</code></p>
+            <div class="row surface p">
+              <div class="surface-2 p-sm text-center">1</div>
+              <div class="surface-2 p-sm text-center">2</div>
+              <div class="surface-2 p-sm text-center">3</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <p class="mb-sm"><code>.column</code></p>
+            <div class="column surface p">
+              <div class="surface-2 p-sm text-center">1</div>
+              <div class="surface-2 p-sm text-center">2</div>
+              <div class="surface-2 p-sm text-center">3</div>
+            </div>
+          </div>
+        </div>
+
+        <pre class="card-code"><code>&lt;div class="row"&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;2&lt;/div&gt;
+  &lt;div&gt;3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="column"&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;2&lt;/div&gt;
+  &lt;div&gt;3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <p class="mb-sm mt-lg">Combine with <code>.center-items</code> to center items within the row instead of
+          stretching them across it:</p>
+        <div class="row center-items surface p mb-sm">
+          <div class="surface-2 p-sm text-center">1</div>
+          <div class="surface-2 p-sm text-center">2</div>
+          <div class="surface-2 p-sm text-center">3</div>
+        </div>
+        <pre class="card-code"><code>&lt;div class="row center-items"&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;2&lt;/div&gt;
+  &lt;div&gt;3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <!--alignment---------------------------------------------------->
+    <section class="section-sm">
+      <div class="container">
+        <span class="text-overline" id="alignment">Alignment</span>
+        <h2 class="text-spacing-sm mt-sm mb">Alignment</h2>
+        <p class="mb-lg">Five directions — <code>center</code>, <code>top</code>, <code>right</code>,
+          <code>bottom</code>, <code>left</code> — each with three variants that follow the same pattern:
+        </p>
+
+        <div class="grid mb-lg">
+          <!--card-center-->
+          <div class="card">
+            <h5 class="mb-sm"><code>.center</code></h5>
+            <p>Centers the element itself and its children.</p>
+          </div>
+          <!--card-center-items-->
+          <div class="card">
+            <h5 class="mb-sm"><code>.center-items</code></h5>
+            <p>Centers the children only.</p>
+          </div>
+          <div class="card">
+            <!--card-center-self-->
+            <h5 class="mb-sm"><code>.center-self</code></h5>
+            <p>Centers the element itself only.</p>
+          </div>
+        </div>
+
+        <p class="mb-sm">Live examples — one per direction:</p>
+        <div class="grid mb-lg">
+          <div class="col-4 height-150 surface top"><span class="tag">top</span></div>
+          <div class="col-4 height-150 surface center"><span class="tag">center</span></div>
+          <div class="col-4 height-150 surface bottom"><span class="tag">bottom</span></div>
+          <div class="col-6 height-150 surface left"><span class="tag">left</span></div>
+          <div class="col-6 height-150 surface right"><span class="tag">right</span></div>
+        </div>
+
+        <p class="mb-sm">Full class reference:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Direction</th>
+              <th>Base</th>
+              <th>Items</th>
+              <th>Self</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Center</td>
+              <td><code>.center</code></td>
+              <td><code>.center-items</code></td>
+              <td><code>.center-self</code></td>
+            </tr>
+            <tr>
+              <td>Center (horizontal)</td>
+              <td><code>.center-horizontal</code></td>
+              <td><code>.center-items-horizontal</code></td>
+              <td><code>.center-self-horizontal</code></td>
+            </tr>
+            <tr>
+              <td>Center (vertical)</td>
+              <td><code>.center-vertical</code></td>
+              <td><code>.center-items-vertical</code></td>
+              <td><code>.center-self-vertical</code></td>
+            </tr>
+            <tr>
+              <td>Top</td>
+              <td><code>.top</code></td>
+              <td><code>.top-items</code></td>
+              <td><code>.top-self</code></td>
+            </tr>
+            <tr>
+              <td>Right</td>
+              <td><code>.right</code></td>
+              <td><code>.right-items</code></td>
+              <td><code>.right-self</code></td>
+            </tr>
+            <tr>
+              <td>Bottom</td>
+              <td><code>.bottom</code></td>
+              <td><code>.bottom-items</code></td>
+              <td><code>.bottom-self</code></td>
+            </tr>
+            <tr>
+              <td>Left</td>
+              <td><code>.left</code></td>
+              <td><code>.left-items</code></td>
+              <td><code>.left-self</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <div class="divider-fade"></div>
+
+    <!--position---------------------------------------------------->
+    <!--position---------------------------------------------------->
+    <section class="section-sm fx-dots">
+      <div class="container">
+        <span class="text-overline" id="position">Position</span>
+        <h2 class="text-spacing-sm mt-sm mb">Position</h2>
+        <p class="mb-lg">Absolutely positions an element against its nearest positioned ancestor — the parent
+          needs <code>position: relative</code> (a <code>.card</code> already has this built in).</p>
+
+        <div class="grid">
+          <div class="col-3 card height-100">
+            <span class="position-tl badge">.position-tl</span>
+          </div>
+          <div class="col-3 card height-100">
+            <span class="position-t badge">.position-t</span>
+          </div>
+          <div class="col-3 card height-100">
+            <span class="position-tr badge">.position-tr</span>
+          </div>
+          <div class="col-3 card height-100">
+            <span class="position-r badge">.position-r</span>
+          </div>
+        </div>
+        <div class="grid mt">
+          <div class="col-3 card height-100">
+            <span class="position-bl badge">.position-bl</span>
+          </div>
+          <div class="col-3 card height-100">
+            <span class="position-b badge">.position-b</span>
+          </div>
+          <div class="col-3 card height-100">
+            <span class="position-br badge">.position-br</span>
+          </div>
+          <div class="col-3 card height-100">
+            <span class="position-l badge">.position-l</span>
+          </div>
+        </div>
+
+        <pre class="card-code"><code>&lt;div class="card"&gt;
+  &lt;span class="position-tr"&gt;...&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+    
+    <!--next steps---------------------------------------------------->
+    <section class="card accent center text-center p-lg container">
+      <span class="text-overline">Next</span>
+      <h2 class="text-spacing-sm width-600 mt-sm mb">Fine-tune your spacing</h2>
+      <p class="width-500 mb-lg">Margin, padding, gap, width and height scales.</p>
+      <a class="btn-outline" href="./spacing.html">Spacing →</a>
+    </section>
+  </main>
+</div>
+
+</html>
