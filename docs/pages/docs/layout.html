@@ -49,7 +49,7 @@
   <!--Celestial Flow JS-->
   <script src="../../../celestial-flow/js/celestial-flow.js" defer></script>
   <!--CSS-->
-  <link rel="stylesheet" href="./docs/styles/index.css" />
+  <link rel="stylesheet" href="../../../docs/styles/index.css" />
   <!--Scripts-->
   <script type="module" src="../../dist/main.js"></script>
 </head>
@@ -267,6 +267,99 @@
           <div class="surface-2 p-sm text-center">3</div>
         </div>
         <pre class="card-code"><code>&lt;div class="row center-items"&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;2&lt;/div&gt;
+  &lt;div&gt;3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <!--stretch---------------------------------------------------->
+    <section class="section-sm">
+      <div class="container">
+        <span class="text-overline" id="stretch">Stretch</span>
+        <h2 class="text-spacing-sm mt-sm mb">Stretch</h2>
+        <p class="mb">Makes children fill the full height (or width) of a <code>.row</code> or
+          <code>.column</code>, instead of only taking up their own content size.
+        </p>
+
+        <div class="grid mb">
+          <div class="col-6">
+            <p class="mb-sm"><code>.stretch-items</code></p>
+            <p class="text-sm mb-sm">Without it — items keep their own height:</p>
+            <div class="row height-100 surface p mb-sm" style="align-items: flex-start;">
+              <div class="surface-2 p-sm text-center">1</div>
+              <div class="surface-2 p-sm text-center">2</div>
+              <div class="surface-2 p-sm text-center">3</div>
+            </div>
+            <p class="text-sm mb-sm">With it — items fill the row:</p>
+            <div class="row stretch-items height-100 surface p">
+              <div class="surface-2 p-sm text-center">1</div>
+              <div class="surface-2 p-sm text-center">2</div>
+              <div class="surface-2 p-sm text-center">3</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <p class="mb-sm"><code>.stretch-self</code></p>
+            <p class="text-sm mb-sm">Just one item stretched, the rest stay put:</p>
+            <div class="row height-100 surface p doc-flex-start">
+              <div class="surface-2 p-sm text-center">1</div>
+              <div class="stretch-self surface-2 p-sm text-center">2</div>
+              <div class="surface-2 p-sm text-center">3</div>
+            </div>
+          </div>
+        </div>
+        <div class="grid">
+          <pre class="card-code"><code>&lt;div class="row stretch-items"&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;2&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+          <pre class="card-code mt-sm"><code>&lt;div class="row"&gt;
+  &lt;div class="stretch-self"&gt;1&lt;/div&gt;
+  &lt;div&gt;2&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </section>
+
+    <div class="divider-fade"></div>
+
+    <!--space---------------------------------------------------->
+    <section class="section-sm fx-dots">
+      <div class="container">
+        <span class="text-overline" id="space">Space</span>
+        <h2 class="text-spacing-sm mt-sm mb">Space</h2>
+        <p class="mb">Distributes children across the full width of a row, with the gaps controlled
+          automatically instead of a fixed <code>gap</code> value.</p>
+
+        <div class="column gap-sm mb">
+          <div>
+            <p class="mb-sm"><code>.space-between</code></p>
+            <div class="space-between surface p">
+              <div class="surface-2 p-sm text-center">1</div>
+              <div class="surface-2 p-sm text-center">2</div>
+              <div class="surface-2 p-sm text-center">3</div>
+            </div>
+          </div>
+          <div>
+            <p class="mb-sm"><code>.space-around</code></p>
+            <div class="space-around surface p">
+              <div class="surface-2 p-sm text-center">1</div>
+              <div class="surface-2 p-sm text-center">2</div>
+              <div class="surface-2 p-sm text-center">3</div>
+            </div>
+          </div>
+          <div>
+            <p class="mb-sm"><code>.space-evenly</code></p>
+            <div class="space-evenly surface p">
+              <div class="surface-2 p-sm text-center">1</div>
+              <div class="surface-2 p-sm text-center">2</div>
+              <div class="surface-2 p-sm text-center">3</div>
+            </div>
+          </div>
+        </div>
+
+        <pre class="card-code"><code>&lt;div class="space-between"&gt;
   &lt;div&gt;1&lt;/div&gt;
   &lt;div&gt;2&lt;/div&gt;
   &lt;div&gt;3&lt;/div&gt;

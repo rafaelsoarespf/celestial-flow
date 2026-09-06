@@ -199,3 +199,9 @@
   color: var(--color-text);
   padding-left: .1rem;
 }
+
+/*layout.html*/
+.doc-flex-start{
+  display: flex;
+  align-items: flex-start
+}
