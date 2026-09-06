@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--About Project-->
+  <title>Celestial Flow</title>
+  <meta name="description" content="Modern CSS framework focused on elegance, responsiveness and clean design" />
+  <meta name="author" content="Rafael" />
+  <meta name="keywords" content="css, framework, responsive, modern ui, frontend, celestial-flow" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Celestial Flow" />
+  <meta property="og:description" content="Modern CSS framework focused on elegance and responsive design." />
+  <meta property="og:type" content="website" />
+
+  <!--Theme-->
+  <meta name="theme-color" content="#121212" />
+
+  <!--Content Security Policy (CSP)-->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self';script-src 'self';style-src 'self' 'unsafe-inline';img-src 'self' data: blob:;font-src 'self' data:;connect-src 'self' https: ws: wss:;object-src 'none';base-uri 'self';form-action 'self';frame-ancestors 'none';upgrade-insecure-requests;" />
+  <!--Referrer Policy-->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <!-- Permissions Policy-->
+  <meta http-equiv="Permissions-Policy"
+    content="camera=(),microphone=(),geolocation=(),payment=(),usb=(),accelerometer=(),gyroscope=(),magnetometer=()" />
+  <!-- HSTS (somente se usar HTTPS, configurar no servidor) -->
+  <!-- <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains"> -->
+  <!--Favicon-->
+  <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" />
+  <!--Celestial Flow-->
+  <link rel="stylesheet" href="../../../celestial-flow/css/fonts.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/reset.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/themes.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/globals.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/layout.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/spacing.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/typography.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/components.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/forms.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/overlays.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/structure.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/decorative.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/appearance.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/animations.css">
+  <!--Celestial Flow JS-->
+  <script src="../../../celestial-flow/js/celestial-flow.js" defer></script>
+  <!--CSS-->
+  <link rel="stylesheet" href="./docs/styles/index.css" />
+  <!--Scripts-->
+  <script type="module" src="../../dist/main.js"></script>
+</head>
+
+<body>
+  <div class="sidebar-layout">
+    <aside class="sidebar doc-sidebar"></aside>
+
+    <main class="content">
+      <button class="sidebar__toggle" type="button" aria-label="Toggle sidebar">☰</button>
+
+      <!--hero ---------------------------------------------------------->
+      <section class="section-sm fx-glow center container">
+        <span class="text-overline">Documentation</span>
+        <h1 class="text-size-4xl text-spacing-sm mt-sm mb">Appearance</h1>
+        <p class="width-600 center-self">Color, depth, and texture — the classes that control how elements
+          look.</p>
+      </section>
+
+      <!--modifiers---------------------------------------------------->
+      <section class="section-sm">
+        <div class="container">
+          <span class="text-overline" id="modifiers">Modifiers</span>
+          <h2 class="text-spacing-sm mt-sm mb">Modifiers</h2>
+          <p class="mb-lg">Classes that override background, border, and text color at once — combine one
+            with almost any component (<code>.btn</code>, <code>.card</code>, <code>.badge</code>, <code>.tag</code>...)
+            to change its finish, instead of needing a dedicated variant class for every combination.</p>
+
+          <div class="grid mb-lg">
+            <!--surface-->
+            <div class="col-6 card surface">
+              <h4 class="mb-sm"><code>.surface</code></h4>
+              <p class="text-sm">Default layer — solid theme background, blurred.</p>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;div class="card surface"&gt;...&lt;/div&gt;</code></pre>
+            </div>
+            <!--surface-2-->
+            <div class="col-6 card surface-2">
+              <h4 class="mb-sm"><code>.surface-2</code></h4>
+              <p class="text-sm">Nested layer, sits visually on top of <code>.surface</code>.</p>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;div class="card surface-2"&gt;...&lt;/div&gt;</code></pre>
+            </div>
+            <!--ghost-->
+            <div class="col-6 card ghost">
+              <h4 class="mb-sm"><code>.ghost</code></h4>
+              <p class="text-sm">Outline only — no background, no blur.</p>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;div class="card ghost"&gt;...&lt;/div&gt;</code></pre>
+            </div>
+            <!--phantom-->
+            <div class="col-6 card phantom">
+              <h4 class="mb-sm"><code>.phantom</code></h4>
+              <p class="text-sm">Blur only — no background tint, for glass over busy content.</p>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;div class="card phantom"&gt;...&lt;/div&gt;</code></pre>
+            </div>
+            <!--soft-->
+            <div class="col-6 card soft">
+              <h4 class="mb-sm"><code>.soft</code></h4>
+              <p class="text-sm">Accent-tinted background, accent-colored text.</p>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;div class="card soft"&gt;...&lt;/div&gt;</code></pre>
+            </div>
+            <!--accent-->
+            <div class="col-6 card accent">
+              <h4 class="mb-sm"><code>.accent</code></h4>
+              <p class="text-sm">Solid accent block, text automatically flips to on-accent.</p>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;div class="card accent"&gt;...&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-fade"></div>
+
+      <!--background---------------------------------------------------->
+      <section class="section-sm fx-dots">
+        <div class="container">
+          <span class="text-overline" id="background">Background</span>
+          <h2 class="text-spacing-sm mt-sm mb">Background</h2>
+          <p class="mb">Background-only utilities — no border, no forced text color</p>
+
+          <div class="grid mb-lg">
+            <div class="col-4 bg-surface p text-center"><code>.bg-surface</code></div>
+            <div class="col-4 bg-surface-2 p text-center"><code>.bg-surface-2</code></div>
+            <div class="col-4 bg-soft p text-center"><code>.bg-soft</code></div>
+            <div class="col-4 bg-accent p text-center"><code>.bg-accent</code></div>
+            <div class="col-4 bg-glass p text-center"><code>.bg-glass</code></div>
+            <div class="col-4 bg p text-center"><code>.bg</code></div>
+          </div>
+
+          <pre class="card-code"><code>&lt;div class="bg-accent"&gt;...&lt;/div&gt;</code></pre>
+
+          <p class="mb-sm mt-lg">Fixed colors — independent of the active theme, each paired with a
+            readable text color automatically:</p>
+          <div class="grid mb-lg">
+            <p class="bg-red p-sm text-center">.bg-red</p>
+            <p class="bg-salmon p-sm text-center">.bg-salmon</p>
+            <p class="bg-orange p-sm text-center">.bg-orange</p>
+            <p class="bg-yellow p-sm text-center">.bg-yellow</p>
+            <p class="bg-lime p-sm text-center">.bg-lime</p>
+            <p class="bg-green p-sm text-center">.bg-green</p>
+          </div>
+          <div class="grid mb-lg">
+            <p class="bg-teal p-sm text-center">.bg-teal</p>
+            <p class="bg-cyan p-sm text-center">.bg-cyan</p>
+            <p class="bg-blue p-sm text-center">.bg-blue</p>
+            <p class="bg-indigo p-sm text-center">.bg-indigo</p>
+            <p class="bg-purple p-sm text-center">.bg-purple</p>
+            <p class="bg-pink p-sm text-center">.bg-pink</p>
+          </div>
+          <div class="grid mb-lg">
+            <p class="bg-brown p-sm text-center">.bg-brown</p>
+            <p class="bg-gray p-sm text-center">.bg-gray</p>
+            <p class="bg-black p-sm text-center">.bg-black</p>
+            <p class="bg-white p-sm text-center">.bg-white</p>
+          </div>
+
+          <p class="mb-sm">Metallic gradients:</p>
+          <div class="row gap-lg">
+            <p class="bg-gold p-sm text-center">.bg-gold</p>
+            <p class="bg-silver p-sm text-center">.bg-silver</p>
+            <p class="bg-bronze p-sm text-center">.bg-bronze</p>
+          </div>
+        </div>
+      </section>
+
+      <!--border---------------------------------------------------->
+      <section class="section-sm">
+        <div class="container">
+          <span class="text-overline" id="border">Border</span>
+          <h2 class="text-spacing-sm mt-sm mb">Border</h2>
+          <p class="mb">Directional borders, plus an accent and full color set for standalone use — no
+            background attached.</p>
+
+          <div class="grid mb">
+            <div class="col-4 surface p text-center"><code>.border-none</code></div>
+            <div class="col-4 border p text-center"><code>.border</code></div>
+            <div class="col-4 border border-accent p text-center"><code>.border-accent</code></div>
+          </div>
+
+          <p class="mb-sm">One side at a time:</p>
+          <div class="grid mb">
+            <div class="col-3 surface border-top p text-center"><code>.border-top</code></div>
+            <div class="col-3 surface border-right p text-center"><code>.border-right</code></div>
+            <div class="col-3 surface border-bottom p text-center"><code>.border-bottom</code></div>
+            <div class="col-3 surface border-left p text-center"><code>.border-left</code></div>
+          </div>
+
+          <pre class="card-code"><code>&lt;div class="border border-accent"&gt;...&lt;/div&gt;
+&lt;div class="border-bottom"&gt;...&lt;/div&gt;</code></pre>
+
+          <p class="mb-sm mt-lg">Colored borders — the same fixed colors and metallics as the
+            background utilities:</p>
+          <div class="grid mb-sm">
+            <p class="border border-red p-sm text-center text-red">.border-red</p>
+            <p class="border border-salmon p-sm text-center text-salmon">.border-salmon</p>
+            <p class="border border-orange p-sm text-center text-orange">.border-orange</p>
+            <p class="border border-yellow p-sm text-center text-yellow">.border-yellow</p>
+            <p class="border border-lime p-sm text-center text-lime">.border-lime</p>
+            <p class="border border-green p-sm text-center text-green">.border-green</p>
+          </div>
+          <div class="grid mb-sm">
+            <p class="border border-teal p-sm text-center text-teal">.border-teal</p>
+            <p class="border border-cyan p-sm text-center text-cyan">.border-cyan</p>
+            <p class="border border-blue p-sm text-center text-blue">.border-blue</p>
+            <p class="border border-indigo p-sm text-center text-indigo">.border-indigo</p>
+            <p class="border border-purple p-sm text-center text-purple">.border-purple</p>
+            <p class="border border-pink p-sm text-center text-pink">.border-pink</p>
+          </div>
+          <div class="grid mb-lg">
+            <p class="border border-brown p-sm text-center text-brown">.border-brown</p>
+            <p class="border border-gray p-sm text-center text-gray">.border-gray</p>
+            <p class="border border-black p-sm text-center text-black">.border-black</p>
+            <p class="border border-white p-sm text-center">.border-white</p>
+          </div>
+
+          <p class="mb-sm">Metallic borders:</p>
+          <div class="row gap-lg">
+            <p class="border border-gold p-sm text-center text-gold">.border-gold</p>
+            <p class="border border-silver p-sm text-center text-silver">.border-silver</p>
+            <p class="border border-bronze p-sm text-center text-bronze">.border-bronze</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <div class="divider-fade"></div>
+      </div>
+
+      <!--effects---------------------------------------------------->
+      <section class="section-sm fx-dots">
+        <div class="container">
+          <span class="text-overline" id="effects">Effects</span>
+          <h2 class="text-spacing-sm mt-sm mb">Effects</h2>
+          <p class="mb">Decorative background layers you can drop onto any element to add visual
+            interest.</p>
+
+          <div class="grid mb">
+            <div class="col-3 surface fx-glow-sm height-150 center-items"><code>.fx-glow-sm</code></div>
+            <div class="col-3 surface fx-glow height-150 center-items"><code>.fx-glow</code></div>
+            <div class="col-3 surface fx-glow-md height-150 center-items"><code>.fx-glow-md</code></div>
+            <div class="col-3 surface fx-glow-lg height-150 center-items"><code>.fx-glow-lg</code></div>
+          </div>
+
+          <div class="grid mb">
+            <div class="col-4 surface fx-grid height-150 center-items"><code>.fx-grid</code></div>
+            <div class="col-4 surface fx-dots height-150 center-items"><code>.fx-dots</code></div>
+            <div class="col-4 surface fx-gradient height-150 center-items"><code>.fx-gradient</code></div>
+          </div>
+
+          <pre class="card-code"><code>&lt;section class="fx-dots"&gt;
+  ...
+&lt;/section&gt;</code></pre>
+        </div>
+      </section>
+
+      <!--next steps---------------------------------------------------->
+      <section class="card accent center text-center p-lg container">
+        <span class="text-overline">Next</span>
+        <h2 class="text-spacing-sm width-600 mt-sm mb">Explore the component library</h2>
+        <p class="width-500 mb-lg">Buttons, cards, alerts, badges, and more.</p>
+        <a class="btn-outline" href="./components.html">Components →</a>
+      </section>
+    </main>
+  </div>
+</body>

@@ -69,6 +69,11 @@
   color: var(--color-on-accent);
 }
 
+.accent code {
+  background: color-mix(in srgb, var(--color-on-accent) 20%, transparent);
+  color: var(--color-on-accent);
+}
+
 /*background -------------------------------------------------*/
 .bg {
   background: var(--color-background);

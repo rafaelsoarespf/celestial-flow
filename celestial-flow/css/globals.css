@@ -145,10 +145,10 @@ button:disabled {
 }
 
 /*code ------------------------------------------------------*/
-code {
-  background: color-mix(in srgb, var(--color-accent) 20%, rgba(255, 255, 255, 0.06));
+  :not(pre) > code {
+  background: color-mix(in srgb, var(--color-accent) 20%, rgba(255,255,255,0.08));
   color: var(--color-accent);
-  padding: 0.2em 0.45em;
+  padding: 0.15em 0.30em;
   border-radius: var(--radius-sm);
   font-size: 0.95em;
   font-family: monospace;

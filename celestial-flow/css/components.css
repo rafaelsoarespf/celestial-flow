@@ -171,15 +171,6 @@
 }
 
 /* card-code ----------------------------------------------------------------------*/
-:not(pre) > code {
-  background: color-mix(in srgb, var(--color-accent) 20%, rgba(255,255,255,0.06));
-  color: var(--color-accent);
-  padding: 0.2em 0.45em;
-  border-radius: 6px;
-  font-size: 0.95em;
-  font-family: monospace;
-}
-
 pre:not(.card-code) {
   background: color-mix(in srgb, var(--color-accent) 35%, rgba(117,117,117,0.5));
   backdrop-filter: var(--blur);
