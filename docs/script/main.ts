@@ -5,8 +5,6 @@ function init(): void {
   initThemeGallery();
 }
 
-
-
 //initSidebar =============================================
 declare global {
   interface Window {

@@ -105,25 +105,6 @@
 .text-bracket::before { content: "["; margin-right: .3em; }
 .text-bracket::after { content: "]"; margin-left: .3em; }
 
-/*text-stat ----------------------------------------------------*/
-.text-stat {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.text-stat__number {
-  font: var(--font-title-hero);
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  line-height: 1;
-  color: var(--color-title);
-}
-
-.text-stat__label {
-  font: var(--font-text-sm);
-  color: var(--color-text);
-}
-
 /*alignment ------------------------------------------------------*/
 .text-center { text-align: center; }
 .text-left { text-align: left; }
