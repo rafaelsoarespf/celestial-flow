@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--About Project-->
+  <title>Celestial Flow</title>
+  <meta name="description" content="Modern CSS framework focused on elegance, responsiveness and clean design" />
+  <meta name="author" content="Rafael" />
+  <meta name="keywords" content="css, framework, responsive, modern ui, frontend, celestial-flow" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Celestial Flow" />
+  <meta property="og:description" content="Modern CSS framework focused on elegance and responsive design." />
+  <meta property="og:type" content="website" />
+
+  <!--Theme-->
+  <meta name="theme-color" content="#121212" />
+
+  <!--Content Security Policy (CSP)-->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self';script-src 'self' 'unsafe-inline';style-src 'self' 'unsafe-inline';img-src 'self' data: blob:;font-src 'self' data:;connect-src 'self' https: ws: wss:;object-src 'none';base-uri 'self';form-action 'self';frame-ancestors 'none';upgrade-insecure-requests;" />
+  <!--Referrer Policy-->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <!-- Permissions Policy-->
+  <meta http-equiv="Permissions-Policy"
+    content="camera=(),microphone=(),geolocation=(),payment=(),usb=(),accelerometer=(),gyroscope=(),magnetometer=()" />
+  <!-- HSTS (somente se usar HTTPS, configurar no servidor) -->
+  <!-- <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains"> -->
+  <!--Favicon-->
+  <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" />
+  <!--Celestial Flow-->
+  <link rel="stylesheet" href="../../../celestial-flow/css/fonts.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/reset.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/themes.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/globals.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/layout.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/spacing.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/typography.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/components.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/forms.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/overlays.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/structure.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/decorative.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/appearance.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/animations.css">
+  <!--Celestial Flow JS-->
+  <script src="../../../celestial-flow/js/celestial-flow.js" defer></script>
+  <!--CSS-->
+  <link rel="stylesheet" href="../../../docs/styles/index.css" />
+  <!--Scripts-->
+  <script type="module" src="../../dist/main.js"></script>
+</head>
+
+<div class="sidebar-layout">
+  <!-- sidebar ---------------------------------------------------------->
+  <aside class="sidebar doc-sidebar"></aside>
+  <!-- main ---------------------------------------------------------->
+  <main class="content">
+    <button class="sidebar__toggle" type="button" aria-label="Toggle sidebar">☰</button>
+
+    <!--hero ---------------------------------------------------------->
+    <section class="section-sm fx-glow center container">
+      <span class="text-overline">Documentation</span>
+      <h1 class="text-size-4xl text-spacing-sm mt-sm mb">Components</h1>
+      <p class="width-600 center-self">
+        Buttons, cards, alerts, badges and tags — the building blocks for most interfaces.
+      </p>
+    </section>
+
+    <!--button---------------------------------------------------->
+    <section class="section-sm">
+      <div class="container">
+        <span class="text-overline" id="button">Button</span>
+        <h2 class="text-spacing-sm mt-sm mb">Button</h2>
+        <p class="mb-lg">A native <code>&lt;button&gt;</code> needs no class at all — add <code>.btn</code> to give
+          a link or any other element the same look, then add one more class on top for a different finish.
+          <code>.btn-none</code> goes the other way and removes the button styling entirely:
+        </p>
+
+        <div class="grid mb-lg">
+          <div class="col-6 card">
+            <button class="center-self" type="button">button</button>
+            <pre class="card-code"><code>&lt;button&gt;button&lt;/button&gt;</code></pre>
+            <pre class="card-code"><code>&lt;button class="btn"&gt;button&lt;/button&gt;</code></pre>
+          </div>
+          <div class="col-6 card">
+            <button class="btn-outline center-self" type="button">.btn-outline</button>
+            <pre class="card-code"><code>&lt;button class="btn-outline"&gt;.btn-outline&lt;/button&gt;</code></pre>
+          </div>
+          <div class="col-6 card">
+            <button class="btn-glow center-self" type="button">.btn-glow</button>
+            <pre class="card-code"><code>&lt;button class="btn-glow"&gt;.btn-glow&lt;/button&gt;</code></pre>
+          </div>
+          <div class="col-6 card">
+            <button class="soft center-self" type="button">.soft</button>
+            <pre class="card-code"><code>&lt;button class="soft"&gt;.soft&lt;/button&gt;</code></pre>
+          </div>
+          <div class="col-6 card">
+            <button class="ghost center-self" type="button">.ghost</button>
+            <pre class="card-code"><code>&lt;button class="ghost"&gt;.ghost&lt;/button&gt;</code></pre>
+          </div>
+          <div class="col-6 card">
+            <button class="phantom center-self" type="button">.phantom</button>
+            <pre class="card-code"><code>&lt;button class="phantom"&gt;.phantom&lt;/button&gt;</code></pre>
+          </div>
+          <div class="col-6 card">
+            <button class="surface center-self" type="button">.surface</button>
+            <pre class="card-code"><code>&lt;button class="surface"&gt;.surface&lt;/button&gt;</code></pre>
+          </div>
+          <div class="col-6 card">
+            <button class="surface-2 center-self" type="button">.surface-2</button>
+            <pre class="card-code"><code>&lt;button class="surface-2"&gt;.surface-2&lt;/button&gt;</code></pre>
+          </div>
+          <div class="col-6 card">
+            <button class="accent center-self" type="button">.accent</button>
+            <pre class="card-code"><code>&lt;button class="accent"&gt;.accent&lt;/button&gt;</code></pre>
+          </div>
+          <div class="col-6 card">
+            <button class="btn-none center-self" type="button">.btn-none</button>
+            <pre class="card-code"><code>&lt;button class="btn-none"&gt;.btn-none&lt;/button&gt;</code></pre>
+          </div>
+          <div class="col-6 card">
+            <a class="btn soft center-self" href="#">.btn.soft</a>
+            <pre class="card-code"><code>&lt;a class="btn soft" href="#"&gt;.btn.soft&lt;/a&gt;</code></pre>
+          </div>
+        </div>
+
+        <p class="mt-lg mb-sm">Add <code>.disabled</code> or <code>aria-disabled="true"</code> to mute any of them:</p>
+        <div class="row gap-sm mb-lg">
+          <button disabled type="button">button</button>
+          <button class="btn" disabled type="button">.btn</button>
+          <button class="btn-outline" disabled type="button">.btn-outline</button>
+          <button class="btn-glow" disabled type="button">.btn-glow</button>
+          <button class="soft" disabled type="button">.soft</button>
+          <button class="ghost" disabled type="button">.ghost</button>
+          <button class="phantom" disabled type="button">.phantom</button>
+          <button class="surface" disabled type="button">.surface</button>
+          <button class="surface-2" disabled type="button">.surface-2</button>
+          <button class="accent" disabled type="button">.accent</button>
+          <button class="btn-none" disabled type="button">.btn-none</button>
+        </div>
+        <pre class="card-code"><code>&lt;button disabled&gt;button&lt;/button&gt;
+&lt;button class="btn" disabled&gt;.btn&lt;/button&gt;
+&lt;button class="btn-outline" aria-disabled="true"&gt;.btn-outline&lt;/button&gt;
+&lt;button class="btn-glow" disabled&gt;.btn-glow&lt;/button&gt;
+&lt;button class="soft" disabled&gt;.soft&lt;/button&gt;
+&lt;button class="ghost" disabled&gt;.ghost&lt;/button&gt;
+&lt;button class="phantom" disabled&gt;.phantom&lt;/button&gt;
+&lt;button class="surface" disabled&gt;.surface&lt;/button&gt;
+&lt;button class="surface-2" disabled&gt;.surface-2&lt;/button&gt;
+&lt;button class="accent" disabled&gt;.accent&lt;/button&gt;
+&lt;button class="btn-none" disabled&gt;.btn-none&lt;/button&gt;</code></pre>
+        <p class="mt-lg mb-sm"><code>.btn-outline</code> also reacts to its surroundings — inside (or combined
+          with) an <code>.accent</code> surface it swaps to the on-accent color automatically, no extra class
+          needed:</p>
+        <div class="card accent center p-lg mb-lg">
+          <a class="btn-outline" href="#">.btn-outline</a>
+        </div>
+        <pre class="card-code"><code>&lt;div class="card accent"&gt;
+  &lt;a class="btn-outline" href="#"&gt;Button&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <!--card---------------------------------------------------->
+    <section class="section-sm fx-dots">
+      <div class="container">
+        <span class="text-overline" id="card">Card</span>
+        <h2 class="text-spacing-sm mt-sm mb">Card</h2>
+        <p class="mb">A flexible surface for grouping content together — headers, text, buttons, images, whatever the
+          section needs.</p>
+        <div class="grid">
+          <!--card-->
+          <div class="card mb">
+            <h2>Card title</h2>
+            <p>Any content can go inside — text, buttons, images, forms.</p>
+          </div>
+          <!--code-->
+          <pre class="card-code"><code>&lt;div class="card"&gt;
+  &lt;h2&gt;Card title&lt;/h2&gt;
+  &lt;p&gt;Any content can go inside...&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <p class="mt-lg mb-sm">Combine with any <a href="./appearance.html#modifiers" class="text-underline">appearance
+            modifier</a> for a different finish:</p>
+        <div class="row gap-lg mb-lg">
+          <div class="card soft"><code>.soft</code></div>
+          <div class="card ghost"><code>.ghost</code></div>
+          <div class="card phantom"><code>.phantom</code></div>
+          <div class="card surface"><code>.surface</code></div>
+          <div class="card surface-2"><code>.surface-2</code></div>
+          <div class="card accent"><code>.accent</code></div>
+        </div>
+        <pre class="card-code"><code>&lt;div class="card soft"&gt;...&lt;/div&gt;
+&lt;div class="card ghost"&gt;...&lt;/div&gt;
+&lt;div class="card phantom"&gt;...&lt;/div&gt;
+&lt;div class="card surface"&gt;...&lt;/div&gt;
+&lt;div class="card surface-2"&gt;...&lt;/div&gt;
+&lt;div class="card accent"&gt;...&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <!--card-img---------------------------------------------------->
+    <section class="section-sm">
+      <div class="container">
+        <span class="text-overline" id="card-img">Card Image</span>
+        <h2 class="text-spacing-sm mt-sm mb">Card Image</h2>
+        <p class="mb-lg">Combining an image with content: stacked on top, or beside it on the left or right.</p>
+
+        <p class="mb-sm"><code>.card-img</code> — image fills the top, content stacks below:</p>
+        <div class="grid">
+          <div class="card-img width-400">
+            <img src="../../assets/images/image.png" alt="" />
+            <h2>Stacked image</h2>
+            <p>Content flows under the image, full width.</p>
+          </div>
+          <pre class="card-code"><code>&lt;div class="card-img"&gt;
+  &lt;img src="..." alt="" /&gt;
+  &lt;h2&gt;Stacked image&lt;/h2&gt;
+  &lt;p&gt;Content flows under the image.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <div class="grid mt-lg">
+          <div class="col-6">
+            <p class="mb-sm"><code>.card-img-left</code>:</p>
+            <div class="card-img-left height-150">
+              <img src="../../assets/images/image.png" alt="" />
+              <h2>Image on the left</h2>
+              <p>Content sits to the right.</p>
+            </div>
+            <pre class="card-code mt-sm"><code>&lt;div class="card-img-left"&gt;
+  &lt;img src="..." alt="" /&gt;
+  &lt;h2&gt;Image on the left&lt;/h2&gt;
+  &lt;p&gt;Content sits to the right.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="col-6">
+            <p class="mb-sm"><code>.card-img-right</code>:</p>
+            <div class="card-img-right height-150">
+              <img src="../../assets/images/image.png" alt="" />
+              <h2>Image on the right</h2>
+              <p>Content sits to the left.</p>
+            </div>
+            <pre class="card-code mt-sm"><code>&lt;div class="card-img-right"&gt;
+  &lt;img src="..." alt="" /&gt;
+  &lt;h2&gt;Image on the right&lt;/h2&gt;
+  &lt;p&gt;Content sits to the left.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider-fade"></div>
+
+    <!--alert---------------------------------------------------->
+    <section class="section-sm">
+      <div class="container">
+        <span class="text-overline" id="alert">Alert</span>
+        <h2 class="text-spacing-sm mt-sm mb">Alert</h2>
+        <p class="mb">A message that stays visible and in place, instead of floating or disappearing on its own.</p>
+        <div class="alert mb">
+          This is an alert message.
+        </div>
+        <pre class="card-code"><code>&lt;div class="alert"&gt;
+  This is an alert message.
+&lt;/div&gt;</code></pre>
+
+        <p class="mt-lg mb-sm">There are a few alert variations, for a different look:</p>
+        <div class="column gap-sm mb-lg">
+          <div class="column gap-sm mb-lg">
+            <div class="alert soft">.soft</div>
+            <div class="alert ghost">.ghost</div>
+            <div class="alert phantom">.phantom</div>
+            <div class="alert surface">.surface</div>
+            <div class="alert surface-2">.surface-2</div>
+            <div class="alert accent">.accent</div>
+          </div>
+          <pre class="card-code"><code>&lt;div class="alert soft"&gt;...&lt;/div&gt;
+&lt;div class="alert ghost"&gt;...&lt;/div&gt;
+&lt;div class="alert phantom"&gt;...&lt;/div&gt;
+&lt;div class="alert surface"&gt;...&lt;/div&gt;
+&lt;div class="alert surface-2"&gt;...&lt;/div&gt;
+&lt;div class="alert accent"&gt;...&lt;/div&gt;</code></pre>
+        </div>
+    </section>
+
+    <!--toast---------------------------------------------------->
+    <section class="section-sm fx-dots">
+      <div class="container">
+        <span class="text-overline" id="toast">Toast</span>
+        <h2 class="text-spacing-sm mt-sm mb">Toast</h2>
+        <p class="mb">A short notification that disappears on its own after a few seconds:</p>
+        <button class="btn mb" type="button" onclick="CelestialFlow.showToast('Toast')">Show toast</button>
+        <pre
+          class="card-code"><code>&lt;button onclick="CelestialFlow.showToast('Toast')"&gt;Show toast&lt;/button&gt;</code></pre>
+      </div>
+    </section>
+
+    <!--badge---------------------------------------------------->
+    <section class="section-sm">
+      <div class="container">
+        <span class="text-overline" id="badge">Badge</span>
+        <h2 class="text-spacing-sm mt-sm mb">Badge</h2>
+        <p class="mb">A small label. Combine with <code>.position-*</code> to pin it onto a corner:</p>
+        <div class="grid mb">
+          <div class="col-6">
+            <div class="card center height-100 mb-sm">
+              <span class="badge">New</span>
+            </div>
+            <pre class="card-code"><code>&lt;span class="badge"&gt;New&lt;/span&gt;</code></pre>
+          </div>
+          <div class="col-6">
+            <div class="card height-100 mb-sm">
+              <span class="badge position-tr">12</span>
+            </div>
+            <pre class="card-code"><code>&lt;div class="card"&gt;
+  &lt;span class="badge position-tr"&gt;12&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+
+        <p class="mt-lg mb-sm">There are a few badge variations, for a different look:</p>
+        <div class="row gap-sm mb-lg">
+          <span class="badge soft">.soft</span>
+          <span class="badge ghost">.ghost</span>
+          <span class="badge phantom">.phantom</span>
+          <span class="badge surface">.surface</span>
+          <span class="badge surface-2">.surface-2</span>
+          <span class="badge accent">.accent</span>
+        </div>
+        <pre class="card-code"><code>&lt;span class="badge soft"&gt;...&lt;/span&gt;
+&lt;span class="badge ghost"&gt;...&lt;/span&gt;
+&lt;span class="badge phantom"&gt;...&lt;/span&gt;
+&lt;span class="badge surface"&gt;...&lt;/span&gt;
+&lt;span class="badge surface-2"&gt;...&lt;/span&gt;
+&lt;span class="badge accent"&gt;...&lt;/span&gt;</code></pre>
+      </div>
+    </section>
+
+    <!--tag---------------------------------------------------->
+    <section class="section-sm fx-dots">
+      <div class="container">
+        <span class="text-overline" id="tag">Tag</span>
+        <h2 class="text-spacing-sm mt-sm mb">Tag</h2>
+        <p class="mb-lg">Use it for metadata like categories or keywords.</p>
+        <span class="tag mb">Tag</span>
+        <pre class="card-code"><code>&lt;span class="tag"&gt;Tag&lt;/span&gt;</code></pre>
+        <p class="mt-lg mb-sm">There are a few tag variations, for a different look:</p>
+        <div class="row gap-sm mb-lg">
+          <span class="tag soft">.soft</span>
+          <span class="tag ghost">.ghost</span>
+          <span class="tag phantom">.phantom</span>
+          <span class="tag surface">.surface</span>
+          <span class="tag surface-2">.surface-2</span>
+          <span class="tag accent">.accent</span>
+        </div>
+        <pre class="card-code"><code>&lt;span class="tag soft"&gt;...&lt;/span&gt;
+&lt;span class="tag ghost"&gt;...&lt;/span&gt;
+&lt;span class="tag phantom"&gt;...&lt;/span&gt;
+&lt;span class="tag surface"&gt;...&lt;/span&gt;
+&lt;span class="tag surface-2"&gt;...&lt;/span&gt;
+&lt;span class="tag accent"&gt;...&lt;/span&gt;</code></pre>
+      </div>
+    </section>
+
+    <!--next steps---------------------------------------------------->
+    <section class="card accent center text-center p-lg container">
+      <span class="text-overline">Next</span>
+      <h2 class="text-spacing-sm width-600 mt-sm mb">Build accessible forms</h2>
+      <p class="width-500 mb-lg">Floating-label fields, switches, input groups and selects.</p>
+      <a class="btn-outline" href="./forms.html">Forms →</a>
+    </section>
+  </main>
+</div>
+
+</html>
