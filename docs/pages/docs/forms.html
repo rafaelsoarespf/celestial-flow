@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--About Project-->
+  <title>Celestial Flow</title>
+  <meta name="description" content="Modern CSS framework focused on elegance, responsiveness and clean design" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="css, framework, responsive, modern ui, frontend, celestial-flow" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Celestial Flow" />
+  <meta property="og:description" content="Modern CSS framework focused on elegance and responsive design." />
+  <meta property="og:type" content="website" />
+
+  <!--Theme-->
+  <meta name="theme-color" content="#121212" />
+
+  <!--Content Security Policy (CSP)-->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self';script-src 'self';style-src 'self' 'unsafe-inline';img-src 'self' data: blob:;font-src 'self' data:;connect-src 'self' https: ws: wss:;object-src 'none';base-uri 'self';form-action 'self';frame-ancestors 'none';upgrade-insecure-requests;" />
+  <!--Referrer Policy-->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <!-- Permissions Policy-->
+  <meta http-equiv="Permissions-Policy"
+    content="camera=(),microphone=(),geolocation=(),payment=(),usb=(),accelerometer=(),gyroscope=(),magnetometer=()" />
+  <!-- HSTS (somente se usar HTTPS, configurar no servidor) -->
+  <!-- <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains"> -->
+  <!--Favicon-->
+  <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" />
+  <!--Celestial Flow-->
+  <link rel="stylesheet" href="../../../celestial-flow/css/fonts.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/reset.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/themes.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/globals.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/layout.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/spacing.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/typography.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/components.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/forms.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/overlays.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/structure.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/decorative.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/appearance.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/animations.css">
+  <!--Celestial Flow JS-->
+  <script src="../../../celestial-flow/js/celestial-flow.js" defer></script>
+  <!--CSS-->
+  <link rel="stylesheet" href="../../../docs/styles/index.css" />
+  <!--Scripts-->
+  <script type="module" src="../../dist/main.js"></script>
+</head>
+
+<div class="sidebar-layout">
+  <!-- sidebar ---------------------------------------------------------->
+  <aside class="sidebar doc-sidebar"></aside>
+  <!-- main ---------------------------------------------------------->
+  <main class="content">
+    <button class="sidebar__toggle" type="button" aria-label="Toggle sidebar">☰</button>
+
+    <!--hero ---------------------------------------------------------->
+    <section class="section-sm fx-glow center container">
+      <span class="text-overline">Documentation</span>
+      <h1 class="text-size-4xl text-spacing-sm mt-sm mb">Forms</h1>
+      <p class="width-600">Build clear and accessible forms with consistent styling and behavior.</p>
+    </section>
+
+    <!--input---------------------------------------------------->
+    <section class="section-sm">
+      <div class="container">
+        <span class="text-overline" id="input">Input</span>
+        <h2 class="text-spacing-sm mt-sm mb">Input</h2>
+        <p class="mb-lg">An <code>&lt;input&gt;</code> is styled by default:</p>
+        <div class="grid mb-lg">
+          <div>
+            <p class="mb-sm">Enabled:</p>
+            <input class="width-full" type="text" placeholder="Text" />
+            <pre class="card-code mt-sm"><code>&lt;input type="text" /&gt;</code></pre>
+          </div>
+          <div>
+            <p class="mb-sm">Disabled:</p>
+            <input class="width-full center-self" type="text" placeholder="Text" disabled />
+            <pre class="card-code mt-sm"><code>&lt;input type="text" disabled /&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider-fade"></div>
+
+
+    <!--textarea---------------------------------------------------->
+    <section class="section-sm fx-dots">
+      <div class="container">
+        <span class="text-overline" id="textarea">Textarea</span>
+        <h2 class="text-spacing-sm mt-sm mb">Textarea</h2>
+        <p class="mb-lg">Use a textarea to let users enter multiple lines of text.</p>
+        <div class="grid mb-lg">
+          <div>
+            <p class="mb-sm">Enabled:</p>
+            <textarea class="width-full" placeholder="Text"></textarea>
+            <pre class="card-code mt-sm"><code>&lt;textarea placeholder="Text"&gt;&lt;/textarea&gt;</code></pre>
+          </div>
+          <div>
+            <p class="mb-sm">Disabled:</p>
+            <textarea class="width-full" placeholder="Text" disabled></textarea>
+            <pre
+              class="card-code mt-sm"><code>&lt;textarea placeholder="Text" disabled&gt;&lt;/textarea&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--field---------------------------------------------------->
+    <section class="section-sm">
+      <div class="container">
+        <span class="text-overline" id="field">Field</span>
+        <h2 class="text-spacing-sm mt-sm mb">Field</h2>
+        <p class="mb-lg">Use a field to display a floating label that moves above the input when focused or filled. The
+          input requires a <code>placeholder</code> attribute, which can be a single space.</p>
+        <div class="grid mb-lg">
+          <div>
+            <div class="field">
+              <input type="text" placeholder=" " />
+              <label>Full name</label>
+            </div>
+          </div>
+          <div>
+            <div class="field">
+              <input type="email" placeholder=" " value="email@email.com" />
+              <label>Email</label>
+            </div>
+          </div>
+        </div>
+        <pre class="card-code"><code>&lt;div class="field"&gt;
+  &lt;input type="text" placeholder=" " /&gt;
+  &lt;label&gt;Full name&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <div class="divider-fade"></div>
+
+    <!--checkbox---------------------------------------------------->
+    <section class="section-sm fx-dots">
+      <div class="container">
+        <span class="text-overline" id="checkbox">Checkbox</span>
+        <h2 class="text-spacing-sm mt-sm mb">Checkbox</h2>
+        <p class="mb-lg">Use checkboxes to let users select one or more options.</p>
+        <div class="grid mb-lg">
+          <div>
+            <label><input type="checkbox" /> Unchecked</label>
+            <pre
+              class="card-code mt-sm"><code>&lt;label&gt;&lt;input type="checkbox" /&gt; Unchecked&lt;/label&gt;</code></pre>
+          </div>
+          <div>
+            <label><input type="checkbox" checked /> Checked</label>
+            <pre
+              class="card-code mt-sm"><code>&lt;label&gt;&lt;input type="checkbox" checked /&gt; Checked&lt;/label&gt;</code></pre>
+          </div>
+          <div>
+            <label><input type="checkbox" disabled /> Disabled</label>
+            <pre
+              class="card-code mt-sm"><code>&lt;label&gt;&lt;input type="checkbox" disabled /&gt; Disabled&lt;/label&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--radio---------------------------------------------------->
+    <section class="section-sm">
+      <div class="container">
+        <span class="text-overline" id="radio">Radio</span>
+        <h2 class="text-spacing-sm mt-sm mb">Radio</h2>
+        <p class="mb-lg">Use radio buttons when users need to select one option from a group.</p>
+        <!--radio-->
+        <div class="row gap-lg mb-lg center-items">
+          <label><input type="radio" name="radio-demo" checked /> Option A</label>
+          <label><input type="radio" name="radio-demo" /> Option B</label>
+          <label><input type="radio" name="radio-demo" /> Option C</label>
+        </div>
+        <pre class="card-code"><code>&lt;label&gt;&lt;input type="radio" name="option" checked /&gt; Option A&lt;/label&gt;
+&lt;label&gt;&lt;input type="radio" name="option" /&gt; Option B&lt;/label&gt;
+&lt;label&gt;&lt;input type="radio" name="option" /&gt; Option C&lt;/label&gt;</code></pre>
+        <!--disabled-->
+        <p class="mt-lg mb-sm">Disabled:</p>
+        <label><input type="radio" name="radio-demo-disabled" disabled /> Option A</label>
+        <pre
+          class="card-code mt-sm"><code>&lt;label&gt;&lt;input type="radio" name="option" disabled /&gt; Option A&lt;/label&gt;</code></pre>
+      </div>
+    </section>
+    <div class="divider-fade"></div>
+
+    <!--switch---------------------------------------------------->
+    <section class="section-sm fx-dots">
+      <div class="container">
+        <span class="text-overline" id="switch">Switch</span>
+        <h2 class="text-spacing-sm mt-sm mb">Switch</h2>
+        <p class="mb-lg">Use <code>.switch</code> on a checkbox input to display it as an on/off toggle:</p>
+        <!--switch-->
+        <div class="row gap-lg mb-lg center-items">
+          <label class="row gap-sm center-items"><input type="checkbox" class="switch" /><span>Off</span></label>
+          <label class="row gap-sm center-items"><input type="checkbox" class="switch" checked /><span>On</span></label>
+          <label class="row gap-sm center-items"><input type="checkbox" class="switch"
+              disabled /><span>Disabled</span></label>
+        </div>
+        <!--code-->
+        <pre
+          class="card-code"><code>&lt;label class="row gap-sm center-items"&gt;&lt;input type="checkbox" class="switch" /&gt;&lt;span&gt;Off&lt;/span&gt;&lt;/label&gt;
+&lt;label class="row gap-sm center-items"&gt;&lt;input type="checkbox" class="switch" checked /&gt;&lt;span&gt;On&lt;/span&gt;&lt;/label&gt;
+&lt;label class="row gap-sm center-items"&gt;&lt;input type="checkbox" class="switch" disabled /&gt;&lt;span&gt;Disabled&lt;/span&gt;&lt;/label&gt;</code></pre>
+      </div>
+    </section>
+
+    <!--range---------------------------------------------------->
+    <section class="section-sm">
+      <div class="container">
+        <span class="text-overline" id="range">Range</span>
+        <h2 class="text-spacing-sm mt-sm mb">Range</h2>
+        <p class="mb-lg">Use a range slider to select a value from a defined range.</p>
+        <input type="range" min="0" max="100" value="40" />
+        <pre class="card-code mt-sm"><code>&lt;input type="range" min="0" max="100" value="40" /&gt;</code></pre>
+      </div>
+    </section>
+    <div class="divider-fade"></div>
+    <!--file---------------------------------------------------->
+    <section class="section-sm fx-dots">
+      <div class="container">
+        <span class="text-overline" id="file">File</span>
+        <h2 class="text-spacing-sm mt-sm mb">File</h2>
+        <p class="mb-lg">Use a file input to let users select a file from their device.</p>
+        <input type="file" />
+        <pre class="card-code mt-sm"><code>&lt;input type="file" /&gt;</code></pre>
+      </div>
+    </section>
+
+    <!--color---------------------------------------------------->
+    <section class="section-sm">
+      <div class="container">
+        <span class="text-overline" id="color">Color</span>
+        <h2 class="text-spacing-sm mt-sm mb">Color</h2>
+        <p class="mb-lg">Use a color input to let users select a color.</p>
+        <input type="color" value="#7c9cff" />
+        <pre class="card-code mt-sm"><code>&lt;input type="color" value="#7c9cff" /&gt;</code></pre>
+      </div>
+    </section>
+
+    <div class="divider-fade"></div>
+
+    <!--progress---------------------------------------------------->
+    <section class="section-sm fx-dots">
+      <div class="container">
+        <span class="text-overline" id="progress">Progress</span>
+        <h2 class="text-spacing-sm mt-sm mb">Progress</h2>
+        <p class="mb-lg">Use a progress bar to indicate the completion of a task. Omit the <code>value</code> attribute
+          for an indeterminate progress state.</p>
+        <div class="column gap mb-lg">
+          <progress value="60" max="100"></progress>
+          <progress></progress>
+        </div>
+        <pre class="card-code"><code>&lt;progress value="60" max="100"&gt;&lt;/progress&gt;
+&lt;progress&gt;&lt;/progress&gt;</code></pre>
+      </div>
+    </section>
+
+    <!--input group---------------------------------------------------->
+    <section class="section-sm">
+      <div class="container">
+        <span class="text-overline" id="input-group">Input Group</span>
+        <h2 class="text-spacing-sm mt-sm mb">Input Group</h2>
+        <p class="mb-lg">Group related inputs, labels, or buttons into a single connected control:</p>
+
+        <div class="input-group mb">
+          <span>https://</span>
+          <input type="text" placeholder="yourdomain.com" />
+          <button class="btn" type="button">Go</button>
+        </div>
+
+        <pre class="card-code"><code>&lt;div class="input-group"&gt;
+  &lt;span&gt;https://&lt;/span&gt;
+  &lt;input type="text" placeholder="yourdomain.com" /&gt;
+  &lt;button type="button"&gt;Go&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <div class="divider-fade"></div>
+
+    <!--select---------------------------------------------------->
+    <section class="section-sm fx-dots">
+      <div class="container">
+        <span class="text-overline" id="select">Select</span>
+        <h2 class="text-spacing-sm mt-sm mb">Select</h2>
+        <p class="mb-lg">Use a select to let users choose one option from a list.</p>
+        <!--select-->
+        <div class="grid">
+          <div>
+            <p class="text-overline">Standard</p>
+            <select class="width-full">
+              <option>Option 1</option>
+              <option>Option 2</option>
+            </select>
+            <pre class="card-code mt-sm"><code>&lt;select&gt;
+  &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;option&gt;Option 2&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+          </div>
+          <!--select custom-->
+          <div>
+            <p class="text-overline">Custom</p>
+            <div class="select width-full">
+              <button class="select__btn" type="button">Choose an option</button>
+              <div class="select__menu">
+                <button class="select__item" type="button" data-value="option-1">Option 1</button>
+                <button class="select__item" type="button" data-value="option-2" data-selected>Option 2</button>
+              </div>
+            </div>
+
+            <pre class="card-code mt-sm"><code>&lt;div class="select"&gt;
+  &lt;button class="select__btn" type="button"&gt;Choose an option&lt;/button&gt;
+  &lt;div class="select__menu"&gt;
+    &lt;button class="select__item" type="button" data-value="option-1"&gt;Option 1&lt;/button&gt;
+    &lt;button class="select__item" type="button" data-value="option-2" data-selected&gt;Option 2&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--next steps---------------------------------------------------->
+    <section class="card accent center p-lg container">
+      <span class="text-overline">Next</span>
+      <h2 class="text-spacing-sm width-600 mt-sm mb">Explore overlays</h2>
+      <p class="width-500 mb-md">Create interactive layers that appear above the main content.</p>
+      <a class="btn-outline" href="./overlays.html">Overlays →</a>
+    </section>
+  </main>
+</div>
+</html>
