@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--About Project-->
+  <title>Celestial Flow</title>
+  <meta name="description" content="Modern CSS framework focused on elegance, responsiveness and clean design" />
+  <meta name="author" content="Rafael" />
+  <meta name="keywords" content="css, framework, responsive, modern ui, frontend, celestial-flow" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Celestial Flow" />
+  <meta property="og:description" content="Modern CSS framework focused on elegance and responsive design." />
+  <meta property="og:type" content="website" />
+
+  <!--Theme-->
+  <meta name="theme-color" content="#121212" />
+
+  <!--Content Security Policy (CSP)-->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self';script-src 'self' 'unsafe-inline';style-src 'self' 'unsafe-inline';img-src 'self' data: blob:;font-src 'self' data:;connect-src 'self' https: ws: wss:;object-src 'none';base-uri 'self';form-action 'self';frame-ancestors 'none';upgrade-insecure-requests;" />
+  <!--Referrer Policy-->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <!-- Permissions Policy-->
+  <meta http-equiv="Permissions-Policy"
+    content="camera=(),microphone=(),geolocation=(),payment=(),usb=(),accelerometer=(),gyroscope=(),magnetometer=()" />
+  <!-- HSTS (somente se usar HTTPS, configurar no servidor) -->
+  <!-- <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains"> -->
+  <!--Favicon-->
+  <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" />
+  <!--Celestial Flow-->
+  <link rel="stylesheet" href="../../../celestial-flow/css/fonts.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/reset.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/themes.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/globals.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/layout.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/spacing.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/typography.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/components.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/forms.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/overlays.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/structure.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/decorative.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/appearance.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/animations.css">
+  <!--Celestial Flow JS-->
+  <script src="../../../celestial-flow/js/celestial-flow.js" defer></script>
+  <!--CSS-->
+  <link rel="stylesheet" href="../../../docs/styles/index.css" />
+  <!--Scripts-->
+  <script type="module" src="../../dist/main.js"></script>
+</head>
+
+<div class="sidebar-layout">
+  <!-- sidebar ---------------------------------------------------------->
+  <aside class="sidebar doc-sidebar"></aside>
+  <!-- main ---------------------------------------------------------->
+  <main class="content">
+    <!--hero ---------------------------------------------------------->
+    <section class="section-sm fx-glow center container">
+      <span class="text-overline">Documentation</span>
+      <h1 class="text-size-4xl text-spacing-sm mt-sm mb">Overlays</h1>
+      <p class="width-600">Create interactive layers that appear above the main content.</p>
+    </section>
+
+    <!--modal---------------------------------------------------->
+    <section class="section-sm">
+      <div class="container">
+        <span class="text-overline" id="modal">Modal</span>
+        <h2 class="text-spacing-sm mt-sm mb">Modal</h2>
+        <p class="mb-lg">Use a modal to display content above the current page without navigating away.</p>
+        <div class="row">
+          <a class="btn center-self" href="#modal-demo">Open modal</a>
+          <div class="modal" id="modal-demo">
+            <div class="modal__content">
+              <a class="modal__close" href="#" aria-label="Close modal">×</a>
+              <h2>Title</h2>
+              <p>Modal text.</p>
+            </div>
+          </div>
+
+          <pre class="card-code mt-lg"><code>&lt;a class="btn" href="#modal"&gt;Open modal&lt;/a&gt;
+
+&lt;div class="modal" id="modal"&gt;
+  &lt;div class="modal__content"&gt;
+    &lt;a class="modal__close" href="#" aria-label="Close modal"&gt;×&lt;/a&gt;
+    &lt;h2&gt;Title&lt;/h2&gt;
+    &lt;p&gt;Modal text.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider-fade"></div>
+
+    <!--toast---------------------------------------------------->
+    <section class="section-sm fx-dots">
+      <div class="container">
+        <span class="text-overline" id="toast">Toast</span>
+        <h2 class="text-spacing-sm mt-sm mb">Toast</h2>
+        <p class="mb">A short notification that appears briefly and disappears automatically:</p>
+        <div class="row">
+          <!--button-->
+          <button class="btn mb center" type="button" onclick="CelestialFlow.showToast('Toast')">Show toast</button>
+          <!--code-->
+          <pre
+            class="card-code"><code>&lt;button onclick="CelestialFlow.showToast('Toast')"&gt;Show toast&lt;/button&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!--accordion---------------------------------------------------->
+    <section class="section-sm">
+      <div class="container">
+        <span class="text-overline" id="accordion">Accordion</span>
+        <h2 class="text-spacing-sm mt-sm mb">Accordion</h2>
+        <p class="mb-lg">Use an accordion to reveal and hide content on demand.</p>
+
+        <details class="accordion" open>
+          <summary>Section title</summary>
+          <p>Content is shown when the section is expanded.</p>
+        </details>
+
+        <pre class="card-code mt-lg"><code>&lt;details class="accordion"&gt;
+  &lt;summary&gt;Section title&lt;/summary&gt;
+  &lt;p&gt;Content is shown when the section is expanded.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+      </div>
+    </section>
+
+    <div class="divider-fade"></div>
+
+    <!--tree---------------------------------------------------->
+    <section class="section-sm fx-dots">
+      <div class="container">
+        <span class="text-overline" id="tree">Tree</span>
+        <h2 class="text-spacing-sm mt-sm mb">Tree</h2>
+        <p class="mb-lg">Use a tree to organize nested items into expandable levels.</p>
+
+        <details class="tree" open>
+          <summary>Parent</summary>
+          <a href="#">Child 1</a>
+          <details open>
+            <summary>Child 2</summary>
+            <a href="#">Nested item</a>
+          </details>
+        </details>
+
+        <pre class="card-code mt-lg"><code>&lt;details class="tree"&gt;
+  &lt;summary&gt;Parent&lt;/summary&gt;
+  &lt;a href="#"&gt;Child 1&lt;/a&gt;
+  &lt;details&gt;
+    &lt;summary&gt;Child 2&lt;/summary&gt;
+    &lt;a href="#"&gt;Nested item&lt;/a&gt;
+  &lt;/details&gt;
+&lt;/details&gt;</code></pre>
+      </div>
+    </section>
+
+    <!--tabs---------------------------------------------------->
+    <section class="section-sm">
+      <div class="container">
+        <span class="text-overline" id="tabs">Tabs</span>
+        <h2 class="text-spacing-sm mt-sm mb">Tabs</h2>
+        <p class="mb-lg">Use tabs to switch between related content within the same context.</p>
+
+        <div class="tabs">
+          <input type="radio" name="tabs-demo" id="tab-1" checked />
+          <label for="tab-1">Option 1</label>
+          <section>Content for option 1.</section>
+
+          <input type="radio" name="tabs-demo" id="tab-2" />
+          <label for="tab-2">Option 2</label>
+          <section>Content for option 2.</section>
+        </div>
+
+        <pre class="card-code mt-lg"><code>&lt;div class="tabs"&gt;
+  &lt;input type="radio" name="tabs" id="tab-1" checked /&gt;
+  &lt;label for="tab-1"&gt;Option 1&lt;/label&gt;
+  &lt;section&gt;Content for option 1.&lt;/section&gt;
+
+  &lt;input type="radio" name="tabs" id="tab-2" /&gt;
+  &lt;label for="tab-2"&gt;Option 2&lt;/label&gt;
+  &lt;section&gt;Content for option 2.&lt;/section&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <div class="divider-fade"></div>
+
+    <!--tooltip---------------------------------------------------->
+    <section class="section-sm fx-dots">
+      <div class="container">
+        <span class="text-overline" id="tooltip">Tooltip</span>
+        <h2 class="text-spacing-sm mt-sm mb">Tooltip</h2>
+        <p class="mb-lg">Use a tooltip to provide additional information when users hover over an element.</p>
+
+        <div class="row gap-lg center-items">
+          <span class="tooltip" data-tooltip="Tooltip text">Default</span>
+          <span class="tooltip-left" data-tooltip="Tooltip text">Left</span>
+          <span class="tooltip-right" data-tooltip="Tooltip text">Right</span>
+          <span class="tooltip-bottom" data-tooltip="Tooltip text">Bottom</span>
+        </div>
+
+        <pre class="card-code mt-lg"><code>&lt;span class="tooltip" data-tooltip="Tooltip text"&gt;Default&lt;/span&gt;
+&lt;span class="tooltip-left" data-tooltip="Tooltip text"&gt;Left&lt;/span&gt;
+&lt;span class="tooltip-right" data-tooltip="Tooltip text"&gt;Right&lt;/span&gt;
+&lt;span class="tooltip-bottom" data-tooltip="Tooltip text"&gt;Bottom&lt;/span&gt;</code></pre>
+      </div>
+    </section>
+
+    <!--next steps---------------------------------------------------->
+    <section class="card accent center p-lg container">
+      <span class="text-overline">Next</span>
+      <h2 class="text-spacing-sm width-600 mt-sm mb">Structure your interface</h2>
+      <p class="width-500 mb-md">Shape the structure of your interface.</p>
+      <a class="btn-outline" href="./structure.html">Structure →</a>
+    </section>
+
+  </main>
+</div>
+
+</html>
