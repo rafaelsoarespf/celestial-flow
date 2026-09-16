@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--About Project-->
+  <title>Celestial Flow</title>
+  <meta name="description" content="Modern CSS framework focused on elegance, responsiveness and clean design" />
+  <meta name="author" content="Rafael" />
+  <meta name="keywords" content="css, framework, responsive, modern ui, frontend, celestial-flow" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Celestial Flow" />
+  <meta property="og:description" content="Modern CSS framework focused on elegance and responsive design." />
+  <meta property="og:type" content="website" />
+
+  <!--Theme-->
+  <meta name="theme-color" content="#121212" />
+
+  <!--Content Security Policy (CSP)-->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self';script-src 'self' 'unsafe-inline';style-src 'self' 'unsafe-inline';img-src 'self' data: blob:;font-src 'self' data:;connect-src 'self' https: ws: wss:;object-src 'none';base-uri 'self';form-action 'self';frame-ancestors 'none';upgrade-insecure-requests;" />
+  <!--Referrer Policy-->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <!-- Permissions Policy-->
+  <meta http-equiv="Permissions-Policy"
+    content="camera=(),microphone=(),geolocation=(),payment=(),usb=(),accelerometer=(),gyroscope=(),magnetometer=()" />
+  <!-- HSTS (somente se usar HTTPS, configurar no servidor) -->
+  <!-- <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains"> -->
+  <!--Favicon-->
+  <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" />
+  <!--Celestial Flow-->
+  <link rel="stylesheet" href="../../../celestial-flow/css/fonts.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/reset.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/themes.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/globals.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/layout.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/spacing.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/typography.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/components.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/forms.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/overlays.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/structure.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/decorative.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/appearance.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/animations.css">
+  <!--Celestial Flow JS-->
+  <script src="../../../celestial-flow/js/celestial-flow.js" defer></script>
+  <!--CSS-->
+  <link rel="stylesheet" href="../../../docs/styles/index.css" />
+  <!--Scripts-->
+  <script type="module" src="../../dist/main.js"></script>
+</head>
+
+<body>
+  <div class="sidebar-layout">
+    <aside class="sidebar doc-sidebar"></aside>
+    <!-- main ------------------------------------------------------------->
+    <main class="content">
+
+      <button class="sidebar__toggle" type="button" aria-label="Toggle sidebar">☰</button>
+
+      <!-- hero ------------------------------------------------------------>
+      <section class="section-sm fx-glow center container">
+        <span class="text-overline">Documentation</span>
+        <h1 class="text-size-4xl text-spacing-sm mt-sm mb">Structure</h1>
+        <p class="width-600">Build clear, consistent structures that organize the essential parts of your interface.</p>
+      </section>
+
+      <!-- navbar ---------------------------------------------------------->
+      <section class="section-sm">
+        <div class="container">
+          <span class="text-overline" id="navbar">Navbar</span>
+          <h2 class="text-spacing-sm mt-sm mb">Navbar</h2>
+          <p class="mb-lg">Use a navbar to organize site navigation and related actions.</p>
+
+          <nav class="navbar mb-lg">
+            <div class="navbar__content">
+              <a class="navbar__logo" href="#">Logo</a>
+              <button class="navbar__toggle" type="button" aria-label="Toggle menu">☰</button>
+              <ul class="navbar__menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <pre class="card-code"><code>&lt;nav class="navbar"&gt;
+  &lt;div class="navbar__content"&gt;
+    &lt;a class="navbar__logo" href="#"&gt;Logo&lt;/a&gt;
+    &lt;button class="navbar__toggle" type="button" aria-label="Toggle menu"&gt;☰&lt;/button&gt;
+    &lt;ul class="navbar__menu"&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+      </section>
+
+      <div class="divider-fade"></div>
+
+      <!-- sidebar --------------------------------------------------------->
+      <section class="section-sm fx-dots">
+        <div class="container">
+          <span class="text-overline" id="sidebar">Sidebar</span>
+          <h2 class="text-spacing-sm mt-sm mb">Sidebar</h2>
+          <p class="mb-lg">Use a sidebar to display secondary navigation alongside the main content.</p>
+          <!--sidebar-->
+          <div class="sidebar-layout mb-lg">
+            <aside class="sidebar">
+              <div class="sidebar__header">Header</div>
+              <nav class="sidebar__menu">
+                <a href="#">Home</a>
+                <a href="#">Projects</a>
+                <a href="#">Settings</a>
+              </nav>
+              <div class="sidebar__footer">Footer</div>
+            </aside>
+            <main class="content">
+              <button class="sidebar__toggle" type="button" aria-label="Toggle sidebar">☰</button>
+              <p>Page content</p>
+            </main>
+          </div>
+          <!--code-->
+          <pre class="card-code"><code>&lt;div class="sidebar-layout"&gt;
+  &lt;aside class="sidebar"&gt;
+    &lt;div class="sidebar__header"&gt;Header&lt;/div&gt;
+
+    &lt;nav class="sidebar__menu"&gt;
+      &lt;a href="#"&gt;Home&lt;/a&gt;
+      &lt;a href="#"&gt;Projects&lt;/a&gt;
+      &lt;a href="#"&gt;Settings&lt;/a&gt;
+    &lt;/nav&gt;
+
+    &lt;div class="sidebar__footer"&gt;Footer&lt;/div&gt;
+  &lt;/aside&gt;
+
+  &lt;main class="content"&gt;
+    &lt;button class="sidebar__toggle" type="button" aria-label="Toggle sidebar"&gt;☰&lt;/button&gt;
+    Page content
+  &lt;/main&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- footer ---------------------------------------------------------->
+      <section class="section-sm">
+        <div class="container">
+          <span class="text-overline" id="footer">Footer</span>
+          <h2 class="text-spacing-sm mt-sm mb">Footer</h2>
+          <p class="mb-lg">Use a footer to group supporting content and links at the end of a page.</p>
+          <!--footer-->
+          <footer class="footer mb-lg">
+            <p>Footer</p>
+            <div>
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+            </div>
+          </footer>
+          <!--code-->
+          <pre class="card-code"><code>&lt;footer class="footer"&gt;
+  &lt;p&gt;Footer&lt;/p&gt;
+  &lt;div&gt;
+    &lt;a href="#"&gt;Link 1&lt;/a&gt;
+    &lt;a href="#"&gt;Link 2&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+        </div>
+      </section>
+
+      <div class="divider-fade"></div>
+
+      <!-- panel ----------------------------------------------------------->
+      <section class="section-sm fx-dots">
+        <div class="container">
+          <span class="text-overline" id="panel">Panel</span>
+          <h2 class="text-spacing-sm mt-sm mb">Panel</h2>
+          <p class="mb-lg">Use a panel to display content beside the main content and toggle it open or closed.</p>
+          <!--panel-->
+          <div class="panel-layout mb-lg">
+            <aside class="panel-left">
+              <button class="panel-toggle" type="button" aria-label="Toggle left panel"></button>
+              Panel content
+            </aside>
+            <main>
+              <p>Main content</p>
+            </main>
+          </div>
+
+          <pre class="card-code"><code>&lt;div class="panel-layout"&gt;
+  &lt;aside class="panel-left"&gt;
+    &lt;button class="panel-toggle" type="button" aria-label="Toggle left panel"&gt;&lt;/button&gt;
+    Panel content
+  &lt;/aside&gt;
+
+  &lt;main&gt;
+    &lt;p&gt;Main content&lt;/p&gt;
+  &lt;/main&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- next steps ----------------------------------------------------->
+      <section class="card accent center p-lg container">
+        <span class="text-overline">Next</span>
+        <h2 class="text-spacing-sm width-600 mt-sm mb">Add decorative details</h2>
+        <p class="width-500 mb-md">Enhance your interface with visual details that complement the content.</p>
+        <a class="btn-outline" href="./decorative.html">Decorative →</a>
+      </section>
+
+    </main>
+  </div>
+</body>
+
+</html>
