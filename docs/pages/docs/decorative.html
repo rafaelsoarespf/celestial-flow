@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--About Project-->
+  <title>Celestial Flow</title>
+  <meta name="description" content="Modern CSS framework focused on elegance, responsiveness and clean design" />
+  <meta name="author" content="Rafael" />
+  <meta name="keywords" content="css, framework, responsive, modern ui, frontend, celestial-flow" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Celestial Flow" />
+  <meta property="og:description" content="Modern CSS framework focused on elegance and responsive design." />
+  <meta property="og:type" content="website" />
+
+  <!--Theme-->
+  <meta name="theme-color" content="#121212" />
+
+  <!--Content Security Policy (CSP)-->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self';script-src 'self' 'unsafe-inline';style-src 'self' 'unsafe-inline';img-src 'self' data: blob:;font-src 'self' data:;connect-src 'self' https: ws: wss:;object-src 'none';base-uri 'self';form-action 'self';frame-ancestors 'none';upgrade-insecure-requests;" />
+  <!--Referrer Policy-->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <!-- Permissions Policy-->
+  <meta http-equiv="Permissions-Policy"
+    content="camera=(),microphone=(),geolocation=(),payment=(),usb=(),accelerometer=(),gyroscope=(),magnetometer=()" />
+  <!-- HSTS (somente se usar HTTPS, configurar no servidor) -->
+  <!-- <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains"> -->
+  <!--Favicon-->
+  <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" />
+  <!--Celestial Flow-->
+  <link rel="stylesheet" href="../../../celestial-flow/css/fonts.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/reset.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/themes.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/globals.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/layout.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/spacing.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/typography.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/components.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/forms.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/overlays.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/structure.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/decorative.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/appearance.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/animations.css">
+  <!--Celestial Flow JS-->
+  <script src="../../../celestial-flow/js/celestial-flow.js" defer></script>
+  <!--CSS-->
+  <link rel="stylesheet" href="../../../docs/styles/index.css" />
+  <!--Scripts-->
+  <script type="module" src="../../dist/main.js"></script>
+</head>
+
+<body>
+  <div class="sidebar-layout">
+    <aside class="sidebar doc-sidebar"></aside>
+
+    <main>
+      <!-- hero ------------------------------------------------------------>
+      <section class="section-sm fx-glow center container">
+        <span class="text-overline">Documentation</span>
+        <h1 class="text-size-4xl text-spacing-sm mt-sm mb">Decorative</h1>
+        <p class="width-600">Add subtle visual details that refine the presentation of your interface.</p>
+      </section>
+
+      <!-- divider --------------------------------------------------------->
+      <section class="section-sm fx-dots">
+        <div class="container">
+          <span class="text-overline" id="divider">Divider</span>
+          <h2 class="text-spacing-sm mt-sm mb">Divider</h2>
+          <p class="mb-lg">Use dividers to separate content and add visual breaks.</p>
+
+          <div class="mb-lg">
+            <p class="text-overline">Standard</p>
+            <div class="divider mb">Content</div>
+            <pre class="card-code"><code>&lt;div class="divider mb"&gt;Content&lt;/div&gt;</code></pre>
+          </div>
+
+          <div class="mb-lg">
+            <p class="text-overline">Line</p>
+            <div class="divider-line mb"></div>
+            <pre class="card-code"><code>&lt;div class="divider-line mb"&gt;&lt;/div&gt;</code></pre>
+          </div>
+
+          <div class="mb-lg">
+            <p class="text-overline">Fade</p>
+            <div class="divider-fade mb"></div>
+            <pre class="card-code"><code>&lt;div class="divider-fade mb"&gt;&lt;/div&gt;</code></pre>
+          </div>
+
+          <div>
+            <p class="text-overline">Vertical</p>
+            <div class="row mb">
+              <span>Content</span>
+              <div class="divider-vertical"></div>
+              <span>Content</span>
+            </div>
+            <pre class="card-code"><code>&lt;div class="divider-vertical"&gt;&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- frame corners --------------------------------------------------->
+      <section class="section-sm">
+        <div class="container">
+          <span class="text-overline" id="frame-corners">Frame Corners</span>
+          <h2 class="text-spacing-sm mt-sm mb">Frame Corners</h2>
+          <p class="mb-lg">Add accent corners to frame a content area.</p>
+          <div class="grid">
+            <div class="frame-corners p-lg center">Content</div>
+            <pre class="card-code col-8"><code>&lt;div class="frame-corners"&gt;Content&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- accent stroke --------------------------------------------------->
+      <section class="section-sm fx-dots">
+        <div class="container">
+          <span class="text-overline" id="accent-stroke">Accent Stroke</span>
+          <h2 class="text-spacing-sm mt-sm mb">Accent Stroke</h2>
+          <p class="mb-lg">Use an accent stroke to add a subtle visual accent to an element.</p>
+
+          <div class="row">
+            <span class="accent-stroke center"></span>
+            <pre class="card-code width-500"><code>&lt;span class="accent-stroke"&gt;&lt;/span&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- next steps ----------------------------------------------------->
+      <section class="card accent center p-lg container">
+        <span class="text-overline">Next</span>
+        <h2 class="text-spacing-sm width-600 mt-sm mb">Animate your interface</h2>
+        <p class="width-500 mb-md">Create transitions, animated states, and loading effects.</p>
+        <a class="btn-outline" href="./animations.html">Animations →</a>
+      </section>
+
+    </main>
