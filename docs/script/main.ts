@@ -49,3 +49,24 @@ function initThemeGallery(): void {
     });
   });
 }
+
+
+//animations.html 
+const replayButtons = document.querySelectorAll<HTMLButtonElement>("[data-entrance-replay]");
+
+replayButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const demo = button.closest<HTMLElement>("[data-entrance]");
+
+    if (!demo) return;
+
+    const effect = demo.dataset.entrance;
+    const target = demo.querySelector<HTMLElement>("[class*='fade-in'], [class*='slide-'], [class*='zoom-'], [class*='pop-'], [class*='blur-']");
+
+    if (!effect || !target) return;
+
+    target.classList.remove(effect);
+    void target.offsetWidth;
+    target.classList.add(effect);
+  });
+});

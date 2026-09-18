@@ -36,4 +36,21 @@ function initThemeGallery() {
         });
     });
 }
+//animations.html
+// 
+const replayButtons = document.querySelectorAll("[data-entrance-replay]");
+replayButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const demo = button.closest("[data-entrance]");
+        if (!demo)
+            return;
+        const effect = demo.dataset.entrance;
+        const target = demo.querySelector("[class*='fade-in'], [class*='slide-'], [class*='zoom-'], [class*='pop-'], [class*='blur-']");
+        if (!effect || !target)
+            return;
+        target.classList.remove(effect);
+        void target.offsetWidth;
+        target.classList.add(effect);
+    });
+});
 //# sourceMappingURL=main.js.map

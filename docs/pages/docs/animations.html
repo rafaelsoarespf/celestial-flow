@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--About Project-->
+  <title>Celestial Flow</title>
+  <meta name="description" content="Modern CSS framework focused on elegance, responsiveness and clean design" />
+  <meta name="author" content="Rafael" />
+  <meta name="keywords" content="css, framework, responsive, modern ui, frontend, celestial-flow" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Celestial Flow" />
+  <meta property="og:description" content="Modern CSS framework focused on elegance and responsive design." />
+  <meta property="og:type" content="website" />
+
+  <!--Theme-->
+  <meta name="theme-color" content="#121212" />
+
+  <!--Content Security Policy (CSP)-->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self';script-src 'self';style-src 'self' 'unsafe-inline';img-src 'self' data: blob:;font-src 'self' data:;connect-src 'self' https: ws: wss:;object-src 'none';base-uri 'self';form-action 'self';frame-ancestors 'none';upgrade-insecure-requests;" />
+  <!--Referrer Policy-->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <!-- Permissions Policy-->
+  <meta http-equiv="Permissions-Policy"
+    content="camera=(),microphone=(),geolocation=(),payment=(),usb=(),accelerometer=(),gyroscope=(),magnetometer=()" />
+  <!-- HSTS (somente se usar HTTPS, configurar no servidor) -->
+  <!-- <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains"> -->
+  <!--Favicon-->
+  <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" />
+  <!--Celestial Flow-->
+  <link rel="stylesheet" href="../../../celestial-flow/css/fonts.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/reset.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/themes.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/globals.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/layout.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/spacing.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/typography.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/components.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/forms.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/overlays.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/structure.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/decorative.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/appearance.css">
+  <link rel="stylesheet" href="../../../celestial-flow/css/animations.css">
+  <!--Celestial Flow JS-->
+  <script src="../../../celestial-flow/js/celestial-flow.js" defer></script>
+  <!--CSS-->
+  <link rel="stylesheet" href="./docs/styles/index.css" />
+  <!--Scripts-->
+  <script type="module" src="../../dist/main.js"></script>
+</head>
+
+<body>
+  <div class="sidebar-layout">
+    <aside class="sidebar doc-sidebar"></aside>
+
+    <main>
+      <!-- hero ------------------------------------------------------------>
+      <section class="section-sm fx-glow center container">
+        <span class="text-overline">Documentation</span>
+        <h1 class="text-size-4xl text-spacing-sm mt-sm mb">Animations</h1>
+        <p class="width-600">Animation utilities for creating dynamic interface effects.</p>
+      </section>
+
+      <!-- motion ---------------------------------------------------------->
+      <section class="section-sm fx-dots">
+        <div class="container">
+          <span class="text-overline" id="motion">Motion</span>
+          <h2 class="text-spacing-sm mt-sm mb">Motion</h2>
+          <p class="mb-lg">Apply continuous movement to interface elements.</p>
+
+          <div class="grid">
+            <div class="col-4">
+              <p class="text-overline">Float</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg float">Float</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="float"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Bounce</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg bounce">Bounce</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="bounce"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Flip</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg flip">Flip</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="flip"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Drift</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg drift">Drift</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="drift"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Orbit</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg orbit">Orbit</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="orbit"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Pulse</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg pulse">Pulse</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="pulse"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Breathe</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg breathe">Breathe</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="breathe"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Spin</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg spin">Spin</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="spin"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Tilt</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg tilt">Tilt</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="tilt"&gt;&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- overlay effects ------------------------------------------------->
+      <!-- overlay effects ------------------------------------------------->
+      <section class="section-sm">
+        <div class="container">
+          <span class="text-overline" id="overlay-effects">Overlay Effects</span>
+          <h2 class="text-spacing-sm mt-sm mb">Overlay Effects</h2>
+          <p class="mb-lg">Place animated effects over an element.</p>
+
+          <div class="grid">
+            <div class="col-4">
+              <p class="text-overline">Shine</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg shine">Shine</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="shine"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Scanline</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg scanline">Scanline</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="scanline"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Beacon</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg beacon">Beacon</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="beacon"&gt;&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- border animation ----------------------------------------------->
+      <section class="section-sm fx-dots">
+        <div class="container">
+          <span class="text-overline" id="border-animation">Border Animation</span>
+          <h2 class="text-spacing-sm mt-sm mb">Border Animation</h2>
+          <p class="mb-lg">Animate the borders of interface elements.</p>
+
+          <div class="grid">
+            <div class="col-4">
+              <p class="text-overline">Border Neon</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg border-neon">Border Neon</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="border-neon"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Border Pulse</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg border-pulse">Border Pulse</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="border-pulse"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Border Flicker</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg border-flicker">Border Flicker</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="border-flicker"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Border Static</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg border-static">Border Static</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="border-static"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Border Glitch</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg border-glitch">Border Glitch</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="border-glitch"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Border Draw</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg border-draw">Border Draw</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="border-draw"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Border Scan</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg border-scan">Border Scan</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="border-scan"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Border Orbit</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg border-orbit">Border Orbit</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="border-orbit"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Border Shift</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg border-shift">Border Shift</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="border-shift"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Border Width</p>
+              <div class="card center p-lg mb height-100">
+                <div class="card p-lg border-width">Border Width</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="border-width"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Border Corners</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg border-corners">Border Corners</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="border-corners"&gt;&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- hover ----------------------------------------------------------->
+      <section class="section-sm">
+        <div class="container">
+          <span class="text-overline" id="hover">Hover</span>
+          <h2 class="text-spacing-sm mt-sm mb">Hover</h2>
+          <p class="mb-lg">Apply effects when an element is hovered.</p>
+
+          <div class="grid">
+            <div class="col-4">
+              <p class="text-overline">Hover Lift</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg hover-lift">Hover Lift</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="hover-lift"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Hover Glow</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg hover-glow">Hover Glow</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="hover-glow"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Hover Shrink</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg hover-shrink">Hover Shrink</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="hover-shrink"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Hover Border</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg hover-border">Hover Border</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="hover-border"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Hover Tilt</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg hover-tilt">Hover Tilt</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="hover-tilt"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Hover Brighten</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg hover-brighten">Hover Brighten</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="hover-brighten"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Hover Shine</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg hover-shine">Hover Shine</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="hover-shine"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Hover Scan</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg hover-scan">Hover Scan</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="hover-scan"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Hover Ripple</p>
+              <div class="card center p-lg mb">
+                <div class="card p-lg hover-ripple">Hover Ripple</div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="hover-ripple"&gt;&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- entrance -------------------------------------------------------->
+      <section class="section-sm fx-dots">
+        <div class="container">
+          <span class="text-overline" id="entrance">Entrance</span>
+          <h2 class="text-spacing-sm mt-sm mb">Entrance</h2>
+          <p class="mb-lg">Animate elements as they enter the page.</p>
+
+          <div class="grid">
+            <div class="col-4">
+              <p class="text-overline">Fade In</p>
+              <div class="card center p-lg mb" data-entrance="fade-in">
+                <div class="card p-lg fade-in">Fade In</div>
+                <button type="button" data-entrance-replay>Replay</button>
+              </div>
+              <pre class="card-code"><code>&lt;div class="fade-in"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Slide Up</p>
+              <div class="card center p-lg mb" data-entrance="slide-up">
+                <div class="card p-lg slide-up">Slide Up</div>
+                <button type="button" data-entrance-replay>Replay</button>
+              </div>
+              <pre class="card-code"><code>&lt;div class="slide-up"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Slide Down</p>
+              <div class="card center p-lg mb" data-entrance="slide-down">
+                <div class="card p-lg slide-down">Slide Down</div>
+                <button type="button" data-entrance-replay>Replay</button>
+              </div>
+              <pre class="card-code"><code>&lt;div class="slide-down"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Slide Left</p>
+              <div class="card center p-lg mb" data-entrance="slide-left">
+                <div class="card p-lg slide-left">Slide Left</div>
+                <button type="button" data-entrance-replay>Replay</button>
+              </div>
+              <pre class="card-code"><code>&lt;div class="slide-left"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Slide Right</p>
+              <div class="card center p-lg mb" data-entrance="slide-right">
+                <div class="card p-lg slide-right">Slide Right</div>
+                <button type="button" data-entrance-replay>Replay</button>
+              </div>
+              <pre class="card-code"><code>&lt;div class="slide-right"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Zoom In</p>
+              <div class="card center p-lg mb" data-entrance="zoom-in">
+                <div class="card p-lg zoom-in">Zoom In</div>
+                <button type="button" data-entrance-replay>Replay</button>
+              </div>
+              <pre class="card-code"><code>&lt;div class="zoom-in"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Pop In</p>
+              <div class="card center p-lg mb" data-entrance="pop-in">
+                <div class="card p-lg pop-in">Pop In</div>
+                <button type="button" data-entrance-replay>Replay</button>
+              </div>
+              <pre class="card-code"><code>&lt;div class="pop-in"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Blur In</p>
+              <div class="card center p-lg mb" data-entrance="blur-in">
+                <div class="card p-lg blur-in">Blur In</div>
+                <button type="button" data-entrance-replay>Replay</button>
+              </div>
+              <pre class="card-code"><code>&lt;div class="blur-in"&gt;&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- loading --------------------------------------------------------->
+      <section class="section-sm">
+        <div class="container">
+          <span class="text-overline" id="loading">Loading</span>
+          <h2 class="text-spacing-sm mt-sm mb">Loading</h2>
+          <p class="mb-lg">Show animated indicators while content is loading.</p>
+
+          <div class="grid">
+            <div class="col-4">
+              <p class="text-overline">Loading Spin</p>
+              <div class="card center p-lg mb">
+                <div class="loading-spin"></div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="loading-spin"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Loading Pulse</p>
+              <div class="card center p-lg mb">
+                <div class="loading-pulse"></div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="loading-pulse"&gt;&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Loading Dots</p>
+              <div class="card center p-lg mb">
+                <div class="loading-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="loading-dots"&gt;
+  &lt;span&gt;&lt;/span&gt;
+  &lt;span&gt;&lt;/span&gt;
+  &lt;span&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Loading Wave</p>
+              <div class="card center p-lg mb">
+                <div class="loading-wave">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="loading-wave"&gt;
+  &lt;span&gt;&lt;/span&gt;
+  &lt;span&gt;&lt;/span&gt;
+  &lt;span&gt;&lt;/span&gt;
+  &lt;span&gt;&lt;/span&gt;
+  &lt;span&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Loading Orbit</p>
+              <div class="card center p-lg mb">
+                <div class="loading-orbit"></div>
+              </div>
+              <pre class="card-code"><code>&lt;div class="loading-orbit"&gt;&lt;/div&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- text ------------------------------------------------------------>
+      <section class="section-sm fx-dots">
+        <div class="container">
+          <span class="text-overline" id="text">Text</span>
+          <h2 class="text-spacing-sm mt-sm mb">Text</h2>
+          <p class="mb-lg">Apply animated effects to text.</p>
+
+          <div class="grid">
+            <div class="col-4">
+              <p class="text-overline">Text Glow</p>
+              <div class="card center p-lg mb">
+                <span class="text-glow">Text Glow</span>
+              </div>
+              <pre class="card-code"><code>&lt;span class="text-glow"&gt;text&lt;/span&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Text Pulse</p>
+              <div class="card center p-lg mb">
+                <span class="text-pulse">Text Pulse</span>
+              </div>
+              <pre class="card-code"><code>&lt;span class="text-pulse"&gt;text&lt;/span&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Text Flicker</p>
+              <div class="card center p-lg mb">
+                <span class="text-flicker">Text Flicker</span>
+              </div>
+              <pre class="card-code"><code>&lt;span class="text-flicker"&gt;text&lt;/span&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Text Shimmer</p>
+              <div class="card center p-lg mb">
+                <span class="text-shimmer">Text Shimmer</span>
+              </div>
+              <pre class="card-code"><code>&lt;span class="text-shimmer"&gt;text&lt;/span&gt;</code></pre>
+            </div>
+
+            <div class="col-4">
+              <p class="text-overline">Text Wave</p>
+              <div class="card center p-lg mb">
+                <span class="text-wave">Text Wave</span>
+              </div>
+              <pre class="card-code"><code>&lt;span class="text-wave"&gt;text&lt;/span&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
