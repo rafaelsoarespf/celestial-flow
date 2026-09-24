@@ -54,360 +54,447 @@
   <script type="module" src="../../dist/main.js"></script>
 </head>
 
-<div class="sidebar-layout">
-  <aside class="sidebar doc-sidebar"></aside>
-  <main class="content">
-    <button class="sidebar__toggle" type="button" aria-label="Toggle sidebar">☰</button>
+<body>
+  <div class="sidebar-layout">
+    <aside class="sidebar doc-sidebar"></aside>
+    <main class="content">
+      <button class="sidebar__toggle" type="button" aria-label="Toggle sidebar">☰</button>
 
-    <!--hero ---------------------------------------------------------->
-    <section class="section-sm fx-glow center container">
-      <span class="text-overline">Documentation</span>
-      <h1 class="text-size-4xl text-spacing-sm mt-sm mb">Typography</h1>
-      <p class="width-600 center-self">Type scale, weight, letter spacing, and native text elements.</p>
-    </section>
+      <!--hero ---------------------------------------------------------->
+      <section class="section-sm fx-glow center container">
+        <span class="text-overline">Documentation</span>
+        <h1 class="text-size-4xl text-spacing-sm mt-sm mb">Typography</h1>
+        <p class="width-600">Typography provides a consistent foundation for clear hierarchy, readable content, and
+          expressive interfaces.</p>
+      </section>
 
-    <!--title, subtitle & text---------------------------------------------------->
-    <section class="section-sm">
-      <div class="container">
-        <span class="text-overline" id="title-text">Title, Subtitle &amp; Text</span>
-        <h2 class="text-spacing-sm mt-sm mb">Title, Subtitle &amp; Text</h2>
-        <p class="mb-lg">Native <code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code> and <code>&lt;p&gt;</code> are
-          already styled — no class needed. The <code>.title</code>/<code>.subtitle</code>/<code>.text-*</code>
-          classes exist for when you need that same look on a different element, like a <code>&lt;span&gt;</code>.</p>
+      <!-- Typography System ---------------------------------------------------->
+      <section class="section-sm">
+        <div class="container">
+          <span class="text-overline" id="typography-system">Typography System</span>
+          <h2 class="text-spacing-sm mt-sm mb">Typography System</h2>
+          <p class="mb-lg">Typography styles define how text is presented across the interface, providing different
+            levels of emphasis and visual hierarchy.</p>
 
-        <div class="grid mb">
-          <!--Title Hero-->
-          <div class="col-6 card">
-            <p class="title-hero center">Title Hero</p>
-          </div>
-          <div class="col-6">
-            <pre class="card-code"><code>&lt;p class="title-hero"&gt;Title Hero&lt;/p&gt;</code></pre>
-          </div>
-          <!--Title-->
-          <div class="col-6 center-items card">
-            <h1>Title</h1>
-          </div>
-          <div class="col-6">
-            <pre class="card-code"><code>&lt;h1&gt;Title&lt;/h1&gt;</code></pre>
-            <pre class="card-code mt-sm"><code>&lt;p class="title"&gt;Title&lt;/p&gt;</code></pre>
-          </div>
-          <!--Subtitle-->
-          <div class="col-6 center-items card">
-            <h2>Subtitle</h2>
-          </div>
-          <div class="col-6">
-            <pre class="card-code"><code>&lt;h2&gt;Subtitle&lt;/h2&gt;</code></pre>
-            <pre class="card-code mt-sm"><code>&lt;p class="subtitle"&gt;Subtitle&lt;/p&gt;</code></pre>
-          </div>
-          <!--heading 3-->
-          <div class="col-6 center-items card">
-            <h3>Heading 3</h3>
-          </div>
-          <div class="col-6">
-            <pre class="card-code"><code>&lt;h3&gt;Heading 3&lt;/h3&gt;</code></pre>
-          </div>
-          <!--heading 4-->
-          <div class="col-6 center-items card">
-            <h4>Heading 4</h4>
-          </div>
-          <div class="col-6">
-            <pre class="card-code"><code>&lt;h4&gt;Heading 4&lt;/h4&gt;</code></pre>
-          </div>
-          <!--heading 5-->
-          <div class="col-6 center-items card">
-            <h5>Heading 5</h5>
-          </div>
-          <div class="col-6">
-            <pre class="card-code"><code>&lt;h5&gt;Heading 5&lt;/h5&gt;</code></pre>
-          </div>
-          <!--heading 6-->
-          <div class="col-6 center-items card">
-            <h6>Heading 6</h6>
-          </div>
-          <div class="col-6">
-            <pre class="card-code"><code>&lt;h6&gt;Heading 6&lt;/h6&gt;</code></pre>
-          </div>
-          <!--Text-->
-          <div class="col-6 center-items card">
-            <p>Paragraph text</p>
-          </div>
-          <div class="col-6">
-            <pre class="card-code"><code>&lt;p&gt;Paragraph text&lt;/p&gt;</code></pre>
-            <pre class="card-code mt-sm"><code>&lt;p class="text"&gt;Paragraph text&lt;/p&gt;</code></pre>
-          </div>
-          <!--text-lg-->
-          <div class="col-6 center-items card">
-            <p class="text-lg">Large text</p>
-          </div>
-          <div class="col-6">
-            <pre class="card-code"><code>&lt;p class="text-lg"&gt;Large text&lt;/p&gt;</code></pre>
-          </div>
-          <!--text-sm-->
-          <div class="col-6 center-items card">
-            <p class="text-sm">Small text</p>
-          </div>
-          <div class="col-6">
-            <pre class="card-code"><code>&lt;p class="text-sm"&gt;Small text&lt;/p&gt;</code></pre>
-          </div>
-          <!--text-accent-->
-          <div class="col-6 center-items card">
-            <p class="text-accent">Accent text</p>
-          </div>
-          <div class="col-6">
-            <pre class="card-code"><code>&lt;p class="text-accent"&gt;Accent text&lt;/p&gt;</code></pre>
-          </div>
-          <!--text-on-accent-->
-          <div class="col-6 center-items bg-accent card">
-            <p class="text-on-accent">On-accent text</p>
-          </div>
-          <div class="col-6">
-            <pre class="card-code"><code>&lt;p class="text-on-accent"&gt;On-accent text&lt;/p&gt;</code></pre>
+          <div class="grid mb">
+            <!--Title Hero-->
+            <div class="col-6 card">
+              <p class="title-hero center">Title Hero</p>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;p class="title-hero"&gt;Title Hero&lt;/p&gt;</code></pre>
+            </div>
+            <!--Title-->
+            <div class="col-6 center-items card">
+              <h1>Title</h1>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;h1&gt;Title&lt;/h1&gt;</code></pre>
+              <pre class="card-code mt-sm"><code>&lt;p class="title"&gt;Title&lt;/p&gt;</code></pre>
+            </div>
+            <!--Subtitle-->
+            <div class="col-6 center-items card">
+              <h2>Subtitle</h2>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;h2&gt;Subtitle&lt;/h2&gt;</code></pre>
+              <pre class="card-code mt-sm"><code>&lt;p class="subtitle"&gt;Subtitle&lt;/p&gt;</code></pre>
+            </div>
+            <!--heading 3-->
+            <div class="col-6 center-items card">
+              <h3>Heading 3</h3>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;h3&gt;Heading 3&lt;/h3&gt;</code></pre>
+            </div>
+            <!--heading 4-->
+            <div class="col-6 center-items card">
+              <h4>Heading 4</h4>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;h4&gt;Heading 4&lt;/h4&gt;</code></pre>
+            </div>
+            <!--heading 5-->
+            <div class="col-6 center-items card">
+              <h5>Heading 5</h5>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;h5&gt;Heading 5&lt;/h5&gt;</code></pre>
+            </div>
+            <!--heading 6-->
+            <div class="col-6 center-items card">
+              <h6>Heading 6</h6>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;h6&gt;Heading 6&lt;/h6&gt;</code></pre>
+            </div>
+            <!--Text-->
+            <div class="col-6 center-items card">
+              <p>Paragraph text</p>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;p&gt;Paragraph text&lt;/p&gt;</code></pre>
+              <pre class="card-code mt-sm"><code>&lt;p class="text"&gt;Paragraph text&lt;/p&gt;</code></pre>
+            </div>
+            <!--text-lg-->
+            <div class="col-6 center-items card">
+              <p class="text-lg">Large text</p>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;p class="text-lg"&gt;Large text&lt;/p&gt;</code></pre>
+            </div>
+            <!--text-sm-->
+            <div class="col-6 center-items card">
+              <p class="text-sm">Small text</p>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;p class="text-sm"&gt;Small text&lt;/p&gt;</code></pre>
+            </div>
+            <!--text-accent-->
+            <div class="col-6 center-items card">
+              <p class="text-accent">Accent text</p>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;p class="text-accent"&gt;Accent text&lt;/p&gt;</code></pre>
+            </div>
+            <!--text-on-accent-->
+            <div class="col-6 center-items bg-accent card">
+              <p class="text-on-accent">On-accent text</p>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;p class="text-on-accent"&gt;On-accent text&lt;/p&gt;</code></pre>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <div class="divider-fade"></div>
+      <div class="divider-fade"></div>
 
-    <!--code---------------------------------------------------->
-    <!--code---------------------------------------------------->
-<section class="section-sm">
-  <div class="container">
-    <span class="text-overline" id="code">Code</span>
-    <h2 class="text-spacing-sm mt-sm mb">Code</h2>
-    <p class="mb-lg">Native <code>&lt;code&gt;</code> and <code>&lt;pre&gt;</code> are already styled — no class
-      needed. Add <code>.card-code</code> to a <code>&lt;pre&gt;</code> for a block with a window-style top
-      bar.</p>
+      <!--text-elements---------------------------------------------------->
+      <section class="section-sm fx-dots">
+        <div class="container">
+          <span class="text-overline" id="text-elements">Text Elements</span>
+          <h2 class="text-spacing-sm mt-sm mb">Text Elements</h2>
+          <p class="mb-lg">Semantic elements for adding emphasis, context, and highlighting within text.</p>
 
-    <div class="grid mb">
-      <!--inline code-->
-      <div class="col-6 center-items card">
-        <p><code>inline code</code></p>
-      </div>
-      <div class="col-6">
-        <pre class="card-code"><code>&lt;code&gt;inline code&lt;/code&gt;</code></pre>
-      </div>
-      <!--pre-->
-      <div class="col-6 card">
-        <pre><code>code block</code></pre>
-      </div>
-      <div class="col-6">
-        <pre class="card-code"><code>&lt;pre&gt;&lt;code&gt;code block&lt;/code&gt;&lt;/pre&gt;</code></pre>
-      </div>
-      <!--card-code-->
-      <div class="col-6 card">
-        <pre class="card-code"><code>card code</code></pre>
-      </div>
-      <div class="col-6">
-        <pre class="card-code"><code>&lt;pre class="card-code"&gt;&lt;code&gt;card code&lt;/code&gt;&lt;/pre&gt;</code></pre>
-      </div>
-    </div>
+          <div class="grid mb">
+            <!--strong-->
+            <div class="col-6 center-items card">
+              <p>Use <strong>strong</strong> when a part of the content has greater importance.</p>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;strong&gt;strong&lt;/strong&gt;</code></pre>
+            </div>
+
+            <!--abbr-->
+            <div class="col-6 center-items card">
+              <p>Use <abbr title="abbreviation">abbr</abbr> for abbreviated terms.</p>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;abbr title="abbreviation"&gt;abbr&lt;/abbr&gt;</code></pre>
+            </div>
+
+            <!--mark-->
+            <div class="col-6 center-items card">
+              <p>Use <mark>mark</mark> to highlight text that needs attention.</p>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;mark&gt;mark&lt;/mark&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--link---------------------------------------------------->
+      <section class="section-sm">
+        <div class="container">
+          <span class="text-overline" id="link">Link</span>
+          <h2 class="text-spacing-sm mt-sm mb">Link</h2>
+          <p class="mb-lg">Links connect related content and provide navigation within or beyond the page.</p>
+
+          <div class="grid mb">
+            <div class="center-items card">
+              <p>Use <a href="#">link</a> to navigate to another destination.</p>
+            </div>
+            <div>
+              <pre class="card-code"><code>&lt;a href="#"&gt;link&lt;/a&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--quotes---------------------------------------------------->
+      <section class="section-sm fx-dots">
+        <div class="container">
+          <span class="text-overline" id="quotes">Quotes</span>
+          <h2 class="text-spacing-sm mt-sm mb">Quotes</h2>
+          <p class="mb-lg">Elements for presenting short quotations and longer quoted passages.</p>
+
+          <div class="grid mb">
+            <!--q-->
+            <div class="col-6 center-items card">
+              <p>Use <q>&lt;q&gt;</q> for short quotations.</p>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;q&gt;short quotations&lt;/q&gt;</code></pre>
+            </div>
+
+            <!--blockquote-->
+            <div class="col-6 card">
+              <blockquote>
+                Use blockquote for longer quotations.
+              </blockquote>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;blockquote&gt;blockquote&lt;/blockquote&gt;</code></pre>
+            </div>
+
+            <!--blockquote footer-->
+            <div class="col-6 card">
+              <blockquote>
+                Use blockquote for longer quotations.
+                <footer>footer</footer>
+              </blockquote>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;blockquote&gt;
+  blockquote
+  &lt;footer&gt;footer&lt;/footer&gt;
+&lt;/blockquote&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-fade"></div>
+      <!--code---------------------------------------------------->
+      <section class="section-sm">
+        <div class="container">
+          <span class="text-overline" id="code">Code</span>
+          <h2 class="text-spacing-sm mt-sm mb">Code</h2>
+          <p class="mb-lg">Styles for presenting code clearly and consistently within content.</p>
+
+          <div class="grid mb">
+            <!--inline code-->
+            <div class="col-6 center-items card">
+              <p><code>inline code</code></p>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;code&gt;inline code&lt;/code&gt;</code></pre>
+            </div>
+            <!--pre-->
+            <div class="col-6 card">
+              <pre><code>code block</code></pre>
+            </div>
+            <div class="col-6">
+              <pre class="card-code"><code>&lt;pre&gt;&lt;code&gt;code block&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            </div>
+            <!--card-code-->
+            <div class="col-6 card">
+              <pre class="card-code"><code>card code</code></pre>
+            </div>
+            <div class="col-6">
+              <pre
+                class="card-code"><code>&lt;pre class="card-code"&gt;&lt;code&gt;card code&lt;/code&gt;&lt;/pre&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="divider-fade"></div>
+
+      <!--text-overline---------------------------------------------------->
+      <section class="section-sm fx-dots">
+        <div class="container">
+          <span class="text-overline" id="text-overline">Text Overline</span>
+          <h2 class="text-spacing-sm mt-sm mb">Text Overline</h2>
+          <p class="mb">A secondary text style for introducing or identifying the content that follows.</p>
+          <span class="text-overline">Text Overline</span>
+          <pre class="card-code mt"><code>&lt;span class="text-overline"&gt;Text Overline&lt;/span&gt;</code></pre>
+        </div>
+      </section>
+
+      <!--text-underline---------------------------------------------------->
+      <section class="section-sm">
+        <div class="container">
+          <span class="text-overline" id="text-underline">Text Underline</span>
+          <h2 class="text-spacing-sm mt-sm mb">Text Underline</h2>
+          <p class="mb">A subtle detail for refining the presentation of text.</p>
+          <p><span class="text-underline">Text Underline</span></p>
+          <pre class="card-code mt"><code>&lt;span class="text-underline"&gt;Text Underline&lt;/span&gt;</code></pre>
+        </div>
+      </section>
+      <div class="divider-fade"></div>
+      <!--weight---------------------------------------------------->
+      <section class="section-sm fx-dots">
+        <div class="container">
+          <span class="text-overline" id="weight">Weight</span>
+          <h2 class="text-spacing-sm mt-sm mb">Weight</h2>
+          <p class="mb">A range of font weights for adjusting the appearance of text.</p>
+
+          <div class="column gap-sm mb">
+            <p class="text-light">.text-light</p>
+            <p class="text-normal">.text-normal</p>
+            <p class="text-medium">.text-medium</p>
+            <p class="text-semibold">.text-semibold</p>
+            <p class="text-bold">.text-bold</p>
+            <p class="text-extrabold">.text-extrabold</p>
+          </div>
+        </div>
+      </section>
+
+      <!--letter spacing---------------------------------------------------->
+      <section class="section-sm">
+        <div class="container">
+          <span class="text-overline" id="letter-spacing">Letter Spacing</span>
+          <h2 class="text-spacing-sm mt-sm mb">Letter Spacing</h2>
+          <p class="mb">A range of letter-spacing values for adjusting the space between characters.</p>
+
+          <div class="column gap-sm mb">
+            <p class="text-spacing-none">.text-spacing-none</p>
+            <p class="text-spacing-sm">.text-spacing-sm</p>
+            <p class="text-spacing">.text-spacing</p>
+            <p class="text-spacing-md">.text-spacing-md</p>
+            <p class="text-spacing-lg">.text-spacing-lg</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-fade"></div>
+
+      <!--decorative text---------------------------------------------------->
+      <section class="section-sm fx-dots">
+        <div class="container">
+          <span class="text-overline" id="decorative-text">Decorative Text</span>
+          <h2 class="text-spacing-sm mt-sm mb">Decorative Text</h2>
+          <p class="mb">Adds supporting text without taking focus from the main content.</p>
+
+          <div class="card" style="position: relative; overflow: hidden; min-height: 120px;">
+            <p class="text-decorative" data-text="Flow">Flow</p>
+          </div>
+          <pre class="card-code mt"><code>&lt;p class="text-decorative" data-text="Flow"&gt;Flow&lt;/p&gt;</code></pre>
+        </div>
+      </section>
+
+      <!--bracket---------------------------------------------------->
+      <section class="section-sm">
+        <div class="container">
+          <span class="text-overline" id="bracket">Bracket</span>
+          <h2 class="text-spacing-sm mt-sm mb">Bracket</h2>
+          <p class="mb">An expressive typographic detail for adding visual character to text.</p>
+          <span class="text-overline text-bracket">Featured</span>
+          <pre
+            class="card-code mt"><code>&lt;span class="text-overline text-bracket"&gt;Featured&lt;/span&gt;</code></pre>
+        </div>
+      </section>
+
+      <div class="divider-fade"></div>
+
+      <!--alignment---------------------------------------------------->
+      <section class="section-sm">
+        <div class="container">
+          <span class="text-overline" id="alignment">Alignment</span>
+          <h2 class="text-spacing-sm mt-sm mb">Alignment</h2>
+          <p class="mb">Classes for controlling the alignment of text.</p>
+          <div class="grid">
+            <p class="col-4 text-left surface p"><code>.text-left</code></p>
+            <p class="col-4 text-center surface p"><code>.text-center</code></p>
+            <p class="col-4 text-right surface p"><code>.text-right</code></p>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-fade"></div>
+
+      <!--color---------------------------------------------------->
+      <section class="section-sm fx-dots">
+        <div class="container">
+          <span class="text-overline" id="color">Color</span>
+          <h2 class="text-spacing-sm mt-sm mb">Color</h2>
+          <p class="mb">A range of text colors for use across different contexts.</p>
+
+          <div class="grid mb-lg">
+            <p class="text-red surface p-sm text-center">.text-red</p>
+            <p class="text-salmon surface p-sm text-center">.text-salmon</p>
+            <p class="text-orange surface p-sm text-center">.text-orange</p>
+            <p class="text-yellow surface p-sm text-center">.text-yellow</p>
+            <p class="text-lime surface p-sm text-center">.text-lime</p>
+            <p class="text-green surface p-sm text-center">.text-green</p>
+          </div>
+          <div class="grid mb-lg">
+            <p class="text-teal surface p-sm text-center">.text-teal</p>
+            <p class="text-cyan surface p-sm text-center">.text-cyan</p>
+            <p class="text-blue surface p-sm text-center">.text-blue</p>
+            <p class="text-indigo surface p-sm text-center">.text-indigo</p>
+            <p class="text-purple surface p-sm text-center">.text-purple</p>
+            <p class="text-pink surface p-sm text-center">.text-pink</p>
+          </div>
+          <div class="grid mb-lg">
+            <p class="text-brown surface p-sm text-center">.text-brown</p>
+            <p class="text-gray surface p-sm text-center">.text-gray</p>
+            <p class="text-black surface p-sm text-center">.text-black</p>
+            <p class="text-white surface-2 p-sm text-center">.text-white</p>
+          </div>
+
+          <p class="mb-sm">Metallic gradients:</p>
+          <div class="row gap-lg">
+            <p class="text-gold text-size-xl surface p-sm text-center">.text-gold</p>
+            <p class="text-silver text-size-xl surface p-sm text-center">.text-silver</p>
+            <p class="text-bronze text-size-xl surface p-sm text-center">.text-bronze</p>
+          </div>
+        </div>
+      </section>
+
+      <!--size scale---------------------------------------------------->
+      <section class="section-sm">
+        <div class="container">
+          <span class="text-overline" id="size-scale">Size Scale</span>
+          <h2 class="text-spacing-sm mt-sm mb">Size Scale</h2>
+          <p class="mb-lg">Predefined text sizes for different levels of scale across the interface.</p>
+
+          <div class="column gap-sm">
+            <div class="row gap center-items-vertical">
+              <span class="text-size-xs">Aa</span><code>.text-size-xs</code>
+            </div>
+            <div class="row gap center-items-vertical">
+              <span class="text-size-sm">Aa</span><code>.text-size-sm</code>
+            </div>
+            <div class="row gap center-items-vertical">
+              <span class="text-size-md">Aa</span><code>.text-size-md</code>
+            </div>
+            <div class="row gap center-items-vertical">
+              <span class="text-size-lg">Aa</span><code>.text-size-lg</code>
+            </div>
+            <div class="row gap center-items-vertical">
+              <span class="text-size-xl">Aa</span><code>.text-size-xl</code>
+            </div>
+            <div class="row gap center-items-vertical">
+              <span class="text-size-2xl">Aa</span><code>.text-size-2xl</code>
+            </div>
+            <div class="row gap center-items-vertical">
+              <span class="text-size-3xl">Aa</span><code>.text-size-3xl</code>
+            </div>
+            <div class="row gap center-items-vertical">
+              <span class="text-size-4xl">Aa</span><code>.text-size-4xl</code>
+            </div>
+            <div class="row gap center-items-vertical">
+              <span class="text-size-5xl">Aa</span><code>.text-size-5xl</code>
+            </div>
+            <div class="row gap center-items-vertical">
+              <span class="text-size-6xl">Aa</span><code>.text-size-6xl</code>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--next steps---------------------------------------------------->
+      <section class="card accent center text-center p-lg container">
+        <span class="text-overline">Next</span>
+        <h2 class="text-spacing-sm width-600 mt-sm mb">Layer color, surface &amp; effects</h2>
+        <p class="width-500 mb-lg">Surfaces, backgrounds, borders, and depth effects.</p>
+        <a class="btn-outline" href="./appearance.html">Appearance →</a>
+      </section>
+    </main>
   </div>
-</section>
-    <div class="divider-fade"></div>
-
-    <!--overline---------------------------------------------------->
-    <section class="section-sm fx-dots">
-      <div class="container">
-        <span class="text-overline" id="overline">Overline</span>
-        <h2 class="text-spacing-sm mt-sm mb">Overline</h2>
-        <p class="mb">A small, uppercase, letter-spaced label — used above headings throughout this
-          documentation.</p>
-        <span class="text-overline">Section Label</span>
-        <pre class="card-code mt"><code>&lt;span class="text-overline"&gt;Section Label&lt;/span&gt;</code></pre>
-      </div>
-    </section>
-
-    <!--underline---------------------------------------------------->
-    <section class="section-sm">
-      <div class="container">
-        <span class="text-overline" id="underline">Underline</span>
-        <h2 class="text-spacing-sm mt-sm mb">Underline</h2>
-        <p class="mb">An accent-colored underline, independent of the browser's default link underline.</p>
-        <p><span class="text-underline">Underlined text</span></p>
-        <pre class="card-code mt"><code>&lt;span class="text-underline"&gt;...&lt;/span&gt;</code></pre>
-      </div>
-    </section>
-
-    <div class="divider-fade"></div>
-    <!--weight---------------------------------------------------->
-    <section class="section-sm fx-dots">
-      <div class="container">
-        <span class="text-overline" id="weight">Weight</span>
-        <h2 class="text-spacing-sm mt-sm mb">Weight</h2>
-        <p class="mb">Six font-weight steps, light to extrabold.</p>
-
-        <div class="column gap-sm mb">
-          <p class="text-light">.text-light</p>
-          <p class="text-normal">.text-normal</p>
-          <p class="text-medium">.text-medium</p>
-          <p class="text-semibold">.text-semibold</p>
-          <p class="text-bold">.text-bold</p>
-          <p class="text-extrabold">.text-extrabold</p>
-        </div>
-      </div>
-    </section>
-
-    <!--letter spacing---------------------------------------------------->
-    <section class="section-sm">
-      <div class="container">
-        <span class="text-overline" id="letter-spacing">Letter Spacing</span>
-        <h2 class="text-spacing-sm mt-sm mb">Letter Spacing</h2>
-        <p class="mb">Five tracking steps, tight to wide.</p>
-
-        <div class="column gap-sm mb">
-          <p class="text-spacing-none">.text-spacing-none</p>
-          <p class="text-spacing-sm">.text-spacing-sm</p>
-          <p class="text-spacing">.text-spacing</p>
-          <p class="text-spacing-md">.text-spacing-md</p>
-          <p class="text-spacing-lg">.text-spacing-lg</p>
-        </div>
-      </div>
-    </section>
-
-    <div class="container">
-      <div class="divider-fade"></div>
-    </div>
-
-    <!--decorative text---------------------------------------------------->
-    <section class="section-sm fx-dots">
-      <div class="container">
-        <span class="text-overline" id="decorative-text">Decorative Text</span>
-        <h2 class="text-spacing-sm mt-sm mb">Decorative Text</h2>
-        <p class="mb">Repeats the element's own text as a large, faint watermark behind it — reads from
-          <code>data-text</code>, so it must match the visible text.
-        </p>
-
-        <div class="card" style="position: relative; overflow: hidden; min-height: 120px;">
-          <p class="text-decorative" data-text="Flow">Flow</p>
-        </div>
-        <pre class="card-code mt"><code>&lt;p class="text-decorative" data-text="Flow"&gt;Flow&lt;/p&gt;</code></pre>
-      </div>
-    </section>
-
-    <!--bracket---------------------------------------------------->
-    <section class="section-sm">
-      <div class="container">
-        <span class="text-overline" id="bracket">Bracket</span>
-        <h2 class="text-spacing-sm mt-sm mb">Bracket</h2>
-        <p class="mb">Wraps text in square brackets — often paired with <code>.text-overline</code>.</p>
-        <span class="text-overline text-bracket">Featured</span>
-        <pre
-          class="card-code mt"><code>&lt;span class="text-overline text-bracket"&gt;Featured&lt;/span&gt;</code></pre>
-      </div>
-    </section>
-
-    <div class="container">
-      <div class="divider-fade"></div>
-    </div>
-
-    <!--alignment---------------------------------------------------->
-    <section class="section-sm">
-      <div class="container">
-        <span class="text-overline" id="alignment">Alignment</span>
-        <h2 class="text-spacing-sm mt-sm mb">Alignment</h2>
-        <div class="grid">
-          <p class="col-4 text-left surface p"><code>.text-left</code></p>
-          <p class="col-4 text-center surface p"><code>.text-center</code></p>
-          <p class="col-4 text-right surface p"><code>.text-right</code></p>
-        </div>
-      </div>
-    </section>
-
-    <div class="container">
-      <div class="divider-fade"></div>
-    </div>
-
-    <!--color---------------------------------------------------->
-    <section class="section-sm fx-dots">
-      <div class="container">
-        <span class="text-overline" id="color">Color</span>
-        <h2 class="text-spacing-sm mt-sm mb">Color</h2>
-        <p class="mb">Fixed text colors, independent of the active theme.</p>
-
-        <div class="grid mb-lg">
-          <p class="text-red surface p-sm text-center">.text-red</p>
-          <p class="text-salmon surface p-sm text-center">.text-salmon</p>
-          <p class="text-orange surface p-sm text-center">.text-orange</p>
-          <p class="text-yellow surface p-sm text-center">.text-yellow</p>
-          <p class="text-lime surface p-sm text-center">.text-lime</p>
-          <p class="text-green surface p-sm text-center">.text-green</p>
-        </div>
-        <div class="grid mb-lg">
-          <p class="text-teal surface p-sm text-center">.text-teal</p>
-          <p class="text-cyan surface p-sm text-center">.text-cyan</p>
-          <p class="text-blue surface p-sm text-center">.text-blue</p>
-          <p class="text-indigo surface p-sm text-center">.text-indigo</p>
-          <p class="text-purple surface p-sm text-center">.text-purple</p>
-          <p class="text-pink surface p-sm text-center">.text-pink</p>
-        </div>
-        <div class="grid mb-lg">
-          <p class="text-brown surface p-sm text-center">.text-brown</p>
-          <p class="text-gray surface p-sm text-center">.text-gray</p>
-          <p class="text-black surface p-sm text-center">.text-black</p>
-          <p class="text-white surface-2 p-sm text-center">.text-white</p>
-        </div>
-
-        <p class="mb-sm">Metallic gradients:</p>
-        <div class="row gap-lg">
-          <p class="text-gold text-size-xl surface p-sm text-center">.text-gold</p>
-          <p class="text-silver text-size-xl surface p-sm text-center">.text-silver</p>
-          <p class="text-bronze text-size-xl surface p-sm text-center">.text-bronze</p>
-        </div>
-      </div>
-    </section>
-
-    <!--size scale---------------------------------------------------->
-    <section class="section-sm">
-      <div class="container">
-        <span class="text-overline" id="size-scale">Size Scale</span>
-        <h2 class="text-spacing-sm mt-sm mb">Size Scale</h2>
-        <p class="mb-lg">A fluid type scale, from caption to headline — text that resizes smoothly as the screen gets
-          bigger or smaller, no breakpoints needed.</p>
-
-        <div class="column gap-sm">
-          <div class="row gap center-items-vertical">
-            <span class="text-size-xs">Aa</span><code>.text-size-xs</code>
-          </div>
-          <div class="row gap center-items-vertical">
-            <span class="text-size-sm">Aa</span><code>.text-size-sm</code>
-          </div>
-          <div class="row gap center-items-vertical">
-            <span class="text-size-md">Aa</span><code>.text-size-md</code>
-          </div>
-          <div class="row gap center-items-vertical">
-            <span class="text-size-lg">Aa</span><code>.text-size-lg</code>
-          </div>
-          <div class="row gap center-items-vertical">
-            <span class="text-size-xl">Aa</span><code>.text-size-xl</code>
-          </div>
-          <div class="row gap center-items-vertical">
-            <span class="text-size-2xl">Aa</span><code>.text-size-2xl</code>
-          </div>
-          <div class="row gap center-items-vertical">
-            <span class="text-size-3xl">Aa</span><code>.text-size-3xl</code>
-          </div>
-          <div class="row gap center-items-vertical">
-            <span class="text-size-4xl">Aa</span><code>.text-size-4xl</code>
-          </div>
-          <div class="row gap center-items-vertical">
-            <span class="text-size-5xl">Aa</span><code>.text-size-5xl</code>
-          </div>
-          <div class="row gap center-items-vertical">
-            <span class="text-size-6xl">Aa</span><code>.text-size-6xl</code>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--next steps---------------------------------------------------->
-    <section class="card accent center text-center p-lg container">
-      <span class="text-overline">Next</span>
-      <h2 class="text-spacing-sm width-600 mt-sm mb">Layer color, surface &amp; effects</h2>
-      <p class="width-500 mb-lg">Surfaces, backgrounds, borders, and depth effects.</p>
-      <a class="btn-outline" href="./appearance.html">Appearance →</a>
-    </section>
-  </main>
-</div>
+</body>
 
 </html>
