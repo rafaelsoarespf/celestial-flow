@@ -34,7 +34,7 @@ function initThemeSelector() {
 
       option.setAttribute("data-selected", "");
 
-      document.body.setAttribute("data-theme", theme);
+      document.documentElement.setAttribute("data-theme", theme);
       localStorage.setItem("celestial-flow-theme", theme);
 
       selectors.forEach((s) => {

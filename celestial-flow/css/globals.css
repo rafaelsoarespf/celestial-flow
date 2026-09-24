@@ -650,7 +650,7 @@ progress:indeterminate::-moz-progress-bar {
 /*scrollbar -------------------------------------------------*/
 html {
   scrollbar-width: thin;
-  scrollbar-color: var(--color-surface-2) var(--color-surface-1);
+  scrollbar-color: var(--color-surface-2);
 }
 
 ::-webkit-scrollbar {
