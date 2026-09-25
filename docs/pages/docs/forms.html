@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="light">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8" />
@@ -124,20 +124,20 @@
         <div class="grid mb-lg">
           <div>
             <div class="field">
-              <input type="text" placeholder=" " />
-              <label>Full name</label>
+              <input type="text" id="full-name" placeholder=" " />
+              <label for="full-name">Full name</label>
             </div>
           </div>
           <div>
             <div class="field">
-              <input type="email" placeholder=" " value="email@email.com" />
-              <label>Email</label>
+              <input type="email" id="email" placeholder=" " value="email@email.com" />
+              <label for="email">Email</label>
             </div>
           </div>
         </div>
         <pre class="card-code"><code>&lt;div class="field"&gt;
-  &lt;input type="text" placeholder=" " /&gt;
-  &lt;label&gt;Full name&lt;/label&gt;
+  &lt;input type="text" id="full-name" placeholder=" " /&gt;
+  &lt;label for="full-name"&gt;Full name&lt;/label&gt;
 &lt;/div&gt;</code></pre>
       </div>
     </section>
@@ -232,7 +232,7 @@
         <span class="text-overline" id="file">File</span>
         <h2 class="text-spacing-sm mt-sm mb">File</h2>
         <p class="mb-lg">Use a file input to let users select a file from their device.</p>
-        <input type="file" />
+        <input type="file"/>
         <pre class="card-code mt-sm"><code>&lt;input type="file" /&gt;</code></pre>
       </div>
     </section>
@@ -340,4 +340,5 @@
     </section>
   </main>
 </div>
+
 </html>

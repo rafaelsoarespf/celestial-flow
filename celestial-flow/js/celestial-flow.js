@@ -255,6 +255,8 @@ function showToast(message, duration = 3000) {
   const toast = document.createElement("div");
 
   toast.className = "toast";
+  toast.setAttribute("role", "status");
+  toast.setAttribute("aria-live", "polite");
   toast.textContent = message;
 
   document.body.appendChild(toast);

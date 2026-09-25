@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8" />
@@ -54,53 +54,51 @@
   <script type="module" src="../../dist/main.js"></script>
 </head>
 
-<html data-theme="light">
-<div class="sidebar-layout">
-  <!-- sidebar ---------------------------------------------------------->
-  <aside class="sidebar doc-sidebar"></aside>
-  <!-- main ---------------------------------------------------------->
-  <main class="content">
-    <button class="sidebar__toggle" type="button" aria-label="Toggle sidebar">☰</button>
+<body>
+  <div class="sidebar-layout">
+    <!-- sidebar ---------------------------------------------------------->
+    <aside class="sidebar doc-sidebar"></aside>
+    <!-- main ---------------------------------------------------------->
+    <main class="content">
+      <button class="sidebar__toggle" type="button" aria-label="Toggle sidebar">☰</button>
 
-    <!--hero ---------------------------------------------------------->
-    <section class="section-sm fx-glow center container">
-      <span class="text-overline">Documentation</span>
-      <h1 class="text-size-4xl text-spacing-sm mt-sm mb">Themes</h1>
-      <p class="width-600 center-self">
-        Celestial Flow is theme-first — every color, font, shadow, and radius is a CSS variable, and switching
-        themes is a single attribute.
-      </p>
-    </section>
-
-    <!--how it works---------------------------------------------------->
-    <section class="section-sm">
-      <div class="container">
-        <span class="text-overline" id="how-it-works">How it works</span>
-        <h2 class="text-spacing-sm mt-sm mb">One attribute, one file</h2>
-        <p class="mb">Each theme is a <code>[data-theme="..."]</code> selector in <code>themes.css</code> that
-          defines a fixed set of CSS variables — colors, fonts, letter spacing, shadows, radii, and blur.
-          Every
-          component in the framework is built entirely from these variables, so setting the attribute on
-          <code>&lt;html&gt;</code> restyles the whole page instantly, with no JavaScript required.
+      <!--hero ---------------------------------------------------------->
+      <section class="section-sm fx-glow center container">
+        <span class="text-overline">Documentation</span>
+        <h1 class="text-size-4xl text-spacing-sm mt-sm mb">Themes</h1>
+        <p class="width-600 center-self">
+          Celestial Flow is theme-first — every color, font, shadow, and radius is a CSS variable, and switching
+          themes is a single attribute.
         </p>
-        <pre class="card-code"><code>&lt;html data-theme="dark"&gt;</code></pre>
-      </div>
-    </section>
+      </section>
 
-    <div class="container">
+      <!--how it works---------------------------------------------------->
+      <section class="section-sm">
+        <div class="container">
+          <span class="text-overline" id="how-it-works">How it works</span>
+          <h2 class="text-spacing-sm mt-sm mb">One attribute, one file</h2>
+          <p class="mb">Each theme is a <code>[data-theme="..."]</code> selector in <code>themes.css</code> that
+            defines a fixed set of CSS variables — colors, fonts, letter spacing, shadows, radii, and blur.
+            Every
+            component in the framework is built entirely from these variables, so setting the attribute on
+            <code>&lt;html&gt;</code> restyles the whole page instantly, with no JavaScript required.
+          </p>
+          <pre class="card-code"><code>&lt;html data-theme="dark"&gt;</code></pre>
+        </div>
+      </section>
+
       <div class="divider-fade"></div>
-    </div>
-    <!--theme selector component---------------------------------------------------->
-    <section class="section-sm fx-dots">
-      <div class="container">
-        <span class="text-overline" id="theme-selector">Theme Selector</span>
-        <h2 class="text-spacing-sm mt-sm mb">Let users pick their own</h2>
-        <p class="mb">The <code>.theme-selector</code> component (built on top of <code>.select</code>) lists
-          every
-          theme with a live color preview, and remembers the visitor's choice on their next visit. Drop it
-          anywhere —
-          the sidebar footer of this page uses one. Delete the entries you don't want to offer.</p>
-        <pre class="card-code"><code>&lt;div class="select theme-selector"&gt;
+      <!--theme selector component---------------------------------------------------->
+      <section class="section-sm fx-dots">
+        <div class="container">
+          <span class="text-overline" id="theme-selector">Theme Selector</span>
+          <h2 class="text-spacing-sm mt-sm mb">Let users pick their own</h2>
+          <p class="mb">The <code>.theme-selector</code> component (built on top of <code>.select</code>) lists
+            every
+            theme with a live color preview, and remembers the visitor's choice on their next visit. Drop it
+            anywhere —
+            the sidebar footer of this page uses one. Delete the entries you don't want to offer.</p>
+          <pre class="card-code"><code>&lt;div class="select theme-selector"&gt;
   &lt;button class="select__btn" type="button"&gt;Light&lt;/button&gt;
   &lt;div class="select__menu"&gt;
     &lt;button class="select__item" type="button" data-value="light"&gt;&lt;span class="theme-preview" data-theme="light"&gt;&lt;/span&gt;Light&lt;/button&gt;
@@ -123,425 +121,425 @@
     &lt;button class="select__item" type="button" data-value="ink"&gt;&lt;span class="theme-preview" data-theme="ink"&gt;&lt;/span&gt;Ink&lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-      </div>
-    </section>
-
-    <!--gallery---------------------------------------------------->
-    <section class="section-sm">
-      <div class="container">
-        <span class="text-overline" id="gallery">Gallery</span>
-        <h2 class="text-spacing-sm mt-sm mb">Built-in themes</h2>
-        <p class="mb-lg">Click any theme to preview it on this page.</p>
-
-        <div class="theme-gallery">
-          <button type="button" class="theme-card width-200" data-theme="light" data-theme-set="light">
-            <div class="theme-card__preview">
-              <div class="theme-card__navbar">
-                <span class="theme-card__logo"></span>
-                <span class="theme-card__navdot"></span>
-                <span class="theme-card__navdot"></span>
-              </div>
-              <div class="theme-card__body">
-                <span class="theme-card__title-line"></span>
-                <span class="theme-card__text-line"></span>
-                <span class="theme-card__btn"></span>
-              </div>
-            </div>
-            <span class="theme-card__name">Light</span>
-          </button>
-
-          <button type="button" class="theme-card width-200" data-theme="dark" data-theme-set="dark">
-            <div class="theme-card__preview">
-              <div class="theme-card__navbar">
-                <span class="theme-card__logo"></span>
-                <span class="theme-card__navdot"></span>
-                <span class="theme-card__navdot"></span>
-              </div>
-              <div class="theme-card__body">
-                <span class="theme-card__title-line"></span>
-                <span class="theme-card__text-line"></span>
-                <span class="theme-card__btn"></span>
-              </div>
-            </div>
-            <span class="theme-card__name">Dark</span>
-          </button>
-
-          <button type="button" class="theme-card width-200" data-theme="light-teal" data-theme-set="light-teal">
-            <div class="theme-card__preview">
-              <div class="theme-card__navbar">
-                <span class="theme-card__logo"></span>
-                <span class="theme-card__navdot"></span>
-                <span class="theme-card__navdot"></span>
-              </div>
-              <div class="theme-card__body">
-                <span class="theme-card__title-line"></span>
-                <span class="theme-card__text-line"></span>
-                <span class="theme-card__btn"></span>
-              </div>
-            </div>
-            <span class="theme-card__name">Light Teal</span>
-          </button>
-
-          <button type="button" class="theme-card width-200" data-theme="dark-teal" data-theme-set="dark-teal">
-            <div class="theme-card__preview">
-              <div class="theme-card__navbar">
-                <span class="theme-card__logo"></span>
-                <span class="theme-card__navdot"></span>
-                <span class="theme-card__navdot"></span>
-              </div>
-              <div class="theme-card__body">
-                <span class="theme-card__title-line"></span>
-                <span class="theme-card__text-line"></span>
-                <span class="theme-card__btn"></span>
-              </div>
-            </div>
-            <span class="theme-card__name">Dark Teal</span>
-          </button>
-
-          <button type="button" class="theme-card width-200" data-theme="nebula-light" data-theme-set="nebula-light">
-            <div class="theme-card__preview">
-              <div class="theme-card__navbar">
-                <span class="theme-card__logo"></span>
-                <span class="theme-card__navdot"></span>
-                <span class="theme-card__navdot"></span>
-              </div>
-              <div class="theme-card__body">
-                <span class="theme-card__title-line"></span>
-                <span class="theme-card__text-line"></span>
-                <span class="theme-card__btn"></span>
-              </div>
-            </div>
-            <span class="theme-card__name">Nebula Light</span>
-          </button>
-
-          <button type="button" class="theme-card width-200" data-theme="nebula-dark" data-theme-set="nebula-dark">
-            <div class="theme-card__preview">
-              <div class="theme-card__navbar">
-                <span class="theme-card__logo"></span>
-                <span class="theme-card__navdot"></span>
-                <span class="theme-card__navdot"></span>
-              </div>
-              <div class="theme-card__body">
-                <span class="theme-card__title-line"></span>
-                <span class="theme-card__text-line"></span>
-                <span class="theme-card__btn"></span>
-              </div>
-            </div>
-            <span class="theme-card__name">Nebula Dark</span>
-          </button>
-
-          <button type="button" class="theme-card width-200" data-theme="coffee" data-theme-set="coffee">
-            <div class="theme-card__preview">
-              <div class="theme-card__navbar">
-                <span class="theme-card__logo"></span>
-                <span class="theme-card__navdot"></span>
-                <span class="theme-card__navdot"></span>
-              </div>
-              <div class="theme-card__body">
-                <span class="theme-card__title-line"></span>
-                <span class="theme-card__text-line"></span>
-                <span class="theme-card__btn"></span>
-              </div>
-            </div>
-            <span class="theme-card__name">Coffee</span>
-          </button>
-
-          <button type="button" class="theme-card width-200" data-theme="paper" data-theme-set="paper">
-            <div class="theme-card__preview">
-              <div class="theme-card__navbar">
-                <span class="theme-card__logo"></span>
-                <span class="theme-card__navdot"></span>
-                <span class="theme-card__navdot"></span>
-              </div>
-              <div class="theme-card__body">
-                <span class="theme-card__title-line"></span>
-                <span class="theme-card__text-line"></span>
-                <span class="theme-card__btn"></span>
-              </div>
-            </div>
-            <span class="theme-card__name">Paper</span>
-          </button>
-
-          <button type="button" class="theme-card width-200" data-theme="neumorphism" data-theme-set="neumorphism">
-            <div class="theme-card__preview">
-              <div class="theme-card__navbar">
-                <span class="theme-card__logo"></span>
-                <span class="theme-card__navdot"></span>
-                <span class="theme-card__navdot"></span>
-              </div>
-              <div class="theme-card__body">
-                <span class="theme-card__title-line"></span>
-                <span class="theme-card__text-line"></span>
-                <span class="theme-card__btn"></span>
-              </div>
-            </div>
-            <span class="theme-card__name">Neumorphism</span>
-          </button>
-
-          <button type="button" class="theme-card width-200" data-theme="glass" data-theme-set="glass">
-            <div class="theme-card__preview">
-              <div class="theme-card__navbar">
-                <span class="theme-card__logo"></span>
-                <span class="theme-card__navdot"></span>
-                <span class="theme-card__navdot"></span>
-              </div>
-              <div class="theme-card__body">
-                <span class="theme-card__title-line"></span>
-                <span class="theme-card__text-line"></span>
-                <span class="theme-card__btn"></span>
-              </div>
-            </div>
-            <span class="theme-card__name">Glass</span>
-          </button>
-
-          <button type="button" class="theme-card width-200" data-theme="forest" data-theme-set="forest">
-            <div class="theme-card__preview">
-              <div class="theme-card__navbar">
-                <span class="theme-card__logo"></span>
-                <span class="theme-card__navdot"></span>
-                <span class="theme-card__navdot"></span>
-              </div>
-              <div class="theme-card__body">
-                <span class="theme-card__title-line"></span>
-                <span class="theme-card__text-line"></span>
-                <span class="theme-card__btn"></span>
-              </div>
-            </div>
-            <span class="theme-card__name">Forest</span>
-          </button>
-
-          <button type="button" class="theme-card width-200" data-theme="nord" data-theme-set="nord">
-            <div class="theme-card__preview">
-              <div class="theme-card__navbar">
-                <span class="theme-card__logo"></span>
-                <span class="theme-card__navdot"></span>
-                <span class="theme-card__navdot"></span>
-              </div>
-              <div class="theme-card__body">
-                <span class="theme-card__title-line"></span>
-                <span class="theme-card__text-line"></span>
-                <span class="theme-card__btn"></span>
-              </div>
-            </div>
-            <span class="theme-card__name">Nord</span>
-          </button>
-
-          <button type="button" class="theme-card width-200" data-theme="sakura" data-theme-set="sakura">
-            <div class="theme-card__preview">
-              <div class="theme-card__navbar">
-                <span class="theme-card__logo"></span>
-                <span class="theme-card__navdot"></span>
-                <span class="theme-card__navdot"></span>
-              </div>
-              <div class="theme-card__body">
-                <span class="theme-card__title-line"></span>
-                <span class="theme-card__text-line"></span>
-                <span class="theme-card__btn"></span>
-              </div>
-            </div>
-            <span class="theme-card__name">Sakura</span>
-          </button>
-
-          <button type="button" class="theme-card width-200" data-theme="gold" data-theme-set="gold">
-            <div class="theme-card__preview">
-              <div class="theme-card__navbar">
-                <span class="theme-card__logo"></span>
-                <span class="theme-card__navdot"></span>
-                <span class="theme-card__navdot"></span>
-              </div>
-              <div class="theme-card__body">
-                <span class="theme-card__title-line"></span>
-                <span class="theme-card__text-line"></span>
-                <span class="theme-card__btn"></span>
-              </div>
-            </div>
-            <span class="theme-card__name">Gold</span>
-          </button>
-
-          <button type="button" class="theme-card width-200" data-theme="light-slate-mist"
-            data-theme-set="light-slate-mist">
-            <div class="theme-card__preview">
-              <div class="theme-card__navbar">
-                <span class="theme-card__logo"></span>
-                <span class="theme-card__navdot"></span>
-                <span class="theme-card__navdot"></span>
-              </div>
-              <div class="theme-card__body">
-                <span class="theme-card__title-line"></span>
-                <span class="theme-card__text-line"></span>
-                <span class="theme-card__btn"></span>
-              </div>
-            </div>
-            <span class="theme-card__name">Light Slate Mist</span>
-          </button>
-
-          <button type="button" class="theme-card width-200" data-theme="dark-slate-mist"
-            data-theme-set="dark-slate-mist">
-            <div class="theme-card__preview">
-              <div class="theme-card__navbar">
-                <span class="theme-card__logo"></span>
-                <span class="theme-card__navdot"></span>
-                <span class="theme-card__navdot"></span>
-              </div>
-              <div class="theme-card__body">
-                <span class="theme-card__title-line"></span>
-                <span class="theme-card__text-line"></span>
-                <span class="theme-card__btn"></span>
-              </div>
-            </div>
-            <span class="theme-card__name">Dark Slate Mist</span>
-          </button>
-
-          <button type="button" class="theme-card width-200" data-theme="blacksteel" data-theme-set="blacksteel">
-            <div class="theme-card__preview">
-              <div class="theme-card__navbar">
-                <span class="theme-card__logo"></span>
-                <span class="theme-card__navdot"></span>
-                <span class="theme-card__navdot"></span>
-              </div>
-              <div class="theme-card__body">
-                <span class="theme-card__title-line"></span>
-                <span class="theme-card__text-line"></span>
-                <span class="theme-card__btn"></span>
-              </div>
-            </div>
-            <span class="theme-card__name">Blacksteel</span>
-          </button>
-
-          <button type="button" class="theme-card width-200" data-theme="ink" data-theme-set="ink">
-            <div class="theme-card__preview">
-              <div class="theme-card__navbar">
-                <span class="theme-card__logo"></span>
-                <span class="theme-card__navdot"></span>
-                <span class="theme-card__navdot"></span>
-              </div>
-              <div class="theme-card__body">
-                <span class="theme-card__title-line"></span>
-                <span class="theme-card__text-line"></span>
-                <span class="theme-card__btn"></span>
-              </div>
-            </div>
-            <span class="theme-card__name">Ink</span>
-          </button>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!--variables reference---------------------------------------------------->
-    <section class="section-sm fx-dots">
-      <div class="container">
-        <span class="text-overline" id="variables">Variables</span>
-        <h2 class="text-spacing-sm mt-sm mb">What a theme controls</h2>
-        <p class="mb-lg">Every theme defines the same set of variables. Overriding all of them is what makes
-          a
-          theme — components never hardcode a color, font, or radius.</p>
+      <!--gallery---------------------------------------------------->
+      <section class="section-sm">
+        <div class="container">
+          <span class="text-overline" id="gallery">Gallery</span>
+          <h2 class="text-spacing-sm mt-sm mb">Built-in themes</h2>
+          <p class="mb-lg">Click any theme to preview it on this page.</p>
 
-        <div class="grid mb-md">
-          <div class="col-6">
-            <h4 class="mb-sm">Color</h4>
-            <table>
-              <tbody>
-                <tr>
-                  <td><code>--color-background</code></td>
-                  <td>Page background</td>
-                </tr>
-                <tr>
-                  <td><code>--color-surface-1</code></td>
-                  <td>Cards, panels</td>
-                </tr>
-                <tr>
-                  <td><code>--color-surface-2</code></td>
-                  <td>Nested surfaces</td>
-                </tr>
-                <tr>
-                  <td><code>--color-border</code></td>
-                  <td>Borders and dividers</td>
-                </tr>
-                <tr>
-                  <td><code>--color-accent</code></td>
-                  <td>Primary brand color</td>
-                </tr>
-                <tr>
-                  <td><code>--color-on-accent</code></td>
-                  <td>Text/icons on accent</td>
-                </tr>
-                <tr>
-                  <td><code>--color-title</code></td>
-                  <td>h1 color</td>
-                </tr>
-                <tr>
-                  <td><code>--color-subtitle</code></td>
-                  <td>h2 color</td>
-                </tr>
-                <tr>
-                  <td><code>--color-heading</code></td>
-                  <td>h3–h6 color</td>
-                </tr>
-                <tr>
-                  <td><code>--color-text</code></td>
-                  <td>Body text color</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="col-6">
-            <h4 class="mb-sm">Typography, Shape &amp; Depth</h4>
-            <table>
-              <tbody>
-                <tr>
-                  <td><code>--font-title-hero</code></td>
-                  <td>Hero heading shorthand</td>
-                </tr>
-                <tr>
-                  <td><code>--font-title</code></td>
-                  <td>h1 shorthand</td>
-                </tr>
-                <tr>
-                  <td><code>--font-subtitle</code></td>
-                  <td>h2 shorthand</td>
-                </tr>
-                <tr>
-                  <td><code>--font-heading-3..6</code></td>
-                  <td>h3–h6 shorthand</td>
-                </tr>
-                <tr>
-                  <td><code>--font-text-lg / -text / -text-sm</code></td>
-                  <td>Body text sizes</td>
-                </tr>
-                <tr>
-                  <td><code>--letter-spacing-*</code></td>
-                  <td>Per-level tracking</td>
-                </tr>
-                <tr>
-                  <td><code>--shadow-sm / -md / -lg</code></td>
-                  <td>Elevation scale</td>
-                </tr>
-                <tr>
-                  <td><code>--radius-sm / -md / -lg</code></td>
-                  <td>Corner radius scale</td>
-                </tr>
-                <tr>
-                  <td><code>--blur</code></td>
-                  <td>Backdrop blur amount</td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="theme-gallery">
+            <button type="button" class="theme-card width-200" data-theme="light" data-theme-set="light">
+              <div class="theme-card__preview">
+                <div class="theme-card__navbar">
+                  <span class="theme-card__logo"></span>
+                  <span class="theme-card__navdot"></span>
+                  <span class="theme-card__navdot"></span>
+                </div>
+                <div class="theme-card__body">
+                  <span class="theme-card__title-line"></span>
+                  <span class="theme-card__text-line"></span>
+                  <span class="theme-card__btn"></span>
+                </div>
+              </div>
+              <span class="theme-card__name">Light</span>
+            </button>
+
+            <button type="button" class="theme-card width-200" data-theme="dark" data-theme-set="dark">
+              <div class="theme-card__preview">
+                <div class="theme-card__navbar">
+                  <span class="theme-card__logo"></span>
+                  <span class="theme-card__navdot"></span>
+                  <span class="theme-card__navdot"></span>
+                </div>
+                <div class="theme-card__body">
+                  <span class="theme-card__title-line"></span>
+                  <span class="theme-card__text-line"></span>
+                  <span class="theme-card__btn"></span>
+                </div>
+              </div>
+              <span class="theme-card__name">Dark</span>
+            </button>
+
+            <button type="button" class="theme-card width-200" data-theme="light-teal" data-theme-set="light-teal">
+              <div class="theme-card__preview">
+                <div class="theme-card__navbar">
+                  <span class="theme-card__logo"></span>
+                  <span class="theme-card__navdot"></span>
+                  <span class="theme-card__navdot"></span>
+                </div>
+                <div class="theme-card__body">
+                  <span class="theme-card__title-line"></span>
+                  <span class="theme-card__text-line"></span>
+                  <span class="theme-card__btn"></span>
+                </div>
+              </div>
+              <span class="theme-card__name">Light Teal</span>
+            </button>
+
+            <button type="button" class="theme-card width-200" data-theme="dark-teal" data-theme-set="dark-teal">
+              <div class="theme-card__preview">
+                <div class="theme-card__navbar">
+                  <span class="theme-card__logo"></span>
+                  <span class="theme-card__navdot"></span>
+                  <span class="theme-card__navdot"></span>
+                </div>
+                <div class="theme-card__body">
+                  <span class="theme-card__title-line"></span>
+                  <span class="theme-card__text-line"></span>
+                  <span class="theme-card__btn"></span>
+                </div>
+              </div>
+              <span class="theme-card__name">Dark Teal</span>
+            </button>
+
+            <button type="button" class="theme-card width-200" data-theme="nebula-light" data-theme-set="nebula-light">
+              <div class="theme-card__preview">
+                <div class="theme-card__navbar">
+                  <span class="theme-card__logo"></span>
+                  <span class="theme-card__navdot"></span>
+                  <span class="theme-card__navdot"></span>
+                </div>
+                <div class="theme-card__body">
+                  <span class="theme-card__title-line"></span>
+                  <span class="theme-card__text-line"></span>
+                  <span class="theme-card__btn"></span>
+                </div>
+              </div>
+              <span class="theme-card__name">Nebula Light</span>
+            </button>
+
+            <button type="button" class="theme-card width-200" data-theme="nebula-dark" data-theme-set="nebula-dark">
+              <div class="theme-card__preview">
+                <div class="theme-card__navbar">
+                  <span class="theme-card__logo"></span>
+                  <span class="theme-card__navdot"></span>
+                  <span class="theme-card__navdot"></span>
+                </div>
+                <div class="theme-card__body">
+                  <span class="theme-card__title-line"></span>
+                  <span class="theme-card__text-line"></span>
+                  <span class="theme-card__btn"></span>
+                </div>
+              </div>
+              <span class="theme-card__name">Nebula Dark</span>
+            </button>
+
+            <button type="button" class="theme-card width-200" data-theme="coffee" data-theme-set="coffee">
+              <div class="theme-card__preview">
+                <div class="theme-card__navbar">
+                  <span class="theme-card__logo"></span>
+                  <span class="theme-card__navdot"></span>
+                  <span class="theme-card__navdot"></span>
+                </div>
+                <div class="theme-card__body">
+                  <span class="theme-card__title-line"></span>
+                  <span class="theme-card__text-line"></span>
+                  <span class="theme-card__btn"></span>
+                </div>
+              </div>
+              <span class="theme-card__name">Coffee</span>
+            </button>
+
+            <button type="button" class="theme-card width-200" data-theme="paper" data-theme-set="paper">
+              <div class="theme-card__preview">
+                <div class="theme-card__navbar">
+                  <span class="theme-card__logo"></span>
+                  <span class="theme-card__navdot"></span>
+                  <span class="theme-card__navdot"></span>
+                </div>
+                <div class="theme-card__body">
+                  <span class="theme-card__title-line"></span>
+                  <span class="theme-card__text-line"></span>
+                  <span class="theme-card__btn"></span>
+                </div>
+              </div>
+              <span class="theme-card__name">Paper</span>
+            </button>
+
+            <button type="button" class="theme-card width-200" data-theme="neumorphism" data-theme-set="neumorphism">
+              <div class="theme-card__preview">
+                <div class="theme-card__navbar">
+                  <span class="theme-card__logo"></span>
+                  <span class="theme-card__navdot"></span>
+                  <span class="theme-card__navdot"></span>
+                </div>
+                <div class="theme-card__body">
+                  <span class="theme-card__title-line"></span>
+                  <span class="theme-card__text-line"></span>
+                  <span class="theme-card__btn"></span>
+                </div>
+              </div>
+              <span class="theme-card__name">Neumorphism</span>
+            </button>
+
+            <button type="button" class="theme-card width-200" data-theme="glass" data-theme-set="glass">
+              <div class="theme-card__preview">
+                <div class="theme-card__navbar">
+                  <span class="theme-card__logo"></span>
+                  <span class="theme-card__navdot"></span>
+                  <span class="theme-card__navdot"></span>
+                </div>
+                <div class="theme-card__body">
+                  <span class="theme-card__title-line"></span>
+                  <span class="theme-card__text-line"></span>
+                  <span class="theme-card__btn"></span>
+                </div>
+              </div>
+              <span class="theme-card__name">Glass</span>
+            </button>
+
+            <button type="button" class="theme-card width-200" data-theme="forest" data-theme-set="forest">
+              <div class="theme-card__preview">
+                <div class="theme-card__navbar">
+                  <span class="theme-card__logo"></span>
+                  <span class="theme-card__navdot"></span>
+                  <span class="theme-card__navdot"></span>
+                </div>
+                <div class="theme-card__body">
+                  <span class="theme-card__title-line"></span>
+                  <span class="theme-card__text-line"></span>
+                  <span class="theme-card__btn"></span>
+                </div>
+              </div>
+              <span class="theme-card__name">Forest</span>
+            </button>
+
+            <button type="button" class="theme-card width-200" data-theme="nord" data-theme-set="nord">
+              <div class="theme-card__preview">
+                <div class="theme-card__navbar">
+                  <span class="theme-card__logo"></span>
+                  <span class="theme-card__navdot"></span>
+                  <span class="theme-card__navdot"></span>
+                </div>
+                <div class="theme-card__body">
+                  <span class="theme-card__title-line"></span>
+                  <span class="theme-card__text-line"></span>
+                  <span class="theme-card__btn"></span>
+                </div>
+              </div>
+              <span class="theme-card__name">Nord</span>
+            </button>
+
+            <button type="button" class="theme-card width-200" data-theme="sakura" data-theme-set="sakura">
+              <div class="theme-card__preview">
+                <div class="theme-card__navbar">
+                  <span class="theme-card__logo"></span>
+                  <span class="theme-card__navdot"></span>
+                  <span class="theme-card__navdot"></span>
+                </div>
+                <div class="theme-card__body">
+                  <span class="theme-card__title-line"></span>
+                  <span class="theme-card__text-line"></span>
+                  <span class="theme-card__btn"></span>
+                </div>
+              </div>
+              <span class="theme-card__name">Sakura</span>
+            </button>
+
+            <button type="button" class="theme-card width-200" data-theme="gold" data-theme-set="gold">
+              <div class="theme-card__preview">
+                <div class="theme-card__navbar">
+                  <span class="theme-card__logo"></span>
+                  <span class="theme-card__navdot"></span>
+                  <span class="theme-card__navdot"></span>
+                </div>
+                <div class="theme-card__body">
+                  <span class="theme-card__title-line"></span>
+                  <span class="theme-card__text-line"></span>
+                  <span class="theme-card__btn"></span>
+                </div>
+              </div>
+              <span class="theme-card__name">Gold</span>
+            </button>
+
+            <button type="button" class="theme-card width-200" data-theme="light-slate-mist"
+              data-theme-set="light-slate-mist">
+              <div class="theme-card__preview">
+                <div class="theme-card__navbar">
+                  <span class="theme-card__logo"></span>
+                  <span class="theme-card__navdot"></span>
+                  <span class="theme-card__navdot"></span>
+                </div>
+                <div class="theme-card__body">
+                  <span class="theme-card__title-line"></span>
+                  <span class="theme-card__text-line"></span>
+                  <span class="theme-card__btn"></span>
+                </div>
+              </div>
+              <span class="theme-card__name">Light Slate Mist</span>
+            </button>
+
+            <button type="button" class="theme-card width-200" data-theme="dark-slate-mist"
+              data-theme-set="dark-slate-mist">
+              <div class="theme-card__preview">
+                <div class="theme-card__navbar">
+                  <span class="theme-card__logo"></span>
+                  <span class="theme-card__navdot"></span>
+                  <span class="theme-card__navdot"></span>
+                </div>
+                <div class="theme-card__body">
+                  <span class="theme-card__title-line"></span>
+                  <span class="theme-card__text-line"></span>
+                  <span class="theme-card__btn"></span>
+                </div>
+              </div>
+              <span class="theme-card__name">Dark Slate Mist</span>
+            </button>
+
+            <button type="button" class="theme-card width-200" data-theme="blacksteel" data-theme-set="blacksteel">
+              <div class="theme-card__preview">
+                <div class="theme-card__navbar">
+                  <span class="theme-card__logo"></span>
+                  <span class="theme-card__navdot"></span>
+                  <span class="theme-card__navdot"></span>
+                </div>
+                <div class="theme-card__body">
+                  <span class="theme-card__title-line"></span>
+                  <span class="theme-card__text-line"></span>
+                  <span class="theme-card__btn"></span>
+                </div>
+              </div>
+              <span class="theme-card__name">Blacksteel</span>
+            </button>
+
+            <button type="button" class="theme-card width-200" data-theme="ink" data-theme-set="ink">
+              <div class="theme-card__preview">
+                <div class="theme-card__navbar">
+                  <span class="theme-card__logo"></span>
+                  <span class="theme-card__navdot"></span>
+                  <span class="theme-card__navdot"></span>
+                </div>
+                <div class="theme-card__body">
+                  <span class="theme-card__title-line"></span>
+                  <span class="theme-card__text-line"></span>
+                  <span class="theme-card__btn"></span>
+                </div>
+              </div>
+              <span class="theme-card__name">Ink</span>
+            </button>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!--custom theme---------------------------------------------------->
-    <section class="section-sm">
-      <div class="container">
-        <span class="text-overline" id="custom-theme">Custom Themes</span>
-        <h2 class="text-spacing-sm mt-sm mb">Build your own</h2>
-        <p class="mb">Add a new <code>[data-theme="..."]</code> block to <code>themes.css</code> (or your
-          own
-          stylesheet, linked after it) with the same variable set. Every component picks it up
-          automatically —
-          nothing else needs to change.</p>
-        <pre class="card-code"><code>[data-theme="sunset"] {
+      <!--variables reference---------------------------------------------------->
+      <section class="section-sm fx-dots">
+        <div class="container">
+          <span class="text-overline" id="variables">Variables</span>
+          <h2 class="text-spacing-sm mt-sm mb">What a theme controls</h2>
+          <p class="mb-lg">Every theme defines the same set of variables. Overriding all of them is what makes
+            a
+            theme — components never hardcode a color, font, or radius.</p>
+
+          <div class="grid mb-md">
+            <div class="col-6">
+              <h4 class="mb-sm">Color</h4>
+              <table>
+                <tbody>
+                  <tr>
+                    <td><code>--color-background</code></td>
+                    <td>Page background</td>
+                  </tr>
+                  <tr>
+                    <td><code>--color-surface-1</code></td>
+                    <td>Cards, panels</td>
+                  </tr>
+                  <tr>
+                    <td><code>--color-surface-2</code></td>
+                    <td>Nested surfaces</td>
+                  </tr>
+                  <tr>
+                    <td><code>--color-border</code></td>
+                    <td>Borders and dividers</td>
+                  </tr>
+                  <tr>
+                    <td><code>--color-accent</code></td>
+                    <td>Primary brand color</td>
+                  </tr>
+                  <tr>
+                    <td><code>--color-on-accent</code></td>
+                    <td>Text/icons on accent</td>
+                  </tr>
+                  <tr>
+                    <td><code>--color-title</code></td>
+                    <td>h1 color</td>
+                  </tr>
+                  <tr>
+                    <td><code>--color-subtitle</code></td>
+                    <td>h2 color</td>
+                  </tr>
+                  <tr>
+                    <td><code>--color-heading</code></td>
+                    <td>h3–h6 color</td>
+                  </tr>
+                  <tr>
+                    <td><code>--color-text</code></td>
+                    <td>Body text color</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-6">
+              <h4 class="mb-sm">Typography, Shape &amp; Depth</h4>
+              <table>
+                <tbody>
+                  <tr>
+                    <td><code>--font-title-hero</code></td>
+                    <td>Hero heading shorthand</td>
+                  </tr>
+                  <tr>
+                    <td><code>--font-title</code></td>
+                    <td>h1 shorthand</td>
+                  </tr>
+                  <tr>
+                    <td><code>--font-subtitle</code></td>
+                    <td>h2 shorthand</td>
+                  </tr>
+                  <tr>
+                    <td><code>--font-heading-3..6</code></td>
+                    <td>h3–h6 shorthand</td>
+                  </tr>
+                  <tr>
+                    <td><code>--font-text-lg / -text / -text-sm</code></td>
+                    <td>Body text sizes</td>
+                  </tr>
+                  <tr>
+                    <td><code>--letter-spacing-*</code></td>
+                    <td>Per-level tracking</td>
+                  </tr>
+                  <tr>
+                    <td><code>--shadow-sm / -md / -lg</code></td>
+                    <td>Elevation scale</td>
+                  </tr>
+                  <tr>
+                    <td><code>--radius-sm / -md / -lg</code></td>
+                    <td>Corner radius scale</td>
+                  </tr>
+                  <tr>
+                    <td><code>--blur</code></td>
+                    <td>Backdrop blur amount</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--custom theme---------------------------------------------------->
+      <section class="section-sm">
+        <div class="container">
+          <span class="text-overline" id="custom-theme">Custom Themes</span>
+          <h2 class="text-spacing-sm mt-sm mb">Build your own</h2>
+          <p class="mb">Add a new <code>[data-theme="..."]</code> block to <code>themes.css</code> (or your
+            own
+            stylesheet, linked after it) with the same variable set. Every component picks it up
+            automatically —
+            nothing else needs to change.</p>
+          <pre class="card-code"><code>[data-theme="sunset"] {
   --color-background: linear-gradient(135deg, #2b1055, #7597de);
   --color-surface-1: rgba(255, 255, 255, 0.06);
   --color-surface-2: rgba(255, 255, 255, 0.1);
@@ -582,17 +580,18 @@
 
   --blur: blur(16px);
 }</code></pre>
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <!--next steps---------------------------------------------------->
-    <section class="card accent center text-center p-lg container">
-      <span class="text-overline">Next</span>
-      <h2 class="text-spacing-sm width-600 mt-sm mb">Start structuring your page</h2>
-      <p class="width-500 mb-lg">Containers, sections, grid, and alignment utilities to lay out any page.</p>
-      <a class="btn-outline" href="./layout.html">Layout →</a>
-    </section>
-  </main>
-</div>
+      <!--next steps---------------------------------------------------->
+      <section class="card accent center text-center p-lg container">
+        <span class="text-overline">Next</span>
+        <h2 class="text-spacing-sm width-600 mt-sm mb">Start structuring your page</h2>
+        <p class="width-500 mb-lg">Containers, sections, grid, and alignment utilities to lay out any page.</p>
+        <a class="btn-outline" href="./layout.html">Layout →</a>
+      </section>
+    </main>
+  </div>
+</body>
 
 </html>

@@ -431,6 +431,13 @@ input[type="range"]::-webkit-slider-thumb:hover {
   transform: scale(1.08);
 }
 
+input[type="range"]:focus-visible::-webkit-slider-thumb {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 25%, transparent);
+}
+input[type="range"]:focus-visible::-moz-range-thumb {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 25%, transparent);
+}
+
 /*firefox*/
 input[type="range"]::-moz-range-track {
   height: 8px;
