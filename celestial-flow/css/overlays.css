@@ -138,6 +138,64 @@
   border-top: 1px solid var(--color-border);
 }
 
+/*disclosure ----------------------------------------------------------------------*/
+.disclosure {
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+}
+
+.disclosure summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .65rem .8rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  color: var(--color-title);
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.disclosure summary:hover {
+  background: color-mix(in srgb, var(--color-accent) 20%, transparent);
+}
+
+.disclosure[open] > summary {
+  color: var(--color-accent);
+}
+
+.disclosure summary:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.disclosure summary::-webkit-details-marker {
+  display: none;
+}
+
+.disclosure summary::after {
+  content: "";
+  width: .5rem;
+  height: .5rem;
+  flex-shrink: 0;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transform-origin: center;
+  transition: transform .25s ease;
+}
+
+.disclosure[open] summary::after {
+  transform: rotate(225deg);
+}
+
+.disclosure > :not(summary) {
+  padding: .5rem .8rem .75rem;
+  color: var(--color-text);
+}
+
 /* tree ----------------------------------------------------------------------*/
 details.tree {
   display: flex;
