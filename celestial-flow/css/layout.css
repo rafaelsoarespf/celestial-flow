@@ -12,16 +12,17 @@
   padding-block: clamp(3rem, 6vw, 4rem);
 }
 
-.section {
+.section, .section-md {
   padding-block: clamp(4rem, 8vw, 6rem);
 }
 
-.section-md {
+.section-lg {
   padding-block: clamp(5rem, 9vw, 8rem);
 }
 
-.section-lg {
-  padding-block: clamp(6rem, 10vw, 10rem);
+.section-hero {
+  min-height: 100dvh;
+  padding-block: clamp(4rem, 8vw, 6rem);
 }
 
 /*grid -------------------------------------------------------*/
