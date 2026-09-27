@@ -259,7 +259,7 @@ pre.card-code {
   align-items: center;
   padding: .25rem .7rem;
   border-radius: 999px;
-  font-size: .75rem;
+  font: var(--font-text-sm);
   font-weight: 600;
   background: color-mix(in srgb, var(--color-accent) 12%, transparent);
   color: var(--color-accent);

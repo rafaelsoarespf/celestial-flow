@@ -231,7 +231,7 @@ input,textarea,select {
   color: var(--color-text);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: .75rem .9rem;
+  padding: .75rem .8rem;
   box-sizing: border-box;
   transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
   outline: none;
@@ -491,7 +491,7 @@ input[type="file"]:focus {
 
 input[type="file"]::file-selector-button {
   margin-right: .75rem;
-  padding: .55rem .9rem;
+  padding: .55rem .8rem;
   border: none;
   border-radius: var(--radius-md);
   background: var(--color-accent);

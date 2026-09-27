@@ -195,3 +195,18 @@
 .text-size-6xl {
   font-size: clamp(3rem, 1.5rem + 7vw, 6.5rem);
 }
+
+/*logo -----------------------------------------------------------*/
+.logo {
+  font: 700 1.6rem "Sora", -apple-system, "Segoe UI", sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--color-title);
+  text-decoration: none;
+  transition: opacity .2s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}

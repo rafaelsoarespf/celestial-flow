@@ -22,13 +22,6 @@
   position: relative;
 }
 
-/* Logo */
-.navbar__logo {
-  font: 700 1.6rem "Sora", -apple-system, "Segoe UI", sans-serif;
-  color: var(--color-title);
-  text-decoration: none;
-}
-
 /* Navbar-menu */
 .navbar__menu {
   display: flex;
