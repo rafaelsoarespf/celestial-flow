@@ -306,6 +306,8 @@
   --blur: blur(12px);
 }
 
+
+
 /*============================================================*/
 /* Paper ========================================================*/
 [data-theme="paper"] {
@@ -357,14 +359,14 @@
   --color-surface-1: #E7EBF0;
   --color-surface-2: #E3E8EE;
 
-  --color-border: transparent;
+  --color-border: rgba(163, 177, 198, 0.15);
   --color-accent: #5B6472;
   --color-on-accent: #FFFFFF;
 
   --color-title: #2E3440;
-  --color-subtitle: #4C566A;
-  --color-heading: #5B6577;
-  --color-text: #6B7280;
+  --color-subtitle: #3B4252;
+  --color-heading: #434C5E;
+  --color-text: #4C566A;
 
   --letter-spacing-title-hero: -0.02em;
   --letter-spacing-title: -0.005em;
@@ -383,15 +385,9 @@
   --font-text: 400 1rem "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
   --font-text-sm: 400 0.875rem "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
 
-  --shadow-sm:
-    2px 2px 4px rgba(163, 177, 198, 0.25),
-    -2px -2px 4px rgba(255, 255, 255, 0.9);
-  --shadow-md:
-    4px 4px 8px rgba(163, 177, 198, 0.35),
-    -4px -4px 8px rgba(255, 255, 255, 0.95);
-  --shadow-lg:
-    6px 6px 12px rgba(163, 177, 198, 0.40),
-    -6px -6px 12px rgba(255, 255, 255, 1);
+  --shadow-sm: 3px 3px 6px rgba(163, 177, 198, 0.45),-3px -3px 6px rgba(255, 255, 255, 0.9);
+  --shadow-md: 6px 6px 14px rgba(163, 177, 198, 0.5),-6px -6px 14px rgba(255, 255, 255, 0.95);
+  --shadow-lg: 10px 10px 24px rgba(163, 177, 198, 0.55),-10px -10px 24px rgba(255, 255, 255, 1);
 
   --radius-sm: 10px;
   --radius-md: 16px;
