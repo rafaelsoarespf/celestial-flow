@@ -141,6 +141,10 @@
   border-radius: 999px;
 }
 
+.sidebar__menu > * {
+  flex-shrink: 0;
+}
+
 .sidebar__menu a {
   display: flex;
   align-items: center;
