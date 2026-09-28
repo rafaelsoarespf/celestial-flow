@@ -171,51 +171,18 @@
 }
 
 /* card-code ----------------------------------------------------------------------*/
-pre:not(.card-code) {
-  background: color-mix(in srgb, var(--color-accent) 35%, rgba(117,117,117,0.5));
-  backdrop-filter: var(--blur);
-  color: color-mix(in srgb, var(--color-on-accent) 80%, rgba(248,248,248,0.5));
-  padding: 1.25rem;
-  border-radius: var(--radius-md);
-  overflow-x: auto;
-  line-height: 1.7;
-  border: 1px solid color-mix(in srgb, var(--color-accent) 40%, transparent);
-  box-shadow: var(--shadow-md);
-}
-
-pre:not(.card-code) code, pre.card-code code {
-  display: block;
-  background: transparent;
-  backdrop-filter: none;
-  color: inherit;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  border-radius: 0;
-  font-family: monospace;
-  font-size: 0.95rem;
-  white-space: pre;
-}
-
-pre:not(.card-code) code {
-  text-align: left;
-}
-
 pre.card-code code {
   min-width: max-content;
 }
 
 pre.card-code {
   position: relative;
-  overflow-x: auto;
   overflow-y: hidden;
   padding: 72px 16px 24px;
-  line-height: 1.7;
   text-align: left;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   color: var(--color-text);
-  backdrop-filter: var(--blur);
   box-shadow: var(--shadow-lg);
   background:
     radial-gradient(circle at 20px 24px, #ff5f56 6px, transparent 7px),
