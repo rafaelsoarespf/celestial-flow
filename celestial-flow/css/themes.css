@@ -35,6 +35,10 @@
   --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
 
+  --shadow-inset-sm: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-inset-md: inset 0 2px 5px rgba(0, 0, 0, 0.09);
+  --shadow-inset-lg: inset 0 3px 10px rgba(0, 0, 0, 0.13);
+
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
@@ -78,6 +82,10 @@
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.25);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
   --shadow-lg: 0 12px 34px rgba(0, 0, 0, 0.45);
+
+  --shadow-inset-sm: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-inset-md: inset 0 2px 5px rgba(0, 0, 0, 0.09);
+  --shadow-inset-lg: inset 0 3px 10px rgba(0, 0, 0, 0.13);
 
   --radius-sm: 8px;
   --radius-md: 12px;
@@ -123,6 +131,10 @@
   --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
 
+  --shadow-inset-sm: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-inset-md: inset 0 2px 5px rgba(0, 0, 0, 0.09);
+  --shadow-inset-lg: inset 0 3px 10px rgba(0, 0, 0, 0.13);
+  
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
@@ -167,6 +179,10 @@
   --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.28);
   --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.38);
 
+  --shadow-inset-sm: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-inset-md: inset 0 2px 5px rgba(0, 0, 0, 0.09);
+  --shadow-inset-lg: inset 0 3px 10px rgba(0, 0, 0, 0.13);
+  
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
@@ -211,6 +227,10 @@
   --shadow-md: 0 8px 20px rgba(30, 41, 59, 0.10);
   --shadow-lg: 0 18px 40px rgba(30, 41, 59, 0.14);
 
+  --shadow-inset-sm: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-inset-md: inset 0 2px 5px rgba(0, 0, 0, 0.09);
+  --shadow-inset-lg: inset 0 3px 10px rgba(0, 0, 0, 0.13);
+  
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
@@ -255,6 +275,10 @@
   --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.35);
   --shadow-lg: 0 18px 40px rgba(0, 0, 0, 0.55);
 
+  --shadow-inset-sm: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-inset-md: inset 0 2px 5px rgba(0, 0, 0, 0.09);
+  --shadow-inset-lg: inset 0 3px 10px rgba(0, 0, 0, 0.13);
+  
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
@@ -299,6 +323,10 @@
   --shadow-md: 0 4px 10px rgba(47, 36, 30, 0.10);
   --shadow-lg: 0 10px 30px rgba(47, 36, 30, 0.16);
 
+  --shadow-inset-sm: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-inset-md: inset 0 2px 5px rgba(0, 0, 0, 0.09);
+  --shadow-inset-lg: inset 0 3px 10px rgba(0, 0, 0, 0.13);
+  
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
@@ -345,6 +373,10 @@
   --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.05);
   --shadow-lg: 0 6px 16px rgba(0, 0, 0, 0.08);
 
+  --shadow-inset-sm: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-inset-md: inset 0 2px 5px rgba(0, 0, 0, 0.09);
+  --shadow-inset-lg: inset 0 3px 10px rgba(0, 0, 0, 0.13);
+  
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 14px;
@@ -388,6 +420,13 @@
   --shadow-sm: 3px 3px 6px rgba(163, 177, 198, 0.45),-3px -3px 6px rgba(255, 255, 255, 0.9);
   --shadow-md: 6px 6px 14px rgba(163, 177, 198, 0.5),-6px -6px 14px rgba(255, 255, 255, 0.95);
   --shadow-lg: 10px 10px 24px rgba(163, 177, 198, 0.55),-10px -10px 24px rgba(255, 255, 255, 1);
+  --shadow-inset-sm: inset 2px 2px 5px rgba(163, 177, 198, 0.45),inset -2px -2px 5px rgba(255, 255, 255, 0.9);
+  --shadow-inset-md: inset 4px 4px 10px rgba(163, 177, 198, 0.5),inset -4px -4px 10px rgba(255, 255, 255, 0.95);
+  --shadow-inset-lg: inset 6px 6px 16px rgba(163, 177, 198, 0.55),inset -6px -6px 16px rgba(255, 255, 255, 1);
+
+  --shadow-inset-sm: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-inset-md: inset 0 2px 5px rgba(0, 0, 0, 0.09);
+  --shadow-inset-lg: inset 0 3px 10px rgba(0, 0, 0, 0.13);
 
   --radius-sm: 10px;
   --radius-md: 16px;
@@ -437,6 +476,10 @@
   --shadow-md: 0 8px 20px rgba(15, 40, 42, .06);
   --shadow-lg: 0 20px 40px rgba(15, 40, 42, .10);
 
+  --shadow-inset-sm: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-inset-md: inset 0 2px 5px rgba(0, 0, 0, 0.09);
+  --shadow-inset-lg: inset 0 3px 10px rgba(0, 0, 0, 0.13);
+  
   --radius-sm: 10px;
   --radius-md: 16px;
   --radius-lg: 24px;
@@ -481,6 +524,10 @@
   --shadow-md: 0 4px 10px rgba(0, 0, 0, .22);
   --shadow-lg: 0 10px 30px rgba(0, 0, 0, .34);
 
+  --shadow-inset-sm: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-inset-md: inset 0 2px 5px rgba(0, 0, 0, 0.09);
+  --shadow-inset-lg: inset 0 3px 10px rgba(0, 0, 0, 0.13);
+  
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
@@ -525,6 +572,10 @@
   --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.30);
   --shadow-lg: 0 18px 40px rgba(0, 0, 0, 0.42);
 
+  --shadow-inset-sm: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-inset-md: inset 0 2px 5px rgba(0, 0, 0, 0.09);
+  --shadow-inset-lg: inset 0 3px 10px rgba(0, 0, 0, 0.13);
+  
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
@@ -569,6 +620,10 @@
   --shadow-md: 0 8px 20px rgba(74, 54, 64, .08);
   --shadow-lg: 0 18px 40px rgba(74, 54, 64, .12);
 
+  --shadow-inset-sm: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-inset-md: inset 0 2px 5px rgba(0, 0, 0, 0.09);
+  --shadow-inset-lg: inset 0 3px 10px rgba(0, 0, 0, 0.13);
+  
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
@@ -613,6 +668,10 @@
   --shadow-md: 0 8px 18px rgba(30, 20, 4, .26);
   --shadow-lg: 0 18px 35px rgba(30, 20, 4, .36);
 
+  --shadow-inset-sm: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-inset-md: inset 0 2px 5px rgba(0, 0, 0, 0.09);
+  --shadow-inset-lg: inset 0 3px 10px rgba(0, 0, 0, 0.13);
+  
   --radius-sm: 10px;
   --radius-md: 16px;
   --radius-lg: 26px;
@@ -656,6 +715,14 @@
   --shadow-sm: 0 2px 6px rgba(20, 28, 34, 0.06);
   --shadow-md: 0 10px 24px rgba(20, 28, 34, 0.10);
   --shadow-lg: 0 22px 48px rgba(20, 28, 34, 0.14);
+
+  --shadow-inset-sm: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-inset-md: inset 0 2px 5px rgba(0, 0, 0, 0.09);
+  --shadow-inset-lg: inset 0 3px 10px rgba(0, 0, 0, 0.13);
+
+  --shadow-inset-sm: inset 0 1px 2px rgba(3, 6, 10, 0.35);
+  --shadow-inset-md: inset 0 2px 5px rgba(3, 6, 10, 0.45);
+  --shadow-inset-lg: inset 0 3px 10px rgba(3, 6, 10, 0.55);
 
   --radius-sm: 8px;
   --radius-md: 12px;
@@ -701,6 +768,14 @@
   --shadow-md: 0 10px 24px rgba(3, 6, 10, 0.42);
   --shadow-lg: 0 22px 48px rgba(3, 6, 10, 0.55);
 
+  --shadow-inset-sm: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-inset-md: inset 0 2px 5px rgba(0, 0, 0, 0.09);
+  --shadow-inset-lg: inset 0 3px 10px rgba(0, 0, 0, 0.13);
+  
+  --shadow-inset-sm: inset 0 1px 2px rgba(0, 0, 0, 0.45);
+  --shadow-inset-md: inset 0 2px 5px rgba(0, 0, 0, 0.55);
+  --shadow-inset-lg: inset 0 3px 10px rgba(0, 0, 0, 0.65);
+
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
@@ -745,6 +820,10 @@
   --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.6);
 
+  --shadow-inset-sm: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-inset-md: inset 0 2px 5px rgba(0, 0, 0, 0.09);
+  --shadow-inset-lg: inset 0 3px 10px rgba(0, 0, 0, 0.13);
+  
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
@@ -789,6 +868,10 @@
   --shadow-md: 0 3px 8px rgba(0, 0, 0, 0.10);
   --shadow-lg: 0 10px 24px rgba(0, 0, 0, 0.16);
 
+  --shadow-inset-sm: inset 0 1px 2px rgba(0, 0, 0, 0.07);
+  --shadow-inset-md: inset 0 2px 4px rgba(0, 0, 0, 0.10);
+  --shadow-inset-lg: inset 0 3px 8px rgba(0, 0, 0, 0.14);
+  
   --radius-sm: 2px;
   --radius-md: 4px;
   --radius-lg: 8px;
