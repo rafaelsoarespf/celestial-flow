@@ -10,19 +10,21 @@
   backdrop-filter: var(--blur);
   border-bottom: 1px solid var(--color-border);
   z-index: 100;
+  box-shadow: var(--shadow-sm);
 }
 
 .navbar__content {
   max-width: 90%;
   margin: 0 auto;
   padding: 1rem;
-  display: flex;
+  display: flex; 
   align-items: center;
   justify-content: space-between;
+  gap: 0.5rem;
   position: relative;
 }
 
-/* Navbar-menu */
+/* navbar-menu */
 .navbar__menu {
   display: flex;
   gap: 2rem;
@@ -49,7 +51,9 @@
   transition: width 0.3s ease;
 }
 
-.navbar__menu a:hover::after {
+.navbar__menu a:hover::after,
+.navbar__menu a:focus-visible::after,
+.navbar__menu a[aria-current]:not([aria-current="false"])::after {
   width: 100%;
 }
 
@@ -57,11 +61,17 @@
 .navbar__toggle {
   font-size: 1.5rem;
   display: none;
-  margin-left: auto;
+  min-width: 0;
+  padding: 0.4rem 0.6rem;
   background: none;
   border: none;
   box-shadow: none;
   color: var(--color-text);
+}
+
+.navbar__toggle.active,
+.navbar__toggle[aria-expanded="true"] {
+  color: var(--color-accent);
 }
 
 @media (max-width: 768px) {
@@ -115,6 +125,7 @@
   border-right: 1px solid var(--color-border);
   transition: transform .3s ease;
   z-index: 10;
+  box-shadow: var(--shadow-md);
 }
 
 .sidebar__header {
@@ -271,6 +282,7 @@
   background: var(--color-background);
   backdrop-filter: var(--blur);
   transition: width .3s ease;
+  box-shadow: var(--shadow-md);
 }
 
 .panel-left {
