@@ -45,6 +45,7 @@ input.switch {
   border: none;
   border-radius: 999px;
   background: var(--color-border);
+  box-shadow: var(--shadow-inset-sm);
   cursor: pointer;
   transition: background-color .25s ease;
 }
@@ -64,16 +65,18 @@ input.switch::before {
 
 input.switch:checked {
   background: var(--color-accent);
+  box-shadow: none;
 }
 
 input.switch:checked::before {
   left: calc(100% - 1.2rem - .15rem);
   background: var(--color-on-accent);
+  box-shadow: none;
 }
 
 input.switch:focus-visible {
-  box-shadow: 0 0 0 3px
-    color-mix(in srgb, var(--color-accent) 18%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 18%, transparent);
+  outline-offset: 2px;
 }
 
 input.switch:disabled {
@@ -85,6 +88,9 @@ input.switch:disabled {
 .input-group {
   display: flex;
   align-items: stretch;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-inset-lg);
 }
 
 .input-group > * {
@@ -107,10 +113,15 @@ input.switch:disabled {
 .input-group > input {
   flex: 1 1 auto;
   min-width: 0;
+  box-shadow: none;
 }
 
 .input-group > button {
   min-width: 50px;
+}
+
+.input-group > button:active {
+  filter: brightness(0.94);
 }
 
 .input-group > span {
@@ -169,6 +180,7 @@ input.switch:disabled {
   line-height: 1.2;
   cursor: pointer;
   user-select: none;
+  box-shadow: var(--shadow-inset-md);
   transition:
     border-color .2s ease,
     box-shadow .2s ease,
@@ -187,9 +199,9 @@ input.switch:disabled {
 }
 
 .select__btn:focus-visible {
-  outline: none;
+  outline: 3px solid color-mix(in srgb, var(--color-accent) 18%, transparent);
+  outline-offset: 0;
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 18%, transparent);
 }
 
 .select__btn::after {
@@ -207,7 +219,8 @@ input.switch:disabled {
 
 .select[data-open] .select__btn {
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 18%, transparent);
+  outline: 3px solid color-mix(in srgb, var(--color-accent) 18%, transparent);
+  outline-offset: 0;
 }
 
 .select[data-open] .select__btn::after {
@@ -220,24 +233,17 @@ input.switch:disabled {
   left: 0;
   right: 0;
   z-index: 100;
-
   display: none;
-
   max-height: 18rem;
   overflow-x: hidden;
   overflow-y: auto;
-
   scrollbar-width: thin;
   scrollbar-color: var(--color-border) transparent;
-
   padding: .25rem;
-
   background-color: color-mix(in srgb, var(--color-surface-2) 90%, transparent);
   backdrop-filter: var(--blur);
-
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-
   box-shadow: var(--shadow-lg);
 }
 
@@ -250,31 +256,21 @@ input.switch:disabled {
   align-items: center;
   justify-content: flex-start;
   gap: .6rem;
-
   width: 100%;
   min-width: 0;
   box-sizing: border-box;
-
   padding: .28rem .5rem;
-
   border: 0;
   border-radius: var(--radius-sm);
-
   box-shadow: none;
-
   font: var(--font-text);
   color: var(--color-text);
   background: transparent;
-
   text-align: left;
   line-height: 1.2;
-
   cursor: pointer;
   white-space: nowrap;
-
-  transition:
-    background-color .2s ease,
-    color .2s ease;
+  transition: background-color .2s ease, color .2s ease;
 }
 
 .select__item:hover {
@@ -282,6 +278,7 @@ input.switch:disabled {
   transform: none;
   box-shadow: none;
   background-color: color-mix(in srgb, var(--color-accent) 20%, transparent);
+  box-shadow: var(--shadow-inset-md);
 }
 
 .select__item[data-selected] {
