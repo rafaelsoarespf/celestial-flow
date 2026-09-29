@@ -134,7 +134,7 @@ button:hover {
 
 button:active {
   transform: translateY(0);
-  box-shadow: var(--shadow-inset-md);
+  filter: brightness(0.94);
 }
 
 button:disabled {

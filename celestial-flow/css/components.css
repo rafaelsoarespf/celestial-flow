@@ -8,13 +8,13 @@
   font: var(--font-text);
   padding: 0.5rem 0.8rem;
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
   cursor: pointer;
   line-height: 1;
   user-select: none;
   white-space: nowrap;
   min-width: 110px;
-  transition: transform .2s ease, opacity .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
+  transition: transform .2s ease, opacity .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, filter .2s ease;
 }
 
 .btn:hover, .btn-outline:hover, .btn-glow:hover {
@@ -25,6 +25,7 @@
 
 .btn:active, .btn-outline:active, .btn-glow:active {
   transform: translateY(0);
+  filter: brightness(0.94);
 }
 
 .btn {
@@ -103,8 +104,7 @@
   background: var(--color-surface-1);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-md);
-  transition: background-color .25s ease, border-color .25s ease,
-    box-shadow .25s ease, transform .25s ease;
+  transition: background-color .25s ease, border-color .25s ease, box-shadow .25s ease, transform .25s ease;
 }
 
 .card:hover {
@@ -183,14 +183,14 @@ pre.card-code {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   color: var(--color-text);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-sm);
   background:
     radial-gradient(circle at 20px 24px, #ff5f56 6px, transparent 7px),
     radial-gradient(circle at 44px 24px, #ffbd2e 6px, transparent 7px),
     radial-gradient(circle at 68px 24px, #27c93f 6px, transparent 7px),
     linear-gradient(var(--color-border), var(--color-border)) top 48px left / 100% 1px no-repeat,
     linear-gradient(rgba(255,255,255,.015), rgba(255,255,255,.015)) top / 100% 48px no-repeat,
-    color-mix(in srgb, var(--color-surface-1) 30%, transparent);
+    color-mix(in srgb, var(--color-surface-1) 80%, transparent);
 }
 
 /*alert ------------------------------------------------------*/
