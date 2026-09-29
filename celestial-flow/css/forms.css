@@ -151,7 +151,7 @@ input.switch:disabled {
 .select {
   position: relative;
   display: inline-block;
-  min-width: min(14rem, 100%);
+  min-width: min(220px, 100%);
   max-width: 100%;
   flex-direction: column;
 }

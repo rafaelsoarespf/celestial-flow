@@ -62,7 +62,7 @@
   font-size: 1.5rem;
   display: none;
   min-width: 0;
-  padding: 0.4rem 0.6rem;
+  padding: 0rem;
   background: none;
   border: none;
   box-shadow: none;
@@ -75,12 +75,17 @@
 }
 
 @media (max-width: 768px) {
-  .navbar__toggle { display: block; }
+  .navbar__toggle { 
+    display: block;
+    flex-shrink: 0;
+  }
 
   .navbar__content {
     max-width: 100%;
-    padding: 1rem 2rem;
+    padding: 1rem 0.75rem;
   }
+
+  .navbar__menu + * { margin-left: auto; }
 
   .navbar__menu {
     display: none;
