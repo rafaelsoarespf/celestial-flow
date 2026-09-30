@@ -20,7 +20,7 @@
   --letter-spacing-heading: 0;
   --letter-spacing-text: 0;
 
-  --font-title-hero: 700 clamp(2.75rem, 3.5rem + 3vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
+  --font-title-hero: 700 clamp(2.5rem, 1.25rem + 5vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-title: 700 clamp(1.75rem, 1.4rem + 1.5vw, 2.25rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-subtitle: 600 clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
   --font-heading-3: 600 clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
@@ -68,7 +68,7 @@
   --letter-spacing-heading: 0;
   --letter-spacing-text: 0;
 
-  --font-title-hero: 700 clamp(2.75rem, 3.5rem + 3vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
+  --font-title-hero: 700 clamp(2.5rem, 1.25rem + 5vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-title: 700 clamp(1.75rem, 1.4rem + 1.5vw, 2.25rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-subtitle: 600 clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
   --font-heading-3: 600 clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
@@ -116,7 +116,7 @@
   --letter-spacing-heading: 0;
   --letter-spacing-text: 0;
 
-  --font-title-hero: 700 clamp(2.75rem, 3.5rem + 3vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
+  --font-title-hero: 700 clamp(2.5rem, 1.25rem + 5vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-title: 700 clamp(1.75rem, 1.4rem + 1.5vw, 2.25rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-subtitle: 600 clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
   --font-heading-3: 600 clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
@@ -164,7 +164,7 @@
   --letter-spacing-heading: 0;
   --letter-spacing-text: 0;
 
-  --font-title-hero: 700 clamp(2.75rem, 3.5rem + 3vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
+  --font-title-hero: 700 clamp(2.5rem, 1.25rem + 5vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-title: 700 clamp(1.75rem, 1.4rem + 1.5vw, 2.25rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-subtitle: 600 clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
   --font-heading-3: 600 clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
@@ -212,7 +212,7 @@
   --letter-spacing-heading: 0;
   --letter-spacing-text: 0;
 
-  --font-title-hero: 700 clamp(2.75rem, 3.5rem + 3vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
+  --font-title-hero: 700 clamp(2.5rem, 1.25rem + 5vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-title: 700 clamp(1.75rem, 1.4rem + 1.5vw, 2.25rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-subtitle: 600 clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
   --font-heading-3: 600 clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
@@ -260,7 +260,7 @@
   --letter-spacing-heading: 0;
   --letter-spacing-text: 0;
 
-  --font-title-hero: 700 clamp(2.75rem, 3.5rem + 3vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
+  --font-title-hero: 700 clamp(2.5rem, 1.25rem + 5vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-title: 700 clamp(1.75rem, 1.4rem + 1.5vw, 2.25rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-subtitle: 600 clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
   --font-heading-3: 600 clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
@@ -308,7 +308,7 @@
   --letter-spacing-heading: 0;
   --letter-spacing-text: 0.01em;
 
-  --font-title-hero: 700 clamp(2.75rem, 3.5rem + 3vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
+  --font-title-hero: 700 clamp(2.5rem, 1.25rem + 5vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-title: 700 clamp(1.75rem, 1.4rem + 1.5vw, 2.25rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-subtitle: 600 clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
   --font-heading-3: 600 clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
@@ -358,7 +358,7 @@
   --letter-spacing-heading: 0;
   --letter-spacing-text: 0;
 
-  --font-title-hero: 700 clamp(2.75rem, 3.5rem + 3vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
+  --font-title-hero: 700 clamp(2.5rem, 1.25rem + 5vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-title: 700 clamp(1.75rem, 1.4rem + 1.5vw, 2.25rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-subtitle: 600 clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
   --font-heading-3: 600 clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
@@ -406,7 +406,7 @@
   --letter-spacing-heading: 0;
   --letter-spacing-text: 0.015em;
 
-  --font-title-hero: 700 clamp(2.75rem, 3.5rem + 3vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
+  --font-title-hero: 700 clamp(2.5rem, 1.25rem + 5vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-title: 600 clamp(1.75rem, 1.4rem + 1.5vw, 2.25rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-subtitle: 500 clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
   --font-heading-3: 600 clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
@@ -459,7 +459,7 @@
   --letter-spacing-heading: 0;
   --letter-spacing-text: 0.02em;
 
-  --font-title-hero: 700 clamp(2.75rem, 3.5rem + 3vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
+  --font-title-hero: 700 clamp(2.5rem, 1.25rem + 5vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-title: 600 clamp(1.75rem, 1.4rem + 1.5vw, 2.25rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-subtitle: 600 clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
   --font-heading-3: 600 clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
@@ -507,7 +507,7 @@
   --letter-spacing-heading: 0;
   --letter-spacing-text: 0;
 
-  --font-title-hero: 700 clamp(2.75rem, 3.5rem + 3vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
+  --font-title-hero: 700 clamp(2.5rem, 1.25rem + 5vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-title: 700 clamp(1.75rem, 1.4rem + 1.5vw, 2.25rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-subtitle: 600 clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
   --font-heading-3: 600 clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
@@ -555,7 +555,7 @@
   --letter-spacing-heading: -0.005em;
   --letter-spacing-text: -0.005em;
 
-  --font-title-hero: 700 clamp(2.75rem, 3.5rem + 3vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
+  --font-title-hero: 700 clamp(2.5rem, 1.25rem + 5vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-title: 700 clamp(1.75rem, 1.4rem + 1.5vw, 2.25rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-subtitle: 600 clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
   --font-heading-3: 600 clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
@@ -603,7 +603,7 @@
   --letter-spacing-heading: 0;
   --letter-spacing-text: 0.015em;
 
-  --font-title-hero: 700 clamp(2.75rem, 3.5rem + 3vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
+  --font-title-hero: 700 clamp(2.5rem, 1.25rem + 5vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-title: 600 clamp(1.75rem, 1.4rem + 1.5vw, 2.25rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-subtitle: 600 clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
   --font-heading-3: 600 clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
@@ -651,7 +651,7 @@
   --letter-spacing-heading: 0.03em;
   --letter-spacing-text: 0.02em;
 
-  --font-title-hero: 700 clamp(2.75rem, 3.5rem + 3vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
+  --font-title-hero: 700 clamp(2.5rem, 1.25rem + 5vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-title: 700 clamp(1.75rem, 1.4rem + 1.5vw, 2.25rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-subtitle: 600 clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
   --font-heading-3: 600 clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
@@ -699,7 +699,7 @@
   --letter-spacing-heading: 0;
   --letter-spacing-text: 0;
 
-  --font-title-hero: 700 clamp(2.75rem, 3.5rem + 3vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
+  --font-title-hero: 700 clamp(2.5rem, 1.25rem + 5vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-title: 700 clamp(1.75rem, 1.4rem + 1.5vw, 2.25rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-subtitle: 600 clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
   --font-heading-3: 600 clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
@@ -751,7 +751,7 @@
   --letter-spacing-heading: 0;
   --letter-spacing-text: 0;
 
-  --font-title-hero: 700 clamp(2.75rem, 3.5rem + 3vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
+  --font-title-hero: 700 clamp(2.5rem, 1.25rem + 5vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-title: 700 clamp(1.75rem, 1.4rem + 1.5vw, 2.25rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-subtitle: 600 clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
   --font-heading-3: 600 clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
@@ -803,7 +803,7 @@
   --letter-spacing-heading: -0.01em;
   --letter-spacing-text: 0;
 
-  --font-title-hero: 700 clamp(2.75rem, 3.5rem + 3vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
+  --font-title-hero: 700 clamp(2.5rem, 1.25rem + 5vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-title: 700 clamp(1.75rem, 1.4rem + 1.5vw, 2.25rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-subtitle: 600 clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
   --font-heading-3: 600 clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
@@ -851,7 +851,7 @@
   --letter-spacing-heading: 0.01em;
   --letter-spacing-text: 0.01em;
 
-  --font-title-hero: 700 clamp(2.75rem, 3.5rem + 3vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
+  --font-title-hero: 700 clamp(2.5rem, 1.25rem + 5vw, 5.5rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-title: 500 clamp(1.75rem, 1.4rem + 1.5vw, 2.25rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   --font-subtitle: 600 clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
   --font-heading-3: 600 clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem) "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
