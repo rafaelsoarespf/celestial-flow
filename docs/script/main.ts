@@ -11,6 +11,7 @@ declare global {
     initThemeSelector: () => void;
     initSelect: () => void;
     initSidebar: () => void;
+    setTheme: (theme: string) => void;
   }
 }
 
@@ -45,7 +46,7 @@ function initThemeGallery(): void {
       const theme = card.dataset.themeSet;
       if (!theme) return;
 
-      document.body.setAttribute("data-theme", theme);
+      window.setTheme(theme);
     });
   });
 }

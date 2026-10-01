@@ -32,12 +32,11 @@ function initThemeGallery() {
             const theme = card.dataset.themeSet;
             if (!theme)
                 return;
-            document.body.setAttribute("data-theme", theme);
+            window.setTheme(theme);
         });
     });
 }
-//animations.html
-// 
+//animations.html 
 const replayButtons = document.querySelectorAll("[data-entrance-replay]");
 replayButtons.forEach((button) => {
     button.addEventListener("click", () => {
