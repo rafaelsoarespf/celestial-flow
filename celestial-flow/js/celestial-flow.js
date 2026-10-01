@@ -3,14 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
   initSidebar();
   initNavbar();
   initPanel();
-  initThemePicker();
+  initSelect();
 });
 
 //theme selector ----------------------------------------------------------
-//theme ---------------------------------------------------------------------
 const CF_THEME_KEY = "celestial-flow-theme";
 
-// Single source of truth for the picker. To add a theme: add it here and in themes.css.
 const CF_THEME_GROUPS = [
   {
     title: "Light themes",
@@ -68,8 +66,6 @@ function getThemeLabel(theme) {
   return theme;
 }
 
-// persist: save in localStorage and notify (the "themechange" event).
-// animate: cross-fade with the View Transitions API when supported.
 function setTheme(theme, { persist = true, animate = true } = {}) {
   if (!isKnownTheme(theme)) return;
 
@@ -86,7 +82,6 @@ function setTheme(theme, { persist = true, animate = true } = {}) {
     try {
       localStorage.setItem(CF_THEME_KEY, theme);
     } catch {
-      /* storage unavailable: the theme just won't be remembered */
     }
   }
 
@@ -101,8 +96,6 @@ function setTheme(theme, { persist = true, animate = true } = {}) {
   }
 }
 
-// Applies the saved theme as soon as this script runs. For zero flash on load,
-// also add the inline snippet to <head> (see the docs).
 (function applyStoredTheme() {
   const saved = getStoredTheme();
   if (saved && isKnownTheme(saved)) {
@@ -110,38 +103,38 @@ function setTheme(theme, { persist = true, animate = true } = {}) {
   }
 })();
 
-//theme picker ----------------------------------------------------------------
-let cfThemePickerCount = 0;
+//theme selector ----------------------------------------------------------------
+let cfThemeSelectorCount = 0;
 
-function initThemePicker() {
-  document.querySelectorAll(".theme-picker").forEach((picker) => {
-    if (picker.dataset.ready) return;
-    picker.dataset.ready = "true";
+function initThemeSelector() {
+  document.querySelectorAll(".theme-selector").forEach((selector) => {
+    if (selector.dataset.ready) return;
+    selector.dataset.ready = "true";
 
-    const uid = `theme-picker-${++cfThemePickerCount}`;
+    const uid = `theme-selector-${++cfThemeSelectorCount}`;
 
     const groupsHTML = CF_THEME_GROUPS.map(
       (group, index) => `
-      <div class="theme-picker__group" role="group" aria-labelledby="${uid}-group-${index}">
-        <p class="theme-picker__group-title" id="${uid}-group-${index}">${group.title}</p>
-        <div class="theme-picker__grid">
+      <div class="theme-selector__group" role="group" aria-labelledby="${uid}-group-${index}">
+        <p class="theme-selector__group-title" id="${uid}-group-${index}">${group.title}</p>
+        <div class="theme-selector__grid">
           ${group.themes
             .map(
               ([value, label]) => `
-          <button class="theme-picker__item" type="button" role="option" aria-selected="false" tabindex="-1" data-value="${value}">
-            <span class="theme-picker__preview" data-theme="${value}" aria-hidden="true">
-              <span class="theme-picker__navbar">
-                <span class="theme-picker__logo"></span>
-                <span class="theme-picker__dot"></span>
-                <span class="theme-picker__dot"></span>
+          <button class="theme-selector__item" type="button" role="option" aria-selected="false" tabindex="-1" data-value="${value}">
+            <span class="theme-selector__preview" data-theme="${value}" aria-hidden="true">
+              <span class="theme-selector__navbar">
+                <span class="theme-selector__logo"></span>
+                <span class="theme-selector__dot"></span>
+                <span class="theme-selector__dot"></span>
               </span>
-              <span class="theme-picker__body">
-                <span class="theme-picker__title-line"></span>
-                <span class="theme-picker__text-line"></span>
-                <span class="theme-picker__pill"></span>
+              <span class="theme-selector__body">
+                <span class="theme-selector__title-line"></span>
+                <span class="theme-selector__text-line"></span>
+                <span class="theme-selector__pill"></span>
               </span>
             </span>
-            <span class="theme-picker__name">${label}</span>
+            <span class="theme-selector__name">${label}</span>
           </button>`,
             )
             .join("")}
@@ -149,22 +142,22 @@ function initThemePicker() {
       </div>`,
     ).join("");
 
-    picker.innerHTML = `
-      <button class="theme-picker__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="${uid}-menu">
-        <span class="theme-picker__swatch" aria-hidden="true"></span>
-        <span class="theme-picker__label"></span>
+    selector.innerHTML = `
+      <button class="theme-selector__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="${uid}-menu">
+        <span class="theme-selector__swatch" aria-hidden="true"></span>
+        <span class="theme-selector__label"></span>
       </button>
-      <div class="theme-picker__menu" id="${uid}-menu" popover="manual" role="listbox" aria-label="Theme">${groupsHTML}</div>`;
+      <div class="theme-selector__menu" id="${uid}-menu" popover="manual" role="listbox" aria-label="Theme">${groupsHTML}</div>`;
 
-    const button = picker.querySelector(".theme-picker__btn");
-    const swatch = picker.querySelector(".theme-picker__swatch");
-    const label = picker.querySelector(".theme-picker__label");
-    const menu = picker.querySelector(".theme-picker__menu");
-    const items = [...menu.querySelectorAll(".theme-picker__item")];
-    const groups = [...menu.querySelectorAll(".theme-picker__grid")].map(
+    const button = selector.querySelector(".theme-selector__btn");
+    const swatch = selector.querySelector(".theme-selector__swatch");
+    const label = selector.querySelector(".theme-selector__label");
+    const menu = selector.querySelector(".theme-selector__menu");
+    const items = [...menu.querySelectorAll(".theme-selector__item")];
+    const groups = [...menu.querySelectorAll(".theme-selector__grid")].map(
       (grid) => [...grid.children],
     );
-    const livePreview = picker.hasAttribute("data-preview");
+    const livePreview = selector.hasAttribute("data-preview");
 
     let committed = getTheme();
 
@@ -187,7 +180,7 @@ function initThemePicker() {
       const openUp = below < 320 && above > below;
 
       menu.style.setProperty(
-        "--tp-max-h",
+        "--ts-max-h",
         `${Math.max(160, Math.floor(openUp ? above : below))}px`,
       );
 
@@ -213,7 +206,7 @@ function initThemePicker() {
 
       menu.showPopover();
       button.setAttribute("aria-expanded", "true");
-      picker.setAttribute("data-open", "");
+      selector.setAttribute("data-open", "");
       place();
 
       const current =
@@ -230,7 +223,7 @@ function initThemePicker() {
 
       menu.hidePopover();
       button.setAttribute("aria-expanded", "false");
-      picker.removeAttribute("data-open");
+      selector.removeAttribute("data-open");
       window.removeEventListener("resize", place);
       window.removeEventListener("scroll", place, true);
 
@@ -310,7 +303,7 @@ function initThemePicker() {
         return;
       }
 
-      const current = document.activeElement.closest(".theme-picker__item");
+      const current = document.activeElement.closest(".theme-selector__item");
       if (!current) return;
 
       const next = move(event.key, current);
@@ -328,7 +321,7 @@ function initThemePicker() {
     });
 
     document.addEventListener("pointerdown", (event) => {
-      if (isOpen() && !picker.contains(event.target)) close(false);
+      if (isOpen() && !selector.contains(event.target)) close(false);
     });
 
     document.addEventListener("themechange", (event) => {

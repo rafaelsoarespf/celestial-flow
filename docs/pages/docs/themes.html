@@ -93,34 +93,18 @@
         <div class="container">
           <span class="text-overline" id="theme-selector">Theme Selector</span>
           <h2 class="text-spacing-sm mt-sm mb">Let users pick their own</h2>
-          <p class="mb">The <code>.theme-selector</code> component (built on top of <code>.select</code>) lists
-            every
-            theme with a live color preview, and remembers the visitor's choice on their next visit. Drop it
-            anywhere —
-            the sidebar footer of this page uses one. Delete the entries you don't want to offer.</p>
-          <pre class="card-code"><code>&lt;div class="select theme-selector"&gt;
-  &lt;button class="select__btn" type="button"&gt;Light&lt;/button&gt;
-  &lt;div class="select__menu"&gt;
-    &lt;button class="select__item" type="button" data-value="light"&gt;&lt;span class="theme-preview" data-theme="light"&gt;&lt;/span&gt;Light&lt;/button&gt;
-    &lt;button class="select__item" type="button" data-value="dark"&gt;&lt;span class="theme-preview" data-theme="dark"&gt;&lt;/span&gt;Dark&lt;/button&gt;
-    &lt;button class="select__item" type="button" data-value="light-teal"&gt;&lt;span class="theme-preview" data-theme="light-teal"&gt;&lt;/span&gt;Light Teal&lt;/button&gt;
-    &lt;button class="select__item" type="button" data-value="dark-teal"&gt;&lt;span class="theme-preview" data-theme="dark-teal"&gt;&lt;/span&gt;Dark Teal&lt;/button&gt;
-    &lt;button class="select__item" type="button" data-value="nebula-light"&gt;&lt;span class="theme-preview" data-theme="nebula-light"&gt;&lt;/span&gt;Nebula Light&lt;/button&gt;
-    &lt;button class="select__item" type="button" data-value="nebula-dark"&gt;&lt;span class="theme-preview" data-theme="nebula-dark"&gt;&lt;/span&gt;Nebula Dark&lt;/button&gt;
-    &lt;button class="select__item" type="button" data-value="coffee"&gt;&lt;span class="theme-preview" data-theme="coffee"&gt;&lt;/span&gt;Coffee&lt;/button&gt;
-    &lt;button class="select__item" type="button" data-value="paper"&gt;&lt;span class="theme-preview" data-theme="paper"&gt;&lt;/span&gt;Paper&lt;/button&gt;
-    &lt;button class="select__item" type="button" data-value="neumorphism"&gt;&lt;span class="theme-preview" data-theme="neumorphism"&gt;&lt;/span&gt;Neumorphism&lt;/button&gt;
-    &lt;button class="select__item" type="button" data-value="glass"&gt;&lt;span class="theme-preview" data-theme="glass"&gt;&lt;/span&gt;Glass&lt;/button&gt;
-    &lt;button class="select__item" type="button" data-value="forest"&gt;&lt;span class="theme-preview" data-theme="forest"&gt;&lt;/span&gt;Forest&lt;/button&gt;
-    &lt;button class="select__item" type="button" data-value="nord"&gt;&lt;span class="theme-preview" data-theme="nord"&gt;&lt;/span&gt;Nord&lt;/button&gt;
-    &lt;button class="select__item" type="button" data-value="sakura"&gt;&lt;span class="theme-preview" data-theme="sakura"&gt;&lt;/span&gt;Sakura&lt;/button&gt;
-    &lt;button class="select__item" type="button" data-value="gold"&gt;&lt;span class="theme-preview" data-theme="gold"&gt;&lt;/span&gt;Gold&lt;/button&gt;
-    &lt;button class="select__item" type="button" data-value="light-slate-mist"&gt;&lt;span class="theme-preview" data-theme="light-slate-mist"&gt;&lt;/span&gt;Light Slate Mist&lt;/button&gt;
-    &lt;button class="select__item" type="button" data-value="dark-slate-mist"&gt;&lt;span class="theme-preview" data-theme="dark-slate-mist"&gt;&lt;/span&gt;Dark Slate Mist&lt;/button&gt;
-    &lt;button class="select__item" type="button" data-value="blacksteel"&gt;&lt;span class="theme-preview" data-theme="blacksteel"&gt;&lt;/span&gt;Blacksteel&lt;/button&gt;
-    &lt;button class="select__item" type="button" data-value="ink"&gt;&lt;span class="theme-preview" data-theme="ink"&gt;&lt;/span&gt;Ink&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+          <p class="mb">The <code>.theme-selector</code> component lists every theme as a live preview card,
+            grouped into light and dark, and remembers the visitor's choice on their next visit. Drop it
+            anywhere.</p>
+          <div class="width-200 mb">
+            <div class="theme-selector" data-cols="3"></div>
+          </div>
+          <pre class="card-code"><code>&lt;div class="theme-selector"&gt;&lt;/div&gt;</code></pre>
+          <div class="alert mt-sm">
+            Use <code>data-cols="2"</code>, <code>"3"</code> (default) or <code>"4"</code> to set
+            how many cards fit per row (always 2 on small screens), and add <code>data-preview</code> to preview
+            each theme on the page while hovering or focusing a card.
+          </div>
         </div>
       </section>
 
