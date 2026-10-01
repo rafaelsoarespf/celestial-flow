@@ -474,3 +474,22 @@
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-4px); }
 }
+
+.text-writer {
+  display: inline-block;
+  white-space: pre-wrap;
+}
+
+.text-writer::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 2px;
+  vertical-align: -.12em;
+  background: var(--color-accent);
+  animation: text-writer-blink .8s step-end infinite;
+}
+@keyframes text-writer-blink {
+  50% { opacity: 0; }
+}

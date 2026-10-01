@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initNavbar();
   initPanel();
   initSelect();
+  initTypewriter();
 });
 
 //theme selector ----------------------------------------------------------
@@ -543,3 +544,71 @@ function showToast(message, duration = 3000) {
 }
 
 window.CelestialFlow = { showToast };
+
+
+//typewriter ----------------------------------------------------------------
+function initTypewriter() {
+  document.querySelectorAll(".text-writer[data-words]").forEach((el) => {
+    if (el.dataset.ready) return;
+
+    const words = el.dataset.words
+      .split(",")
+      .map((word) => word.trim())
+      .filter(Boolean);
+    if (!words.length) return;
+    el.dataset.ready = "true";
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      el.textContent = words[0];
+      return;
+    }
+
+    const readTime = (name, fallback) => {
+      const raw = getComputedStyle(el).getPropertyValue(name).trim();
+      const value = parseFloat(raw);
+      if (Number.isNaN(value)) return fallback;
+      return raw.endsWith("ms") ? value : value * 1000;
+    };
+
+    const speed = readTime("--speed", 80);
+    const hold = readTime("--hold", 1500);
+    const delay = readTime("--delay", 0);
+    const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+    const whenVisible = () =>
+      new Promise((resolve) => {
+        const observer = new IntersectionObserver((entries) => {
+          if (entries.some((entry) => entry.isIntersecting)) {
+            observer.disconnect();
+            resolve();
+          }
+        });
+        observer.observe(el);
+      });
+
+    (async () => {
+      await whenVisible();
+      await sleep(delay);
+
+      let index = 0;
+      while (el.isConnected) {
+        const letters = Array.from(words[index]);
+
+        for (let i = 1; i <= letters.length; i++) {
+          el.textContent = letters.slice(0, i).join("");
+          await sleep(speed);
+        }
+
+        await sleep(hold);
+
+        for (let i = letters.length - 1; i >= 0; i--) {
+          el.textContent = letters.slice(0, i).join("");
+          await sleep(speed / 2);
+        }
+
+        await sleep(speed * 4);
+        index = (index + 1) % words.length;
+      }
+    })();
+  });
+}
