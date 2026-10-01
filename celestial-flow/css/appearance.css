@@ -180,44 +180,295 @@
 }
 
 /*fx-glow*/
-.fx-glow::before, .fx-glow-sm::before, .fx-glow-md::before, .fx-glow-lg::before {
+.fx-glow::before,.fx-glow-sm::before,.fx-glow-md::before,.fx-glow-lg::before {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: var(--color-accent);
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
   z-index: -1;
   pointer-events: none;
 }
-
 .fx-glow-sm::before {
-  width: 180px;
-  height: 180px;
-  opacity: .08;
-  filter: blur(60px);
+  border-image: radial-gradient(
+    circle closest-side,
+    color-mix(in srgb, var(--color-accent) 5.40%, transparent) 0%,
+    color-mix(in srgb, var(--color-accent) 5.26%, transparent) 7%,
+    color-mix(in srgb, var(--color-accent) 4.84%, transparent) 13%,
+    color-mix(in srgb, var(--color-accent) 4.25%, transparent) 20%,
+    color-mix(in srgb, var(--color-accent) 3.49%, transparent) 27%,
+    color-mix(in srgb, var(--color-accent) 2.68%, transparent) 33%,
+    color-mix(in srgb, var(--color-accent) 1.93%, transparent) 40%,
+    color-mix(in srgb, var(--color-accent) 1.29%, transparent) 47%,
+    color-mix(in srgb, var(--color-accent) 0.82%, transparent) 53%,
+    color-mix(in srgb, var(--color-accent) 0.47%, transparent) 60%,
+    color-mix(in srgb, var(--color-accent) 0.25%, transparent) 67%,
+    color-mix(in srgb, var(--color-accent) 0.12%, transparent) 73%,
+    color-mix(in srgb, var(--color-accent) 0.05%, transparent) 80%,
+    color-mix(in srgb, var(--color-accent) 0.02%, transparent) 87%,
+    color-mix(in srgb, var(--color-accent) 0.01%, transparent) 93%,
+    color-mix(in srgb, var(--color-accent) 0.00%, transparent) 100%
+  ) 50% / 282px / 282px;
 }
 
 .fx-glow::before {
-  width: min(320px, 70vw);
-  height: min(320px, 70vw);
-  opacity: .1;
-  filter: blur(100px);
+  border-image: radial-gradient(
+    circle closest-side,
+    color-mix(in srgb, var(--color-accent) 7.22%, transparent) 0%,
+    color-mix(in srgb, var(--color-accent) 7.04%, transparent) 7%,
+    color-mix(in srgb, var(--color-accent) 6.52%, transparent) 13%,
+    color-mix(in srgb, var(--color-accent) 5.71%, transparent) 20%,
+    color-mix(in srgb, var(--color-accent) 4.72%, transparent) 27%,
+    color-mix(in srgb, var(--color-accent) 3.67%, transparent) 33%,
+    color-mix(in srgb, var(--color-accent) 2.66%, transparent) 40%,
+    color-mix(in srgb, var(--color-accent) 1.79%, transparent) 47%,
+    color-mix(in srgb, var(--color-accent) 1.12%, transparent) 53%,
+    color-mix(in srgb, var(--color-accent) 0.64%, transparent) 60%,
+    color-mix(in srgb, var(--color-accent) 0.34%, transparent) 67%,
+    color-mix(in srgb, var(--color-accent) 0.16%, transparent) 73%,
+    color-mix(in srgb, var(--color-accent) 0.07%, transparent) 80%,
+    color-mix(in srgb, var(--color-accent) 0.03%, transparent) 87%,
+    color-mix(in srgb, var(--color-accent) 0.01%, transparent) 93%,
+    color-mix(in srgb, var(--color-accent) 0.00%, transparent) 100%
+  ) 50% / 480px / 480px;
+}
+
+@media (max-width: 457px) {
+  .fx-glow::before {
+    border-image: radial-gradient(
+      circle closest-side,
+      color-mix(in srgb, var(--color-accent) 6.60%, transparent) 0%,
+      color-mix(in srgb, var(--color-accent) 6.43%, transparent) 7%,
+      color-mix(in srgb, var(--color-accent) 5.93%, transparent) 13%,
+      color-mix(in srgb, var(--color-accent) 5.17%, transparent) 20%,
+      color-mix(in srgb, var(--color-accent) 4.22%, transparent) 27%,
+      color-mix(in srgb, var(--color-accent) 3.25%, transparent) 33%,
+      color-mix(in srgb, var(--color-accent) 2.34%, transparent) 40%,
+      color-mix(in srgb, var(--color-accent) 1.57%, transparent) 47%,
+      color-mix(in srgb, var(--color-accent) 0.98%, transparent) 53%,
+      color-mix(in srgb, var(--color-accent) 0.56%, transparent) 60%,
+      color-mix(in srgb, var(--color-accent) 0.30%, transparent) 67%,
+      color-mix(in srgb, var(--color-accent) 0.15%, transparent) 73%,
+      color-mix(in srgb, var(--color-accent) 0.06%, transparent) 80%,
+      color-mix(in srgb, var(--color-accent) 0.03%, transparent) 87%,
+      color-mix(in srgb, var(--color-accent) 0.01%, transparent) 93%,
+      color-mix(in srgb, var(--color-accent) 0.00%, transparent) 100%
+    ) 50% / 467px / 467px;
+  }
+}
+
+@media (max-width: 380px) {
+  .fx-glow::before {
+    border-image: radial-gradient(
+      circle closest-side,
+      color-mix(in srgb, var(--color-accent) 5.07%, transparent) 0%,
+      color-mix(in srgb, var(--color-accent) 4.93%, transparent) 7%,
+      color-mix(in srgb, var(--color-accent) 4.50%, transparent) 13%,
+      color-mix(in srgb, var(--color-accent) 3.88%, transparent) 20%,
+      color-mix(in srgb, var(--color-accent) 3.15%, transparent) 27%,
+      color-mix(in srgb, var(--color-accent) 2.40%, transparent) 33%,
+      color-mix(in srgb, var(--color-accent) 1.70%, transparent) 40%,
+      color-mix(in srgb, var(--color-accent) 1.13%, transparent) 47%,
+      color-mix(in srgb, var(--color-accent) 0.71%, transparent) 53%,
+      color-mix(in srgb, var(--color-accent) 0.41%, transparent) 60%,
+      color-mix(in srgb, var(--color-accent) 0.22%, transparent) 67%,
+      color-mix(in srgb, var(--color-accent) 0.11%, transparent) 73%,
+      color-mix(in srgb, var(--color-accent) 0.05%, transparent) 80%,
+      color-mix(in srgb, var(--color-accent) 0.02%, transparent) 87%,
+      color-mix(in srgb, var(--color-accent) 0.01%, transparent) 93%,
+      color-mix(in srgb, var(--color-accent) 0.00%, transparent) 100%
+    ) 50% / 439px / 439px;
+  }
 }
 
 .fx-glow-md::before {
-  width: min(420px, 70vw);
-  height: min(420px, 70vw);
-  opacity: .1;
-  filter: blur(120px);
+  border-image: radial-gradient(
+    circle closest-side,
+    color-mix(in srgb, var(--color-accent) 7.84%, transparent) 0%,
+    color-mix(in srgb, var(--color-accent) 7.65%, transparent) 7%,
+    color-mix(in srgb, var(--color-accent) 7.14%, transparent) 13%,
+    color-mix(in srgb, var(--color-accent) 6.31%, transparent) 20%,
+    color-mix(in srgb, var(--color-accent) 5.29%, transparent) 27%,
+    color-mix(in srgb, var(--color-accent) 4.14%, transparent) 33%,
+    color-mix(in srgb, var(--color-accent) 3.02%, transparent) 40%,
+    color-mix(in srgb, var(--color-accent) 2.06%, transparent) 47%,
+    color-mix(in srgb, var(--color-accent) 1.29%, transparent) 53%,
+    color-mix(in srgb, var(--color-accent) 0.75%, transparent) 60%,
+    color-mix(in srgb, var(--color-accent) 0.39%, transparent) 67%,
+    color-mix(in srgb, var(--color-accent) 0.19%, transparent) 73%,
+    color-mix(in srgb, var(--color-accent) 0.08%, transparent) 80%,
+    color-mix(in srgb, var(--color-accent) 0.03%, transparent) 87%,
+    color-mix(in srgb, var(--color-accent) 0.01%, transparent) 93%,
+    color-mix(in srgb, var(--color-accent) 0.00%, transparent) 100%
+  ) 50% / 594px / 594px;
+}
+
+@media (max-width: 600px) {
+  .fx-glow-md::before {
+    border-image: radial-gradient(
+      circle closest-side,
+      color-mix(in srgb, var(--color-accent) 7.11%, transparent) 0%,
+      color-mix(in srgb, var(--color-accent) 6.93%, transparent) 7%,
+      color-mix(in srgb, var(--color-accent) 6.41%, transparent) 13%,
+      color-mix(in srgb, var(--color-accent) 5.60%, transparent) 20%,
+      color-mix(in srgb, var(--color-accent) 4.63%, transparent) 27%,
+      color-mix(in srgb, var(--color-accent) 3.59%, transparent) 33%,
+      color-mix(in srgb, var(--color-accent) 2.60%, transparent) 40%,
+      color-mix(in srgb, var(--color-accent) 1.76%, transparent) 47%,
+      color-mix(in srgb, var(--color-accent) 1.08%, transparent) 53%,
+      color-mix(in srgb, var(--color-accent) 0.62%, transparent) 60%,
+      color-mix(in srgb, var(--color-accent) 0.33%, transparent) 67%,
+      color-mix(in srgb, var(--color-accent) 0.16%, transparent) 73%,
+      color-mix(in srgb, var(--color-accent) 0.07%, transparent) 80%,
+      color-mix(in srgb, var(--color-accent) 0.03%, transparent) 87%,
+      color-mix(in srgb, var(--color-accent) 0.01%, transparent) 93%,
+      color-mix(in srgb, var(--color-accent) 0.00%, transparent) 100%
+    ) 50% / 573px / 573px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fx-glow-md::before {
+    border-image: radial-gradient(
+      circle closest-side,
+      color-mix(in srgb, var(--color-accent) 5.61%, transparent) 0%,
+      color-mix(in srgb, var(--color-accent) 5.45%, transparent) 7%,
+      color-mix(in srgb, var(--color-accent) 4.99%, transparent) 13%,
+      color-mix(in srgb, var(--color-accent) 4.31%, transparent) 20%,
+      color-mix(in srgb, var(--color-accent) 3.52%, transparent) 27%,
+      color-mix(in srgb, var(--color-accent) 2.68%, transparent) 33%,
+      color-mix(in srgb, var(--color-accent) 1.92%, transparent) 40%,
+      color-mix(in srgb, var(--color-accent) 1.28%, transparent) 47%,
+      color-mix(in srgb, var(--color-accent) 0.79%, transparent) 53%,
+      color-mix(in srgb, var(--color-accent) 0.46%, transparent) 60%,
+      color-mix(in srgb, var(--color-accent) 0.24%, transparent) 67%,
+      color-mix(in srgb, var(--color-accent) 0.12%, transparent) 73%,
+      color-mix(in srgb, var(--color-accent) 0.06%, transparent) 80%,
+      color-mix(in srgb, var(--color-accent) 0.02%, transparent) 87%,
+      color-mix(in srgb, var(--color-accent) 0.01%, transparent) 93%,
+      color-mix(in srgb, var(--color-accent) 0.00%, transparent) 100%
+    ) 50% / 538px / 538px;
+  }
+}
+
+@media (max-width: 400px) {
+  .fx-glow-md::before {
+    border-image: radial-gradient(
+      circle closest-side,
+      color-mix(in srgb, var(--color-accent) 4.06%, transparent) 0%,
+      color-mix(in srgb, var(--color-accent) 3.94%, transparent) 7%,
+      color-mix(in srgb, var(--color-accent) 3.61%, transparent) 13%,
+      color-mix(in srgb, var(--color-accent) 3.10%, transparent) 20%,
+      color-mix(in srgb, var(--color-accent) 2.50%, transparent) 27%,
+      color-mix(in srgb, var(--color-accent) 1.89%, transparent) 33%,
+      color-mix(in srgb, var(--color-accent) 1.36%, transparent) 40%,
+      color-mix(in srgb, var(--color-accent) 0.90%, transparent) 47%,
+      color-mix(in srgb, var(--color-accent) 0.56%, transparent) 53%,
+      color-mix(in srgb, var(--color-accent) 0.33%, transparent) 60%,
+      color-mix(in srgb, var(--color-accent) 0.18%, transparent) 67%,
+      color-mix(in srgb, var(--color-accent) 0.09%, transparent) 73%,
+      color-mix(in srgb, var(--color-accent) 0.04%, transparent) 80%,
+      color-mix(in srgb, var(--color-accent) 0.02%, transparent) 87%,
+      color-mix(in srgb, var(--color-accent) 0.01%, transparent) 93%,
+      color-mix(in srgb, var(--color-accent) 0.00%, transparent) 100%
+    ) 50% / 506px / 506px;
+  }
 }
 
 .fx-glow-lg::before {
-  width: min(600px, 70vw);
-  height: min(600px, 70vw);
-  opacity: .16;
-  filter: blur(140px);
+  border-image: radial-gradient(
+    circle closest-side,
+    color-mix(in srgb, var(--color-accent) 14.39%, transparent) 0%,
+    color-mix(in srgb, var(--color-accent) 14.15%, transparent) 7%,
+    color-mix(in srgb, var(--color-accent) 13.43%, transparent) 13%,
+    color-mix(in srgb, var(--color-accent) 12.22%, transparent) 20%,
+    color-mix(in srgb, var(--color-accent) 10.59%, transparent) 27%,
+    color-mix(in srgb, var(--color-accent) 8.61%, transparent) 33%,
+    color-mix(in srgb, var(--color-accent) 6.50%, transparent) 40%,
+    color-mix(in srgb, var(--color-accent) 4.53%, transparent) 47%,
+    color-mix(in srgb, var(--color-accent) 2.88%, transparent) 53%,
+    color-mix(in srgb, var(--color-accent) 1.66%, transparent) 60%,
+    color-mix(in srgb, var(--color-accent) 0.87%, transparent) 67%,
+    color-mix(in srgb, var(--color-accent) 0.41%, transparent) 73%,
+    color-mix(in srgb, var(--color-accent) 0.17%, transparent) 80%,
+    color-mix(in srgb, var(--color-accent) 0.07%, transparent) 87%,
+    color-mix(in srgb, var(--color-accent) 0.02%, transparent) 93%,
+    color-mix(in srgb, var(--color-accent) 0.01%, transparent) 100%
+  ) 50% / 748px / 748px;
+}
+
+@media (max-width: 857px) {
+  .fx-glow-lg::before {
+    border-image: radial-gradient(
+      circle closest-side,
+      color-mix(in srgb, var(--color-accent) 13.11%, transparent) 0%,
+      color-mix(in srgb, var(--color-accent) 12.83%, transparent) 7%,
+      color-mix(in srgb, var(--color-accent) 12.02%, transparent) 13%,
+      color-mix(in srgb, var(--color-accent) 10.71%, transparent) 20%,
+      color-mix(in srgb, var(--color-accent) 9.00%, transparent) 27%,
+      color-mix(in srgb, var(--color-accent) 7.12%, transparent) 33%,
+      color-mix(in srgb, var(--color-accent) 5.26%, transparent) 40%,
+      color-mix(in srgb, var(--color-accent) 3.59%, transparent) 47%,
+      color-mix(in srgb, var(--color-accent) 2.26%, transparent) 53%,
+      color-mix(in srgb, var(--color-accent) 1.30%, transparent) 60%,
+      color-mix(in srgb, var(--color-accent) 0.69%, transparent) 67%,
+      color-mix(in srgb, var(--color-accent) 0.33%, transparent) 73%,
+      color-mix(in srgb, var(--color-accent) 0.14%, transparent) 80%,
+      color-mix(in srgb, var(--color-accent) 0.05%, transparent) 87%,
+      color-mix(in srgb, var(--color-accent) 0.02%, transparent) 93%,
+      color-mix(in srgb, var(--color-accent) 0.01%, transparent) 100%
+    ) 50% / 707px / 707px;
+  }
+}
+
+@media (max-width: 640px) {
+  .fx-glow-lg::before {
+    border-image: radial-gradient(
+      circle closest-side,
+      color-mix(in srgb, var(--color-accent) 9.78%, transparent) 0%,
+      color-mix(in srgb, var(--color-accent) 9.51%, transparent) 7%,
+      color-mix(in srgb, var(--color-accent) 8.75%, transparent) 13%,
+      color-mix(in srgb, var(--color-accent) 7.58%, transparent) 20%,
+      color-mix(in srgb, var(--color-accent) 6.18%, transparent) 27%,
+      color-mix(in srgb, var(--color-accent) 4.76%, transparent) 33%,
+      color-mix(in srgb, var(--color-accent) 3.40%, transparent) 40%,
+      color-mix(in srgb, var(--color-accent) 2.27%, transparent) 47%,
+      color-mix(in srgb, var(--color-accent) 1.42%, transparent) 53%,
+      color-mix(in srgb, var(--color-accent) 0.82%, transparent) 60%,
+      color-mix(in srgb, var(--color-accent) 0.43%, transparent) 67%,
+      color-mix(in srgb, var(--color-accent) 0.22%, transparent) 73%,
+      color-mix(in srgb, var(--color-accent) 0.10%, transparent) 80%,
+      color-mix(in srgb, var(--color-accent) 0.04%, transparent) 87%,
+      color-mix(in srgb, var(--color-accent) 0.02%, transparent) 93%,
+      color-mix(in srgb, var(--color-accent) 0.01%, transparent) 100%
+    ) 50% / 640px / 640px;
+  }
+}
+
+@media (max-width: 470px) {
+  .fx-glow-lg::before {
+    border-image: radial-gradient(
+      circle closest-side,
+      color-mix(in srgb, var(--color-accent) 6.29%, transparent) 0%,
+      color-mix(in srgb, var(--color-accent) 6.11%, transparent) 7%,
+      color-mix(in srgb, var(--color-accent) 5.58%, transparent) 13%,
+      color-mix(in srgb, var(--color-accent) 4.78%, transparent) 20%,
+      color-mix(in srgb, var(--color-accent) 3.86%, transparent) 27%,
+      color-mix(in srgb, var(--color-accent) 2.94%, transparent) 33%,
+      color-mix(in srgb, var(--color-accent) 2.09%, transparent) 40%,
+      color-mix(in srgb, var(--color-accent) 1.40%, transparent) 47%,
+      color-mix(in srgb, var(--color-accent) 0.87%, transparent) 53%,
+      color-mix(in srgb, var(--color-accent) 0.51%, transparent) 60%,
+      color-mix(in srgb, var(--color-accent) 0.28%, transparent) 67%,
+      color-mix(in srgb, var(--color-accent) 0.14%, transparent) 73%,
+      color-mix(in srgb, var(--color-accent) 0.07%, transparent) 80%,
+      color-mix(in srgb, var(--color-accent) 0.03%, transparent) 87%,
+      color-mix(in srgb, var(--color-accent) 0.01%, transparent) 93%,
+      color-mix(in srgb, var(--color-accent) 0.00%, transparent) 100%
+    ) 50% / 588px / 588px;
+  }
 }
 
 /*fx-grid*/

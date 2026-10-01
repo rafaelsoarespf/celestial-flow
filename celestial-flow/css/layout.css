@@ -75,14 +75,14 @@
 /*column --------------------------------------------------------*/
 .column {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: column;
   gap: 1rem;
 }
 
 .column-reverse {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: column-reverse;
   gap: 1rem;
 }
