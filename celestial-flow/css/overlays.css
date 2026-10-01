@@ -331,19 +331,20 @@ details.tree details > :not(summary):not(details) {
 }
 
 /* tooltip ---------------------------------------------------*/
-.tooltip, .tooltip-left, .tooltip-right, .tooltip-bottom {
+.tooltip {
   position: relative;
   cursor: help;
 }
 
-.tooltip::after, .tooltip-left::after, .tooltip-right::after, .tooltip-bottom::after {
+.tooltip::after {
   content: attr(data-tooltip);
   position: absolute;
   left: 50%;
   bottom: calc(100% + 0.6rem);
-  transform: translateX(-50%);
+  transform: translateX(-50%) scale(0);
+  transform-origin: 50% 100%;
   width: max-content;
-  max-width: 220px;
+  max-width: min(220px, calc(100vw - 1rem));
   padding: 0.45rem 0.7rem;
   border-radius: var(--radius-sm);
   background: color-mix(in srgb, var(--color-surface-1) 90%, transparent);
@@ -358,34 +359,10 @@ details.tree details > :not(summary):not(details) {
   z-index: 1000;
 }
 
-.tooltip:hover::after, .tooltip-left:hover::after, .tooltip-right:hover::after, .tooltip-bottom:hover::after {
+.tooltip:hover::after,
+.tooltip:focus::after {
   opacity: 1;
-}
-
-/*default*/
-.tooltip:hover::after {
   transform: translateX(-50%) translateY(-2px);
-}
-
-/*left*/
-.tooltip-left::after {
-  left: 0;
-  transform: translateX(0);
-}
-
-.tooltip-left:hover::after {
-  transform: translateY(-2px);
-}
-
-/*right*/
-.tooltip-right::after {
-  left: auto;
-  right: 0;
-  transform: translateX(0);
-}
-
-.tooltip-right:hover::after {
-  transform: translateY(-2px);
 }
 
 /*bottom*/
@@ -396,4 +373,28 @@ details.tree details > :not(summary):not(details) {
 
 .tooltip-bottom:hover::after {
   transform: translateX(-50%) translateY(2px);
+}
+
+@supports (position-area: top) and (anchor-scope: --tooltip) {
+  .tooltip {
+    anchor-name: --tooltip;
+    anchor-scope: --tooltip;
+  }
+
+  .tooltip::after {
+    position: fixed;
+    inset: auto;
+    position-anchor: --tooltip;
+    position-area: top span-all;
+    justify-self: anchor-center;
+    position-try-fallbacks: flip-block;
+    margin: 0 0.5rem 0.6rem;
+    transform: scale(0.96);
+    transform-origin: center;
+  }
+
+  .tooltip:hover::after,
+  .tooltip:focus::after {
+    transform: scale(1);
+  }
 }
