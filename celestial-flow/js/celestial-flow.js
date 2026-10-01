@@ -3,91 +3,340 @@ document.addEventListener("DOMContentLoaded", () => {
   initSidebar();
   initNavbar();
   initPanel();
-  setTimeout(() => {
-    initThemeSelector();
-    initSelect();
-  }, 100);
+  initThemePicker();
 });
 
 //theme selector ----------------------------------------------------------
-function initThemeSelector() {
-  const selectors = document.querySelectorAll(".theme-selector");
-  const savedTheme = localStorage.getItem("celestial-flow-theme");
+//theme ---------------------------------------------------------------------
+const CF_THEME_KEY = "celestial-flow-theme";
 
-  selectors.forEach((selector) => {
-    const button = selector.querySelector(".select__btn");
-    const options = selector.querySelectorAll(".select__item");
-    if (!(button instanceof HTMLButtonElement)) {
-      return;
-    }
+// Single source of truth for the picker. To add a theme: add it here and in themes.css.
+const CF_THEME_GROUPS = [
+  {
+    title: "Light themes",
+    themes: [
+      ["light", "Light"],
+      ["light-teal", "Light Teal"],
+      ["nebula-light", "Nebula Light"],
+      ["light-slate-mist", "Light Slate Mist"],
+      ["paper", "Paper"],
+      ["neumorphism", "Neumorphism"],
+      ["glass", "Glass"],
+      ["sakura", "Sakura"],
+      ["coffee", "Coffee"],
+      ["ink", "Ink"],
+    ],
+  },
+  {
+    title: "Dark themes",
+    themes: [
+      ["dark", "Dark"],
+      ["dark-teal", "Dark Teal"],
+      ["nebula-dark", "Nebula Dark"],
+      ["dark-slate-mist", "Dark Slate Mist"],
+      ["blacksteel", "Blacksteel"],
+      ["forest", "Forest"],
+      ["nord", "Nord"],
+      ["gold", "Gold"],
+    ],
+  },
+];
 
-    const setTheme = (theme) => {
-      const option = selector.querySelector(
-        `.select__item[data-value="${theme}"]`,
+function getStoredTheme() {
+  try {
+    return localStorage.getItem(CF_THEME_KEY);
+  } catch {
+    return null;
+  }
+}
+
+function isKnownTheme(theme) {
+  return CF_THEME_GROUPS.some((group) =>
+    group.themes.some(([value]) => value === theme),
+  );
+}
+
+function getTheme() {
+  return document.documentElement.getAttribute("data-theme") || "light";
+}
+
+function getThemeLabel(theme) {
+  for (const group of CF_THEME_GROUPS) {
+    const found = group.themes.find(([value]) => value === theme);
+    if (found) return found[1];
+  }
+  return theme;
+}
+
+// persist: save in localStorage and notify (the "themechange" event).
+// animate: cross-fade with the View Transitions API when supported.
+function setTheme(theme, { persist = true, animate = true } = {}) {
+  if (!isKnownTheme(theme)) return;
+
+  const apply = () => {
+    document.documentElement.setAttribute("data-theme", theme);
+    if (persist) {
+      document.dispatchEvent(
+        new CustomEvent("themechange", { detail: { theme } }),
       );
+    }
+  };
 
-      if (!(option instanceof HTMLElement)) {
-        return;
-      }
+  if (persist) {
+    try {
+      localStorage.setItem(CF_THEME_KEY, theme);
+    } catch {
+      /* storage unavailable: the theme just won't be remembered */
+    }
+  }
 
-      const label = option.querySelector(".theme-name");
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
 
-      selector.dataset.value = theme;
-      button.textContent =
-        label?.textContent.trim() || option.textContent.trim();
+  if (animate && !reduceMotion && document.startViewTransition) {
+    document.startViewTransition(apply);
+  } else {
+    apply();
+  }
+}
 
-      options.forEach((item) => {
-        item.removeAttribute("data-selected");
-      });
+// Applies the saved theme as soon as this script runs. For zero flash on load,
+// also add the inline snippet to <head> (see the docs).
+(function applyStoredTheme() {
+  const saved = getStoredTheme();
+  if (saved && isKnownTheme(saved)) {
+    document.documentElement.setAttribute("data-theme", saved);
+  }
+})();
 
-      option.setAttribute("data-selected", "");
+//theme picker ----------------------------------------------------------------
+let cfThemePickerCount = 0;
 
-      document.documentElement.setAttribute("data-theme", theme);
-      localStorage.setItem("celestial-flow-theme", theme);
+function initThemePicker() {
+  document.querySelectorAll(".theme-picker").forEach((picker) => {
+    if (picker.dataset.ready) return;
+    picker.dataset.ready = "true";
 
-      selectors.forEach((s) => {
-        if (s === selector) {
-          return;
-        }
+    const uid = `theme-picker-${++cfThemePickerCount}`;
 
-        const otherButton = s.querySelector(".select__btn");
-        const otherOptions = s.querySelectorAll(".select__item");
-        const otherOption = s.querySelector(
-          `.select__item[data-value="${theme}"]`,
-        );
+    const groupsHTML = CF_THEME_GROUPS.map(
+      (group, index) => `
+      <div class="theme-picker__group" role="group" aria-labelledby="${uid}-group-${index}">
+        <p class="theme-picker__group-title" id="${uid}-group-${index}">${group.title}</p>
+        <div class="theme-picker__grid">
+          ${group.themes
+            .map(
+              ([value, label]) => `
+          <button class="theme-picker__item" type="button" role="option" aria-selected="false" tabindex="-1" data-value="${value}">
+            <span class="theme-picker__preview" data-theme="${value}" aria-hidden="true">
+              <span class="theme-picker__navbar">
+                <span class="theme-picker__logo"></span>
+                <span class="theme-picker__dot"></span>
+                <span class="theme-picker__dot"></span>
+              </span>
+              <span class="theme-picker__body">
+                <span class="theme-picker__title-line"></span>
+                <span class="theme-picker__text-line"></span>
+                <span class="theme-picker__pill"></span>
+              </span>
+            </span>
+            <span class="theme-picker__name">${label}</span>
+          </button>`,
+            )
+            .join("")}
+        </div>
+      </div>`,
+    ).join("");
 
-        if (
-          !(otherButton instanceof HTMLButtonElement) ||
-          !(otherOption instanceof HTMLElement)
-        ) {
-          return;
-        }
+    picker.innerHTML = `
+      <button class="theme-picker__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="${uid}-menu">
+        <span class="theme-picker__swatch" aria-hidden="true"></span>
+        <span class="theme-picker__label"></span>
+      </button>
+      <div class="theme-picker__menu" id="${uid}-menu" popover="manual" role="listbox" aria-label="Theme">${groupsHTML}</div>`;
 
-        const otherLabel = otherOption.querySelector(".theme-name");
+    const button = picker.querySelector(".theme-picker__btn");
+    const swatch = picker.querySelector(".theme-picker__swatch");
+    const label = picker.querySelector(".theme-picker__label");
+    const menu = picker.querySelector(".theme-picker__menu");
+    const items = [...menu.querySelectorAll(".theme-picker__item")];
+    const groups = [...menu.querySelectorAll(".theme-picker__grid")].map(
+      (grid) => [...grid.children],
+    );
+    const livePreview = picker.hasAttribute("data-preview");
 
-        s.dataset.value = theme;
-        otherButton.textContent =
-          otherLabel?.textContent.trim() || otherOption.textContent.trim();
+    let committed = getTheme();
 
-        otherOptions.forEach((item) => {
-          item.removeAttribute("data-selected");
-        });
+    const isOpen = () => menu.matches(":popover-open");
 
-        otherOption.setAttribute("data-selected", "");
+    const render = (theme) => {
+      swatch.setAttribute("data-theme", theme);
+      label.textContent = getThemeLabel(theme);
+      items.forEach((item) => {
+        item.setAttribute("aria-selected", String(item.dataset.value === theme));
       });
     };
 
-    if (savedTheme) {
-      setTheme(savedTheme);
-    }
+    const place = () => {
+      const rect = button.getBoundingClientRect();
+      const gap = 8;
+      const margin = 8;
+      const below = window.innerHeight - rect.bottom - gap - margin;
+      const above = rect.top - gap - margin;
+      const openUp = below < 320 && above > below;
 
-    selector.addEventListener("selectchange", () => {
-      const theme = selector.dataset.value;
+      menu.style.setProperty(
+        "--tp-max-h",
+        `${Math.max(160, Math.floor(openUp ? above : below))}px`,
+      );
 
-      if (theme) {
-        setTheme(theme);
+      const width = menu.offsetWidth;
+      const height = menu.offsetHeight;
+      const left = Math.max(
+        margin,
+        Math.min(rect.left, window.innerWidth - width - margin),
+      );
+
+      menu.style.left = `${Math.round(left)}px`;
+      menu.style.top = `${Math.round(openUp ? rect.top - gap - height : rect.bottom + gap)}px`;
+    };
+
+    const revertPreview = () => {
+      if (getTheme() !== committed) {
+        setTheme(committed, { persist: false, animate: false });
+      }
+    };
+
+    const open = () => {
+      if (isOpen()) return;
+
+      menu.showPopover();
+      button.setAttribute("aria-expanded", "true");
+      picker.setAttribute("data-open", "");
+      place();
+
+      const current =
+        items.find((item) => item.dataset.value === committed) || items[0];
+      current.focus({ preventScroll: true });
+      current.scrollIntoView({ block: "center" });
+
+      window.addEventListener("resize", place);
+      window.addEventListener("scroll", place, true);
+    };
+
+    const close = (returnFocus = true, revert = true) => {
+      if (!isOpen()) return;
+
+      menu.hidePopover();
+      button.setAttribute("aria-expanded", "false");
+      picker.removeAttribute("data-open");
+      window.removeEventListener("resize", place);
+      window.removeEventListener("scroll", place, true);
+
+      if (revert) revertPreview();
+      if (returnFocus) button.focus();
+    };
+
+    const choose = (theme) => {
+      const alreadyShowing = getTheme() === theme;
+      committed = theme;
+      setTheme(theme, { animate: !alreadyShowing });
+      render(theme);
+      close(true, false);
+    };
+
+    const move = (key, current) => {
+      const flat = groups.flat();
+      const groupIndex = groups.findIndex((group) => group.includes(current));
+      const group = groups[groupIndex];
+      const position = group.indexOf(current);
+      const cols = getComputedStyle(current.parentElement)
+        .gridTemplateColumns.split(" ").length;
+
+      switch (key) {
+        case "ArrowRight":
+          return flat[Math.min(flat.indexOf(current) + 1, flat.length - 1)];
+        case "ArrowLeft":
+          return flat[Math.max(flat.indexOf(current) - 1, 0)];
+        case "ArrowDown": {
+          if (position + cols < group.length) return group[position + cols];
+          const next = groups[groupIndex + 1];
+          return next ? next[Math.min(position % cols, next.length - 1)] : current;
+        }
+        case "ArrowUp": {
+          if (position - cols >= 0) return group[position - cols];
+          const prev = groups[groupIndex - 1];
+          if (!prev) return current;
+          const lastRow = Math.floor((prev.length - 1) / cols) * cols;
+          return prev[Math.min(lastRow + (position % cols), prev.length - 1)];
+        }
+        case "Home":
+          return flat[0];
+        case "End":
+          return flat[flat.length - 1];
+        default:
+          return undefined;
+      }
+    };
+
+    button.addEventListener("click", () => (isOpen() ? close() : open()));
+
+    button.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+        event.preventDefault();
+        open();
       }
     });
+
+    items.forEach((item) => {
+      item.addEventListener("click", () => choose(item.dataset.value));
+
+      if (livePreview) {
+        const show = () =>
+          setTheme(item.dataset.value, { persist: false, animate: false });
+        item.addEventListener("pointerenter", show);
+        item.addEventListener("focus", show);
+      }
+    });
+
+    if (livePreview) {
+      menu.addEventListener("pointerleave", revertPreview);
+    }
+
+    menu.addEventListener("keydown", (event) => {
+      if (event.key === "Tab") {
+        close(false);
+        return;
+      }
+
+      const current = document.activeElement.closest(".theme-picker__item");
+      if (!current) return;
+
+      const next = move(event.key, current);
+      if (next) {
+        event.preventDefault();
+        next.focus();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && isOpen()) {
+        event.preventDefault();
+        close();
+      }
+    });
+
+    document.addEventListener("pointerdown", (event) => {
+      if (isOpen() && !picker.contains(event.target)) close(false);
+    });
+
+    document.addEventListener("themechange", (event) => {
+      committed = event.detail.theme;
+      render(committed);
+    });
+
+    render(committed);
   });
 }
 
