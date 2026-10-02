@@ -307,13 +307,24 @@ input.switch:disabled {
 }
 
 /*.theme-selector -------------------------------------------------------------*/
+:where(.theme-selector) {
+  min-width: 0;
+  max-width: 100%;
+}
+
 .theme-selector {
   --ts-cols: 3;
   position: relative;
   display: inline-block;
-  min-width: min(220px, 100%);
+  vertical-align: top;
+}
+
+/* natural width: 175px when loose, fills the cell in a grid */
+.theme-selector::before {
+  content: "";
+  display: block;
+  width: 220px;
   max-width: 100%;
-  flex-direction: column;
 }
 
 .theme-selector[data-cols="2"] { --ts-cols: 2; }

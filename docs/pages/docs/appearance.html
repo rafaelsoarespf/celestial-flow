@@ -70,6 +70,7 @@
       </section>
 
       <!--modifiers---------------------------------------------------->
+      <!--modifiers---------------------------------------------------->
       <section class="section-sm">
         <div class="container">
           <span class="text-overline" id="modifiers">Modifiers</span>
@@ -78,86 +79,139 @@
             with almost any component (<code>.btn</code>, <code>.card</code>, <code>.badge</code>...)
             to change its finish, instead of needing a dedicated variant class for every combination.</p>
 
+          <p class="text-overline mb-sm">Surfaces</p>
           <div class="grid mb-lg">
             <!--surface-->
             <div class="col-6 card surface">
               <h4 class="mb-sm"><code>.surface</code></h4>
               <p class="text-sm">Default layer — solid theme background, blurred.</p>
-            </div>
-            <div class="col-6">
-              <pre class="card-code"><code>&lt;div class="card surface"&gt;...&lt;/div&gt;</code></pre>
+              <div class="row modifier-samples">
+                <button class="btn surface" type="button">Button</button>
+                <span class="badge surface">Badge</span>
+              </div>
+              <div class="modifier-code">
+                <pre class="card-code"><code>&lt;div class="card surface"&gt;...&lt;/div&gt;</code></pre>
+              </div>
             </div>
             <!--surface-2-->
             <div class="col-6 card surface-2">
               <h4 class="mb-sm"><code>.surface-2</code></h4>
               <p class="text-sm">Nested layer, sits visually on top of <code>.surface</code>.</p>
-            </div>
-            <div class="col-6">
-              <pre class="card-code"><code>&lt;div class="card surface-2"&gt;...&lt;/div&gt;</code></pre>
+              <div class="row modifier-samples">
+                <button class="btn surface-2" type="button">Button</button>
+                <span class="badge surface-2">Badge</span>
+              </div>
+              <div class="modifier-code">
+                <pre class="card-code"><code>&lt;div class="card surface-2"&gt;...&lt;/div&gt;</code></pre>
+              </div>
             </div>
             <!--ghost-->
             <div class="col-6 card ghost">
               <h4 class="mb-sm"><code>.ghost</code></h4>
               <p class="text-sm">Outline only — no background, no blur.</p>
-            </div>
-            <div class="col-6">
-              <pre class="card-code"><code>&lt;div class="card ghost"&gt;...&lt;/div&gt;</code></pre>
+              <div class="row modifier-samples">
+                <button class="btn ghost" type="button">Button</button>
+                <span class="badge ghost">Badge</span>
+              </div>
+              <div class="modifier-code">
+                <pre class="card-code"><code>&lt;div class="card ghost"&gt;...&lt;/div&gt;</code></pre>
+              </div>
             </div>
             <!--phantom-->
-            <div class="col-6 card phantom">
-              <h4 class="mb-sm"><code>.phantom</code></h4>
-              <p class="text-sm">Blur only — no background tint, for glass over busy content.</p>
+            <div class="col-6 modifier-backdrop">
+              <div class="card phantom">
+                <h4 class="mb-sm"><code>.phantom</code></h4>
+                <p class="text-sm">Blur only — no background tint, for glass over busy content.</p>
+                <div class="row modifier-samples">
+                  <button class="btn phantom" type="button">Button</button>
+                  <span class="badge phantom">Badge</span>
+                </div>
+                <div class="modifier-code">
+                  <pre class="card-code"><code>&lt;div class="card phantom"&gt;...&lt;/div&gt;</code></pre>
+                </div>
+              </div>
             </div>
-            <div class="col-6">
-              <pre class="card-code"><code>&lt;div class="card phantom"&gt;...&lt;/div&gt;</code></pre>
-            </div>
+          </div>
+
+          <p class="text-overline mb-sm">Colors</p>
+          <div class="grid mb-lg">
             <!--soft-->
             <div class="col-6 card soft">
               <h4 class="mb-sm"><code>.soft</code></h4>
               <p class="text-sm">Accent-tinted background, accent-colored text.</p>
-            </div>
-            <div class="col-6">
-              <pre class="card-code"><code>&lt;div class="card soft"&gt;...&lt;/div&gt;</code></pre>
+              <div class="row modifier-samples">
+                <button class="btn soft" type="button">Button</button>
+                <span class="badge soft">Badge</span>
+              </div>
+              <div class="modifier-code">
+                <pre class="card-code"><code>&lt;div class="card soft"&gt;...&lt;/div&gt;</code></pre>
+              </div>
             </div>
             <!--accent-->
             <div class="col-6 card accent">
               <h4 class="mb-sm"><code>.accent</code></h4>
               <p class="text-sm">Solid accent block, text automatically flips to on-accent.</p>
+              <div class="row modifier-samples">
+                <button class="btn accent" type="button">Button</button>
+                <span class="badge accent">Badge</span>
+              </div>
+              <div class="modifier-code">
+                <pre class="card-code"><code>&lt;div class="card accent"&gt;...&lt;/div&gt;</code></pre>
+              </div>
             </div>
-            <div class="col-6">
-              <pre class="card-code"><code>&lt;div class="card accent"&gt;...&lt;/div&gt;</code></pre>
-            </div>
-                        <!--outline-->
+            <!--outline-->
             <div class="col-6 card outline">
               <h4 class="mb-sm"><code>.outline</code></h4>
               <p class="text-sm">Transparent background with an accent border and text.</p>
-            </div>
-            <div class="col-6">
-              <pre class="card-code"><code>&lt;div class="card outline"&gt;...&lt;/div&gt;</code></pre>
+              <div class="row modifier-samples">
+                <button class="btn outline" type="button">Button</button>
+                <span class="badge outline">Badge</span>
+              </div>
+              <div class="modifier-code">
+                <pre class="card-code"><code>&lt;div class="card outline"&gt;...&lt;/div&gt;</code></pre>
+              </div>
             </div>
             <!--invert-->
             <div class="col-6 card invert">
               <h4 class="mb-sm"><code>.invert</code></h4>
               <p class="text-sm">Flips the theme: title color as background, its opposite as text.</p>
+              <div class="row modifier-samples">
+                <button class="btn invert" type="button">Button</button>
+                <span class="badge invert">Badge</span>
+              </div>
+              <div class="modifier-code">
+                <pre class="card-code"><code>&lt;div class="card invert"&gt;...&lt;/div&gt;</code></pre>
+              </div>
             </div>
-            <div class="col-6">
-              <pre class="card-code"><code>&lt;div class="card invert"&gt;...&lt;/div&gt;</code></pre>
-            </div>
+          </div>
+
+          <p class="text-overline mb-sm">Effects</p>
+          <div class="grid mb-lg">
             <!--glow-->
             <div class="col-6 card glow">
               <h4 class="mb-sm"><code>.glow</code></h4>
               <p class="text-sm">Soft accent halo. Change its color with <code>--glow-color</code>.</p>
-            </div>
-            <div class="col-6">
-              <pre class="card-code"><code>&lt;div class="card glow" style="--glow-color: #ec4899"&gt;...&lt;/div&gt;</code></pre>
+              <div class="row modifier-samples">
+                <button class="btn glow" type="button">Button</button>
+                <span class="badge glow">Badge</span>
+              </div>
+              <div class="modifier-code">
+                <pre class="card-code"><code>&lt;div class="card glow"&gt;...&lt;/div&gt;</code></pre>
+              </div>
             </div>
             <!--liquid-glass-->
-            <div class="card liquid-glass">
-              <h4 class="mb-sm"><code>.liquid-glass</code></h4>
-              <p class="text-sm">Frosted glass with a bright edge — shines over colorful or busy backgrounds.</p>
-            </div>
-            <div class="col-6">
-              <pre class="card-code"><code>&lt;div class="card liquid-glass"&gt;...&lt;/div&gt;</code></pre>
+            <div class="col-6 modifier-backdrop">
+              <div class="card liquid-glass">
+                <h4 class="mb-sm"><code>.liquid-glass</code></h4>
+                <p class="text-sm">Frosted glass with a bright edge — shines over colorful or busy backgrounds.</p>
+                <div class="row modifier-samples">
+                  <button class="btn liquid-glass" type="button">Button</button>
+                  <span class="badge liquid-glass">Badge</span>
+                </div>
+                <div class="modifier-code">
+                  <pre class="card-code"><code>&lt;div class="card liquid-glass"&gt;...&lt;/div&gt;</code></pre>
+                </div>
+              </div>
             </div>
           </div>
         </div>
