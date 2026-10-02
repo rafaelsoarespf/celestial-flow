@@ -310,8 +310,10 @@ input.switch:disabled {
 .theme-selector {
   --ts-cols: 3;
   position: relative;
-  display: block;
-  width: 100%;
+  display: inline-block;
+  min-width: min(220px, 100%);
+  max-width: 100%;
+  flex-direction: column;
 }
 
 .theme-selector[data-cols="2"] { --ts-cols: 2; }
@@ -327,11 +329,11 @@ input.switch:disabled {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: .75rem;
+  gap: .3rem;
   width: 100%;
   min-width: 0;
   box-sizing: border-box;
-  padding: .6rem 2.8rem .6rem .7rem;
+  padding: .6rem 1.7rem .6rem .3rem;
   font: var(--font-text);
   line-height: 1.2;
   color: var(--color-text);
@@ -364,7 +366,7 @@ input.switch:disabled {
   content: "";
   position: absolute;
   top: 50%;
-  right: 1rem;
+  right: 0.7rem;
   width: .45rem;
   height: .45rem;
   border-right: 1.5px solid currentColor;
@@ -405,7 +407,7 @@ input.switch:disabled {
 .theme-selector__swatch::after {
   content: "";
   position: absolute;
-  left: .35rem;
+  left: .15rem;
   bottom: .3rem;
   width: .9rem;
   height: .28rem;
