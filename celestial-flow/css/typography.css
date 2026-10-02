@@ -198,7 +198,7 @@
 
 /*logo -----------------------------------------------------------*/
 .logo {
-  font: 700 1.6rem "Sora", -apple-system, "Segoe UI", sans-serif;
+  font: 700 clamp(1.25rem, 1rem + 1.2vw, 1.6rem) "Sora", -apple-system, "Segoe UI", sans-serif;
   letter-spacing: -0.02em;
   line-height: 1;
   white-space: nowrap;
