@@ -483,9 +483,9 @@
 .text-writer::after {
   content: "";
   display: inline-block;
-  width: 2px;
+  width: max(2px, .06em);
   height: 1em;
-  margin-left: 2px;
+  margin-left: max(2px, .05em);
   vertical-align: -.12em;
   background: var(--color-accent);
   animation: text-writer-blink .8s step-end infinite;
