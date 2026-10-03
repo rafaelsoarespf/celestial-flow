@@ -205,11 +205,13 @@
     </section>
 
     <!--card-img---------------------------------------------------->
+    <!--card-img---------------------------------------------------->
     <section class="section-sm">
       <div class="container">
         <span class="text-overline" id="card-img">Card Image</span>
         <h2 class="text-spacing-sm mt-sm mb">Card Image</h2>
-        <p class="mb-lg">Combining an image with content: stacked on top, or beside it on the left or right.</p>
+        <p class="mb-lg">Combining an image with content: stacked on top, beside it on the left or right, or behind it
+          as a background.</p>
 
         <p class="mb-sm"><code>.card-img</code> — image fills the top, content stacks below:</p>
         <div class="grid">
@@ -250,6 +252,63 @@
   &lt;img src="..." alt="" /&gt;
   &lt;h2&gt;Image on the right&lt;/h2&gt;
   &lt;p&gt;Content sits to the left.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+
+        <p class="mt-lg mb-sm"><code>.card-img-bg</code> — image fills the card as a background, content sits on top.
+          Combine it with appearance modifiers such as <code>.phantom</code>, <code>.liquid-glass</code> or
+          <code>.ghost</code> to change how the card looks over the image:</p>
+        <div class="grid">
+          <div class="col-6">
+            <div class="card-img-bg">
+              <img src="../../assets/images/image.png" alt="" />
+              <h2>Image behind</h2>
+              <p>Content sits on top of the image.</p>
+            </div>
+            <pre class="card-code mt-sm"><code>&lt;div class="card-img-bg"&gt;
+  &lt;img src="..." alt="" /&gt;
+  &lt;h2&gt;Image behind&lt;/h2&gt;
+  &lt;p&gt;Content sits on top of the image.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="col-6">
+            <div class="card-img-bg phantom">
+              <img src="../../assets/images/image.png" alt="" />
+              <h2>Blurred image</h2>
+              <p>The modifier is applied over the image.</p>
+            </div>
+            <pre class="card-code mt-sm"><code>&lt;div class="card-img-bg phantom"&gt;
+  &lt;img src="..." alt="" /&gt;
+  &lt;h2&gt;Blurred image&lt;/h2&gt;
+  &lt;p&gt;The modifier is applied over the image.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+
+        <div class="grid mt-lg">
+          <div class="col-6">
+            <div class="card-img-bg liquid-glass">
+              <img src="../../assets/images/image.png" alt="" />
+              <h2>Liquid glass</h2>
+              <p>Glass effect over the image.</p>
+            </div>
+            <pre class="card-code mt-sm"><code>&lt;div class="card-img-bg liquid-glass"&gt;
+  &lt;img src="..." alt="" /&gt;
+  &lt;h2&gt;Liquid glass&lt;/h2&gt;
+  &lt;p&gt;Glass effect over the image.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <div class="col-6">
+            <div class="card-img-bg ghost">
+              <img src="../../assets/images/image.png" alt="" />
+              <h2>Ghost</h2>
+              <p>The image stays sharp, no overlay.</p>
+            </div>
+            <pre class="card-code mt-sm"><code>&lt;div class="card-img-bg ghost"&gt;
+  &lt;img src="..." alt="" /&gt;
+  &lt;h2&gt;Ghost&lt;/h2&gt;
+  &lt;p&gt;The image stays sharp, no overlay.&lt;/p&gt;
 &lt;/div&gt;</code></pre>
           </div>
         </div>
