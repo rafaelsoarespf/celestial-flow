@@ -1,22 +1,27 @@
 /*root ------------------------------------------------*/
 :root {
-  --color-red: #c62852;
+  --color-red: #c72929;
   --color-salmon: #d85f63;
   --color-orange: #c97a24;
+  --color-amber: #d09524;
   --color-yellow: #c9a321;
   --color-lime: #90a92e;
   --color-green: #3b9659;
+  --color-mint: #4e9f76;
   --color-teal: #2d8b7f;
+  --color-aqua: #2d9f9a;
   --color-cyan: #2d90b0;
+  --color-sky: #438fca;
   --color-blue: #3f73cf;
   --color-indigo: #5e63cf;
+  --color-violet: #755bc2;
   --color-purple: #8758c6;
   --color-pink: #c53f74;
-  --color-brown: #9b6848;
-  --color-gray: #66707d;
-  --color-black: #222831;
-  --color-white: #ffffff;
+  --color-rose: #c94f6d;
+  --color-ruby: #c62852;
 
+
+  /* metals: gradient for bg and text, solid for borders */
   --color-gold: linear-gradient(135deg, #8f6520 0%, #c99b3a 25%, #f2d16b 50%, #c99b3a 75%, #8f6520 100%);
   --color-gold-solid: #c99b3a;
   --color-silver: linear-gradient(135deg, #6d7680 0%, #b5bec7 25%, #eef2f5 50%, #b5bec7 75%, #6d7680 100%);
