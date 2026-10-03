@@ -222,18 +222,18 @@ pre.card-code code {
 pre.card-code {
   position: relative;
   overflow-y: hidden;
-  padding: 72px 16px 24px;
+  padding: 55px 16px 16px;
   text-align: left;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   color: var(--color-text);
   box-shadow: var(--shadow-sm);
   background:
-    radial-gradient(circle at 20px 24px, #ff5f56 6px, transparent 7px),
-    radial-gradient(circle at 44px 24px, #ffbd2e 6px, transparent 7px),
-    radial-gradient(circle at 68px 24px, #27c93f 6px, transparent 7px),
-    linear-gradient(var(--color-border), var(--color-border)) top 48px left / 100% 1px no-repeat,
-    linear-gradient(rgba(255,255,255,.015), rgba(255,255,255,.015)) top / 100% 48px no-repeat,
+    radial-gradient(circle at 20px 22px, #ff5f56 6px, transparent 7px),
+    radial-gradient(circle at 44px 22px, #ffbd2e 6px, transparent 7px),
+    radial-gradient(circle at 68px 22px, #27c93f 6px, transparent 7px),
+    linear-gradient(var(--color-border), var(--color-border)) top 44px left / 100% 1px no-repeat,
+    linear-gradient(rgba(255,255,255,.015), rgba(255,255,255,.015)) top / 100% 44px no-repeat,
     color-mix(in srgb, var(--color-surface-1) 80%, transparent);
 }
 

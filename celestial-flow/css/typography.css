@@ -111,26 +111,25 @@
 .text-right { text-align: right; }
 
 /*color ----------------------------------------------------------*/
-.text-red { color: #c62852; }
-.text-salmon { color: #d85f63; }
-.text-orange { color: #c97a24; }
-.text-yellow { color: #c9a321; }
-.text-lime { color: #90a92e; }
-.text-green { color: #3b9659; }
-.text-teal { color: #2d8b7f; }
-.text-cyan { color: #2d90b0; }
-.text-blue { color: #3f73cf; }
-.text-indigo { color: #5e63cf; }
-.text-purple { color: #8758c6; }
-.text-pink { color: #c53f74; }
-.text-brown { color: #9b6848; }
-.text-gray { color: #66707d; }
-.text-black { color: #222831; }
-.text-white { color: #ffffff; }
+.text-red { color: var(--color-red); }
+.text-salmon { color: var(--color-salmon); }
+.text-orange { color: var(--color-orange); }
+.text-yellow { color: var(--color-yellow); }
+.text-lime { color: var(--color-lime); }
+.text-green { color: var(--color-green); }
+.text-teal { color: var(--color-teal); }
+.text-cyan { color: var(--color-cyan); }
+.text-blue { color: var(--color-blue); }
+.text-indigo { color: var(--color-indigo); }
+.text-purple { color: var(--color-purple); }
+.text-pink { color: var(--color-pink); }
+.text-brown { color: var(--color-brown); }
+.text-gray { color: var(--color-gray); }
+.text-black { color: var(--color-black); }
+.text-white { color: var(--color-white); }
 
 .text-gold {
-  color: #c99b3a;
-  background: linear-gradient(135deg, #8f6520 0%, #c99b3a 30%, #f2d16b 50%, #c99b3a 70%, #8f6520 100%);
+  background: var(--color-gold);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -138,8 +137,7 @@
 }
 
 .text-silver {
-  color: #b5bec7;
-  background: linear-gradient(135deg, #6d7680 0%, #b5bec7 30%, #eef2f5 50%, #b5bec7 70%, #6d7680 100%);
+  background: var(--color-silver);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -147,8 +145,7 @@
 }
 
 .text-bronze {
-  color: #996339;
-  background: linear-gradient(135deg, #5f3c22 0%, #996339 30%, #cb9157 50%, #996339 70%, #5f3c22 100%);
+  background: var(--color-bronze);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
