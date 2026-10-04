@@ -217,24 +217,28 @@
 /* card-code ----------------------------------------------------------------------*/
 pre.card-code code {
   min-width: max-content;
+  padding: 0;
+  color: inherit;
+  background: transparent;
 }
 
 pre.card-code {
   position: relative;
   overflow-y: hidden;
-  padding: 55px 16px 16px;
+  padding: 43px 14px 10px;
   text-align: left;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   color: var(--color-text);
   box-shadow: var(--shadow-sm);
   background:
-    radial-gradient(circle at 20px 22px, #ff5f56 6px, transparent 7px),
-    radial-gradient(circle at 44px 22px, #ffbd2e 6px, transparent 7px),
-    radial-gradient(circle at 68px 22px, #27c93f 6px, transparent 7px),
-    linear-gradient(var(--color-border), var(--color-border)) top 44px left / 100% 1px no-repeat,
-    linear-gradient(rgba(255,255,255,.015), rgba(255,255,255,.015)) top / 100% 44px no-repeat,
-    color-mix(in srgb, var(--color-surface-1) 80%, transparent);
+    radial-gradient(circle at 20px 17px, #ff5f56 5px, transparent 6px),
+    radial-gradient(circle at 40px 17px, #ffbd2e 5px, transparent 6px),
+    radial-gradient(circle at 60px 17px, #27c93f 5px, transparent 6px),
+    linear-gradient(var(--color-border), var(--color-border)) top 31px left / 100% 1px no-repeat,
+    linear-gradient(rgba(255,255,255,.015), rgba(255,255,255,.015)) top / 100% 31px no-repeat,
+    linear-gradient(color-mix(in srgb, var(--color-surface-1) 80%, transparent), color-mix(in srgb, var(--color-surface-1) 80%, transparent)),
+    var(--color-background);
 }
 
 /*alert ------------------------------------------------------*/
