@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initPanel();
   initSelect();
   initTypewriter();
+  initSpotlight();
 });
 
 //theme selector ----------------------------------------------------------
@@ -611,4 +612,37 @@ function initTypewriter() {
       }
     })();
   });
+}
+
+
+//initSpotlight -------------------------------------------------------------------
+//.hover-spotlight
+let spotlightListening = false;
+function initSpotlight() {
+  const ensureLayer = (host) => {
+    if (host.querySelector(":scope > .spotlight")) return;
+    const layer = document.createElement("span");
+    layer.className = "spotlight";
+    layer.setAttribute("aria-hidden", "true");
+    host.append(layer);
+  };
+
+  document.querySelectorAll(".hover-spotlight").forEach(ensureLayer);
+
+  if (spotlightListening) return;
+  spotlightListening = true;
+
+  document.addEventListener(
+    "pointermove",
+    (event) => {
+      if (event.pointerType === "touch") return;
+      const host = event.target instanceof Element ? event.target.closest(".hover-spotlight") : null;
+      if (!host) return;
+      ensureLayer(host);
+      const rect = host.getBoundingClientRect();
+      host.style.setProperty("--mx", `${event.clientX - rect.left}px`);
+      host.style.setProperty("--my", `${event.clientY - rect.top}px`);
+    },
+    { passive: true }
+  );
 }

@@ -294,6 +294,24 @@
   to { opacity: 0; transform: translate(-50%, -50%) scale(10); }
 }
 
+/*hover-spotlight*/
+:where(.hover-spotlight) { position: relative; }
+.hover-spotlight > .spotlight {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .3s ease;
+  background: radial-gradient(15rem circle at var(--mx, 50%) var(--my, 50%),
+    color-mix(in srgb, var(--color-accent) 16%, transparent),
+    transparent 60%
+  );
+}
+@media (hover: hover) {
+  .hover-spotlight:hover > .spotlight { opacity: 1; }
+}
+
 /*entrance -------------------------------*/
 .fade-in { animation: fade-in .4s ease both; }
 @keyframes fade-in {
