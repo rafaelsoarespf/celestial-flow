@@ -1,6 +1,7 @@
 /*===========================================================*/
 /* Fonts ======================================================*/
 
+@layer layer0 {
 @font-face {
   font-family: "Sora";
   src: url("../fonts/sora/Sora-VariableFont_wght.woff2") format("woff2");
@@ -23,4 +24,5 @@
   font-weight: 200 800;
   font-style: italic;
   font-display: swap;
+}
 }

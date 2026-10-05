@@ -1,591 +1,597 @@
 /*============================================================*/
 /*Appearance ==================================================*/
 
-/*appearance -------------------------------------------------*/
-.surface {
-  background: var(--color-surface-1);
-  border: 1px solid var(--color-border);
-  backdrop-filter: var(--blur);
-  color: var(--color-text);
-}
+@layer layer3 {
+  /*appearance -------------------------------------------------*/
+  .surface {
+    background: var(--color-surface-1);
+    border: 1px solid var(--color-border);
+    backdrop-filter: var(--blur);
+    color: var(--color-text);
+  }
 
-.surface-2 {
-  background: var(--color-surface-2);
-  border: 1px solid var(--color-border);
-  backdrop-filter: var(--blur);
-  color: var(--color-text);
-}
+  .surface-2 {
+    background: var(--color-surface-2);
+    border: 1px solid var(--color-border);
+    backdrop-filter: var(--blur);
+    color: var(--color-text);
+  }
 
-.ghost {
-  background: transparent;
-  border: 1px solid var(--color-border);
-  color: var(--color-text);
-}
+  .ghost {
+    background: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+  }
 
-.phantom {
-  background: transparent;
-  border: 1px solid var(--color-border);
-  backdrop-filter: var(--blur);
-  color: var(--color-text);
-}
+  .phantom {
+    background: transparent;
+    border: 1px solid var(--color-border);
+    backdrop-filter: var(--blur);
+    color: var(--color-text);
+  }
 
-.surface h1, .surface-2 h1, .ghost h1, .phantom h1 {
-  color: var(--color-title);
-}
+  .surface h1, .surface-2 h1, .ghost h1, .phantom h1 {
+    color: var(--color-title);
+  }
 
-.surface h2, .surface-2 h2, .ghost h2, .phantom h2,
-.surface h3, .surface-2 h3, .ghost h3, .phantom h3,
-.surface h4, .surface-2 h4, .ghost h4, .phantom h4,
-.surface h5, .surface-2 h5, .ghost h5, .phantom h5,
-.surface h6, .surface-2 h6, .ghost h6, .phantom h6 {
-  color: var(--color-subtitle);
-}
+  .surface h2, .surface-2 h2, .ghost h2, .phantom h2,
+  .surface h3, .surface-2 h3, .ghost h3, .phantom h3,
+  .surface h4, .surface-2 h4, .ghost h4, .phantom h4,
+  .surface h5, .surface-2 h5, .ghost h5, .phantom h5,
+  .surface h6, .surface-2 h6, .ghost h6, .phantom h6 {
+    color: var(--color-subtitle);
+  }
 
-.soft {
-  background: color-mix(in srgb, var(--color-accent) 25%, transparent);
-  border: 1px solid color-mix(in srgb, var(--color-accent) 15%, transparent);
-  backdrop-filter: var(--blur);
-  color: var(--color-accent);
-}
+  .soft {
+    background: color-mix(in srgb, var(--color-accent) 25%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-accent) 15%, transparent);
+    backdrop-filter: var(--blur);
+    color: var(--color-accent);
+  }
 
-.accent {
-  background: var(--color-accent);
-  border: 1px solid var(--color-accent);
-  backdrop-filter: var(--blur);
-  color: var(--color-on-accent);
-}
+  .accent {
+    background: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    backdrop-filter: var(--blur);
+    color: var(--color-on-accent);
+  }
 
-.accent :is(h1,h2,h3,h4,h5,h6,p,span,label,strong) {
-  color: var(--color-on-accent);
-}
+  .accent :is(h1,h2,h3,h4,h5,h6,p,span,label,strong) {
+    color: var(--color-on-accent);
+  }
 
-.accent .text-overline,.accent.text-overline {
-  color: var(--color-on-accent);
-  opacity: .85;
-}
+  .accent .text-overline,.accent.text-overline {
+    color: var(--color-on-accent);
+    opacity: .85;
+  }
 
-.accent .btn-outline,.accent.btn-outline {
-  border-color: var(--color-on-accent);
-  color: var(--color-on-accent);
-}
+  .accent .btn-outline,.accent.btn-outline {
+    border-color: var(--color-on-accent);
+    color: var(--color-on-accent);
+  }
 
-.accent code {
-  background: color-mix(in srgb, var(--color-on-accent) 20%, transparent);
-  color: var(--color-on-accent);
-}
+  .accent code {
+    background: color-mix(in srgb, var(--color-on-accent) 20%, transparent);
+    color: var(--color-on-accent);
+  }
 
-/*outline ----------------------------------------------------*/
-.outline {
-  background: transparent;
-  border: 1px solid var(--color-accent);
-  color: var(--color-accent);
-}
+  /*outline ----------------------------------------------------*/
+  .outline {
+    background: transparent;
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent);
+  }
 
-.btn.outline:hover {
-  background: var(--color-accent);
-  color: var(--color-on-accent);
-}
+  .btn.outline:hover {
+    background: var(--color-accent);
+    color: var(--color-on-accent);
+  }
 
-/*invert -----------------------------------------------------*/
-.invert {
-  background: var(--color-title);
-  border: 1px solid var(--color-title);
-  color: oklch(from var(--color-title) calc(1 - l) c h);
-}
+  /*invert -----------------------------------------------------*/
+  .invert {
+    background: var(--color-title);
+    border: 1px solid var(--color-title);
+    color: oklch(from var(--color-title) calc(1 - l) c h);
+  }
 
-.invert :is(h1, h2, h3, h4, h5, h6, p, span, label, strong),
-.invert .text-overline,
-.invert.text-overline {
-  color: inherit;
-}
+  .invert :is(h1, h2, h3, h4, h5, h6, p, span, label, strong),
+  .invert .text-overline,
+  .invert.text-overline {
+    color: inherit;
+  }
 
-.invert code {
-  background: color-mix(in srgb, currentColor 15%, transparent);
-  color: inherit;
-}
+  .invert code {
+    background: color-mix(in srgb, currentColor 15%, transparent);
+    color: inherit;
+  }
 
-/*glow -------------------------------------------------------*/
-.glow {
-  --glow-color: var(--color-accent);
-  box-shadow: 0 0 20px color-mix(in srgb, var(--glow-color) 60%, transparent), var(--shadow-md);
-}
+  /*glow -------------------------------------------------------*/
+  .glow {
+    --glow-color: var(--color-accent);
+    box-shadow: 0 0 20px color-mix(in srgb, var(--glow-color) 60%, transparent), var(--shadow-md);
+  }
 
-.glow:hover {
-  box-shadow: 0 0 32px color-mix(in srgb, var(--glow-color) 80%, transparent), var(--shadow-lg);
-}
+  .glow:hover {
+    box-shadow: 0 0 32px color-mix(in srgb, var(--glow-color) 80%, transparent), var(--shadow-lg);
+  }
 
-/*liquid glass -----------------------------------------------*/
-.liquid-glass {
-  background:
-    linear-gradient(135deg, rgb(255 255 255 / .28) 0%, rgb(255 255 255 / .06) 45%, rgb(255 255 255 / .02) 55%, rgb(255 255 255 / .16) 100%),
-    color-mix(in srgb, var(--color-surface-1) 35%, transparent);
-  border: 1px solid rgb(255 255 255 / .3);
-  -webkit-backdrop-filter: blur(16px) saturate(180%) brightness(1.08);
-  backdrop-filter: blur(16px) saturate(180%) brightness(1.08);
-  box-shadow:
-    inset 0 1px 0 rgb(255 255 255 / .55),
-    inset 0 -1px 0 rgb(255 255 255 / .12),
-    inset 0 0 18px rgb(255 255 255 / .08),
-    0 10px 30px rgb(0 0 0 / .14);
-  color: var(--color-title);
-}
+  /*liquid glass -----------------------------------------------*/
+  .liquid-glass {
+    background:
+      linear-gradient(135deg, rgb(255 255 255 / .28) 0%, rgb(255 255 255 / .06) 45%, rgb(255 255 255 / .02) 55%, rgb(255 255 255 / .16) 100%),
+      color-mix(in srgb, var(--color-surface-1) 35%, transparent);
+    border: 1px solid rgb(255 255 255 / .3);
+    -webkit-backdrop-filter: blur(16px) saturate(180%) brightness(1.08);
+    backdrop-filter: blur(16px) saturate(180%) brightness(1.08);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / .55),
+      inset 0 -1px 0 rgb(255 255 255 / .12),
+      inset 0 0 18px rgb(255 255 255 / .08),
+      0 10px 30px rgb(0 0 0 / .14);
+    color: var(--color-title);
+  }
 
-.liquid-glass:hover {
-  box-shadow:
-    inset 0 1px 0 rgb(255 255 255 / .55),
-    inset 0 -1px 0 rgb(255 255 255 / .12),
-    inset 0 0 18px rgb(255 255 255 / .08),
-    0 14px 36px rgb(0 0 0 / .18);
-}
-
-/*background -------------------------------------------------*/
-.bg {
-  background: var(--color-background);
-}
-
-.bg-surface {
-  background: var(--color-surface-1);
-  backdrop-filter: var(--blur);
-}
-
-.bg-surface-2 {
-  background: var(--color-surface-2);
-  backdrop-filter: var(--blur);
-}
-
-.bg-soft {
-  background: color-mix(in srgb, var(--color-accent) 30%, transparent);
-  backdrop-filter: var(--blur);
-}
-
-.bg-accent {
-  background: var(--color-accent);
-  backdrop-filter: var(--blur);
-  color: var(--color-on-accent);
-}
-
-.bg-accent :is(h1,h2,h3,h4,h5,h6,p,span,label,strong) {
-  color: var(--color-on-accent);
-}
-
-.bg-glass {
-  background: color-mix(in srgb, var(--color-surface-1) 60%, transparent);
-  backdrop-filter: var(--blur);
-}
-
-/* fixed background colors ---------------------------------------------------*/
-.bg-red { background: var(--color-red); color: var(--color-white); }
-.bg-salmon { background: var(--color-salmon); color: var(--color-white); }
-.bg-orange { background: var(--color-orange); color: var(--color-white); }
-.bg-amber { background: var(--color-amber); color: var(--color-white); }
-.bg-yellow { background: var(--color-yellow); color: var(--color-white); }
-.bg-lime { background: var(--color-lime); color: var(--color-white); }
-.bg-green { background: var(--color-green); color: var(--color-white); }
-.bg-mint { background: var(--color-mint); color: var(--color-white); }
-.bg-teal { background: var(--color-teal); color: var(--color-white); }
-.bg-turquoise { background: var(--color-turquoise); color: var(--color-white); }
-.bg-cyan { background: var(--color-cyan); color: var(--color-white); }
-.bg-sky { background: var(--color-sky); color: var(--color-white); }
-.bg-blue { background: var(--color-blue); color: var(--color-white); }
-.bg-indigo { background: var(--color-indigo); color: var(--color-white); }
-.bg-violet { background: var(--color-violet); color: var(--color-white); }
-.bg-purple { background: var(--color-purple); color: var(--color-white); }
-.bg-pink { background: var(--color-pink); color: var(--color-white); }
-.bg-rose { background: var(--color-rose); color: var(--color-white); }
-.bg-ruby { background: var(--color-ruby); color: var(--color-white); }
-.bg-brown { background: var(--color-brown); color: var(--color-white); }
-.bg-gray { background: var(--color-gray); color: var(--color-white); }
-.bg-black { background: var(--color-black); color: var(--color-white); }
-.bg-white { background: var(--color-white); color: var(--color-black); }
-
-.bg-gold {
-  background: var(--color-gold);
-  color: var(--color-white);
-}
-
-.bg-silver {
-  background: var(--color-silver);
-  color: var(--color-black);
-}
-
-.bg-bronze {
-  background: var(--color-bronze);
-  color: var(--color-white);
-}
-
-/*border -------------------------------------------------------*/
-.border-none { border: none; }
-.border { border: 1px solid var(--color-border); }
-.border-top { border-top: 1px solid var(--color-border); }
-.border-right { border-right: 1px solid var(--color-border); }
-.border-bottom { border-bottom: 1px solid var(--color-border); }
-.border-left { border-left: 1px solid var(--color-border); }
-.border-accent { border-color: var(--color-accent); }
-
-/* colored borders*/
-.border-red { border-color: var(--color-red); }
-.border-salmon { border-color: var(--color-salmon); }
-.border-orange { border-color: var(--color-orange); }
-.border-amber { border-color: var(--color-amber); }
-.border-yellow { border-color: var(--color-yellow); }
-.border-lime { border-color: var(--color-lime); }
-.border-green { border-color: var(--color-green); }
-.border-mint { border-color: var(--color-mint); }
-.border-teal { border-color: var(--color-teal); }
-.border-turquoise { border-color: var(--color-turquoise); }
-.border-cyan { border-color: var(--color-cyan); }
-.border-sky { border-color: var(--color-sky); }
-.border-blue { border-color: var(--color-blue); }
-.border-indigo { border-color: var(--color-indigo); }
-.border-violet { border-color: var(--color-violet); }
-.border-purple { border-color: var(--color-purple); }
-.border-pink { border-color: var(--color-pink); }
-.border-rose { border-color: var(--color-rose); }
-.border-ruby { border-color: var(--color-ruby); }
-.border-brown { border-color: var(--color-brown); }
-.border-gray { border-color: var(--color-gray); }
-.border-black { border-color: var(--color-black); }
-.border-white { border-color: var(--color-white); }
-.border-gold { border-color: var(--color-gold-solid); }
-.border-silver { border-color: var(--color-silver-solid); }
-.border-bronze { border-color: var(--color-bronze-solid); }
-
-/*efects -----------------------------------------------------*/
-.fx-glow, .fx-glow-sm, .fx-glow-md, .fx-glow-lg,
-.fx-grid, .fx-dots, .fx-gradient {
-  position: relative;
-  isolation: isolate;
-}
-
-/*fx-glow*/
-.fx-glow::before,.fx-glow-sm::before,.fx-glow-md::before,.fx-glow-lg::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border: 0 solid transparent;
-  z-index: -1;
-  pointer-events: none;
-}
-.fx-glow-sm::before {
-  border-image: radial-gradient(
-    circle closest-side,
-    color-mix(in srgb, var(--color-accent) 5.40%, transparent) 0%,
-    color-mix(in srgb, var(--color-accent) 5.26%, transparent) 7%,
-    color-mix(in srgb, var(--color-accent) 4.84%, transparent) 13%,
-    color-mix(in srgb, var(--color-accent) 4.25%, transparent) 20%,
-    color-mix(in srgb, var(--color-accent) 3.49%, transparent) 27%,
-    color-mix(in srgb, var(--color-accent) 2.68%, transparent) 33%,
-    color-mix(in srgb, var(--color-accent) 1.93%, transparent) 40%,
-    color-mix(in srgb, var(--color-accent) 1.29%, transparent) 47%,
-    color-mix(in srgb, var(--color-accent) 0.82%, transparent) 53%,
-    color-mix(in srgb, var(--color-accent) 0.47%, transparent) 60%,
-    color-mix(in srgb, var(--color-accent) 0.25%, transparent) 67%,
-    color-mix(in srgb, var(--color-accent) 0.12%, transparent) 73%,
-    color-mix(in srgb, var(--color-accent) 0.05%, transparent) 80%,
-    color-mix(in srgb, var(--color-accent) 0.02%, transparent) 87%,
-    color-mix(in srgb, var(--color-accent) 0.01%, transparent) 93%,
-    color-mix(in srgb, var(--color-accent) 0.00%, transparent) 100%
-  ) 50% / 282px / 282px;
-}
-
-.fx-glow::before {
-  border-image: radial-gradient(
-    circle closest-side,
-    color-mix(in srgb, var(--color-accent) 7.22%, transparent) 0%,
-    color-mix(in srgb, var(--color-accent) 7.04%, transparent) 7%,
-    color-mix(in srgb, var(--color-accent) 6.52%, transparent) 13%,
-    color-mix(in srgb, var(--color-accent) 5.71%, transparent) 20%,
-    color-mix(in srgb, var(--color-accent) 4.72%, transparent) 27%,
-    color-mix(in srgb, var(--color-accent) 3.67%, transparent) 33%,
-    color-mix(in srgb, var(--color-accent) 2.66%, transparent) 40%,
-    color-mix(in srgb, var(--color-accent) 1.79%, transparent) 47%,
-    color-mix(in srgb, var(--color-accent) 1.12%, transparent) 53%,
-    color-mix(in srgb, var(--color-accent) 0.64%, transparent) 60%,
-    color-mix(in srgb, var(--color-accent) 0.34%, transparent) 67%,
-    color-mix(in srgb, var(--color-accent) 0.16%, transparent) 73%,
-    color-mix(in srgb, var(--color-accent) 0.07%, transparent) 80%,
-    color-mix(in srgb, var(--color-accent) 0.03%, transparent) 87%,
-    color-mix(in srgb, var(--color-accent) 0.01%, transparent) 93%,
-    color-mix(in srgb, var(--color-accent) 0.00%, transparent) 100%
-  ) 50% / 480px / 480px;
-}
-
-@media (max-width: 457px) {
-  .fx-glow::before {
-    border-image: radial-gradient(
-      circle closest-side,
-      color-mix(in srgb, var(--color-accent) 6.60%, transparent) 0%,
-      color-mix(in srgb, var(--color-accent) 6.43%, transparent) 7%,
-      color-mix(in srgb, var(--color-accent) 5.93%, transparent) 13%,
-      color-mix(in srgb, var(--color-accent) 5.17%, transparent) 20%,
-      color-mix(in srgb, var(--color-accent) 4.22%, transparent) 27%,
-      color-mix(in srgb, var(--color-accent) 3.25%, transparent) 33%,
-      color-mix(in srgb, var(--color-accent) 2.34%, transparent) 40%,
-      color-mix(in srgb, var(--color-accent) 1.57%, transparent) 47%,
-      color-mix(in srgb, var(--color-accent) 0.98%, transparent) 53%,
-      color-mix(in srgb, var(--color-accent) 0.56%, transparent) 60%,
-      color-mix(in srgb, var(--color-accent) 0.30%, transparent) 67%,
-      color-mix(in srgb, var(--color-accent) 0.15%, transparent) 73%,
-      color-mix(in srgb, var(--color-accent) 0.06%, transparent) 80%,
-      color-mix(in srgb, var(--color-accent) 0.03%, transparent) 87%,
-      color-mix(in srgb, var(--color-accent) 0.01%, transparent) 93%,
-      color-mix(in srgb, var(--color-accent) 0.00%, transparent) 100%
-    ) 50% / 467px / 467px;
+  .liquid-glass:hover {
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / .55),
+      inset 0 -1px 0 rgb(255 255 255 / .12),
+      inset 0 0 18px rgb(255 255 255 / .08),
+      0 14px 36px rgb(0 0 0 / .18);
   }
 }
 
-@media (max-width: 380px) {
-  .fx-glow::before {
+@layer layer4 {
+  /*background -------------------------------------------------*/
+  .bg {
+    background: var(--color-background);
+  }
+
+  .bg-surface {
+    background: var(--color-surface-1);
+    backdrop-filter: var(--blur);
+  }
+
+  .bg-surface-2 {
+    background: var(--color-surface-2);
+    backdrop-filter: var(--blur);
+  }
+
+  .bg-soft {
+    background: color-mix(in srgb, var(--color-accent) 30%, transparent);
+    backdrop-filter: var(--blur);
+  }
+
+  .bg-accent {
+    background: var(--color-accent);
+    backdrop-filter: var(--blur);
+    color: var(--color-on-accent);
+  }
+
+  .bg-accent :is(h1,h2,h3,h4,h5,h6,p,span,label,strong) {
+    color: var(--color-on-accent);
+  }
+
+  .bg-glass {
+    background: color-mix(in srgb, var(--color-surface-1) 60%, transparent);
+    backdrop-filter: var(--blur);
+  }
+
+  /* fixed background colors ---------------------------------------------------*/
+  .bg-red { background: var(--color-red); color: var(--color-white); }
+  .bg-salmon { background: var(--color-salmon); color: var(--color-white); }
+  .bg-orange { background: var(--color-orange); color: var(--color-white); }
+  .bg-amber { background: var(--color-amber); color: var(--color-white); }
+  .bg-yellow { background: var(--color-yellow); color: var(--color-white); }
+  .bg-lime { background: var(--color-lime); color: var(--color-white); }
+  .bg-green { background: var(--color-green); color: var(--color-white); }
+  .bg-mint { background: var(--color-mint); color: var(--color-white); }
+  .bg-teal { background: var(--color-teal); color: var(--color-white); }
+  .bg-turquoise { background: var(--color-turquoise); color: var(--color-white); }
+  .bg-cyan { background: var(--color-cyan); color: var(--color-white); }
+  .bg-sky { background: var(--color-sky); color: var(--color-white); }
+  .bg-blue { background: var(--color-blue); color: var(--color-white); }
+  .bg-indigo { background: var(--color-indigo); color: var(--color-white); }
+  .bg-violet { background: var(--color-violet); color: var(--color-white); }
+  .bg-purple { background: var(--color-purple); color: var(--color-white); }
+  .bg-pink { background: var(--color-pink); color: var(--color-white); }
+  .bg-rose { background: var(--color-rose); color: var(--color-white); }
+  .bg-ruby { background: var(--color-ruby); color: var(--color-white); }
+  .bg-brown { background: var(--color-brown); color: var(--color-white); }
+  .bg-gray { background: var(--color-gray); color: var(--color-white); }
+  .bg-black { background: var(--color-black); color: var(--color-white); }
+  .bg-white { background: var(--color-white); color: var(--color-black); }
+
+  .bg-gold {
+    background: var(--color-gold);
+    color: var(--color-white);
+  }
+
+  .bg-silver {
+    background: var(--color-silver);
+    color: var(--color-black);
+  }
+
+  .bg-bronze {
+    background: var(--color-bronze);
+    color: var(--color-white);
+  }
+
+  /*border -------------------------------------------------------*/
+  .border-none { border: none; }
+  .border { border: 1px solid var(--color-border); }
+  .border-top { border-top: 1px solid var(--color-border); }
+  .border-right { border-right: 1px solid var(--color-border); }
+  .border-bottom { border-bottom: 1px solid var(--color-border); }
+  .border-left { border-left: 1px solid var(--color-border); }
+  .border-accent { border-color: var(--color-accent); }
+
+  /* colored borders*/
+  .border-red { border-color: var(--color-red); }
+  .border-salmon { border-color: var(--color-salmon); }
+  .border-orange { border-color: var(--color-orange); }
+  .border-amber { border-color: var(--color-amber); }
+  .border-yellow { border-color: var(--color-yellow); }
+  .border-lime { border-color: var(--color-lime); }
+  .border-green { border-color: var(--color-green); }
+  .border-mint { border-color: var(--color-mint); }
+  .border-teal { border-color: var(--color-teal); }
+  .border-turquoise { border-color: var(--color-turquoise); }
+  .border-cyan { border-color: var(--color-cyan); }
+  .border-sky { border-color: var(--color-sky); }
+  .border-blue { border-color: var(--color-blue); }
+  .border-indigo { border-color: var(--color-indigo); }
+  .border-violet { border-color: var(--color-violet); }
+  .border-purple { border-color: var(--color-purple); }
+  .border-pink { border-color: var(--color-pink); }
+  .border-rose { border-color: var(--color-rose); }
+  .border-ruby { border-color: var(--color-ruby); }
+  .border-brown { border-color: var(--color-brown); }
+  .border-gray { border-color: var(--color-gray); }
+  .border-black { border-color: var(--color-black); }
+  .border-white { border-color: var(--color-white); }
+  .border-gold { border-color: var(--color-gold-solid); }
+  .border-silver { border-color: var(--color-silver-solid); }
+  .border-bronze { border-color: var(--color-bronze-solid); }
+}
+
+@layer layer2{
+  /*efects -----------------------------------------------------*/
+  .fx-glow, .fx-glow-sm, .fx-glow-md, .fx-glow-lg,
+  .fx-grid, .fx-dots, .fx-gradient {
+    position: relative;
+    isolation: isolate;
+  }
+
+  /*fx-glow*/
+  .fx-glow::before,.fx-glow-sm::before,.fx-glow-md::before,.fx-glow-lg::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    z-index: -1;
+    pointer-events: none;
+  }
+  .fx-glow-sm::before {
     border-image: radial-gradient(
       circle closest-side,
-      color-mix(in srgb, var(--color-accent) 5.07%, transparent) 0%,
-      color-mix(in srgb, var(--color-accent) 4.93%, transparent) 7%,
-      color-mix(in srgb, var(--color-accent) 4.50%, transparent) 13%,
-      color-mix(in srgb, var(--color-accent) 3.88%, transparent) 20%,
-      color-mix(in srgb, var(--color-accent) 3.15%, transparent) 27%,
-      color-mix(in srgb, var(--color-accent) 2.40%, transparent) 33%,
-      color-mix(in srgb, var(--color-accent) 1.70%, transparent) 40%,
-      color-mix(in srgb, var(--color-accent) 1.13%, transparent) 47%,
-      color-mix(in srgb, var(--color-accent) 0.71%, transparent) 53%,
-      color-mix(in srgb, var(--color-accent) 0.41%, transparent) 60%,
-      color-mix(in srgb, var(--color-accent) 0.22%, transparent) 67%,
-      color-mix(in srgb, var(--color-accent) 0.11%, transparent) 73%,
+      color-mix(in srgb, var(--color-accent) 5.40%, transparent) 0%,
+      color-mix(in srgb, var(--color-accent) 5.26%, transparent) 7%,
+      color-mix(in srgb, var(--color-accent) 4.84%, transparent) 13%,
+      color-mix(in srgb, var(--color-accent) 4.25%, transparent) 20%,
+      color-mix(in srgb, var(--color-accent) 3.49%, transparent) 27%,
+      color-mix(in srgb, var(--color-accent) 2.68%, transparent) 33%,
+      color-mix(in srgb, var(--color-accent) 1.93%, transparent) 40%,
+      color-mix(in srgb, var(--color-accent) 1.29%, transparent) 47%,
+      color-mix(in srgb, var(--color-accent) 0.82%, transparent) 53%,
+      color-mix(in srgb, var(--color-accent) 0.47%, transparent) 60%,
+      color-mix(in srgb, var(--color-accent) 0.25%, transparent) 67%,
+      color-mix(in srgb, var(--color-accent) 0.12%, transparent) 73%,
       color-mix(in srgb, var(--color-accent) 0.05%, transparent) 80%,
       color-mix(in srgb, var(--color-accent) 0.02%, transparent) 87%,
       color-mix(in srgb, var(--color-accent) 0.01%, transparent) 93%,
       color-mix(in srgb, var(--color-accent) 0.00%, transparent) 100%
-    ) 50% / 439px / 439px;
+    ) 50% / 282px / 282px;
   }
-}
 
-.fx-glow-md::before {
-  border-image: radial-gradient(
-    circle closest-side,
-    color-mix(in srgb, var(--color-accent) 7.84%, transparent) 0%,
-    color-mix(in srgb, var(--color-accent) 7.65%, transparent) 7%,
-    color-mix(in srgb, var(--color-accent) 7.14%, transparent) 13%,
-    color-mix(in srgb, var(--color-accent) 6.31%, transparent) 20%,
-    color-mix(in srgb, var(--color-accent) 5.29%, transparent) 27%,
-    color-mix(in srgb, var(--color-accent) 4.14%, transparent) 33%,
-    color-mix(in srgb, var(--color-accent) 3.02%, transparent) 40%,
-    color-mix(in srgb, var(--color-accent) 2.06%, transparent) 47%,
-    color-mix(in srgb, var(--color-accent) 1.29%, transparent) 53%,
-    color-mix(in srgb, var(--color-accent) 0.75%, transparent) 60%,
-    color-mix(in srgb, var(--color-accent) 0.39%, transparent) 67%,
-    color-mix(in srgb, var(--color-accent) 0.19%, transparent) 73%,
-    color-mix(in srgb, var(--color-accent) 0.08%, transparent) 80%,
-    color-mix(in srgb, var(--color-accent) 0.03%, transparent) 87%,
-    color-mix(in srgb, var(--color-accent) 0.01%, transparent) 93%,
-    color-mix(in srgb, var(--color-accent) 0.00%, transparent) 100%
-  ) 50% / 594px / 594px;
-}
-
-@media (max-width: 600px) {
-  .fx-glow-md::before {
+  .fx-glow::before {
     border-image: radial-gradient(
       circle closest-side,
-      color-mix(in srgb, var(--color-accent) 7.11%, transparent) 0%,
-      color-mix(in srgb, var(--color-accent) 6.93%, transparent) 7%,
-      color-mix(in srgb, var(--color-accent) 6.41%, transparent) 13%,
-      color-mix(in srgb, var(--color-accent) 5.60%, transparent) 20%,
-      color-mix(in srgb, var(--color-accent) 4.63%, transparent) 27%,
-      color-mix(in srgb, var(--color-accent) 3.59%, transparent) 33%,
-      color-mix(in srgb, var(--color-accent) 2.60%, transparent) 40%,
-      color-mix(in srgb, var(--color-accent) 1.76%, transparent) 47%,
-      color-mix(in srgb, var(--color-accent) 1.08%, transparent) 53%,
-      color-mix(in srgb, var(--color-accent) 0.62%, transparent) 60%,
-      color-mix(in srgb, var(--color-accent) 0.33%, transparent) 67%,
+      color-mix(in srgb, var(--color-accent) 7.22%, transparent) 0%,
+      color-mix(in srgb, var(--color-accent) 7.04%, transparent) 7%,
+      color-mix(in srgb, var(--color-accent) 6.52%, transparent) 13%,
+      color-mix(in srgb, var(--color-accent) 5.71%, transparent) 20%,
+      color-mix(in srgb, var(--color-accent) 4.72%, transparent) 27%,
+      color-mix(in srgb, var(--color-accent) 3.67%, transparent) 33%,
+      color-mix(in srgb, var(--color-accent) 2.66%, transparent) 40%,
+      color-mix(in srgb, var(--color-accent) 1.79%, transparent) 47%,
+      color-mix(in srgb, var(--color-accent) 1.12%, transparent) 53%,
+      color-mix(in srgb, var(--color-accent) 0.64%, transparent) 60%,
+      color-mix(in srgb, var(--color-accent) 0.34%, transparent) 67%,
       color-mix(in srgb, var(--color-accent) 0.16%, transparent) 73%,
       color-mix(in srgb, var(--color-accent) 0.07%, transparent) 80%,
       color-mix(in srgb, var(--color-accent) 0.03%, transparent) 87%,
       color-mix(in srgb, var(--color-accent) 0.01%, transparent) 93%,
       color-mix(in srgb, var(--color-accent) 0.00%, transparent) 100%
-    ) 50% / 573px / 573px;
+    ) 50% / 480px / 480px;
   }
-}
 
-@media (max-width: 480px) {
+  @media (max-width: 457px) {
+    .fx-glow::before {
+      border-image: radial-gradient(
+        circle closest-side,
+        color-mix(in srgb, var(--color-accent) 6.60%, transparent) 0%,
+        color-mix(in srgb, var(--color-accent) 6.43%, transparent) 7%,
+        color-mix(in srgb, var(--color-accent) 5.93%, transparent) 13%,
+        color-mix(in srgb, var(--color-accent) 5.17%, transparent) 20%,
+        color-mix(in srgb, var(--color-accent) 4.22%, transparent) 27%,
+        color-mix(in srgb, var(--color-accent) 3.25%, transparent) 33%,
+        color-mix(in srgb, var(--color-accent) 2.34%, transparent) 40%,
+        color-mix(in srgb, var(--color-accent) 1.57%, transparent) 47%,
+        color-mix(in srgb, var(--color-accent) 0.98%, transparent) 53%,
+        color-mix(in srgb, var(--color-accent) 0.56%, transparent) 60%,
+        color-mix(in srgb, var(--color-accent) 0.30%, transparent) 67%,
+        color-mix(in srgb, var(--color-accent) 0.15%, transparent) 73%,
+        color-mix(in srgb, var(--color-accent) 0.06%, transparent) 80%,
+        color-mix(in srgb, var(--color-accent) 0.03%, transparent) 87%,
+        color-mix(in srgb, var(--color-accent) 0.01%, transparent) 93%,
+        color-mix(in srgb, var(--color-accent) 0.00%, transparent) 100%
+      ) 50% / 467px / 467px;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .fx-glow::before {
+      border-image: radial-gradient(
+        circle closest-side,
+        color-mix(in srgb, var(--color-accent) 5.07%, transparent) 0%,
+        color-mix(in srgb, var(--color-accent) 4.93%, transparent) 7%,
+        color-mix(in srgb, var(--color-accent) 4.50%, transparent) 13%,
+        color-mix(in srgb, var(--color-accent) 3.88%, transparent) 20%,
+        color-mix(in srgb, var(--color-accent) 3.15%, transparent) 27%,
+        color-mix(in srgb, var(--color-accent) 2.40%, transparent) 33%,
+        color-mix(in srgb, var(--color-accent) 1.70%, transparent) 40%,
+        color-mix(in srgb, var(--color-accent) 1.13%, transparent) 47%,
+        color-mix(in srgb, var(--color-accent) 0.71%, transparent) 53%,
+        color-mix(in srgb, var(--color-accent) 0.41%, transparent) 60%,
+        color-mix(in srgb, var(--color-accent) 0.22%, transparent) 67%,
+        color-mix(in srgb, var(--color-accent) 0.11%, transparent) 73%,
+        color-mix(in srgb, var(--color-accent) 0.05%, transparent) 80%,
+        color-mix(in srgb, var(--color-accent) 0.02%, transparent) 87%,
+        color-mix(in srgb, var(--color-accent) 0.01%, transparent) 93%,
+        color-mix(in srgb, var(--color-accent) 0.00%, transparent) 100%
+      ) 50% / 439px / 439px;
+    }
+  }
+
   .fx-glow-md::before {
     border-image: radial-gradient(
       circle closest-side,
-      color-mix(in srgb, var(--color-accent) 5.61%, transparent) 0%,
-      color-mix(in srgb, var(--color-accent) 5.45%, transparent) 7%,
-      color-mix(in srgb, var(--color-accent) 4.99%, transparent) 13%,
-      color-mix(in srgb, var(--color-accent) 4.31%, transparent) 20%,
-      color-mix(in srgb, var(--color-accent) 3.52%, transparent) 27%,
-      color-mix(in srgb, var(--color-accent) 2.68%, transparent) 33%,
-      color-mix(in srgb, var(--color-accent) 1.92%, transparent) 40%,
-      color-mix(in srgb, var(--color-accent) 1.28%, transparent) 47%,
-      color-mix(in srgb, var(--color-accent) 0.79%, transparent) 53%,
-      color-mix(in srgb, var(--color-accent) 0.46%, transparent) 60%,
-      color-mix(in srgb, var(--color-accent) 0.24%, transparent) 67%,
-      color-mix(in srgb, var(--color-accent) 0.12%, transparent) 73%,
-      color-mix(in srgb, var(--color-accent) 0.06%, transparent) 80%,
-      color-mix(in srgb, var(--color-accent) 0.02%, transparent) 87%,
-      color-mix(in srgb, var(--color-accent) 0.01%, transparent) 93%,
-      color-mix(in srgb, var(--color-accent) 0.00%, transparent) 100%
-    ) 50% / 538px / 538px;
-  }
-}
-
-@media (max-width: 400px) {
-  .fx-glow-md::before {
-    border-image: radial-gradient(
-      circle closest-side,
-      color-mix(in srgb, var(--color-accent) 4.06%, transparent) 0%,
-      color-mix(in srgb, var(--color-accent) 3.94%, transparent) 7%,
-      color-mix(in srgb, var(--color-accent) 3.61%, transparent) 13%,
-      color-mix(in srgb, var(--color-accent) 3.10%, transparent) 20%,
-      color-mix(in srgb, var(--color-accent) 2.50%, transparent) 27%,
-      color-mix(in srgb, var(--color-accent) 1.89%, transparent) 33%,
-      color-mix(in srgb, var(--color-accent) 1.36%, transparent) 40%,
-      color-mix(in srgb, var(--color-accent) 0.90%, transparent) 47%,
-      color-mix(in srgb, var(--color-accent) 0.56%, transparent) 53%,
-      color-mix(in srgb, var(--color-accent) 0.33%, transparent) 60%,
-      color-mix(in srgb, var(--color-accent) 0.18%, transparent) 67%,
-      color-mix(in srgb, var(--color-accent) 0.09%, transparent) 73%,
-      color-mix(in srgb, var(--color-accent) 0.04%, transparent) 80%,
-      color-mix(in srgb, var(--color-accent) 0.02%, transparent) 87%,
-      color-mix(in srgb, var(--color-accent) 0.01%, transparent) 93%,
-      color-mix(in srgb, var(--color-accent) 0.00%, transparent) 100%
-    ) 50% / 506px / 506px;
-  }
-}
-
-.fx-glow-lg::before {
-  border-image: radial-gradient(
-    circle closest-side,
-    color-mix(in srgb, var(--color-accent) 14.39%, transparent) 0%,
-    color-mix(in srgb, var(--color-accent) 14.15%, transparent) 7%,
-    color-mix(in srgb, var(--color-accent) 13.43%, transparent) 13%,
-    color-mix(in srgb, var(--color-accent) 12.22%, transparent) 20%,
-    color-mix(in srgb, var(--color-accent) 10.59%, transparent) 27%,
-    color-mix(in srgb, var(--color-accent) 8.61%, transparent) 33%,
-    color-mix(in srgb, var(--color-accent) 6.50%, transparent) 40%,
-    color-mix(in srgb, var(--color-accent) 4.53%, transparent) 47%,
-    color-mix(in srgb, var(--color-accent) 2.88%, transparent) 53%,
-    color-mix(in srgb, var(--color-accent) 1.66%, transparent) 60%,
-    color-mix(in srgb, var(--color-accent) 0.87%, transparent) 67%,
-    color-mix(in srgb, var(--color-accent) 0.41%, transparent) 73%,
-    color-mix(in srgb, var(--color-accent) 0.17%, transparent) 80%,
-    color-mix(in srgb, var(--color-accent) 0.07%, transparent) 87%,
-    color-mix(in srgb, var(--color-accent) 0.02%, transparent) 93%,
-    color-mix(in srgb, var(--color-accent) 0.01%, transparent) 100%
-  ) 50% / 748px / 748px;
-}
-
-@media (max-width: 857px) {
-  .fx-glow-lg::before {
-    border-image: radial-gradient(
-      circle closest-side,
-      color-mix(in srgb, var(--color-accent) 13.11%, transparent) 0%,
-      color-mix(in srgb, var(--color-accent) 12.83%, transparent) 7%,
-      color-mix(in srgb, var(--color-accent) 12.02%, transparent) 13%,
-      color-mix(in srgb, var(--color-accent) 10.71%, transparent) 20%,
-      color-mix(in srgb, var(--color-accent) 9.00%, transparent) 27%,
-      color-mix(in srgb, var(--color-accent) 7.12%, transparent) 33%,
-      color-mix(in srgb, var(--color-accent) 5.26%, transparent) 40%,
-      color-mix(in srgb, var(--color-accent) 3.59%, transparent) 47%,
-      color-mix(in srgb, var(--color-accent) 2.26%, transparent) 53%,
-      color-mix(in srgb, var(--color-accent) 1.30%, transparent) 60%,
-      color-mix(in srgb, var(--color-accent) 0.69%, transparent) 67%,
-      color-mix(in srgb, var(--color-accent) 0.33%, transparent) 73%,
-      color-mix(in srgb, var(--color-accent) 0.14%, transparent) 80%,
-      color-mix(in srgb, var(--color-accent) 0.05%, transparent) 87%,
-      color-mix(in srgb, var(--color-accent) 0.02%, transparent) 93%,
-      color-mix(in srgb, var(--color-accent) 0.01%, transparent) 100%
-    ) 50% / 707px / 707px;
-  }
-}
-
-@media (max-width: 640px) {
-  .fx-glow-lg::before {
-    border-image: radial-gradient(
-      circle closest-side,
-      color-mix(in srgb, var(--color-accent) 9.78%, transparent) 0%,
-      color-mix(in srgb, var(--color-accent) 9.51%, transparent) 7%,
-      color-mix(in srgb, var(--color-accent) 8.75%, transparent) 13%,
-      color-mix(in srgb, var(--color-accent) 7.58%, transparent) 20%,
-      color-mix(in srgb, var(--color-accent) 6.18%, transparent) 27%,
-      color-mix(in srgb, var(--color-accent) 4.76%, transparent) 33%,
-      color-mix(in srgb, var(--color-accent) 3.40%, transparent) 40%,
-      color-mix(in srgb, var(--color-accent) 2.27%, transparent) 47%,
-      color-mix(in srgb, var(--color-accent) 1.42%, transparent) 53%,
-      color-mix(in srgb, var(--color-accent) 0.82%, transparent) 60%,
-      color-mix(in srgb, var(--color-accent) 0.43%, transparent) 67%,
-      color-mix(in srgb, var(--color-accent) 0.22%, transparent) 73%,
-      color-mix(in srgb, var(--color-accent) 0.10%, transparent) 80%,
-      color-mix(in srgb, var(--color-accent) 0.04%, transparent) 87%,
-      color-mix(in srgb, var(--color-accent) 0.02%, transparent) 93%,
-      color-mix(in srgb, var(--color-accent) 0.01%, transparent) 100%
-    ) 50% / 640px / 640px;
-  }
-}
-
-@media (max-width: 470px) {
-  .fx-glow-lg::before {
-    border-image: radial-gradient(
-      circle closest-side,
-      color-mix(in srgb, var(--color-accent) 6.29%, transparent) 0%,
-      color-mix(in srgb, var(--color-accent) 6.11%, transparent) 7%,
-      color-mix(in srgb, var(--color-accent) 5.58%, transparent) 13%,
-      color-mix(in srgb, var(--color-accent) 4.78%, transparent) 20%,
-      color-mix(in srgb, var(--color-accent) 3.86%, transparent) 27%,
-      color-mix(in srgb, var(--color-accent) 2.94%, transparent) 33%,
-      color-mix(in srgb, var(--color-accent) 2.09%, transparent) 40%,
-      color-mix(in srgb, var(--color-accent) 1.40%, transparent) 47%,
-      color-mix(in srgb, var(--color-accent) 0.87%, transparent) 53%,
-      color-mix(in srgb, var(--color-accent) 0.51%, transparent) 60%,
-      color-mix(in srgb, var(--color-accent) 0.28%, transparent) 67%,
-      color-mix(in srgb, var(--color-accent) 0.14%, transparent) 73%,
-      color-mix(in srgb, var(--color-accent) 0.07%, transparent) 80%,
+      color-mix(in srgb, var(--color-accent) 7.84%, transparent) 0%,
+      color-mix(in srgb, var(--color-accent) 7.65%, transparent) 7%,
+      color-mix(in srgb, var(--color-accent) 7.14%, transparent) 13%,
+      color-mix(in srgb, var(--color-accent) 6.31%, transparent) 20%,
+      color-mix(in srgb, var(--color-accent) 5.29%, transparent) 27%,
+      color-mix(in srgb, var(--color-accent) 4.14%, transparent) 33%,
+      color-mix(in srgb, var(--color-accent) 3.02%, transparent) 40%,
+      color-mix(in srgb, var(--color-accent) 2.06%, transparent) 47%,
+      color-mix(in srgb, var(--color-accent) 1.29%, transparent) 53%,
+      color-mix(in srgb, var(--color-accent) 0.75%, transparent) 60%,
+      color-mix(in srgb, var(--color-accent) 0.39%, transparent) 67%,
+      color-mix(in srgb, var(--color-accent) 0.19%, transparent) 73%,
+      color-mix(in srgb, var(--color-accent) 0.08%, transparent) 80%,
       color-mix(in srgb, var(--color-accent) 0.03%, transparent) 87%,
       color-mix(in srgb, var(--color-accent) 0.01%, transparent) 93%,
       color-mix(in srgb, var(--color-accent) 0.00%, transparent) 100%
-    ) 50% / 588px / 588px;
+    ) 50% / 594px / 594px;
   }
-}
 
-/*fx-grid*/
-.fx-grid::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background-image:
-    linear-gradient(color-mix(in srgb, var(--color-text) 8%, transparent) 1px, transparent 1px),
-    linear-gradient(90deg, color-mix(in srgb, var(--color-text) 8%, transparent) 1px, transparent 1px);
-  background-size: 40px 40px;
-  mask-image: radial-gradient(circle, white 20%, transparent 80%);
-}
+  @media (max-width: 600px) {
+    .fx-glow-md::before {
+      border-image: radial-gradient(
+        circle closest-side,
+        color-mix(in srgb, var(--color-accent) 7.11%, transparent) 0%,
+        color-mix(in srgb, var(--color-accent) 6.93%, transparent) 7%,
+        color-mix(in srgb, var(--color-accent) 6.41%, transparent) 13%,
+        color-mix(in srgb, var(--color-accent) 5.60%, transparent) 20%,
+        color-mix(in srgb, var(--color-accent) 4.63%, transparent) 27%,
+        color-mix(in srgb, var(--color-accent) 3.59%, transparent) 33%,
+        color-mix(in srgb, var(--color-accent) 2.60%, transparent) 40%,
+        color-mix(in srgb, var(--color-accent) 1.76%, transparent) 47%,
+        color-mix(in srgb, var(--color-accent) 1.08%, transparent) 53%,
+        color-mix(in srgb, var(--color-accent) 0.62%, transparent) 60%,
+        color-mix(in srgb, var(--color-accent) 0.33%, transparent) 67%,
+        color-mix(in srgb, var(--color-accent) 0.16%, transparent) 73%,
+        color-mix(in srgb, var(--color-accent) 0.07%, transparent) 80%,
+        color-mix(in srgb, var(--color-accent) 0.03%, transparent) 87%,
+        color-mix(in srgb, var(--color-accent) 0.01%, transparent) 93%,
+        color-mix(in srgb, var(--color-accent) 0.00%, transparent) 100%
+      ) 50% / 573px / 573px;
+    }
+  }
 
-/*fx-dots*/
-.fx-dots::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background-image: radial-gradient(
-    color-mix(in srgb, var(--color-text) 15%, transparent) 1px,
-    transparent 1px
-  );
-  background-size: 24px 24px;
-}
+  @media (max-width: 480px) {
+    .fx-glow-md::before {
+      border-image: radial-gradient(
+        circle closest-side,
+        color-mix(in srgb, var(--color-accent) 5.61%, transparent) 0%,
+        color-mix(in srgb, var(--color-accent) 5.45%, transparent) 7%,
+        color-mix(in srgb, var(--color-accent) 4.99%, transparent) 13%,
+        color-mix(in srgb, var(--color-accent) 4.31%, transparent) 20%,
+        color-mix(in srgb, var(--color-accent) 3.52%, transparent) 27%,
+        color-mix(in srgb, var(--color-accent) 2.68%, transparent) 33%,
+        color-mix(in srgb, var(--color-accent) 1.92%, transparent) 40%,
+        color-mix(in srgb, var(--color-accent) 1.28%, transparent) 47%,
+        color-mix(in srgb, var(--color-accent) 0.79%, transparent) 53%,
+        color-mix(in srgb, var(--color-accent) 0.46%, transparent) 60%,
+        color-mix(in srgb, var(--color-accent) 0.24%, transparent) 67%,
+        color-mix(in srgb, var(--color-accent) 0.12%, transparent) 73%,
+        color-mix(in srgb, var(--color-accent) 0.06%, transparent) 80%,
+        color-mix(in srgb, var(--color-accent) 0.02%, transparent) 87%,
+        color-mix(in srgb, var(--color-accent) 0.01%, transparent) 93%,
+        color-mix(in srgb, var(--color-accent) 0.00%, transparent) 100%
+      ) 50% / 538px / 538px;
+    }
+  }
 
-/*fx-gradient*/
-.fx-gradient::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background: linear-gradient(
-    135deg,
-    color-mix(in srgb, var(--color-accent) 6%, transparent), transparent 60%
-  );
+  @media (max-width: 400px) {
+    .fx-glow-md::before {
+      border-image: radial-gradient(
+        circle closest-side,
+        color-mix(in srgb, var(--color-accent) 4.06%, transparent) 0%,
+        color-mix(in srgb, var(--color-accent) 3.94%, transparent) 7%,
+        color-mix(in srgb, var(--color-accent) 3.61%, transparent) 13%,
+        color-mix(in srgb, var(--color-accent) 3.10%, transparent) 20%,
+        color-mix(in srgb, var(--color-accent) 2.50%, transparent) 27%,
+        color-mix(in srgb, var(--color-accent) 1.89%, transparent) 33%,
+        color-mix(in srgb, var(--color-accent) 1.36%, transparent) 40%,
+        color-mix(in srgb, var(--color-accent) 0.90%, transparent) 47%,
+        color-mix(in srgb, var(--color-accent) 0.56%, transparent) 53%,
+        color-mix(in srgb, var(--color-accent) 0.33%, transparent) 60%,
+        color-mix(in srgb, var(--color-accent) 0.18%, transparent) 67%,
+        color-mix(in srgb, var(--color-accent) 0.09%, transparent) 73%,
+        color-mix(in srgb, var(--color-accent) 0.04%, transparent) 80%,
+        color-mix(in srgb, var(--color-accent) 0.02%, transparent) 87%,
+        color-mix(in srgb, var(--color-accent) 0.01%, transparent) 93%,
+        color-mix(in srgb, var(--color-accent) 0.00%, transparent) 100%
+      ) 50% / 506px / 506px;
+    }
+  }
+
+  .fx-glow-lg::before {
+    border-image: radial-gradient(
+      circle closest-side,
+      color-mix(in srgb, var(--color-accent) 14.39%, transparent) 0%,
+      color-mix(in srgb, var(--color-accent) 14.15%, transparent) 7%,
+      color-mix(in srgb, var(--color-accent) 13.43%, transparent) 13%,
+      color-mix(in srgb, var(--color-accent) 12.22%, transparent) 20%,
+      color-mix(in srgb, var(--color-accent) 10.59%, transparent) 27%,
+      color-mix(in srgb, var(--color-accent) 8.61%, transparent) 33%,
+      color-mix(in srgb, var(--color-accent) 6.50%, transparent) 40%,
+      color-mix(in srgb, var(--color-accent) 4.53%, transparent) 47%,
+      color-mix(in srgb, var(--color-accent) 2.88%, transparent) 53%,
+      color-mix(in srgb, var(--color-accent) 1.66%, transparent) 60%,
+      color-mix(in srgb, var(--color-accent) 0.87%, transparent) 67%,
+      color-mix(in srgb, var(--color-accent) 0.41%, transparent) 73%,
+      color-mix(in srgb, var(--color-accent) 0.17%, transparent) 80%,
+      color-mix(in srgb, var(--color-accent) 0.07%, transparent) 87%,
+      color-mix(in srgb, var(--color-accent) 0.02%, transparent) 93%,
+      color-mix(in srgb, var(--color-accent) 0.01%, transparent) 100%
+    ) 50% / 748px / 748px;
+  }
+
+  @media (max-width: 857px) {
+    .fx-glow-lg::before {
+      border-image: radial-gradient(
+        circle closest-side,
+        color-mix(in srgb, var(--color-accent) 13.11%, transparent) 0%,
+        color-mix(in srgb, var(--color-accent) 12.83%, transparent) 7%,
+        color-mix(in srgb, var(--color-accent) 12.02%, transparent) 13%,
+        color-mix(in srgb, var(--color-accent) 10.71%, transparent) 20%,
+        color-mix(in srgb, var(--color-accent) 9.00%, transparent) 27%,
+        color-mix(in srgb, var(--color-accent) 7.12%, transparent) 33%,
+        color-mix(in srgb, var(--color-accent) 5.26%, transparent) 40%,
+        color-mix(in srgb, var(--color-accent) 3.59%, transparent) 47%,
+        color-mix(in srgb, var(--color-accent) 2.26%, transparent) 53%,
+        color-mix(in srgb, var(--color-accent) 1.30%, transparent) 60%,
+        color-mix(in srgb, var(--color-accent) 0.69%, transparent) 67%,
+        color-mix(in srgb, var(--color-accent) 0.33%, transparent) 73%,
+        color-mix(in srgb, var(--color-accent) 0.14%, transparent) 80%,
+        color-mix(in srgb, var(--color-accent) 0.05%, transparent) 87%,
+        color-mix(in srgb, var(--color-accent) 0.02%, transparent) 93%,
+        color-mix(in srgb, var(--color-accent) 0.01%, transparent) 100%
+      ) 50% / 707px / 707px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .fx-glow-lg::before {
+      border-image: radial-gradient(
+        circle closest-side,
+        color-mix(in srgb, var(--color-accent) 9.78%, transparent) 0%,
+        color-mix(in srgb, var(--color-accent) 9.51%, transparent) 7%,
+        color-mix(in srgb, var(--color-accent) 8.75%, transparent) 13%,
+        color-mix(in srgb, var(--color-accent) 7.58%, transparent) 20%,
+        color-mix(in srgb, var(--color-accent) 6.18%, transparent) 27%,
+        color-mix(in srgb, var(--color-accent) 4.76%, transparent) 33%,
+        color-mix(in srgb, var(--color-accent) 3.40%, transparent) 40%,
+        color-mix(in srgb, var(--color-accent) 2.27%, transparent) 47%,
+        color-mix(in srgb, var(--color-accent) 1.42%, transparent) 53%,
+        color-mix(in srgb, var(--color-accent) 0.82%, transparent) 60%,
+        color-mix(in srgb, var(--color-accent) 0.43%, transparent) 67%,
+        color-mix(in srgb, var(--color-accent) 0.22%, transparent) 73%,
+        color-mix(in srgb, var(--color-accent) 0.10%, transparent) 80%,
+        color-mix(in srgb, var(--color-accent) 0.04%, transparent) 87%,
+        color-mix(in srgb, var(--color-accent) 0.02%, transparent) 93%,
+        color-mix(in srgb, var(--color-accent) 0.01%, transparent) 100%
+      ) 50% / 640px / 640px;
+    }
+  }
+
+  @media (max-width: 470px) {
+    .fx-glow-lg::before {
+      border-image: radial-gradient(
+        circle closest-side,
+        color-mix(in srgb, var(--color-accent) 6.29%, transparent) 0%,
+        color-mix(in srgb, var(--color-accent) 6.11%, transparent) 7%,
+        color-mix(in srgb, var(--color-accent) 5.58%, transparent) 13%,
+        color-mix(in srgb, var(--color-accent) 4.78%, transparent) 20%,
+        color-mix(in srgb, var(--color-accent) 3.86%, transparent) 27%,
+        color-mix(in srgb, var(--color-accent) 2.94%, transparent) 33%,
+        color-mix(in srgb, var(--color-accent) 2.09%, transparent) 40%,
+        color-mix(in srgb, var(--color-accent) 1.40%, transparent) 47%,
+        color-mix(in srgb, var(--color-accent) 0.87%, transparent) 53%,
+        color-mix(in srgb, var(--color-accent) 0.51%, transparent) 60%,
+        color-mix(in srgb, var(--color-accent) 0.28%, transparent) 67%,
+        color-mix(in srgb, var(--color-accent) 0.14%, transparent) 73%,
+        color-mix(in srgb, var(--color-accent) 0.07%, transparent) 80%,
+        color-mix(in srgb, var(--color-accent) 0.03%, transparent) 87%,
+        color-mix(in srgb, var(--color-accent) 0.01%, transparent) 93%,
+        color-mix(in srgb, var(--color-accent) 0.00%, transparent) 100%
+      ) 50% / 588px / 588px;
+    }
+  }
+
+  /*fx-grid*/
+  .fx-grid::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+      linear-gradient(color-mix(in srgb, var(--color-text) 8%, transparent) 1px, transparent 1px),
+      linear-gradient(90deg, color-mix(in srgb, var(--color-text) 8%, transparent) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(circle, white 20%, transparent 80%);
+  }
+
+  /*fx-dots*/
+  .fx-dots::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: radial-gradient(
+      color-mix(in srgb, var(--color-text) 15%, transparent) 1px,
+      transparent 1px
+    );
+    background-size: 24px 24px;
+  }
+
+  /*fx-gradient*/
+  .fx-gradient::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--color-accent) 6%, transparent), transparent 60%
+    );
+  }
 }
