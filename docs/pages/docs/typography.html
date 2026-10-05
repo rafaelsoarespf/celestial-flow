@@ -371,7 +371,8 @@
           <div class="card" style="position: relative; overflow: hidden; min-height: 120px;">
             <p class="text-decorative" data-text="Decorative">Decorative Text</p>
           </div>
-          <pre class="card-code mt"><code>&lt;p class="text-decorative" data-text="Decorative"&gt;Decorative Text&lt;/p&gt;</code></pre>
+          <pre
+            class="card-code mt"><code>&lt;p class="text-decorative" data-text="Decorative"&gt;Decorative Text&lt;/p&gt;</code></pre>
         </div>
       </section>
 
@@ -406,6 +407,74 @@
 
       <div class="divider-fade"></div>
 
+      <!--stat---------------------------------------------------->
+      <section class="section-sm">
+        <div class="container">
+          <span class="text-overline" id="stat">Stat</span>
+          <h2 class="text-spacing-sm mt-sm mb">Stat</h2>
+          <p class="mb-lg">A number with a label. Use it on its own or combine it with cards, modifiers and utilities.
+          </p>
+
+          <p class="mb-sm"><code>.stat</code> — label above, value below:</p>
+          <div class="grid">
+            <div class="stat">
+              <span>Visitors</span>
+              <strong>24.8k</strong>
+            </div>
+            <pre class="card-code"><code>&lt;div class="stat"&gt;
+  &lt;span&gt;Visitors&lt;/span&gt;
+  &lt;strong&gt;24.8k&lt;/strong&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+
+          <p class="mt-lg mb-sm">Inside a card, with an optional note colored by a utility:</p>
+          <div class="grid">
+            <div class="card stat">
+              <span>Revenue</span>
+              <strong>$12.4k</strong>
+              <small class="text-green">+12% this month</small>
+            </div>
+            <div class="card stat">
+              <span>Churn</span>
+              <strong>1.8%</strong>
+              <small class="text-red">+0.3% this month</small>
+            </div>
+            <div class="card stat">
+              <span>Active users</span>
+              <strong>8,920</strong>
+              <small>Last 30 days</small>
+            </div>
+          </div>
+          <pre class="card-code mt-sm"><code>&lt;div class="card stat"&gt;
+  &lt;span&gt;Revenue&lt;/span&gt;
+  &lt;strong&gt;$12.4k&lt;/strong&gt;
+  &lt;small class="text-green"&gt;+12% this month&lt;/small&gt;
+&lt;/div&gt;</code></pre>
+
+          <p class="mt-lg mb-sm">With modifiers and a layout utility:</p>
+          <div class="grid">
+            <div class="card stat phantom">
+              <span>Phantom</span>
+              <strong>24.8k</strong>
+            </div>
+            <div class="card stat liquid-glass">
+              <span>Liquid glass</span>
+              <strong>24.8k</strong>
+            </div>
+            <div class="card stat accent center">
+              <span>Accent</span>
+              <strong>24.8k</strong>
+              <small>Last 30 days</small>
+            </div>
+          </div>
+          <pre class="card-code mt-sm"><code>&lt;div class="card stat accent center"&gt;
+  &lt;span&gt;Accent&lt;/span&gt;
+  &lt;strong&gt;24.8k&lt;/strong&gt;
+  &lt;small&gt;Last 30 days&lt;/small&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+
       <!--alignment---------------------------------------------------->
       <section class="section-sm">
         <div class="container">
@@ -422,7 +491,7 @@
 
       <div class="divider-fade"></div>
 
-            <!--color---------------------------------------------------->
+      <!--color---------------------------------------------------->
       <section class="section-sm fx-dots">
         <div class="container">
           <span class="text-overline" id="color">Color</span>

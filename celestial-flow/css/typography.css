@@ -41,6 +41,48 @@
     font: var(--font-text-sm);
     color: var(--color-text);
   }
+
+  /*logo -----------------------------------------------------------*/
+  .logo {
+    font: 700 clamp(1.25rem, 1rem + 1.2vw, 1.6rem) "Sora", -apple-system, "Segoe UI", sans-serif;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    white-space: nowrap;
+    color: var(--color-title);
+    text-decoration: none;
+    transition: opacity .2s ease;
+  }
+
+  .logo:hover {
+    opacity: 0.8;
+  }
+
+  /*stat ------------------------------------------------------*/
+  .stat {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    gap: .25rem;
+  }
+
+  :where(.stat) > span {
+    font: var(--font-text-sm);
+    color: var(--color-subtitle);
+  }
+
+  :where(.stat) > strong {
+    font: var(--font-title);
+    font-size: clamp(1.75rem, 1.2rem + 2vw, 2.75rem);
+    line-height: 1.05;
+    letter-spacing: -.02em;
+    font-variant-numeric: tabular-nums;
+    color: var(--color-title);
+  }
+
+  :where(.stat) > small {
+    font: var(--font-text-sm);
+    color: inherit;
+  }
 }
 
 
@@ -203,20 +245,5 @@
 
   .text-size-6xl {
     font-size: clamp(3rem, 1.5rem + 7vw, 6.5rem);
-  }
-
-  /*logo -----------------------------------------------------------*/
-  .logo {
-    font: 700 clamp(1.25rem, 1rem + 1.2vw, 1.6rem) "Sora", -apple-system, "Segoe UI", sans-serif;
-    letter-spacing: -0.02em;
-    line-height: 1;
-    white-space: nowrap;
-    color: var(--color-title);
-    text-decoration: none;
-    transition: opacity .2s ease;
-  }
-
-  .logo:hover {
-    opacity: 0.8;
   }
 }
