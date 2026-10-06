@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initHoverIncline();
   initScrollProgress();
   initReveal();
+  initParallax();
 });
 
 //theme selector ----------------------------------------------------------
@@ -770,4 +771,40 @@ function initReveal() {
   );
 
   waiting.forEach((_, target) => observer.observe(target));
+}
+
+
+//initParallax -------------------------------------------------------------------
+let parallaxListening = false;
+function initParallax() {
+  if (parallaxListening) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  parallaxListening = true;
+
+  let frame = 0;
+  let x = 0;
+  let y = 0;
+
+  const update = () => {
+    frame = 0;
+    document.querySelectorAll(".hover-parallax").forEach((host) => {
+      const rect = host.getBoundingClientRect();
+      if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+      const px = Math.max(-0.5, Math.min(0.5, (x - rect.left) / rect.width - 0.5));
+      const py = Math.max(-0.5, Math.min(0.5, (y - rect.top) / rect.height - 0.5));
+      host.style.setProperty("--fx-px", px.toFixed(3));
+      host.style.setProperty("--fx-py", py.toFixed(3));
+    });
+  };
+
+  document.addEventListener(
+    "pointermove",
+    (event) => {
+      if (event.pointerType === "touch") return;
+      x = event.clientX;
+      y = event.clientY;
+      if (!frame) frame = requestAnimationFrame(update);
+    },
+    { passive: true }
+  );
 }
