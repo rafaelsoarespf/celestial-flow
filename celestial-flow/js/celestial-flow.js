@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initTextMarquee()
   initHoverIncline();
   initScrollProgress();
+  initReveal();
 });
 
 //theme selector ----------------------------------------------------------
@@ -722,4 +723,51 @@ function initScrollProgress() {
   addEventListener("scroll", update, { passive: true });
   addEventListener("resize", update);
   update();
+}
+
+//initReveal -------------------------------------------------------------------
+const revealHandled = new WeakSet();
+
+function initReveal() {
+  if (typeof CSSAnimation === "undefined" || !("IntersectionObserver" in window)) return;
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  const waiting = new Map();
+
+  document.getAnimations().forEach((animation) => {
+    if (!(animation instanceof CSSAnimation) || animation.timeline !== document.timeline || revealHandled.has(animation)) return;
+    revealHandled.add(animation);
+
+    const effect = animation.effect;
+    const target = effect && effect.target;
+    if (!(target instanceof Element) || effect.pseudoElement) return;
+    if (target.closest('[data-reveal="off"]')) return;
+
+    const timing = effect.getComputedTiming();
+    const isEntrance = timing.iterations === 1 && (timing.fill === "both" || timing.fill === "backwards");
+    if (!isEntrance) return;
+
+    const rect = target.getBoundingClientRect();
+    if (rect.top < innerHeight && rect.bottom > 0) return;
+
+    animation.pause();
+    animation.currentTime = 0;
+    if (!waiting.has(target)) waiting.set(target, []);
+    waiting.get(target).push(animation);
+  });
+
+  if (!waiting.size) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        waiting.get(entry.target).forEach((animation) => animation.play());
+        observer.unobserve(entry.target);
+      });
+    },
+    { rootMargin: "0px 0px -10% 0px" }
+  );
+
+  waiting.forEach((_, target) => observer.observe(target));
 }
