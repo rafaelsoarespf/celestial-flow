@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initSelect();
   initTypewriter();
   initSpotlight();
+  initTextMarquee()
 });
 
 //theme selector ----------------------------------------------------------
@@ -645,4 +646,21 @@ function initSpotlight() {
     },
     { passive: true }
   );
+}
+
+//initTextMarquee -----------------------------------------------------------------
+function initTextMarquee() {
+  document.querySelectorAll(".text-marquee").forEach((el) => {
+    if (el.dataset.textMarqueeBound) return;
+    el.dataset.textMarqueeBound = "true";
+    const track = document.createElement("div");
+    track.className = "text-marquee__track";
+    track.append(...el.children);
+    [...track.children].forEach((item) => {
+      const clone = item.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      track.append(clone);
+    });
+    el.append(track);
+  });
 }
