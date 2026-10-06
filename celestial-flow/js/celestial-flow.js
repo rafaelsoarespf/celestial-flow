@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initSpotlight();
   initTextMarquee()
   initHoverIncline();
+  initScrollProgress();
 });
 
 //theme selector ----------------------------------------------------------
@@ -666,6 +667,7 @@ function initTextMarquee() {
   });
 }
 
+
 //hoverInclineListening -----------------------------------------------------------------
 let hoverInclineListening = false;
 
@@ -700,4 +702,24 @@ function initHoverIncline() {
       active = null;
     }
   });
+}
+
+//initScrollProgress -----------------------------------------------------------------
+function initScrollProgress() {
+  if (CSS.supports("animation-timeline: scroll()")) return;
+  const bars = document.querySelectorAll(".scroll-progress");
+  if (!bars.length) return;
+
+  const update = () => {
+    const doc = document.documentElement;
+    const max = doc.scrollHeight - doc.clientHeight;
+    const ratio = max > 0 ? doc.scrollTop / max : 0;
+    bars.forEach((bar) => {
+      bar.style.transform = `scaleX(${ratio})`;
+    });
+  };
+
+  addEventListener("scroll", update, { passive: true });
+  addEventListener("resize", update);
+  update();
 }

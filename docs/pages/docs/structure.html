@@ -54,41 +54,41 @@
   <script type="module" src="../../dist/main.js"></script>
 </head>
 
-<body>
-  <div class="sidebar-layout">
-    <aside class="sidebar doc-sidebar"></aside>
-    <!-- main ------------------------------------------------------------->
-    <main class="content">
+<body class="sidebar-layout">
+  <div class="scroll-progress"></div>
+  <aside class="sidebar doc-sidebar"></aside>
+  <!-- main ------------------------------------------------------------->
+  <main class="content">
 
-      <button class="sidebar__toggle" type="button" aria-label="Toggle sidebar">☰</button>
+    <button class="sidebar__toggle" type="button" aria-label="Toggle sidebar">☰</button>
 
-      <!-- hero ------------------------------------------------------------>
-      <section class="section-sm fx-glow center container">
-        <span class="text-overline">Documentation</span>
-        <h1 class="text-size-4xl text-spacing-sm mt-sm mb">Structure</h1>
-        <p class="width-600">Build clear, consistent structures that organize the essential parts of your interface.</p>
-      </section>
+    <!-- hero ------------------------------------------------------------>
+    <section class="section-sm fx-glow center container">
+      <span class="text-overline">Documentation</span>
+      <h1 class="text-size-4xl text-spacing-sm mt-sm mb">Structure</h1>
+      <p class="width-600">Build clear, consistent structures that organize the essential parts of your interface.</p>
+    </section>
 
-      <!-- navbar ---------------------------------------------------------->
-      <section class="section-sm">
-        <div class="container">
-          <span class="text-overline" id="navbar">Navbar</span>
-          <h2 class="text-spacing-sm mt-sm mb">Navbar</h2>
-          <p class="mb-lg">Use a navbar to organize site navigation and related actions.</p>
+    <!-- navbar ---------------------------------------------------------->
+    <section class="section-sm">
+      <div class="container">
+        <span class="text-overline" id="navbar">Navbar</span>
+        <h2 class="text-spacing-sm mt-sm mb">Navbar</h2>
+        <p class="mb-lg">Use a navbar to organize site navigation and related actions.</p>
 
-          <nav class="navbar mb-lg">
-            <div class="navbar__content">
-              <a class="logo" href="#">Logo</a>
-              <button class="navbar__toggle" type="button" aria-label="Toggle menu">☰</button>
-              <ul class="navbar__menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
-          </nav>
+        <nav class="navbar mb-lg">
+          <div class="navbar__content">
+            <a class="logo" href="#">Logo</a>
+            <button class="navbar__toggle" type="button" aria-label="Toggle menu">☰</button>
+            <ul class="navbar__menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
 
-          <pre class="card-code"><code>&lt;nav class="navbar"&gt;
+        <pre class="card-code"><code>&lt;nav class="navbar"&gt;
   &lt;div class="navbar__content"&gt;
     &lt;a class="logo" href="#"&gt;Logo&lt;/a&gt;
     &lt;button class="navbar__toggle" type="button" aria-label="Toggle menu"&gt;☰&lt;/button&gt;
@@ -99,35 +99,35 @@
     &lt;/ul&gt;
   &lt;/div&gt;
 &lt;/nav&gt;</code></pre>
+      </div>
+    </section>
+
+    <div class="divider-fade"></div>
+
+    <!-- sidebar --------------------------------------------------------->
+    <section class="section-sm fx-dots">
+      <div class="container">
+        <span class="text-overline" id="sidebar">Sidebar</span>
+        <h2 class="text-spacing-sm mt-sm mb">Sidebar</h2>
+        <p class="mb-lg">Use a sidebar to display secondary navigation alongside the main content.</p>
+        <!--sidebar-->
+        <div class="sidebar-layout mb-lg">
+          <aside class="sidebar">
+            <div class="sidebar__header">Header</div>
+            <nav class="sidebar__menu">
+              <a href="#">Home</a>
+              <a href="#">Projects</a>
+              <a href="#">Settings</a>
+            </nav>
+            <div class="sidebar__footer">Footer</div>
+          </aside>
+          <main class="content">
+            <button class="sidebar__toggle" type="button" aria-label="Toggle sidebar">☰</button>
+            <p>Page content</p>
+          </main>
         </div>
-      </section>
-
-      <div class="divider-fade"></div>
-
-      <!-- sidebar --------------------------------------------------------->
-      <section class="section-sm fx-dots">
-        <div class="container">
-          <span class="text-overline" id="sidebar">Sidebar</span>
-          <h2 class="text-spacing-sm mt-sm mb">Sidebar</h2>
-          <p class="mb-lg">Use a sidebar to display secondary navigation alongside the main content.</p>
-          <!--sidebar-->
-          <div class="sidebar-layout mb-lg">
-            <aside class="sidebar">
-              <div class="sidebar__header">Header</div>
-              <nav class="sidebar__menu">
-                <a href="#">Home</a>
-                <a href="#">Projects</a>
-                <a href="#">Settings</a>
-              </nav>
-              <div class="sidebar__footer">Footer</div>
-            </aside>
-            <main class="content">
-              <button class="sidebar__toggle" type="button" aria-label="Toggle sidebar">☰</button>
-              <p>Page content</p>
-            </main>
-          </div>
-          <!--code-->
-          <pre class="card-code"><code>&lt;div class="sidebar-layout"&gt;
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="sidebar-layout"&gt;
   &lt;aside class="sidebar"&gt;
     &lt;div class="sidebar__header"&gt;Header&lt;/div&gt;
 
@@ -145,54 +145,54 @@
     Page content
   &lt;/main&gt;
 &lt;/div&gt;</code></pre>
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- footer ---------------------------------------------------------->
-      <section class="section-sm">
-        <div class="container">
-          <span class="text-overline" id="footer">Footer</span>
-          <h2 class="text-spacing-sm mt-sm mb">Footer</h2>
-          <p class="mb-lg">Use a footer to group supporting content and links at the end of a page.</p>
-          <!--footer-->
-          <footer class="footer mb-lg">
-            <p>Footer</p>
-            <div>
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-            </div>
-          </footer>
-          <!--code-->
-          <pre class="card-code"><code>&lt;footer class="footer"&gt;
+    <!-- footer ---------------------------------------------------------->
+    <section class="section-sm">
+      <div class="container">
+        <span class="text-overline" id="footer">Footer</span>
+        <h2 class="text-spacing-sm mt-sm mb">Footer</h2>
+        <p class="mb-lg">Use a footer to group supporting content and links at the end of a page.</p>
+        <!--footer-->
+        <footer class="footer mb-lg">
+          <p>Footer</p>
+          <div>
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+          </div>
+        </footer>
+        <!--code-->
+        <pre class="card-code"><code>&lt;footer class="footer"&gt;
   &lt;p&gt;Footer&lt;/p&gt;
   &lt;div&gt;
     &lt;a href="#"&gt;Link 1&lt;/a&gt;
     &lt;a href="#"&gt;Link 2&lt;/a&gt;
   &lt;/div&gt;
 &lt;/footer&gt;</code></pre>
+      </div>
+    </section>
+
+    <div class="divider-fade"></div>
+
+    <!-- panel ----------------------------------------------------------->
+    <section class="section-sm fx-dots">
+      <div class="container">
+        <span class="text-overline" id="panel">Panel</span>
+        <h2 class="text-spacing-sm mt-sm mb">Panel</h2>
+        <p class="mb-lg">Use a panel to display content beside the main content and toggle it open or closed.</p>
+        <!--panel-->
+        <div class="panel-layout mb-lg">
+          <aside class="panel-left">
+            <button class="panel-toggle" type="button" aria-label="Toggle left panel"></button>
+            Panel content
+          </aside>
+          <main>
+            <p>Main content</p>
+          </main>
         </div>
-      </section>
 
-      <div class="divider-fade"></div>
-
-      <!-- panel ----------------------------------------------------------->
-      <section class="section-sm fx-dots">
-        <div class="container">
-          <span class="text-overline" id="panel">Panel</span>
-          <h2 class="text-spacing-sm mt-sm mb">Panel</h2>
-          <p class="mb-lg">Use a panel to display content beside the main content and toggle it open or closed.</p>
-          <!--panel-->
-          <div class="panel-layout mb-lg">
-            <aside class="panel-left">
-              <button class="panel-toggle" type="button" aria-label="Toggle left panel"></button>
-              Panel content
-            </aside>
-            <main>
-              <p>Main content</p>
-            </main>
-          </div>
-
-          <pre class="card-code"><code>&lt;div class="panel-layout"&gt;
+        <pre class="card-code"><code>&lt;div class="panel-layout"&gt;
   &lt;aside class="panel-left"&gt;
     &lt;button class="panel-toggle" type="button" aria-label="Toggle left panel"&gt;&lt;/button&gt;
     Panel content
@@ -202,19 +202,18 @@
     &lt;p&gt;Main content&lt;/p&gt;
   &lt;/main&gt;
 &lt;/div&gt;</code></pre>
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- next steps ----------------------------------------------------->
-      <section class="card accent center p-lg container">
-        <span class="text-overline">Next</span>
-        <h2 class="text-spacing-sm width-600 mt-sm mb">Add decorative details</h2>
-        <p class="width-500 mb-md">Enhance your interface with visual details that complement the content.</p>
-        <a class="btn-outline" href="./decorative.html">Decorative →</a>
-      </section>
+    <!-- next steps ----------------------------------------------------->
+    <section class="card accent center p-lg container">
+      <span class="text-overline">Next</span>
+      <h2 class="text-spacing-sm width-600 mt-sm mb">Add decorative details</h2>
+      <p class="width-500 mb-md">Enhance your interface with visual details that complement the content.</p>
+      <a class="btn-outline" href="./decorative.html">Decorative →</a>
+    </section>
 
-    </main>
-  </div>
+  </main>
 </body>
 
 </html>
