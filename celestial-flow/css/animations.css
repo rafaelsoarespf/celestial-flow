@@ -544,3 +544,17 @@
 @media (prefers-reduced-motion: reduce) {
   .text-marquee__track { animation: none; }
 }
+
+/*hover-incline*/
+.hover-incline {
+  --hover-incline-angle: 8deg;
+  --hover-incline-perspective: 900px;
+  transition: transform .15s ease-out;
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .hover-incline:hover {
+    transform: perspective(var(--hover-incline-perspective))
+      rotateX(calc(var(--hover-incline-y, 0) * var(--hover-incline-angle) * -1))
+      rotateY(calc(var(--hover-incline-x, 0) * var(--hover-incline-angle)));
+  }
+}

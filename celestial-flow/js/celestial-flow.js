@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initTypewriter();
   initSpotlight();
   initTextMarquee()
+  initHoverIncline();
 });
 
 //theme selector ----------------------------------------------------------
@@ -662,5 +663,41 @@ function initTextMarquee() {
       track.append(clone);
     });
     el.append(track);
+  });
+}
+
+//hoverInclineListening -----------------------------------------------------------------
+let hoverInclineListening = false;
+
+function initHoverIncline() {
+  if (hoverInclineListening) return;
+  hoverInclineListening = true;
+
+  let active = null;
+  const reset = (el) => {
+    el.style.removeProperty("--hover-incline-x");
+    el.style.removeProperty("--hover-incline-y");
+  };
+
+  document.addEventListener(
+    "pointermove",
+    (event) => {
+      if (event.pointerType === "touch") return;
+      const host = event.target instanceof Element ? event.target.closest(".hover-incline") : null;
+      if (active && active !== host) reset(active);
+      active = host;
+      if (!host) return;
+      const rect = host.getBoundingClientRect();
+      host.style.setProperty("--hover-incline-x", ((event.clientX - rect.left) / rect.width - 0.5) * 2);
+      host.style.setProperty("--hover-incline-y", ((event.clientY - rect.top) / rect.height - 0.5) * 2);
+    },
+    { passive: true }
+  );
+
+  document.addEventListener("pointerout", (event) => {
+    if (!event.relatedTarget && active) {
+      reset(active);
+      active = null;
+    }
   });
 }
