@@ -297,6 +297,7 @@
       </section>
       <div class="divider-fade"></div>
       <!--effects---------------------------------------------------->
+      <!--effects---------------------------------------------------->
       <section class="section-sm fx-dots">
         <div class="container">
           <span class="text-overline" id="effects">Effects</span>
@@ -304,20 +305,43 @@
           <p class="mb">Decorative background layers you can drop onto any element to add visual
             interest.</p>
 
+          <!-- glow -->
+          <p class="text-overline mb-sm">Glow</p>
           <div class="grid mb">
-            <div class="col-3 surface fx-glow-sm height-150 center-items"><code>.fx-glow-sm</code></div>
-            <div class="col-3 surface fx-glow height-150 center-items"><code>.fx-glow</code></div>
-            <div class="col-3 surface fx-glow-md height-150 center-items"><code>.fx-glow-md</code></div>
-            <div class="col-3 surface fx-glow-lg height-150 center-items"><code>.fx-glow-lg</code></div>
+            <div class="col-3 surface fx-glow-sm height-200 center-items"><code>.fx-glow-sm</code></div>
+            <div class="col-3 surface fx-glow height-200 center-items"><code>.fx-glow</code></div>
+            <div class="col-3 surface fx-glow-md height-200 center-items"><code>.fx-glow-md</code></div>
+            <div class="col-3 surface fx-glow-lg height-200 center-items"><code>.fx-glow-lg</code></div>
           </div>
 
+          <!-- static -->
+          <p class="text-overline mb-sm">Static</p>
           <div class="grid mb">
-            <div class="col-4 surface fx-grid height-150 center-items"><code>.fx-grid</code></div>
-            <div class="col-4 surface fx-dots height-150 center-items"><code>.fx-dots</code></div>
-            <div class="col-4 surface fx-gradient height-150 center-items"><code>.fx-gradient</code></div>
+            <div class="col-4 surface fx-grid height-200 center-items"><code>.fx-grid</code></div>
+            <div class="col-4 surface fx-dots height-200 center-items"><code>.fx-dots</code></div>
+            <div class="col-4 surface fx-gradient height-200 center-items"><code>.fx-gradient</code></div>
           </div>
 
-          <pre class="card-code"><code>&lt;section class="fx-dots"&gt;
+          <pre class="card-code mb"><code>&lt;section class="fx-dots"&gt;
+  ...
+&lt;/section&gt;</code></pre>
+
+          <!-- parallax -->
+          <p class="text-overline mb-sm">Parallax</p>
+          <p class="mb">Add <code>.hover-parallax</code> and the layers follow the cursor, each one
+            at its own depth. Without it they stay still.</p>
+          <div class="grid mb">
+            <div class="col-4 surface fx-stars hover-parallax height-250 center-items"><code>.fx-stars</code></div>
+            <div class="col-4 surface fx-constellation hover-parallax height-250 center-items"><code>.fx-constellation</code></div>
+            <div class="col-4 surface fx-contours hover-parallax height-250 center-items"><code>.fx-contours</code></div>
+            <div class="col-4 surface fx-blackhole hover-parallax height-250 center-items"><code>.fx-blackhole</code></div>
+            <div class="col-4 surface fx-bubbles hover-parallax height-250 center-items"><code>.fx-bubbles</code></div>
+            <div class="col-4 surface fx-petals hover-parallax height-250 center-items"><code>.fx-petals</code></div>
+            <div class="col-6 surface fx-light hover-parallax height-250 center-items"><code>.fx-light</code></div>
+            <div class="col-6 surface fx-streaks hover-parallax height-250 center-items"><code>.fx-streaks</code></div>
+          </div>
+
+          <pre class="card-code mb"><code>&lt;section class="fx-petals fx-light hover-parallax"&gt;
   ...
 &lt;/section&gt;</code></pre>
         </div>
@@ -333,3 +357,4 @@
     </main>
   </div>
 </body>
+

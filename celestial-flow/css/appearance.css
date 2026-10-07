@@ -254,12 +254,21 @@
   .border-bronze { border-color: var(--color-bronze-solid); }
 }
 
-@layer layer2{
+@layer layer4{
   /*efects -----------------------------------------------------*/
-  .fx-glow, .fx-glow-sm, .fx-glow-md, .fx-glow-lg,
-  .fx-grid, .fx-dots, .fx-gradient {
+  .fx-glow, .fx-glow-sm, .fx-glow-md, .fx-glow-lg,.fx-grid,
+  .fx-dots, .fx-gradient, .fx-stars, .fx-light, .fx-streaks,
+  .fx-blackhole, .fx-bubbles,.fx-constellation, .fx-contours, 
+  .fx-petals {
     position: relative;
     isolation: isolate;
+  }
+
+  .fx-grid,
+  .fx-dots, .fx-gradient, .fx-stars, .fx-light, .fx-streaks,
+  .fx-blackhole, .fx-bubbles,.fx-constellation, .fx-contours, 
+  .fx-petals {
+    overflow: clip;
   }
 
   /*fx-glow*/
@@ -594,26 +603,23 @@
       color-mix(in srgb, var(--color-accent) 6%, transparent), transparent 60%
     );
   }
-}
 
-
-  /*fx-stars*/
-  .fx-stars {
-    position: relative;
-    isolation: isolate;
-    overflow: clip;
-  }
-
-  .fx-stars::before {
+  .fx-stars::before, .fx-blackhole::before, .fx-bubbles::before,
+  .fx-constellation::before, .fx-contours::before, .fx-petals::before,
+  .fx-light::after, .fx-streaks::after {
     content: "";
     position: absolute;
-    inset: 0;
-    z-index: -1;
     pointer-events: none;
+    z-index: -1;
+  }
+
+  /*fx-stars*/
+  .fx-stars::before {
     --fx-star: color-mix(in srgb, var(--color-text) 70%, transparent);
     --fx-star-accent: color-mix(in srgb, var(--color-accent) 80%, transparent);
     --fx-far: calc(var(--fx-px, 0) * -9px) calc(var(--fx-py, 0) * -9px);
     --fx-near: calc(var(--fx-px, 0) * -26px) calc(var(--fx-py, 0) * -26px);
+    inset: 0;
     background-image:
       radial-gradient(1px 1px at 8% 14%, var(--fx-star) 50%, transparent),
       radial-gradient(2px 2px at 22% 62%, var(--fx-star-accent) 50%, transparent),
@@ -634,11 +640,172 @@
     animation: fx-twinkle 5s ease-in-out infinite alternate;
   }
 
+  .fx-light::after {
+    inset: 0;
+    background:
+      radial-gradient(10rem circle at calc(50% + var(--fx-px, 0) * 100%) calc(50% + var(--fx-py, 0) * 100%), color-mix(in srgb, var(--color-accent) calc(var(--fx-strength, 1) * 20%), transparent), transparent),
+      radial-gradient(34rem circle at calc(50% + var(--fx-px, 0) * 100%) calc(50% + var(--fx-py, 0) * 100%), color-mix(in srgb, var(--color-accent) calc(var(--fx-strength, 1) * 26%), transparent), transparent 65%);
+  }
+
+  .fx-streaks::after {
+    inset: -10%;
+    --fx-s2: var(--color-accent);
+    --fx-s3: var(--color-accent);
+    background:
+      linear-gradient(115deg, transparent 38%, color-mix(in srgb, var(--color-accent) calc(var(--fx-strength, 1) * 34%), transparent) 46%, transparent 54%) calc(var(--fx-px, 0) * -30px) 0 / 150% 100% no-repeat,
+      linear-gradient(115deg, transparent 52%, color-mix(in srgb, var(--fx-s2) calc(var(--fx-strength, 1) * 30%), transparent) 58%, transparent 64%) calc(var(--fx-px, 0) * -70px) 0 / 160% 100% no-repeat,
+      linear-gradient(115deg, transparent 20%, color-mix(in srgb, var(--fx-s3) calc(var(--fx-strength, 1) * 26%), transparent) 25%, transparent 31%) calc(var(--fx-px, 0) * -110px) 0 / 140% 100% no-repeat,
+      linear-gradient(115deg, transparent 66%, color-mix(in srgb, var(--color-accent) calc(var(--fx-strength, 1) * 24%), transparent) 69%, transparent 72%) calc(var(--fx-px, 0) * -150px) 0 / 150% 100% no-repeat;
+    filter: blur(10px);
+    -webkit-mask-image: linear-gradient(#000 40%, transparent);
+    mask-image: linear-gradient(#000 40%, transparent);
+  }
+
+  @supports (color: oklch(from red l c h)) {
+    .fx-streaks::after {
+      --fx-s2: oklch(from var(--color-accent) l c calc(h + 50));
+      --fx-s3: oklch(from var(--color-accent) l c calc(h - 50));
+    }
+  }
+
+  .fx-blackhole::before {
+    width: min(72%, 44rem);
+    aspect-ratio: 1;
+    right: -8%;
+    top: 50%;
+    --fx-h2: var(--color-accent);
+    --fx-h3: var(--color-accent);
+    translate: calc(var(--fx-px, 0) * -60px) calc(-50% + var(--fx-py, 0) * -60px);
+    background: conic-gradient(color-mix(in srgb, var(--color-accent) calc(var(--fx-strength, 1) * 100%), transparent), color-mix(in srgb, var(--fx-h2) calc(var(--fx-strength, 1) * 60%), transparent), color-mix(in srgb, var(--color-accent) calc(var(--fx-strength, 1) * 14%), transparent), color-mix(in srgb, var(--fx-h3) calc(var(--fx-strength, 1) * 55%), transparent), color-mix(in srgb, var(--color-accent) calc(var(--fx-strength, 1) * 100%), transparent));
+    filter: blur(1.5px) saturate(1.3);
+    -webkit-mask-image: radial-gradient(circle, transparent 0 21%, #000 24%, rgb(0 0 0 / 0.55) 31%, rgb(0 0 0 / 0.22) 42%, transparent 62%);
+    mask-image: radial-gradient(circle, transparent 0 21%, #000 24%, rgb(0 0 0 / 0.55) 31%, rgb(0 0 0 / 0.22) 42%, transparent 62%);
+    animation: fx-spin-slow 40s linear infinite;
+  }
+
+  @supports (color: oklch(from red l c h)) {
+    .fx-blackhole::before {
+      --fx-h2: oklch(from var(--color-accent) l c calc(h + 50));
+      --fx-h3: oklch(from var(--color-accent) l c calc(h - 50));
+    }
+  }
+
+  /*fx-bubbles*/
+  .fx-bubbles::before {
+    inset: 0;
+    --fx-b2: var(--color-accent);
+    --fx-b3: var(--color-accent);
+    --fx-rim-a: color-mix(in srgb, var(--color-accent) calc(var(--fx-strength, 1) * 5%), transparent) 0 60%, color-mix(in srgb, var(--color-accent) calc(var(--fx-strength, 1) * 12%), transparent) 74%, color-mix(in srgb, var(--color-accent) calc(var(--fx-strength, 1) * 48%), transparent) 90%, color-mix(in srgb, var(--fx-b2) calc(var(--fx-strength, 1) * 62%), transparent) 94%, transparent 96%;
+    --fx-rim-b: color-mix(in srgb, var(--fx-b2) calc(var(--fx-strength, 1) * 5%), transparent) 0 60%, color-mix(in srgb, var(--fx-b2) calc(var(--fx-strength, 1) * 12%), transparent) 74%, color-mix(in srgb, var(--fx-b2) calc(var(--fx-strength, 1) * 48%), transparent) 90%, color-mix(in srgb, var(--fx-b3) calc(var(--fx-strength, 1) * 62%), transparent) 94%, transparent 96%;
+    --fx-rim-c: color-mix(in srgb, var(--fx-b3) calc(var(--fx-strength, 1) * 5%), transparent) 0 60%, color-mix(in srgb, var(--fx-b3) calc(var(--fx-strength, 1) * 12%), transparent) 74%, color-mix(in srgb, var(--fx-b3) calc(var(--fx-strength, 1) * 48%), transparent) 90%, color-mix(in srgb, var(--color-accent) calc(var(--fx-strength, 1) * 62%), transparent) 94%, transparent 96%;
+    --fx-hl: rgb(255 255 255 / calc(var(--fx-strength, 1) * 0.8)), transparent;
+    --fx-far: calc(var(--fx-px, 0) * -10px) calc(var(--fx-py, 0) * -10px - var(--fx-fall) * 900px);
+    --fx-mid: calc(var(--fx-px, 0) * -26px) calc(var(--fx-py, 0) * -26px - var(--fx-fall) * 1800px);
+    --fx-near: calc(var(--fx-px, 0) * -56px) calc(var(--fx-py, 0) * -56px - var(--fx-fall) * 2700px);
+    background-image:
+      radial-gradient(ellipse 2.4px 1.3px at calc(8% - 5.0px) calc(20% - 6.2px), var(--fx-hl)),
+      radial-gradient(ellipse 3.2px 1.8px at calc(27% - 6.7px) calc(74% - 8.3px), var(--fx-hl)),
+      radial-gradient(ellipse 2.0px 1.1px at calc(42% - 4.2px) calc(36% - 5.2px), var(--fx-hl)),
+      radial-gradient(ellipse 3.6px 2.0px at calc(58% - 7.6px) calc(88% - 9.4px), var(--fx-hl)),
+      radial-gradient(ellipse 2.8px 1.5px at calc(73% - 5.9px) calc(14% - 7.3px), var(--fx-hl)),
+      radial-gradient(ellipse 2.2px 1.2px at calc(90% - 4.6px) calc(52% - 5.7px), var(--fx-hl)),
+      radial-gradient(ellipse 6.8px 3.7px at calc(16% - 14.3px) calc(52% - 17.7px), var(--fx-hl)),
+      radial-gradient(ellipse 8.4px 4.6px at calc(38% - 17.6px) calc(12% - 21.8px), var(--fx-hl)),
+      radial-gradient(ellipse 5.6px 3.1px at calc(62% - 11.8px) calc(58% - 14.6px), var(--fx-hl)),
+      radial-gradient(ellipse 7.6px 4.2px at calc(84% - 16.0px) calc(80% - 19.8px), var(--fx-hl)),
+      radial-gradient(ellipse 6.0px 3.3px at calc(92% - 12.6px) calc(28% - 15.6px), var(--fx-hl)),
+      radial-gradient(ellipse 16.8px 9.2px at calc(24% - 35.3px) calc(86% - 43.7px), var(--fx-hl)),
+      radial-gradient(ellipse 19.6px 10.8px at calc(70% - 41.2px) calc(34% - 51.0px), var(--fx-hl)),
+      radial-gradient(ellipse 14.4px 7.9px at calc(52% - 30.2px) calc(64% - 37.4px), var(--fx-hl)),
+      radial-gradient(circle 12px at 8% 20%, var(--fx-rim-a)),
+      radial-gradient(circle 16px at 27% 74%, var(--fx-rim-b)),
+      radial-gradient(circle 10px at 42% 36%, var(--fx-rim-c)),
+      radial-gradient(circle 18px at 58% 88%, var(--fx-rim-a)),
+      radial-gradient(circle 14px at 73% 14%, var(--fx-rim-b)),
+      radial-gradient(circle 11px at 90% 52%, var(--fx-rim-c)),
+      radial-gradient(circle 34px at 16% 52%, var(--fx-rim-b)),
+      radial-gradient(circle 42px at 38% 12%, var(--fx-rim-a)),
+      radial-gradient(circle 28px at 62% 58%, var(--fx-rim-c)),
+      radial-gradient(circle 38px at 84% 80%, var(--fx-rim-b)),
+      radial-gradient(circle 30px at 92% 28%, var(--fx-rim-a)),
+      radial-gradient(circle 84px at 24% 86%, var(--fx-rim-a)),
+      radial-gradient(circle 98px at 70% 34%, var(--fx-rim-b)),
+      radial-gradient(circle 72px at 52% 64%, var(--fx-rim-c));
+    background-size: 900px 900px;
+    background-position:
+      var(--fx-far), var(--fx-far), var(--fx-far), var(--fx-far), var(--fx-far), var(--fx-far), var(--fx-mid), var(--fx-mid), var(--fx-mid), var(--fx-mid), var(--fx-mid), var(--fx-near), var(--fx-near), var(--fx-near), var(--fx-far), var(--fx-far), var(--fx-far), var(--fx-far), var(--fx-far), var(--fx-far), var(--fx-mid), var(--fx-mid), var(--fx-mid), var(--fx-mid), var(--fx-mid), var(--fx-near), var(--fx-near), var(--fx-near);
+    animation: fx-fall 90s linear infinite;
+  }
+
+  @supports (color: oklch(from red l c h)) {
+    .fx-bubbles::before {
+      --fx-b2: oklch(from var(--color-accent) l c calc(h + 55));
+      --fx-b3: oklch(from var(--color-accent) l c calc(h - 55));
+    }
+  }
+
+  @property --fx-fall { syntax: "<number>"; inherits: false; initial-value: 0; }
+
   @keyframes fx-twinkle {
     from { opacity: 0.45; }
     to { opacity: 1; }
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    .fx-stars::before { animation: none; }
+  @keyframes fx-fall {
+    to { --fx-fall: 1; }
   }
+
+  @keyframes fx-spin-slow {
+    to { rotate: 360deg; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fx-stars::before, .fx-blackhole::before, .fx-bubbles::before, .fx-petals::before { animation: none; }
+  }
+
+    .fx-constellation::before {
+    inset: 0;
+    background: color-mix(in srgb, var(--color-accent) calc(var(--fx-strength, 1) * 85%), transparent);
+    --fx-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520'%3E%3Cpath d='M78 217L93 144M195 107L143 53M54 67L93 144M328 59L289 139M54 67L143 53M78 217L76 312M195 107L289 139M93 144L143 53M450 304L352 351M289 139L252 244M232 363L352 351M232 363L252 244M352 351L315 469M232 363L315 469M195 107L328 59M54 67L78 217M252 244L76 312' fill='none' stroke='%23000' stroke-width='1' stroke-opacity='0.45'/%3E%3Cg fill='%23000' fill-opacity='0.55'%3E%3Ccircle cx='195' cy='107' r='2'/%3E%3Ccircle cx='232' cy='363' r='2'/%3E%3Ccircle cx='54' cy='67' r='2'/%3E%3Ccircle cx='450' cy='304' r='2'/%3E%3Ccircle cx='78' cy='217' r='2'/%3E%3Ccircle cx='328' cy='59' r='2'/%3E%3Ccircle cx='289' cy='139' r='2'/%3E%3Ccircle cx='252' cy='244' r='2'/%3E%3Ccircle cx='76' cy='312' r='2'/%3E%3Ccircle cx='93' cy='144' r='2'/%3E%3Ccircle cx='352' cy='351' r='2'/%3E%3Ccircle cx='143' cy='53' r='2'/%3E%3Ccircle cx='315' cy='469' r='2'/%3E%3C/g%3E%3C/svg%3E"), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='760'%3E%3Cpath d='M547 570L629 468M198 458L318 520M198 458L194 595M458 680L547 570M318 520L194 595M198 458L44 409M554 217L482 64M100 178L267 268M458 680L318 520M271 33L482 64M271 33L100 178M271 33L267 268M44 409L100 178M44 409L194 595M554 217L629 468M458 680L629 468M554 217L267 268' fill='none' stroke='%23000' stroke-width='1.4' stroke-opacity='0.8'/%3E%3Cg fill='%23000' fill-opacity='0.95'%3E%3Ccircle cx='198' cy='458' r='3.4'/%3E%3Ccircle cx='458' cy='680' r='3.4'/%3E%3Ccircle cx='318' cy='520' r='3.4'/%3E%3Ccircle cx='554' cy='217' r='3.4'/%3E%3Ccircle cx='547' cy='570' r='3.4'/%3E%3Ccircle cx='271' cy='33' r='3.4'/%3E%3Ccircle cx='44' cy='409' r='3.4'/%3E%3Ccircle cx='629' cy='468' r='3.4'/%3E%3Ccircle cx='100' cy='178' r='3.4'/%3E%3Ccircle cx='267' cy='268' r='3.4'/%3E%3Ccircle cx='482' cy='64' r='3.4'/%3E%3Ccircle cx='194' cy='595' r='3.4'/%3E%3C/g%3E%3C/svg%3E");
+    mask-image: var(--fx-mask);
+    -webkit-mask-image: var(--fx-mask);
+    mask-size: 520px 520px, 760px 760px;
+    mask-repeat: repeat;
+    mask-position: calc(var(--fx-px, 0) * -24px) calc(var(--fx-py, 0) * -24px), calc(var(--fx-px, 0) * -70px) calc(var(--fx-py, 0) * -70px);
+  }
+
+  /*fx-contours*/
+  .fx-contours {
+    --fx-ink: color-mix(in srgb, var(--color-text) 26%, transparent);
+  }
+
+  @supports (color: oklch(from red l c h / 0.5)) {
+    .fx-contours {
+      --fx-ink: oklch(from var(--color-text) l c h / calc(0.14 + (1 - l) * 0.22));
+    }
+  }
+
+  .fx-contours::before {
+    inset: 0;
+    background: var(--fx-ink);
+    --fx-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='700'%3E%3Cpath d='M399 350L404 360L401 368L391 374L380 376L372 377L367 380L362 384L356 386L350 386L344 383L339 381L331 382L321 384L310 384L302 378L301 368L309 357L319 350L325 346L326 341L322 334L319 324L321 315L327 310L335 309L343 308L350 306L358 304L366 306L371 313L373 323L371 332L371 338L376 340L387 343ZM441 350L444 367L438 382L425 393L411 402L399 409L388 416L376 422L363 424L350 422L338 419L325 417L310 418L293 418L276 412L265 399L264 381L272 364L281 350L287 339L288 327L287 313L289 299L296 286L308 277L321 271L335 266L350 262L366 261L380 267L390 280L396 296L398 309L404 319L415 326L429 336ZM482 350L484 374L475 395L460 413L443 428L427 441L409 452L390 459L369 460L350 457L332 455L312 455L289 456L264 452L242 440L230 419L228 394L234 370L242 350L247 332L249 313L252 293L259 274L272 258L289 244L307 233L328 223L350 217L373 218L394 229L409 248L418 268L426 286L437 299L454 312L471 329ZM523 350L522 380L512 409L495 434L476 456L454 474L430 488L403 495L376 495L350 493L325 492L298 493L267 493L236 486L210 468L195 440L192 408L197 377L203 350L207 325L211 299L218 274L231 250L249 229L270 211L293 194L320 180L350 173L381 176L407 192L427 216L442 241L455 262L472 280L493 298L512 321ZM562 350L560 387L549 423L532 455L509 484L482 507L450 523L415 530L382 530L350 528L318 529L284 532L246 531L208 519L178 494L161 459L156 421L158 384L162 350L167 318L173 286L185 255L203 227L225 201L250 177L279 154L312 136L350 128L388 135L421 156L446 184L465 213L485 237L507 259L532 284L552 314ZM600 350L599 394L588 437L569 476L543 512L509 540L470 557L428 564L388 565L350 565L311 568L269 572L224 568L181 551L147 520L127 479L119 434L118 391L120 350L126 311L137 272L153 236L175 203L201 172L230 141L264 113L304 92L350 85L395 96L433 121L464 153L490 184L515 211L543 239L570 270L590 308ZM638 350L638 401L627 451L607 498L577 540L536 572L489 590L440 598L394 600L350 603L304 608L255 612L203 605L155 583L117 545L93 498L81 448L77 398L78 350L86 303L101 259L122 218L148 180L176 143L209 105L249 71L297 48L350 43L402 57L446 86L483 120L514 154L546 186L578 218L607 256L628 301Z' fill='none' stroke='%23000' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E"), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='700'%3E%3Cpath d='M393 350L387 357L384 362L382 369L379 374L373 378L366 378L360 379L356 383L350 390L341 399L331 403L322 398L319 386L322 374L326 364L326 359L321 355L313 350L309 343L309 335L313 329L318 323L322 316L326 309L333 304L342 304L350 310L355 320L358 327L362 329L371 325L383 322L395 324L401 331L399 341ZM434 350L429 364L424 377L418 389L409 399L397 405L384 409L373 414L363 422L350 434L334 443L316 443L302 433L295 416L293 398L292 384L288 373L281 362L274 350L271 336L274 322L279 309L286 296L294 283L304 271L319 263L335 265L350 274L361 285L371 293L382 294L398 293L416 295L430 304L438 318L438 334ZM475 350L471 371L464 392L453 410L437 423L419 433L402 440L386 450L370 463L350 478L326 486L302 482L282 467L270 445L263 423L257 404L249 387L241 369L235 350L235 330L239 310L245 290L254 269L265 249L282 232L304 224L328 227L350 238L368 249L384 257L402 259L425 261L447 268L465 284L475 305L477 328ZM518 350L514 379L504 406L488 429L466 447L442 460L420 471L400 487L377 505L350 521L319 528L288 521L263 501L245 475L233 448L222 424L211 401L202 376L198 350L199 323L204 297L210 269L220 241L236 214L260 194L290 186L322 190L350 201L374 213L397 220L423 224L451 230L478 243L499 264L511 291L517 321ZM561 350L557 386L544 420L521 449L493 470L465 487L439 504L414 525L385 547L350 564L311 569L274 558L243 535L220 505L201 475L186 445L173 415L164 383L161 350L163 317L168 284L175 249L187 213L208 180L239 157L277 149L315 153L350 164L381 175L411 182L443 188L477 199L508 217L532 245L548 278L558 313ZM605 350L600 394L582 434L554 468L520 493L488 514L458 537L428 563L392 589L350 607L304 609L261 595L224 569L194 536L169 502L150 466L135 428L127 389L125 350L127 311L131 270L138 228L153 184L179 147L218 121L263 112L309 116L350 127L388 137L425 144L464 153L502 168L537 193L565 226L586 264L600 306ZM650 350L642 402L619 448L585 486L547 516L511 542L478 571L442 602L400 631L350 648L297 648L247 632L204 603L167 568L137 529L114 487L98 442L91 396L90 350L91 304L93 256L100 206L119 156L152 113L198 86L250 76L302 79L350 88L395 97L439 106L484 118L527 139L566 169L599 207L625 250L643 298Z' fill='none' stroke='%23000' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E");
+    mask-image: var(--fx-mask);
+    -webkit-mask-image: var(--fx-mask);
+    mask-size: 700px 700px, 1000px 1000px;
+    mask-repeat: repeat;
+    mask-position: calc(var(--fx-px, 0) * -18px) calc(var(--fx-py, 0) * -18px), calc(var(--fx-px, 0) * -52px) calc(var(--fx-py, 0) * -52px);
+  }
+
+  /*fx-petals*/
+  .fx-petals::before {
+    inset: 0;
+    background: color-mix(in srgb, var(--color-accent) calc(var(--fx-strength, 1) * 90%), transparent);
+    --fx-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='.3'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='url(%23g)'%3E%3Cpath transform='translate(171 353) rotate(278) scale(0.70)' opacity='0.78' d='M-9 -6C-6 -10 2 -9 6 -3C8 0 10 3 9 5C7 8 0 11 -5 8C-9 5 -11 -2 -9 -6Z'/%3E%3Cpath transform='translate(370 347) rotate(33) scale(0.86)' opacity='0.78' d='M-9 -6C-6 -10 2 -9 6 -3C8 0 10 3 9 5C7 8 0 11 -5 8C-9 5 -11 -2 -9 -6Z'/%3E%3Cpath transform='translate(169 148) rotate(240) scale(0.84)' opacity='0.69' d='M-9 -6C-6 -10 2 -9 6 -3C8 0 10 3 9 5C7 8 0 11 -5 8C-9 5 -11 -2 -9 -6Z'/%3E%3Cpath transform='translate(377 490) rotate(77) scale(0.74)' opacity='0.59' d='M-8 0C-8 -7 -2 -10 4 -9C9 -8 9 -2 8 3C7 8 2 11 -3 10C-7 9 -8 5 -8 0Z'/%3E%3Cpath transform='translate(249 429) rotate(7) scale(0.88)' opacity='0.57' d='M-8 0C-8 -7 -2 -10 4 -9C9 -8 9 -2 8 3C7 8 2 11 -3 10C-7 9 -8 5 -8 0Z'/%3E%3Cpath transform='translate(71 204) rotate(15) scale(0.93)' opacity='0.62' d='M-8 0C-8 -7 -2 -10 4 -9C9 -8 9 -2 8 3C7 8 2 11 -3 10C-7 9 -8 5 -8 0Z'/%3E%3Cpath transform='translate(499 248) rotate(218) scale(0.79)' opacity='0.75' d='M-9 -6C-6 -10 2 -9 6 -3C8 0 10 3 9 5C7 8 0 11 -5 8C-9 5 -11 -2 -9 -6Z'/%3E%3Cpath transform='translate(543 529) rotate(68) scale(0.95)' opacity='0.57' d='M-9 -3C-8 -9 0 -11 6 -7C10 -4 10 2 6 6C2 10 -4 10 -7 6C-9 3 -9 0 -9 -3Z'/%3E%3Cpath transform='translate(303 161) rotate(132) scale(0.98)' opacity='0.66' d='M-7 -7C-3 -10 4 -10 7 -6C9 -2 8 5 5 8C2 11 -4 10 -7 6C-9 2 -9 -4 -7 -7Z'/%3E%3C/g%3E%3C/svg%3E"), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='760'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='.3'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='url(%23g)'%3E%3Cpath transform='translate(513 623) rotate(238) scale(1.62)' opacity='0.87' d='M-9 -3C-8 -9 0 -11 6 -7C10 -4 10 2 6 6C2 10 -4 10 -7 6C-9 3 -9 0 -9 -3Z'/%3E%3Cpath transform='translate(239 574) rotate(243) scale(1.74)' opacity='0.86' d='M-6 -9C0 -11 7 -9 8 -3C9 3 6 9 1 10C-4 11 -8 8 -8 2C-8 -3 -8 -7 -6 -9Z'/%3E%3Cpath transform='translate(507 360) rotate(72) scale(1.38)' opacity='0.86' d='M-7 -7C-3 -10 4 -10 7 -6C9 -2 8 5 5 8C2 11 -4 10 -7 6C-9 2 -9 -4 -7 -7Z'/%3E%3Cpath transform='translate(699 92) rotate(304) scale(1.97)' opacity='0.89' d='M-7 -7C-3 -10 4 -10 7 -6C9 -2 8 5 5 8C2 11 -4 10 -7 6C-9 2 -9 -4 -7 -7Z'/%3E%3Cpath transform='translate(110 86) rotate(97) scale(1.90)' opacity='0.82' d='M-9 -6C-6 -10 2 -9 6 -3C8 0 10 3 9 5C7 8 0 11 -5 8C-9 5 -11 -2 -9 -6Z'/%3E%3Cpath transform='translate(384 501) rotate(302) scale(1.88)' opacity='0.80' d='M-7 -7C-3 -10 4 -10 7 -6C9 -2 8 5 5 8C2 11 -4 10 -7 6C-9 2 -9 -4 -7 -7Z'/%3E%3Cpath transform='translate(135 310) rotate(161) scale(1.82)' opacity='0.80' d='M-6 -9C0 -11 7 -9 8 -3C9 3 6 9 1 10C-4 11 -8 8 -8 2C-8 -3 -8 -7 -6 -9Z'/%3E%3Cpath transform='translate(160 460) rotate(55) scale(1.88)' opacity='0.78' d='M-6 -9C0 -11 7 -9 8 -3C9 3 6 9 1 10C-4 11 -8 8 -8 2C-8 -3 -8 -7 -6 -9Z'/%3E%3C/g%3E%3C/svg%3E"), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='980' height='980'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='.3'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='url(%23g)'%3E%3Cpath transform='translate(743 94) rotate(266) scale(2.77)' opacity='0.88' d='M-9 4C-9 -4 -2 -9 8 -9C9.5 -9 9.5 -6 8 -2C6 6 -1 11 -6 10C-8 9.5 -9 7 -9 4Z'/%3E%3Cpath transform='translate(591 346) rotate(299) scale(2.80)' opacity='0.89' d='M-9 4C-9 -4 -2 -9 8 -9C9.5 -9 9.5 -6 8 -2C6 6 -1 11 -6 10C-8 9.5 -9 7 -9 4Z'/%3E%3Cpath transform='translate(324 904) rotate(55) scale(3.49)' opacity='0.98' d='M-6 -9C0 -11 7 -9 8 -3C9 3 6 9 1 10C-4 11 -8 8 -8 2C-8 -3 -8 -7 -6 -9Z'/%3E%3Cpath transform='translate(632 682) rotate(103) scale(3.61)' opacity='0.99' d='M-6 -9C0 -11 7 -9 8 -3C9 3 6 9 1 10C-4 11 -8 8 -8 2C-8 -3 -8 -7 -6 -9Z'/%3E%3Cpath transform='translate(605 516) rotate(198) scale(3.59)' opacity='0.86' d='M-6 -9C0 -11 7 -9 8 -3C9 3 6 9 1 10C-4 11 -8 8 -8 2C-8 -3 -8 -7 -6 -9Z'/%3E%3C/g%3E%3C/svg%3E");
+    mask-image: var(--fx-mask);
+    -webkit-mask-image: var(--fx-mask);
+    mask-size: 600px 600px, 760px 760px, 980px 980px;
+    mask-repeat: repeat;
+    mask-position: calc(var(--fx-px, 0) * -20px) calc(var(--fx-py, 0) * -20px + var(--fx-fall) * 600px), calc(var(--fx-px, 0) * -48px) calc(var(--fx-py, 0) * -48px + var(--fx-fall) * 760px), calc(var(--fx-px, 0) * -90px) calc(var(--fx-py, 0) * -90px + var(--fx-fall) * 1960px);
+    animation: fx-fall 70s linear infinite;
+  }
+}
