@@ -571,8 +571,8 @@
     z-index: -1;
     pointer-events: none;
     background-image:
-      linear-gradient(color-mix(in srgb, var(--color-text) 8%, transparent) 1px, transparent 1px),
-      linear-gradient(90deg, color-mix(in srgb, var(--color-text) 8%, transparent) 1px, transparent 1px);
+      linear-gradient(color-mix(in srgb, var(--color-text) 20%, transparent) 1px, transparent 1px),
+      linear-gradient(90deg, color-mix(in srgb, var(--color-text) 20%, transparent) 1px, transparent 1px);
     background-size: 40px 40px;
     mask-image: radial-gradient(circle, white 20%, transparent 80%);
   }
@@ -585,8 +585,8 @@
     z-index: -1;
     pointer-events: none;
     background-image: radial-gradient(
-      color-mix(in srgb, var(--color-text) 15%, transparent) 1px,
-      transparent 1px
+      color-mix(in srgb, var(--color-text) 28%, transparent) 1.15px,
+      transparent 1.15px
     );
     background-size: 24px 24px;
   }
@@ -598,10 +598,7 @@
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    background: linear-gradient(
-      135deg,
-      color-mix(in srgb, var(--color-accent) 6%, transparent), transparent 60%
-    );
+    background: linear-gradient(140deg,color-mix(in srgb, var(--color-accent) 50%, transparent), transparent 60%);
   }
 
   .fx-stars::before, .fx-blackhole::before, .fx-bubbles::before,
@@ -613,29 +610,30 @@
     z-index: -1;
   }
 
-  /*fx-stars*/
+    /*fx-stars*/
   .fx-stars::before {
-    --fx-star: color-mix(in srgb, var(--color-text) 70%, transparent);
-    --fx-star-accent: color-mix(in srgb, var(--color-accent) 80%, transparent);
+    --fx-star: var(--color-text);
+    --fx-star-accent: var(--color-accent);
     --fx-far: calc(var(--fx-px, 0) * -9px) calc(var(--fx-py, 0) * -9px);
     --fx-near: calc(var(--fx-px, 0) * -26px) calc(var(--fx-py, 0) * -26px);
     inset: 0;
     background-image:
-      radial-gradient(1px 1px at 8% 14%, var(--fx-star) 50%, transparent),
-      radial-gradient(2px 2px at 22% 62%, var(--fx-star-accent) 50%, transparent),
-      radial-gradient(1px 1px at 35% 30%, var(--fx-star) 50%, transparent),
-      radial-gradient(1px 1px at 47% 84%, var(--fx-star) 50%, transparent),
-      radial-gradient(2px 2px at 58% 18%, var(--fx-star) 50%, transparent),
-      radial-gradient(1px 1px at 66% 52%, var(--fx-star-accent) 50%, transparent),
-      radial-gradient(1px 1px at 78% 76%, var(--fx-star) 50%, transparent),
-      radial-gradient(2px 2px at 88% 28%, var(--fx-star) 50%, transparent),
-      radial-gradient(1px 1px at 93% 90%, var(--fx-star) 50%, transparent),
-      radial-gradient(1px 1px at 14% 92%, var(--fx-star) 50%, transparent),
-      radial-gradient(1px 1px at 52% 48%, var(--fx-star) 50%, transparent);
+      radial-gradient(1.1px 1.1px at 8% 14%, var(--fx-star) 0 55%, transparent),
+      radial-gradient(3px 3px at 22% 62%, var(--fx-star-accent) 0 55%, transparent),
+      radial-gradient(1.1px 1.1px at 35% 30%, var(--fx-star) 0 55%, transparent),
+      radial-gradient(1.1px 1.1px at 47% 84%, var(--fx-star) 0 55%, transparent),
+      radial-gradient(2.1px 2.6px at 58% 18%, var(--fx-star) 0 55%, transparent),
+      radial-gradient(2px 2px at 66% 52%, var(--fx-star-accent) 0 55%, transparent),
+      radial-gradient(1.1px 1.1px at 78% 76%, var(--fx-star) 0 55%, transparent),
+      radial-gradient(2.1px 2.1px at 88% 28%, var(--fx-star) 0 55%, transparent),
+      radial-gradient(1.1px 1.1px at 93% 90%, var(--fx-star) 0 55%, transparent),
+      radial-gradient(1.1px 1.1px at 14% 92%, var(--fx-star) 0 55%, transparent),
+      radial-gradient(1.1px 1.1px at 52% 48%, var(--fx-star) 0 55%, transparent);
     background-size: 340px 340px;
     background-position:
       var(--fx-far), var(--fx-near), var(--fx-far), var(--fx-far), var(--fx-near), var(--fx-near),
       var(--fx-far), var(--fx-near), var(--fx-far), var(--fx-far), var(--fx-far);
+    filter: drop-shadow(0 0 2px color-mix(in srgb, var(--color-accent) 60%, transparent));
     transition: background-position 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
     animation: fx-twinkle 5s ease-in-out infinite alternate;
   }
