@@ -84,7 +84,7 @@
             <div class="col-6 card surface">
               <h4 class="mb-sm"><code>.surface</code></h4>
               <p class="text-sm">Default layer — solid theme background, blurred.</p>
-              <pre class="card-code"><code>&lt;div class="card surface"&gt;...&lt;/div&gt;</code></pre>            
+              <pre class="card-code"><code>&lt;div class="card surface"&gt;...&lt;/div&gt;</code></pre>
             </div>
             <!--surface-2-->
             <div class="col-6 card surface-2">
@@ -132,7 +132,8 @@
             <div class="col-6 card glow">
               <h4 class="mb-sm"><code>.glow</code></h4>
               <p class="text-sm">Soft accent halo. Change its color with <code>--glow-color</code>.</p>
-              <pre class="card-code"><code>&lt;div class="card glow" style="--glow-color: #ec4899"&gt;...&lt;/div&gt;</code></pre>
+              <pre
+                class="card-code"><code>&lt;div class="card glow" style="--glow-color: #ec4899"&gt;...&lt;/div&gt;</code></pre>
             </div>
             <!--liquid-glass-->
             <div class="card liquid-glass">
@@ -146,7 +147,7 @@
 
       <div class="divider-fade"></div>
 
-            <!--background---------------------------------------------------->
+      <!--background---------------------------------------------------->
       <section class="section-sm fx-dots">
         <div class="container">
           <span class="text-overline" id="background">Background</span>
@@ -277,7 +278,6 @@
       <div class="divider-fade"></div>
 
       <!--effects---------------------------------------------------->
-      <!--effects---------------------------------------------------->
       <section class="section-sm fx-dots">
         <div class="container">
           <span class="text-overline" id="effects">Effects</span>
@@ -288,18 +288,39 @@
           <!-- glow -->
           <p class="text-overline mb-sm">Glow</p>
           <div class="grid mb">
-            <div class="col-3 surface fx-glow-sm height-200 center-items"><code>.fx-glow-sm</code></div>
-            <div class="col-3 surface fx-glow height-200 center-items"><code>.fx-glow</code></div>
-            <div class="col-3 surface fx-glow-md height-200 center-items"><code>.fx-glow-md</code></div>
-            <div class="col-3 surface fx-glow-lg height-200 center-items"><code>.fx-glow-lg</code></div>
+            <div class="col-3 card center-items-horizontal fx-glow-sm height-250">
+              <span class="text-overline">fx-glow-sm</span>
+              <h3 class="title mt-sm">Glow</h3>
+            </div>
+            <div class="col-3 card center-items-horizontal fx-glow height-250">
+              <span class="text-overline">fx-glow</span>
+              <h3 class="title mt-sm">Glow</h3>
+            </div>
+            <div class="col-3 card center-items-horizontal fx-glow-md height-250">
+              <span class="text-overline">fx-glow-md</span>
+              <h3 class="title mt-sm">Glow</h3>
+            </div>
+            <div class="col-3 card center-items-horizontal fx-glow-lg height-250">
+              <span class="text-overline">fx-glow-lg</span>
+              <h3 class="title mt-sm">Glow</h3>
+            </div>
           </div>
 
           <!-- static -->
           <p class="text-overline mb-sm">Static</p>
           <div class="grid mb">
-            <div class="col-4 surface fx-grid height-200 center-items"><code>.fx-grid</code></div>
-            <div class="col-4 surface fx-dots height-200 center-items"><code>.fx-dots</code></div>
-            <div class="col-4 surface fx-gradient height-200 center-items"><code>.fx-gradient</code></div>
+            <div class="col-4 card center-items-horizontal fx-grid height-250">
+              <span class="text-overline">fx-grid</span>
+              <h3 class="title mt-sm">Grid</h3>
+            </div>
+            <div class="col-4 card center-items-horizontal fx-dots height-250">
+              <span class="text-overline">fx-dots</span>
+              <h3 class="title mt-sm">Dots</h3>
+            </div>
+            <div class="col-4 card center-items-horizontal fx-gradient height-250">
+              <span class="text-overline">fx-gradient</span>
+              <h3 class="title mt-sm">Gradient</h3>
+            </div>
           </div>
 
           <pre class="card-code mb"><code>&lt;section class="fx-dots"&gt;
@@ -308,20 +329,44 @@
 
           <!-- parallax -->
           <p class="text-overline mb-sm">Parallax</p>
-          <p class="mb">Add <code>.hover-parallax</code> and the layers follow the cursor, each one
+          <p class="mb">Add <code>.parallax</code> and the layers follow the cursor, each one
             at its own depth. Without it they stay still.</p>
           <div class="grid mb">
-            <div class="col-4 surface fx-stars hover-parallax height-250 center-items"><code>.fx-stars</code></div>
-            <div class="col-4 surface fx-constellation hover-parallax height-250 center-items"><code>.fx-constellation</code></div>
-            <div class="col-4 surface fx-contours hover-parallax height-250 center-items"><code>.fx-contours</code></div>
-            <div class="col-4 surface fx-blackhole hover-parallax height-250 center-items"><code>.fx-blackhole</code></div>
-            <div class="col-4 surface fx-bubbles hover-parallax height-250 center-items"><code>.fx-bubbles</code></div>
-            <div class="col-4 surface fx-petals hover-parallax height-250 center-items"><code>.fx-petals</code></div>
-            <div class="col-6 surface fx-light hover-parallax height-250 center-items"><code>.fx-light</code></div>
-            <div class="col-6 surface fx-streaks hover-parallax height-250 center-items"><code>.fx-streaks</code></div>
+            <div class="col-4 card center-items-horizontal fx-stars parallax height-300">
+              <span class="text-overline">fx-stars</span>
+              <h3 class="title mt-sm">Stars</h3>
+            </div>
+            <div class="col-4 card center-items-horizontal fx-constellation parallax height-300">
+              <span class="text-overline">fx-constellation</span>
+              <h3 class="title mt-sm">Constellation</h3>
+            </div>
+            <div class="col-4 card center-items-horizontal fx-contours parallax height-300">
+              <span class="text-overline">fx-contours</span>
+              <h3 class="title mt-sm">Contours</h3>
+            </div>
+            <div class="col-4 card center-items-horizontal fx-blackhole parallax height-300">
+              <span class="text-overline">fx-blackhole</span>
+              <h3 class="title mt-sm">Blackhole</h3>
+            </div>
+            <div class="col-4 card center-items-horizontal fx-bubbles parallax height-300">
+              <span class="text-overline">fx-bubbles</span>
+              <h3 class="title mt-sm">Bubbles</h3>
+            </div>
+            <div class="col-4 card center-items-horizontal fx-petals parallax height-300">
+              <span class="text-overline">fx-petals</span>
+              <h3 class="title mt-sm">Petals</h3>
+            </div>
+            <div class="col-6 card center-items-horizontal fx-light parallax height-300">
+              <span class="text-overline">fx-light</span>
+              <h3 class="title mt-sm">Light</h3>
+            </div>
+            <div class="col-6 card center-items-horizontal fx-streaks parallax height-300">
+              <span class="text-overline">fx-streaks</span>
+              <h3 class="title mt-sm">Streaks</h3>
+            </div>
           </div>
 
-          <pre class="card-code mb"><code>&lt;section class="fx-petals fx-light hover-parallax"&gt;
+          <pre class="card-code mb"><code>&lt;section class="fx-petals fx-light parallax"&gt;
   ...
 &lt;/section&gt;</code></pre>
 
@@ -331,9 +376,15 @@
             one is a single class, may be tuned with optional <code>data-*</code> attributes and
             is disabled with <code>prefers-reduced-motion</code>.</p>
           <div class="grid mb">
-            <div class="col-6 surface fx-network height-250 center-items"><code>.fx-network</code></div>
-            <div class="col-6 surface fx-network height-250 center-items"
-                 data-density="40" data-speed="0.8" data-link-distance="160"><code>.fx-network custom</code></div>
+            <div class="col-6 card center-items-horizontal fx-network height-300">
+              <span class="text-overline">fx-network</span>
+              <h3 class="title mt-sm">Network</h3>
+            </div>
+            <div class="col-6 card center-items-horizontal fx-network height-300" data-density="40" data-speed="0.8"
+              data-link-distance="160">
+              <span class="text-overline">fx-network custom</span>
+              <h3 class="title mt-sm">Network</h3>
+            </div>
           </div>
 
           <!-- fx-network -->
@@ -343,10 +394,10 @@
             <code>data-density</code> (max points, default 80), <code>data-speed</code> (0.4),
             <code>data-link-distance</code> (120), <code>data-mouse-distance</code> (170) and
             <code>data-color</code> (defaults to the theme accent). Canvas opacity is set with
-            the <code>--network-opacity</code> variable.</p>
+            the <code>--network-opacity</code> variable.
+          </p>
 
-          <pre class="card-code mb"><code>&lt;section class="fx-network"
-         data-density="60" data-link-distance="140"&gt;
+          <pre class="card-code mb"><code>&lt;section class="fx-network" data-density="60" data-link-distance="140"&gt;
   ...
 &lt;/section&gt;</code></pre>
         </div>
@@ -362,4 +413,3 @@
     </main>
   </div>
 </body>
-

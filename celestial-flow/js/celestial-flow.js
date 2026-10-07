@@ -788,7 +788,7 @@ function initParallax() {
 
   const update = () => {
     frame = 0;
-    document.querySelectorAll(".hover-parallax").forEach((host) => {
+    document.querySelectorAll(".parallax").forEach((host) => {
       const rect = host.getBoundingClientRect();
       if (rect.bottom < 0 || rect.top > window.innerHeight) return;
       const px = Math.max(-0.5, Math.min(0.5, (x - rect.left) / rect.width - 0.5));
