@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initSelect();
   initTypewriter();
   initSpotlight();
+  initNetwork();
   initTextMarquee();
   initHoverIncline();
   initScrollProgress();
@@ -807,4 +808,116 @@ function initParallax() {
     },
     { passive: true }
   );
+}
+
+
+//initNetwork -------------------------------------------------------------------
+//.fx-network
+function initNetwork() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  document.querySelectorAll(".fx-network").forEach((host) => {
+    if (host.dataset.networkReady) return;
+    host.dataset.networkReady = "true";
+
+    const num = (name, fallback) => {
+      const value = parseFloat(host.dataset[name]);
+      return Number.isFinite(value) ? value : fallback;
+    };
+    const density = num("density", 80);
+    const speed = num("speed", 0.4);
+    const linkDistance = num("linkDistance", 120);
+    const mouseDistance = num("mouseDistance", 170);
+
+    const canvas = document.createElement("canvas");
+    canvas.className = "network-canvas";
+    canvas.setAttribute("aria-hidden", "true");
+    host.prepend(canvas);
+
+    const ctx = canvas.getContext("2d");
+    const mouse = { x: -9999, y: -9999 };
+    let width = 0;
+    let height = 0;
+    let points = [];
+    let color = "#8fa9ff";
+    let frame = 0;
+
+    const readColor = () => {
+      color =
+        host.dataset.color ||
+        getComputedStyle(host).getPropertyValue("--color-accent").trim() ||
+        color;
+    };
+
+    const resize = () => {
+      const rect = canvas.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      width = rect.width;
+      height = rect.height;
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const count = Math.min(density, Math.floor(width / 14));
+      points = Array.from({ length: count }, () => ({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * speed,
+        vy: (Math.random() - 0.5) * speed,
+      }));
+    };
+
+    const link = (x1, y1, x2, y2, alpha) => {
+      ctx.globalAlpha = alpha;
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x2, y2);
+      ctx.stroke();
+    };
+
+    const draw = () => {
+      ctx.clearRect(0, 0, width, height);
+      ctx.fillStyle = ctx.strokeStyle = color;
+
+      points.forEach((p, i) => {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0 || p.x > width) p.vx *= -1;
+        if (p.y < 0 || p.y > height) p.vy *= -1;
+
+        ctx.globalAlpha = 0.8;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 1.6, 0, Math.PI * 2);
+        ctx.fill();
+
+        for (let j = i + 1; j < points.length; j++) {
+          const q = points[j];
+          const d = Math.hypot(p.x - q.x, p.y - q.y);
+          if (d < linkDistance) link(p.x, p.y, q.x, q.y, (1 - d / linkDistance) * 0.35);
+        }
+
+        const dm = Math.hypot(p.x - mouse.x, p.y - mouse.y);
+        if (dm < mouseDistance) link(p.x, p.y, mouse.x, mouse.y, (1 - dm / mouseDistance) * 0.7);
+      });
+
+      frame = requestAnimationFrame(draw);
+    };
+
+    const start = () => { if (!frame) frame = requestAnimationFrame(draw); };
+    const stop = () => { cancelAnimationFrame(frame); frame = 0; };
+
+    host.addEventListener("pointermove", (event) => {
+      if (event.pointerType === "touch") return;
+      const rect = canvas.getBoundingClientRect();
+      mouse.x = event.clientX - rect.left;
+      mouse.y = event.clientY - rect.top;
+    }, { passive: true });
+    host.addEventListener("pointerleave", () => { mouse.x = mouse.y = -9999; });
+
+    document.addEventListener("themechange", () => setTimeout(readColor, 80));
+    new ResizeObserver(resize).observe(host);
+    new IntersectionObserver(([entry]) => (entry.isIntersecting ? start() : stop())).observe(host);
+
+    readColor();
+    resize();
+  });
 }

@@ -208,7 +208,6 @@
       </section>
 
       <!--border---------------------------------------------------->
-            <!--border---------------------------------------------------->
       <section class="section-sm">
         <div class="container">
           <span class="text-overline" id="border">Border</span>
@@ -276,6 +275,7 @@
         </div>
       </section>
       <div class="divider-fade"></div>
+
       <!--effects---------------------------------------------------->
       <!--effects---------------------------------------------------->
       <section class="section-sm fx-dots">
@@ -322,6 +322,31 @@
           </div>
 
           <pre class="card-code mb"><code>&lt;section class="fx-petals fx-light hover-parallax"&gt;
+  ...
+&lt;/section&gt;</code></pre>
+
+          <!-- animated -->
+          <p class="text-overline mb-sm">Animated</p>
+          <p class="mb">Effects that animate on their own, with no hover or scroll needed. Each
+            one is a single class, may be tuned with optional <code>data-*</code> attributes and
+            is disabled with <code>prefers-reduced-motion</code>.</p>
+          <div class="grid mb">
+            <div class="col-6 surface fx-network height-250 center-items"><code>.fx-network</code></div>
+            <div class="col-6 surface fx-network height-250 center-items"
+                 data-density="40" data-speed="0.8" data-link-distance="160"><code>.fx-network custom</code></div>
+          </div>
+
+          <!-- fx-network -->
+          <p class="mb alert"><code>.fx-network</code> creates a canvas of moving points inside the
+            element. Nearby points link together and the cursor acts as an extra node. It uses
+            the theme accent color and pauses when off-screen. Options, all optional:
+            <code>data-density</code> (max points, default 80), <code>data-speed</code> (0.4),
+            <code>data-link-distance</code> (120), <code>data-mouse-distance</code> (170) and
+            <code>data-color</code> (defaults to the theme accent). Canvas opacity is set with
+            the <code>--network-opacity</code> variable.</p>
+
+          <pre class="card-code mb"><code>&lt;section class="fx-network"
+         data-density="60" data-link-distance="140"&gt;
   ...
 &lt;/section&gt;</code></pre>
         </div>

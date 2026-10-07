@@ -808,4 +808,20 @@
     mask-position: calc(var(--fx-px, 0) * -20px) calc(var(--fx-py, 0) * -20px + var(--fx-fall) * 600px), calc(var(--fx-px, 0) * -48px) calc(var(--fx-py, 0) * -48px + var(--fx-fall) * 760px), calc(var(--fx-px, 0) * -90px) calc(var(--fx-py, 0) * -90px + var(--fx-fall) * 1960px);
     animation: fx-fall 70s linear infinite;
   }
+
+  /*fx-network ---------------------------------------------------*/
+  .fx-network { position: relative; isolation: isolate; }
+  .fx-network > .network-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    opacity: var(--network-opacity, 0.75);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .fx-network > .network-canvas { display: none; }
+  }
+
 }
