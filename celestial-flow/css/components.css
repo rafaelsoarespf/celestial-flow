@@ -101,7 +101,7 @@
     flex-direction: column;
     min-width: 0;
     gap: .5rem;
-    padding: 1.1rem clamp(0.5rem, 4%, 1.1rem);
+    padding: 1rem clamp(0.5rem, 4%, 1rem);
     border-radius: var(--radius-md);
     background: var(--color-surface-1);
     border: 1px solid var(--color-border);

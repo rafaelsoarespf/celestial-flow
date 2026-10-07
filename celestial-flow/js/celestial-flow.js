@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initSelect();
   initTypewriter();
   initSpotlight();
-  initTextMarquee()
+  initTextMarquee();
   initHoverIncline();
   initScrollProgress();
   initReveal();
