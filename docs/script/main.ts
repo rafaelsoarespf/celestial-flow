@@ -3,7 +3,72 @@ document.addEventListener("DOMContentLoaded", init);
 function init(): void {
   initSidebar();
   initThemeGallery();
+  initHeroThemes();
 }
+
+declare global {
+  interface Window {
+    initThemeSelector: () => void;
+    initSelect: () => void;
+    initSidebar: () => void;
+    setTheme: (theme: string) => void;
+    getTheme: () => string;
+  }
+}
+
+//index.html
+//hero ===========================================================
+declare const CF_THEME_GROUPS: { title: string; themes: [string, string][] }[];
+
+function initHeroThemes(): void {
+  const stage = document.querySelector<HTMLElement>(".hero-demo");
+  if (!stage || typeof CF_THEME_GROUPS === "undefined") return;
+
+  const themes = CF_THEME_GROUPS.flatMap((group) => group.themes);
+  if (!themes.length) return;
+
+  const themeName = document.querySelector<HTMLElement>("[data-theme-name]");
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let index = Math.max(0, themes.findIndex(([value]) => value === window.getTheme()));
+  let paused = false;
+  let visible = true;
+
+  const show = (): void => {
+    const current = themes[index];
+    if (!current) return;
+
+    const [value, label] = current;
+    stage.setAttribute("data-theme", value);
+    if (themeName) themeName.textContent = label;
+  };
+
+  show();
+
+  if (!reduce) {
+    setInterval(() => {
+      if (paused || !visible) return;
+      index = (index + 1) % themes.length;
+      show();
+    }, 3000);
+
+    stage.addEventListener("pointerenter", () => (paused = true));
+    stage.addEventListener("pointerleave", () => (paused = false));
+
+    new IntersectionObserver(([entry]) => {
+      visible = entry?.isIntersecting ?? true;
+    }).observe(stage);
+  }
+
+  document.addEventListener("themechange", (event) => {
+    const { theme } = (event as CustomEvent<{ theme: string }>).detail;
+    const next = themes.findIndex(([value]) => value === theme);
+    if (next < 0) return;
+
+    index = next;
+    show();
+  });
+}
+
 
 //initSidebar =============================================
 declare global {

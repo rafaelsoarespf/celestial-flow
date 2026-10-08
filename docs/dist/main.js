@@ -2,6 +2,51 @@ document.addEventListener("DOMContentLoaded", init);
 function init() {
     initSidebar();
     initThemeGallery();
+    initHeroThemes();
+}
+function initHeroThemes() {
+    const stage = document.querySelector(".hero-demo");
+    if (!stage || typeof CF_THEME_GROUPS === "undefined")
+        return;
+    const themes = CF_THEME_GROUPS.flatMap((group) => group.themes);
+    if (!themes.length)
+        return;
+    const themeName = document.querySelector("[data-theme-name]");
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let index = Math.max(0, themes.findIndex(([value]) => value === window.getTheme()));
+    let paused = false;
+    let visible = true;
+    const show = () => {
+        const current = themes[index];
+        if (!current)
+            return;
+        const [value, label] = current;
+        stage.setAttribute("data-theme", value);
+        if (themeName)
+            themeName.textContent = label;
+    };
+    show();
+    if (!reduce) {
+        setInterval(() => {
+            if (paused || !visible)
+                return;
+            index = (index + 1) % themes.length;
+            show();
+        }, 3000);
+        stage.addEventListener("pointerenter", () => (paused = true));
+        stage.addEventListener("pointerleave", () => (paused = false));
+        new IntersectionObserver(([entry]) => {
+            visible = entry?.isIntersecting ?? true;
+        }).observe(stage);
+    }
+    document.addEventListener("themechange", (event) => {
+        const { theme } = event.detail;
+        const next = themes.findIndex(([value]) => value === theme);
+        if (next < 0)
+            return;
+        index = next;
+        show();
+    });
 }
 export async function initSidebar() {
     const sidebar = document.querySelector(".doc-sidebar");
